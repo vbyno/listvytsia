@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby '2.2.2'
 
-gem 'rails', '4.2.1'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'rails'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 
 gem 'bootstrap-sass'
 gem 'high_voltage'
@@ -17,12 +17,12 @@ gem 'slim-rails'
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_21]
-  gem 'capistrano', '~> 3.0.1'
+  gem 'binding_of_caller', platforms: [:mri_21]
+  gem 'capistrano'
   gem 'capistrano-bundler'
-  gem 'capistrano-rails', '~> 1.1.0'
+  gem 'capistrano-rails'
   gem 'capistrano-rails-console'
-  gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'capistrano-rvm'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
@@ -40,7 +40,7 @@ group :development, :test do
   gem 'puma'
   gem 'rspec-rails'
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   gem 'spring'
 end
 
