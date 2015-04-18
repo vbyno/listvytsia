@@ -1,0 +1,15 @@
+.copyright
+  .container
+    .row
+      .col-md-6
+        p= t('.rights_reserved')
+      .col-md-6
+        ul.footer-socials.list-inline
+          li
+            a.tooltips[data={'original-title': 'Facebook', placement: 'top', toggle: 'tooltip'}
+                       href==t('.facebook.link') title==t('.facebook.title')]
+              i.fa.fa-facebook
+          li
+            a.tooltips[data={'original-title': 'Google Plus', placement: 'top', toggle: 'tooltip'}
+                       href=t('.google_plus.link') title==t('.google_plus.title')]
+              i.fa.fa-google-plus

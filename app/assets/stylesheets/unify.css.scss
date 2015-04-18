@@ -1,0 +1,26 @@
+@import 'unify/style';
+@import 'unify/custom';
+@import 'unify/headers/header-v5';
+@import 'unify/footers/footer-v1';
+@import 'unify/theme-colors/blue';
+
+$primary-color: #3498db;
+
+.interactive-slider-v2 {
+  background: url(listvytsia-home.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &:after {
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.navbar-brand {
+  &.logo-link {
+    line-height: 40px;
+    font-size: 30px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

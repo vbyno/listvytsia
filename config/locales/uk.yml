@@ -1,0 +1,37 @@
+uk:
+  layouts:
+    header:
+      listvytsia: &listvytsia Ліствиця
+      about_us: &about_us Про нас
+      articles: Статті
+      timetable: Розклад
+      contacts: &contacts Контакти
+    banner:
+      main_text: *listvytsia
+      subtext: Львівська міська громадська організація
+    footer:
+      about_1: Ліствиця є нерелігійною неполітичною громадською суспільною організацією
+      about_2: Основною ціллю якої є розвиток особистості
+      contacts: *contacts
+      address: Україна, м. Львів
+      phone:
+        title: Телефон
+        value: +38 (067) 444 44 44
+      email:
+        title: Email
+        value: listvycia@gmail.com
+      useful_links: Корисні сторінки
+      latest_posts: Нові статті
+    copyright:
+      rights_reserved: 2015 © Права застережені
+      facebook:
+        link: '#'
+        title: Ми у Facebook
+      google_plus:
+        link: '#'
+        title: Ми у Google Plus
+  static_pages:
+    about_us:
+      title: *about_us
+      content: Ми - організація
+

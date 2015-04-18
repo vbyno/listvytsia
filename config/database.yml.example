@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  host: localhost
+  username: postgres
+  password:
+
+development:
+  <<: *default
+  database: listvytsia_development
+
+test:
+  <<: *default
+  database: listvytsia_test
+
+production:
+  <<: *default
+  database: listvytsia_production

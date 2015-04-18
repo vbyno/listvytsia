@@ -1,0 +1,20 @@
+.header-v5
+  .topbar-v3
+  .navbar.navbar-default.mega-menu role='navigation'
+    .container
+      .navbar-header
+        button.navbar-toggle data={target: '.navbar-responsive-collapse', toggle: 'collapse'} type="button"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        - if current_page?(root_path)
+          span.navbar-brand.logo-link= t('.listvytsia')
+        - else
+          a.navbar-brand.logo-link[href=root_path]= t('.listvytsia')
+      .collapse.navbar-collapse.navbar-responsive-collapse
+        ul.nav.navbar-nav
+          - %w[about_us articles timetable contacts].each do |page|
+            - page_path = public_send :"#{page}_path"
+            li class=('active' if current_page?(page_path))
+              a[href=page_path]= t(".#{page}")

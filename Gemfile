@@ -14,6 +14,7 @@ gem 'high_voltage'
 gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'better_errors'

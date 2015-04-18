@@ -1,0 +1,42 @@
+.footer
+  .container
+    .row
+      .col-md-3.md-margin-bottom-40
+        br
+        br
+        p= t('.about_1')
+        p= t('.about_2')
+      .col-md-3.md-margin-bottom-40
+        .posts
+          .headline
+            h2= t('.latest_posts')
+          ul.list-unstyled.latest-list
+            li
+              a href="#"  Incredible content
+              small May 8, 2014
+      .col-md-3.md-margin-bottom-40
+        .headline
+          h2= t('.useful_links')
+        ul.list-unstyled.link-list
+          li
+            a[href=about_us_path]= t('layouts.header.about_us')
+            i.fa.fa-angle-right
+          li
+            a[href=articles_path]= t('layouts.header.articles')
+            i.fa.fa-angle-right
+          li
+            a[href=timetable_path]= t('layouts.header.timetable')
+            i.fa.fa-angle-right
+          li
+            a[href=contacts_path]= t('layouts.header.contacts')
+            i.fa.fa-angle-right
+      .col-md-3.map-img.md-margin-bottom-40
+        .headline
+          h2= t('.contacts')
+        address.md-margin-bottom-40
+          = t('.address')
+          br
+          = "#{t('.phone.title')}: #{t('.phone.value')}"
+          br
+          = "#{t('.email.title')}:"
+          a<[href="mailto:#{t('.email.value')}"]= t('.email.value')
