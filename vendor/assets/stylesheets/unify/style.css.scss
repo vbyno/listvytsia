@@ -7,10 +7,10 @@
 */
 
 /*Import Global Compulsory CSS Files*/
-@import url(unify/ie8.css);
-@import url(unify/blocks.css);
-@import url(unify/plugins.css);
-@import url(unify/app.css);
+@import 'unify/ie8';
+@import 'unify/blocks';
+@import 'unify/plugins';
+@import 'unify/app';
 
 body {
    color: #333;

@@ -1,13 +1,12 @@
 @import 'unify/style';
-@import 'unify/custom';
 @import 'unify/headers/header-v5';
 @import 'unify/footers/footer-v1';
 @import 'unify/theme-colors/blue';
 
 $primary-color: #3498db;
 
-.interactive-slider-v2 {
-  background: url(listvytsia-home.jpg) no-repeat;
+.interactive-slider-custom {
+  background: asset_url('listvytsia-home.jpg') no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #97C2EC;
