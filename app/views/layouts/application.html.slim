@@ -12,7 +12,7 @@ html lang==I18n.locale
     .wrapper
       == render 'layouts/header'
       == render 'layouts/banner' if current_page?(root_path)
-      .container.content
+      .container.content.content-custom
         == render 'layouts/messages'
         == yield
       .footer-v1

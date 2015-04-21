@@ -1,8 +1,14 @@
 uk:
+  site_info:
+    email: &email listvycja@gmail.com
+    phone: &phone +38 (093) 657 02 19
+    site: &site listvycja.org
+    address: &address Україна, Львів
+    facebook: &facebook https://www.facebook.com/pages/%D0%9B%D0%9C%D0%93%D0%9E-%D0%9B%D1%96%D1%81%D1%82%D0%B2%D0%B8%D1%86%D1%8F/1433298123589114'
+    google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
   layouts:
     header:
       listvytsia: &listvytsia Ліствиця
-      about_us: &about_us Про нас
       articles: Статті
       timetable: Розклад
       contacts: &contacts Контакти
@@ -10,28 +16,27 @@ uk:
       main_text: *listvytsia
       subtext: Львівська міська громадська організація
     footer:
-      about_1: Ліствиця є нерелігійною неполітичною громадською суспільною організацією
-      about_2: Основною ціллю якої є розвиток особистості
+      about_1: Ліствиця є добровільною, нерелігійною і некомерційною, неприбутковою організацією
+      about_2: Cтворена з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актів милосердя, добродійності у всіх регіонах тощо
       contacts: *contacts
-      address: Україна, м. Львів
+      address: *address
       phone:
         title: Телефон
-        value: +38 (067) 444 44 44
+        value: *phone
       email:
         title: Email
-        value: listvycia@gmail.com
+        value: *email
       useful_links: Корисні сторінки
       latest_posts: Нові статті
     copyright:
-      rights_reserved: 2015 © Права застережені
+      rights_reserved: 2015 © Заборонене будь-яке копіювання і передрук матеріалів без узгодження із авторами
       facebook:
-        link: '#'
+        link: *facebook
         title: Ми у Facebook
       google_plus:
-        link: '#'
+        link: *google_plus
         title: Ми у Google Plus
   static_pages:
-    about_us:
-      title: *about_us
-      content: Ми - організація
-
+    index:
+      title: ЛМГО "Ліствиця"
+      content: Львівська міська громадська організація ”Ліствиця” є добровільною, нерелігійною і некомерційною, неприбутковою організацією, створеною з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актах милосердя, добродійності у всіх регіонах, громадських місцях, лікарнях, дитячих будинках, будинках пристарілих, по необхідності громадян. Сприяти створенню умов для розкриття духовного, творчого, інтелектуального, морального потенціалу народу.

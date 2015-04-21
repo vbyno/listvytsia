@@ -1,0 +1,64 @@
+//TODO I18n
+.row.margin-bottom-30
+  .col-md-9.mb-margin-bottom-30
+    p Напишіть нам листа. Вкажіть свій email для зворотнього зв'язку
+    br
+    form#sky-form3.sky-form.contact-style action="#" method="post"
+      fieldset.no-padding
+        label
+          | Ім'я
+          span.color-red *
+        .row.sky-space-20
+          .col-md-7.col-md-offset-0
+            div
+              input#name.form-control name="name" type="text"
+        label
+          | Email
+          span.color-red *
+        .row.sky-space-20
+          .col-md-7.col-md-offset-0
+            div
+              input#email.form-control name="email" type="text"
+        label
+          | Повідомлення
+          span.color-red *
+        .row.sky-space-20
+          .col-md-11.col-md-offset-0
+            div
+              textarea#message.form-control name="message" rows="8"
+        p
+          button.btn-u type="submit"  Надіслати повідомлення
+      .message
+        i.rounded-x.fa.fa-check
+        p Ваше повідомлення успішно надіслане!
+  .col-md-3
+    .headline
+      h2 Контакти
+    ul.list-unstyled.who.margin-bottom-30
+      li
+        a href="#"
+          i.fa.fa-home
+          | Україна, м. Львів
+      li
+        a href="tel:+#{t('site_info.phone').gsub(/[^\d]/, '')}"
+          i.fa.fa-phone
+          | #{t('site_info.phone')}
+      li
+        a href= "mailto:#{t('site_info.email')}"
+          i.fa.fa-envelope
+          | #{t('site_info.email')}
+      li
+        a href=root_path
+          i.fa.fa-globe
+          | #{t('site_info.site')}
+    .headline
+      h2 Ми в соцмережах
+    ul.list-unstyled.who.margin-bottom-30
+      li
+        a href= t('site_info.facebook')
+          i.fa.fa-facebook
+          | ЛМГО "Ліствиця" у Facebook
+      li
+        a href= t('site_info.google_plus')
+          i.fa.fa-google-plus
+          | ЛМГО "Ліствиця" у Google Plus

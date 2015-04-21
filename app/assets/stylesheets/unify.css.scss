@@ -2,6 +2,9 @@
 @import 'unify/headers/header-v5';
 @import 'unify/footers/footer-v1';
 @import 'unify/theme-colors/blue';
+@import 'unify/plugins/sky-forms-pro/skyforms/css/sky-forms';
+@import 'unify/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms';
+@import 'unify/pages/page_contact';
 
 $primary-color: #3498db;
 
@@ -13,6 +16,10 @@ $primary-color: #3498db;
   &:after {
     background: rgba(0, 0, 0, 0.15);
   }
+}
+
+.content-custom {
+  font-size: 14px;
 }
 
 .navbar-brand {
