@@ -48,6 +48,9 @@ uk:
         intro: Соцмережі
         facebook: Ми у Facebook
         google_plus: Ми у Google Plus
+    timetable:
+      title_events: Зустрічі
+      title_consultations: Особисті прийоми
   contact_forms:
     contact_form:
       subject: Повідомлення зі сторінки контактів
