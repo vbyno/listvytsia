@@ -12,5 +12,14 @@
       .col-md-11.col-md-offset-0
         div
           = f.input :message, as: :text, input_html: { rows: 8 }
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = recaptcha_tags
+    - if @contact_form && @contact_form.errors[:base].present?
+      .alert.alert-danger role='alert'
+        span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'
+        span[class='sr-only'] Error:
+        = @contact_form.errors[:base].to_sentence
     p
       = f.button :submit, t('.submit'), class: 'btn-u'

@@ -52,6 +52,8 @@ uk:
     contact_form:
       subject: Повідомлення зі сторінки контактів
       submit: Надіслати повідомлення
+    create:
+      invalid_captcha: Ви не підтвердили, що ви не робот
     thank_you_notice:
       message: Ваше повідомлення надіслане успішно!
   mail_form:

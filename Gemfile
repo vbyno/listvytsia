@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'mail_form'
 gem 'slim-rails'
 gem 'font-awesome-rails'
+gem 'figaro'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :development do
   gem 'better_errors'
@@ -25,6 +27,9 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm'
+
+  gem 'mailcatcher'
+  gem 'pry'
 
   gem 'guard-bundler'
   gem 'guard-rails'
@@ -40,7 +45,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'puma'
+  gem 'thin'
   gem 'rspec-rails'
   gem 'byebug'
   gem 'web-console'
