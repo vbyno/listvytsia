@@ -31,3 +31,10 @@ $primary-color: #3498db;
     }
   }
 }
+
+.google-calendar {
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
