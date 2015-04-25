@@ -1,9 +1,10 @@
 uk:
   site_info:
-    email: &email listvycja@gmail.com
+    email: &email volodymyr.byno@gmail.com
+    email_real: listvycja@gmail.com
     phone: &phone +38 (093) 657 02 19
     site: &site listvycja.org
-    address: &address Україна, Львів
+    address: &address Україна, м. Львів
     facebook: &facebook https://www.facebook.com/pages/%D0%9B%D0%9C%D0%93%D0%9E-%D0%9B%D1%96%D1%81%D1%82%D0%B2%D0%B8%D1%86%D1%8F/1433298123589114'
     google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
   layouts:
@@ -40,3 +41,38 @@ uk:
     index:
       title: ЛМГО "Ліствиця"
       content: Львівська міська громадська організація ”Ліствиця” є добровільною, нерелігійною і некомерційною, неприбутковою організацією, створеною з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актах милосердя, добродійності у всіх регіонах, громадських місцях, лікарнях, дитячих будинках, будинках пристарілих, по необхідності громадян. Сприяти створенню умов для розкриття духовного, творчого, інтелектуального, морального потенціалу народу.
+    contacts:
+      intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
+      contacts: Контакти
+      groups:
+        intro: Соцмережі
+        facebook: Ми у Facebook
+        google_plus: Ми у Google Plus
+  contact_forms:
+    contact_form:
+      subject: Повідомлення зі сторінки контактів
+      submit: Надіслати повідомлення
+    create:
+      invalid_captcha: Ви не підтвердили, що ви не робот
+    thank_you_notice:
+      message: Ваше повідомлення надіслане успішно!
+  mail_form:
+    models:
+      contact_form: Ваша контактна форма
+    attributes:
+      contact_form:
+        name: Ім’я
+        email: E-mail
+        message: Повідомлення
+    errors:
+      models:
+        contact_form:
+          attributes:
+            email:
+              invalid: Неправильно введена email-адреса
+              blank: Email-адреса не має бути пустою
+            name:
+              invalid: Неправильне ім’я
+              blank: Ім’я не має бути пустим
+            message:
+              blank: Повідомлення не має бути пустим

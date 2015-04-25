@@ -85,6 +85,7 @@ namespace :deploy do
       sudo "ln -sf /var/log/upstart /var/www/log/upstart"
 
       upload!('shared/database.yml', "#{shared_path}/config/database.yml")
+      upload!('config/application.yml', "#{shared_path}/config/application.yml")
       upload!('Procfile', "#{shared_path}/Procfile")
 
       # Commented this because several sites will be stored on one nginx server
@@ -106,6 +107,7 @@ namespace :deploy do
   task :symlink do
     on roles(:all) do
       execute "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+      execute "ln -s #{shared_path}/config/application.yml #{release_path}/config/application.yml"
       execute "ln -s #{shared_path}/Procfile #{release_path}/Procfile"
       execute "ln -s #{shared_path}/system #{release_path}/public/system"
     end

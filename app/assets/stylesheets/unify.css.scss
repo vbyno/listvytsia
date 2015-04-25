@@ -9,7 +9,7 @@
 $primary-color: #3498db;
 
 .interactive-slider-custom {
-  background: asset_url('listvytsia-home.jpg') no-repeat;
+  background-image: image-url('listvytsia-home.jpg');
   background-position: center center;
   background-size: cover;
   background-color: #97C2EC;

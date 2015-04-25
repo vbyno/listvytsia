@@ -1,0 +1,4 @@
+- if @contact_form.errors.any?
+  | $('#contact-form').html("#{escape_javascript(render 'contact_form')}");
+- else
+  | $('#contact-form').html("#{escape_javascript(render 'thank_you_notice')}");
