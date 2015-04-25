@@ -18,10 +18,6 @@ $primary-color: #3498db;
   }
 }
 
-.content-custom {
-  font-size: 14px;
-}
-
 .navbar-brand {
   &.logo-link {
     line-height: 40px;
@@ -29,12 +25,5 @@ $primary-color: #3498db;
     &:hover {
       color: $primary-color;
     }
-  }
-}
-
-.google-calendar {
-  iframe {
-    display: block;
-    margin: 0 auto;
   }
 }
