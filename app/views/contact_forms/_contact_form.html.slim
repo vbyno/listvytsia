@@ -1,0 +1,16 @@
+= simple_form_for @contact_form, remote: true, html: { id: 'sky-form3', class: %w[sky-form contact-style] } do |f|
+  fieldset.no-padding
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = f.input :name
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = f.input :email
+    .row.sky-space-20
+      .col-md-11.col-md-offset-0
+        div
+          = f.input :message, as: :text, input_html: { rows: 8 }
+    p
+      = f.button :submit, t('.submit'), class: 'btn-u'

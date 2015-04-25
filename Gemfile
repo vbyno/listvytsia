@@ -10,9 +10,9 @@ gem 'turbolinks'
 gem 'jbuilder'
 
 gem 'bootstrap-sass'
-gem 'high_voltage'
 gem 'pg'
 gem 'simple_form'
+gem 'mail_form'
 gem 'slim-rails'
 gem 'font-awesome-rails'
 
