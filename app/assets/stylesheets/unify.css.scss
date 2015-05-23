@@ -5,6 +5,7 @@
 @import 'unify/plugins/sky-forms-pro/skyforms/css/sky-forms';
 @import 'unify/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms';
 @import 'unify/pages/page_contact';
+@import 'unify/pages/page_job_inner';
 
 $primary-color: #3498db;
 
@@ -18,10 +19,6 @@ $primary-color: #3498db;
   }
 }
 
-.content-custom {
-  font-size: 14px;
-}
-
 .navbar-brand {
   &.logo-link {
     line-height: 40px;
@@ -31,10 +28,9 @@ $primary-color: #3498db;
     }
   }
 }
-
-.google-calendar {
-  iframe {
-    display: block;
-    margin: 0 auto;
-  }
+.padding-bottom-0 {
+  padding-bottom: 0;
+}
+.map-high {
+  height: 420px;
 }
