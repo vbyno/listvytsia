@@ -14,7 +14,7 @@
           a.navbar-brand.logo-link[href=root_path]= t('.listvytsia')
       .collapse.navbar-collapse.navbar-responsive-collapse
         ul.nav.navbar-nav
-          - %w[articles timetable contacts].each do |page|
+          - %i[timetable seminar contacts].each do |page|
             - page_path = public_send :"#{page}_path"
             li class=('active' if current_page?(page_path))
               a[href=page_path]= t(".#{page}")

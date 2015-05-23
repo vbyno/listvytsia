@@ -1,0 +1,54 @@
+.contacts
+  .container
+    i.center-icon.rounded-x.fa.fa-map-marker
+    .title-box-v2
+      h2 Місце проведення
+    .row
+      .col-md-6.col-sm-6
+        /! Google Map
+        #map.map
+        /! End Google Map
+      .col-md-6.col-sm-6
+        h3 Адреса
+        ul.list-unstyled.who
+          li
+            a href="#"
+              i.fa.fa-home
+              | Ринок "Нижній Шувар" (вул. Хуторівка, 4Б), 3-й поверх
+        hr
+        h3 Маршрутні автобуси до ринку "Нижній Шувар"
+        ul.list-unstyled.who
+          li
+            | Від
+            strong<> залізничного вокзалу:
+            strong<> №32
+          li
+            | Від
+            strong<> автовокзалу
+            | (вул. Стрийська, 109):
+            strong<> №40
+          li
+            | Від
+            strong<> автостанції №2
+            | (вул. Липинського):
+            strong<> №11
+          li
+            | З
+            strong<> аеропорту:
+            | проїхати тролейбусом
+            strong<> №9
+            | одну зупинку і пересісти на маршрутний автобус
+            strong<> №32
+          li
+            | З
+            strong<> центру львова
+            | (від універмагу "Магнус"):
+            strong<> №41
+        hr
+        h3 Виклик таксі по Львову
+        ul.list-unstyled.who
+          - ['067 67 000 86', '063 817 77 55', '098 239 15 15'].each do |phone|
+            li
+              a href="tel:+38#{phone.gsub(/[^\d]/, '')}"
+                i.fa.fa-phone
+                = phone

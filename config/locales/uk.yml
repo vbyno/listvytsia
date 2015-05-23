@@ -12,6 +12,7 @@ uk:
       listvytsia: &listvytsia Ліствиця
       articles: Статті
       timetable: Розклад
+      seminar: Семінар
       contacts: &contacts Контакти
     banner:
       main_text: *listvytsia

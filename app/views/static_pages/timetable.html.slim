@@ -1,9 +1,6 @@
 .title-v1
   h1= t('.title_events')
-  p
-    | 05-07 жовтня 2015 року у Львові відбудеться 1 семінар Ольги Асауляк:
-  p
-    | "Практика Духовного анализа в прямой и искаженной голограмме мира"
+  p 5-7 жовтня 2015 року у Львові відбудеться #{link_to('1 семінар Ольги Асауляк', seminar_path)}
 .google-calendar
   = render 'static_pages/timetable/calendar_events'
 .title-v1
