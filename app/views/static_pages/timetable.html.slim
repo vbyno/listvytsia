@@ -1,6 +1,6 @@
 .title-v1
   h1= t('.title_events')
-  p 5-7 жовтня 2015 року у Львові відбудеться #{link_to('1 семінар Ольги Асауляк', seminar_path)}
+  p 5-7 жовтня 2015 року у Львові відбудеться #{no_turbolink_link_to('1 семінар Ольги Асауляк', seminar_path)}
 .google-calendar
   = render 'static_pages/timetable/calendar_events'
 .title-v1

@@ -12,13 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require underscore
 //= require gmaps/google
 //= require bootstrap-sprockets
+//= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
+ready = function() {
   var lat = 49.798381,
       lng = 24.035034;
   handler = Gmaps.build('Google');
@@ -41,4 +41,7 @@ $(document).ready(function() {
     ]);
     handler.fitMapToBounds();
   });
-});
+};
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

@@ -19,13 +19,13 @@
           h2= t('.useful_links')
         ul.list-unstyled.link-list
           li
-            a[href=timetable_path]= t('layouts.header.timetable')
+            = link_to t('layouts.header.timetable'), timetable_path
             i.fa.fa-angle-right
           li
-            a[href=seminar_path]= t('layouts.header.seminar')
+            = no_turbolink_link_to t('layouts.header.seminar'), seminar_path, 'data-no-turbolink': true
             i.fa.fa-angle-right
           li
-            a[href=contacts_path]= t('layouts.header.contacts')
+            = link_to t('layouts.header.contacts'), contacts_path
             i.fa.fa-angle-right
       .col-md-3.md-margin-bottom-40
         .headline
