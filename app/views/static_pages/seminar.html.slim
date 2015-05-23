@@ -6,33 +6,7 @@
       | в прямой и искаженной голограмме мира
     p 1 семінар Ольги Асауляк
 
-.container.content-sm
-  .row
-    .col-sm-6.col-sm-offset-3
-      .content-boxes-v3.content-boxes-v3.sm-margin-bottom-30
-        .margin-bottom-30
-          i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-            i.fa.fa-calendar
-          .content-boxes-in-v3
-            h2.heading-sm 5-7 жовтня 2015 р.
-            p на 3-му поверсі ринку нижній "Шувар"
-        .clearfix.margin-bottom-30
-          i.icon-custom.icon-md.rounded-x.icon-bg-u
-            i.fa.fa-edit
-          .content-boxes-in-v3
-            h2.heading-sm Реєстрація учасників
-            p
-              | 9:00-18:00 з 5 по 7 жовтня.
-              =<> link_to('+38 063 683 79 01', 'tel:+380636837901')
-              | - Леся
-        .clearfix.margin-bottom-30
-          i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-            i.fa.fa-info
-          .content-boxes-in-v3
-            h2.heading-sm Інформаційний центр
-            p
-              => link_to('+38 063 683 79 01', 'tel:+380636837901')
-              | - Лариса
-
+= render 'static_pages/seminar/brief_info'
 = render 'static_pages/seminar/location'
 = render 'static_pages/seminar/hotels'
+= render 'static_pages/seminar/google_map_scripts'
