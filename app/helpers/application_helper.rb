@@ -4,4 +4,8 @@ module ApplicationHelper
 
     link_to *params, options
   end
+
+  def phone_link_to(phone_number)
+    link_to phone_number, Phone.new(phone_number).link_tel
+  end
 end
