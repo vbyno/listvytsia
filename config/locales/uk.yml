@@ -1,7 +1,7 @@
 uk:
   site_info:
-    email: &email listvytsia@gmail.com
-    email_real: listvycja@gmail.com
+    name: &name Ліствиця
+    email: &email listvycja@gmail.com
     phone: &phone +38 (093) 657 02 19
     site: &site listvycja.org
     address: &address Україна, м. Львів
@@ -9,13 +9,13 @@ uk:
     google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
   layouts:
     header:
-      listvytsia: &listvytsia Ліствиця
+      listvytsia: *name
       articles: Статті
       timetable: Розклад
       seminar: Семінар
       contacts: &contacts Контакти
     banner:
-      main_text: *listvytsia
+      main_text: *name
       subtext: Львівська міська громадська організація
     footer:
       about_1: Ліствиця є добровільною, нерелігійною і некомерційною, неприбутковою організацією

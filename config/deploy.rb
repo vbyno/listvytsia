@@ -144,7 +144,7 @@ namespace :deploy do
   after :updating, 'deploy:symlink'
   after :setup, 'deploy:foreman_init'
 
-  # after :foreman_init, 'foreman:start'
+  after :foreman_init, 'foreman:start'
   before :foreman_init, 'rvm:hook'
 
   before :setup, 'deploy:starting'
