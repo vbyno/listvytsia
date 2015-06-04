@@ -10,6 +10,7 @@ set :repo_url, 'git@github.com:vbyno/listvytsia.git'
 set :rvm_type, :user
 set :rvm_ruby_version, rvm_ruby_string
 set :deploy_to, "/var/www/apps/#{application}"
+set :sudo, 'env rvmsudo_secure_path=1 rvmsudo'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -119,13 +120,13 @@ namespace :deploy do
       foreman_temp = "/var/www/tmp/foreman"
       execute  "mkdir -p #{foreman_temp}"
       # Create folder for foreman be able to create upstart-files with correct paths
-      execute "ln -s #{release_path} #{current_path}"
+      # execute "ln -s #{release_path} #{current_path}"
 
       within current_path do
         execute "cd #{current_path}"
-        # execute :budnle, "exec foreman export upstart #{foreman_temp} -a #{application} -u #{user_name} -l /var/www/apps/#{application}/log -d #{current_path}"
+        execute :bundle, "exec foreman export upstart #{foreman_temp} -a #{application} -u #{user_name} -l /var/www/apps/#{application}/log -d #{current_path}"
       end
-      # sudo "mv #{foreman_temp}/* /etc/init/"
+      sudo "mv #{foreman_temp}/* /etc/init/"
       sudo "rm -r #{foreman_temp}"
     end
   end

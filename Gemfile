@@ -19,6 +19,8 @@ gem 'font-awesome-rails'
 gem 'figaro'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'gmaps4rails'
+# Require foreman to make "cap production deploy:foreman_init" work
+gem 'foreman', require: false
 
 group :development do
   gem 'better_errors'
