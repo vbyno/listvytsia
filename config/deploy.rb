@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 application = 'listvytsia'
-user_name = 'vbyno'
+user_name = 'deployer'
 rvm_ruby_string = 'ruby-2.2.2@listvytsia'
 
 set :application, application
@@ -120,7 +120,7 @@ namespace :deploy do
       foreman_temp = "/var/www/tmp/foreman"
       execute  "mkdir -p #{foreman_temp}"
       # Create folder for foreman be able to create upstart-files with correct paths
-      # execute "ln -s #{release_path} #{current_path}"
+      execute "ln -s #{release_path} #{current_path}"
 
       within current_path do
         execute "cd #{current_path}"
