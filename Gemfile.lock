@@ -41,6 +41,7 @@ GEM
     autoprefixer-rails (5.1.9)
       execjs
       json
+    awesome_print (1.6.1)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -184,6 +185,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -328,6 +331,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -354,7 +358,7 @@ DEPENDENCIES
   mail_form
   mailcatcher
   pg
-  pry
+  pry-rails
   quiet_assets
   rails
   rails_layout

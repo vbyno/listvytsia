@@ -19,6 +19,7 @@ gem 'font-awesome-rails'
 gem 'figaro'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'gmaps4rails'
+gem 'awesome_print'
 
 group :development do
   gem 'better_errors'
@@ -31,7 +32,6 @@ group :development do
   gem 'capistrano-rvm'
 
   gem 'mailcatcher'
-  gem 'pry'
 
   gem 'guard-bundler'
   gem 'guard-rails'
@@ -52,6 +52,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console'
   gem 'spring'
+  gem 'pry-rails'
 end
 
 group :production do
