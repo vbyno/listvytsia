@@ -5,7 +5,7 @@ uk:
     phone: &phone +38 (093) 657 02 19
     site: &site listvycja.org
     address: &address Україна, м. Львів
-    facebook: &facebook https://www.facebook.com/pages/%D0%9B%D0%9C%D0%93%D0%9E-%D0%9B%D1%96%D1%81%D1%82%D0%B2%D0%B8%D1%86%D1%8F/1433298123589114'
+    facebook: &facebook 'https://www.facebook.com/pages/ЛМГО-Ліствиця/1433298123589114'
     google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
   layouts:
     header:
