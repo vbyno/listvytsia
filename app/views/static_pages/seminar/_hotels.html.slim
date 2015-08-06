@@ -3,11 +3,8 @@
     i.center-icon.rounded-x.fa.icon-bg-u.fa-building
   .title-box-v2
     h2 Готелі
-.title-v1.margin-bottom-20
-  p Для учаників семінару пропонуємо готелі в районі ринку "Шувар", а також економ-клас у центральній частині Львова.
-  p Зголошуйтесь і завчасно бронюйте місця за вказаними адресами!
 .row
-  .col-md-3.col-sm-6.col-sm-offset-3.md-margin-bottom-40
+  .col-md-3.col-sm-6.col-sm-offset-1.md-margin-bottom-40
     .easy-block-v2
       .easy-bg-v2
       = image_tag('hotels/sonata.jpg', alt: 'Готель Соната')
@@ -20,3 +17,51 @@
           a href="tel:+380933143019"
             i.fa.fa-phone
             | 093 314 30 19 (Наталія)
+      p
+        | У цьому готелі заброньовано місця на семінар:
+        br
+        | одномісний люкс -- 500 грн
+        br
+        |двомісний номер - 250 грн з особи
+        br
+        |тримісний  номер - 200 грн з особи
+  .col-md-3.col-sm-6.md-margin-bottom-40
+    .easy-block-v2
+      .easy-bg-v2
+      = image_tag('hotels/iskra.jpg', alt: 'Хостел Іскра')
+      h3.margin-top-20= link_to('Хостел "Іскра"', 'http://orendar.com/ua/f5549/')
+      ul.list-unstyled.who
+        li
+          i.fa.fa-home
+          | вул. Монастирського, 1
+          br
+          | (Не в районі Сихова, але достатньо близько ~ 20-30 хв. маршруткою)
+        li
+          a href="tel:+380673105094"
+            i.fa.fa-phone
+            | 067 310-50-94
+        li
+          a href="mailto:hostel.Iskra@gmail.com"
+            i.fa.fa-envelope
+            | hostel.Iskra@gmail.com
+        li
+          i.fa.fa-dollar
+          | В загальних кімнатах – 75 грн.
+          br
+          | В кімнатах підвищеного комфорту – 100 грн. за добу
+  .col-md-3.col-sm-6.md-margin-bottom-40
+    .easy-block-v2
+      .easy-bg-v2
+      = image_tag('hotels/molodizhniy.jpg', alt: 'Хостел Молодіжний')
+      h3.margin-top-20= link_to('Хостел "Молодіжний"', 'http://www.booking.com/hotel/ua/molodizhniy.uk.html?aid=357014;label=gog235jc-hotel-uk-ua-molodizhniy-unspec-ua-com-L%3Auk-O%3Aunk-B%3Aunk-N%3AXX-S%3Abo-U%3Ac;sid=b2c2f349d6fafdb9ca965269a05a00f6;dcid=4;checkin=2015-10-05;checkout=2015-10-06;dist=0;sb_price_type=total;srfid=0c2b84f874e2aea6a670b0acdfcdd9a902e713b3X1;type=total;ucfs=1&')
+      ul.list-unstyled.who
+        li
+          i.fa.fa-home
+          | вул. Володимира Великого, 16
+        li
+          a href="tel:+380675101504"
+            i.fa.fa-phone
+            | 067 510-15-04, 0800 210-017
+        li
+          i.fa.fa-dollar
+          | 100 грн.
