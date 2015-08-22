@@ -11,6 +11,11 @@ gem 'jbuilder'
 gem 'mongoid', '~> 5.0.0.beta'
 gem 'bson_ext'
 
+gem 'devise'
+gem 'devise-i18n'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 gem 'bootstrap-sass'
 gem 'underscore-rails'
 gem 'slim-rails'

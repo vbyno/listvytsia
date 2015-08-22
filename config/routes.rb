@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get :timetable, to: 'static_pages#timetable'
   get :seminar,   to: 'static_pages#seminar'
 
-  resources :contact_forms, only: :create
   resources :articles
+  resources :contact_forms, only: :create
 
+  devise_for :users
   mount Ckeditor::Engine => '/ckeditor'
 end

@@ -6,7 +6,7 @@ class Article
   field :active, type: Mongoid::Boolean
 
   validates :title, :permalink, :content, :active, presence: true
-  validates :permalink, permalink: true
+  validates :permalink, permalink: true, uniqueness: true
 
   def to_param
     permalink
