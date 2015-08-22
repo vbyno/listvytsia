@@ -7,6 +7,9 @@ uk:
     address: &address Україна, м. Львів
     facebook: &facebook 'https://www.facebook.com/pages/ЛМГО-Ліствиця/1433298123589114'
     google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
+  error_messages:
+    invalid_permalink_format: "Посилання не повинно містити пробілів, лише латинські символи і символи '-' та '_'"
+    invalid_email_format: Очікується валідний формат електронної пошти
   layouts:
     header:
       listvytsia: *name
@@ -80,3 +83,16 @@ uk:
               blank: Ім’я не має бути пустим
             message:
               blank: Повідомлення не має бути пустим
+  articles:
+    form:
+      submit: Зберегти
+    index:
+      header: Статті
+    edit:
+      header: Редагування статті
+    new:
+      header: Створення статті
+    create:
+      success: Стаття успішно створена
+    update:
+      success: Стаття успішно оновлена

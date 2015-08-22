@@ -1,8 +1,6 @@
 class EmailValidator < EachValidatorBase
-  REGEXP = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-
   def regexp
-    REGEXP
+    /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   end
 
   def error_message

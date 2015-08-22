@@ -1,0 +1,19 @@
+= simple_form_for article do |f|
+  fieldset.no-padding
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = f.input :title
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = f.input :permalink
+    .row.sky-space-20
+      .col-md-7.col-md-offset-0
+        div
+          = f.input :content
+    .row.sky-space-20
+      .col-md-11.col-md-offset-0
+        div
+          = f.input :active, as: :boolean
+    p= f.button :submit, t('.submit')
