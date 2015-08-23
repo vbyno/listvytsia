@@ -111,6 +111,7 @@ namespace :deploy do
       execute "ln -s #{shared_path}/config/application.yml #{release_path}/config/application.yml"
       execute "ln -s #{shared_path}/Procfile #{release_path}/Procfile"
       execute "ln -s #{shared_path}/system #{release_path}/public/system"
+      execute "ln -s #{shared_path}/public/uploads #{release_path}/public/uploads"
     end
   end
 

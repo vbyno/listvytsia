@@ -16,6 +16,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'pundit'
 
 gem 'bootstrap-sass'
 gem 'underscore-rails'

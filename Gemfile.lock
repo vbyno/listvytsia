@@ -246,6 +246,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    pundit (1.0.1)
+      activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -433,6 +435,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   pry-rails
+  pundit
   quiet_assets
   rails
   rails-i18n

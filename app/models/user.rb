@@ -35,4 +35,17 @@ class User
   # field :locked_at,       type: Time
 
   has_and_belongs_to_many :roles
+
+  def permitted_to?(action, resource)
+    permission_identifiers.any? do |p|
+      p.action_identifier.to_sym == action &&
+      p.resource_identifier.to_sym == resource
+    end
+  end
+
+  private
+
+  def permission_identifiers
+    @permission_identifiers ||= roles.map(&:permissions).flatten
+  end
 end

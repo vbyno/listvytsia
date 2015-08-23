@@ -1,12 +1,16 @@
 class ArticlesController < ApplicationController
   helper_method :articles, :article
 
+  after_action :verify_authorized, except: :index
+  after_action :verify_policy_scoped, only: :index
+
   def index; end
   def show; end
   def edit; end
 
   def new
-    @article ||= Article.new
+    @article ||= articles.new
+    authorize @article
   end
 
   def create
@@ -28,15 +32,15 @@ class ArticlesController < ApplicationController
   private
 
   def articles
-    @articles ||= Article.scoped
+    @articles ||= policy_scope(Article)
   end
 
   def article
-    @article ||= if params[:id]
-      articles.find_by(permalink: params[:id])
-    else
-      articles.new(article_params)
-    end
+    return @article if defined?(@article)
+
+    @article = params[:id] ? articles.find_by(permalink: params[:id]) : articles.new(article_params)
+    @article.present? ? authorize(@article) : skip_authorization
+    @article
   end
 
   def article_params

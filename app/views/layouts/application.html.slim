@@ -11,9 +11,11 @@ html lang==I18n.locale
   body class= "#{controller_name} #{action_name}_page"
     .wrapper
       == render 'layouts/header'
-      == render 'layouts/banner' if current_page?(root_path)
-      .container.content.content-custom
+      - if current_page?(root_path)
         == render 'layouts/messages'
+        == render 'layouts/banner'
+      .container.content.content-custom
+        == render 'layouts/messages' unless current_page?(root_path)
         == yield
       .footer-v1
         == render 'layouts/footer'

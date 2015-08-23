@@ -10,6 +10,7 @@ uk:
   error_messages:
     invalid_permalink_format: "Посилання не повинно містити пробілів, лише латинські символи і символи '-' та '_'"
     invalid_email_format: Очікується валідний формат електронної пошти
+    not_authorized: Ви не маєте дозволів для завершення цієї дії
   actions:
     actions: Дії
     create: Створити
@@ -26,6 +27,11 @@ uk:
       user:
         roles: Ролі
         email: Електронна адреса
+  pundit:
+    default: Ця дія Вам не дозволена
+    article_policy:
+      update?: У Вас немає прав на змінювання статті!
+      create?: Ви не можете створювати нову статтю!
   layouts:
     header:
       listvytsia: *name
