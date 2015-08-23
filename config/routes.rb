@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :contact_forms, only: :create
 
   devise_for :users
+  devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
 end
