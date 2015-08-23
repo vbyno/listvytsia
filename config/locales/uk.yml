@@ -109,18 +109,22 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
-  roles:
-    form:
-      submit: Зберегти
-    role:
-      confirm_msg: Ви справді хочете видалити роль?
-    index:
-      header: Ролі
-    edit:
-      header: Редагування ролі
-    new:
-      header: Створення ролі
-    create:
-      success: Роль успішно створена
-    update:
-      success: Роль успішно оновлена
+  admin:
+    roles:
+      form:
+        submit: Зберегти
+      role:
+        confirm_msg: Ви справді хочете видалити роль?
+      index:
+        header: Ролі
+      edit:
+        header: Редагування ролі
+      new:
+        header: Створення ролі
+      create:
+        success: Роль успішно створена
+      update:
+        success: Роль успішно оновлена
+      destroy:
+        success: Роль успішно видалена
+        fail: Роль не видалена

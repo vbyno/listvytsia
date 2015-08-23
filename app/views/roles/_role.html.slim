@@ -1,9 +1,0 @@
-tr
-  td= link_to role.title, role
-  td
-    span>
-      = link_to edit_role_path(role) do
-        i.fa.fa-pencil
-    span
-      = link_to role_path(role), data: { method: :delete, confirm: t('.confirm_msg') } do
-        i.fa.fa-trash

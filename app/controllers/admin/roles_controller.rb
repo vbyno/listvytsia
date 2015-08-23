@@ -1,4 +1,4 @@
-class RolesController < ApplicationController
+class Admin::RolesController < Admin::BaseController
   helper_method :roles, :role
 
   def index; end
@@ -11,7 +11,7 @@ class RolesController < ApplicationController
 
   def create
     if role.save
-      redirect_to edit_role_path(role), notice: t('.success')
+      redirect_to admin_roles_path, notice: t('.success')
     else
       render :new
     end
@@ -19,10 +19,14 @@ class RolesController < ApplicationController
 
   def update
     if role.update_attributes(role_params)
-      redirect_to edit_role_path(role.reload), notice: t('.success')
+      redirect_to admin_roles_path, notice: t('.success')
     else
       render :edit
     end
+  end
+
+  def destroy
+    redirect_to :back, notice: (role.destroy ? t('.success') : t('.fail'))
   end
 
   private

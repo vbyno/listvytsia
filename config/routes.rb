@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   get :timetable, to: 'static_pages#timetable'
   get :seminar,   to: 'static_pages#seminar'
 
-  resources :articles, :roles
+  resources :articles
   resources :contact_forms, only: :create
+
+  namespace :admin do
+    resources :roles
+  end
 
   devise_for :users
   devise_for :admins

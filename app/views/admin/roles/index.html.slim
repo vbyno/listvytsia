@@ -5,4 +5,4 @@ h1= t('.header')
       th= Role.human_attribute_name(:title)
       th= t('actions.actions')
     = render roles
-= link_to t('actions.new'), new_role_path, class: 'btn btn-big'
+= link_to t('actions.new'), new_admin_role_path, class: 'btn btn-big'
