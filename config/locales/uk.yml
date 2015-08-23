@@ -10,6 +10,19 @@ uk:
   error_messages:
     invalid_permalink_format: "Посилання не повинно містити пробілів, лише латинські символи і символи '-' та '_'"
     invalid_email_format: Очікується валідний формат електронної пошти
+  actions:
+    actions: Дії
+    create: Створити
+    update: Змінити
+    delete: Видалити
+    new: Створити
+    edit: Змінити
+  mongoid:
+    attributes:
+      role:
+        title: Назва
+        users: Користувачі
+        permissions: Дозволи
   layouts:
     header:
       listvytsia: *name
@@ -96,3 +109,18 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
+  roles:
+    form:
+      submit: Зберегти
+    role:
+      confirm_msg: Ви справді хочете видалити роль?
+    index:
+      header: Ролі
+    edit:
+      header: Редагування ролі
+    new:
+      header: Створення ролі
+    create:
+      success: Роль успішно створена
+    update:
+      success: Роль успішно оновлена

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'rails'
+gem 'rails-i18n'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
