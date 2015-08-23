@@ -23,6 +23,9 @@ uk:
         title: Назва
         users: Користувачі
         permissions: Дозволи
+      user:
+        roles: Ролі
+        email: Електронна адреса
   layouts:
     header:
       listvytsia: *name
@@ -128,3 +131,21 @@ uk:
       destroy:
         success: Роль успішно видалена
         fail: Роль не видалена
+    users:
+      form:
+        submit: Зберегти
+      user:
+        confirm_msg: Ви справді хочете видалити користувача?
+      index:
+        header: Користувачі
+      edit:
+        header: Редагування користувача
+      new:
+        header: Створення користувача
+      create:
+        success: Користувач успішно створений
+      update:
+        success: Користувач успішно оновлений
+      destroy:
+        success: Користувач успішно видалений
+        fail: Користувач не видалений

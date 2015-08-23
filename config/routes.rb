@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :contact_forms, only: :create
 
   namespace :admin do
-    resources :roles
+    resources :roles, :users
   end
 
   devise_for :users
