@@ -11,3 +11,6 @@
   h2= t('.title_consultations')
 .google-calendar
   = render 'static_pages/timetable/calendar_consultations'
+
+- content_for :title do
+  = t('layouts.header.timetable')

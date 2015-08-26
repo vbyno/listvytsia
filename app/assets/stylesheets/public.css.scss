@@ -1,7 +1,20 @@
 $primary-color: #3498db;
+$main-font-size: 14px;
 
 .content-custom {
-  font-size: 14px;
+  font-size: $main-font-size;
+  article {
+    blockquote {
+      border: none;
+      padding: 18px;
+      font-size: $main-font-size;
+      background: #f3f3f3;
+      border-left: solid 2px $primary-color;
+    }
+    p {
+      text-indent: 25pt;
+    }
+  }
 }
 
 .google-calendar {

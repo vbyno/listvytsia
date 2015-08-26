@@ -1,2 +1,4 @@
-h1= t('.header')
 = render collection: articles, partial: 'article'
+
+- content_for :title do
+  = t('layouts.header.articles')
