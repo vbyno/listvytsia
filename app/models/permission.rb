@@ -5,10 +5,9 @@ class Permission
   RESOURCES = %w( articles roles ).freeze
 
   embedded_in :role
-  field :resource_identifier
-  field :action_identifier
+  field :resource
+  field :action
 
-  validates :resource_identifier, presence: true, inclusion: { in: RESOURCES }
-  validates :action_identifier, presence: true,
-            uniqueness: { scope: :resource_identifier }, inclusion: { in: ACTIONS }
+  validates :resource, presence: true, inclusion: { in: RESOURCES }
+  validates :action, presence: true, uniqueness: { scope: :resource }, inclusion: { in: ACTIONS }
 end

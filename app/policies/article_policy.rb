@@ -1,7 +1,7 @@
 class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(active: true)
+      scope.where(published: true)
     end
   end
 
@@ -12,7 +12,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def show?
-    article.active? || article.author?(user)
+    article.published? || article.author?(user)
   end
 
   def create?

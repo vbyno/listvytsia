@@ -9,9 +9,9 @@
         .col-md-7
           = f.simple_fields_for :permissions, permission do |ff|
             .col-md-5
-              div= ff.input :resource_identifier, as: :select, label: false, collection: Permission::RESOURCES
+              div= ff.input :resource, as: :select, label: false, collection: Permission::RESOURCES
             .col-md-5
-              div= ff.input :action_identifier, as: :select, label: false, collection: Permission::ACTIONS
+              div= ff.input :action, as: :select, label: false, collection: Permission::ACTIONS
             .col-md-1
               div= ff.input :_destroy, as: :boolean, label: t('actions.delete')
     .row.sky-space-20

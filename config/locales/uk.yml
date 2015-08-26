@@ -27,6 +27,18 @@ uk:
       user:
         roles: Ролі
         email: Електронна адреса
+      article:
+        permalink: Посилання
+        title: Заголовок
+        published: Опублікована
+        content: Контент
+        author: Автор
+    errors:
+      messages:
+        validations:
+          message: There was validation errors on %{document}
+          summary: "Errors:\n    %{errors}"
+          resolution: Check the instances for this model looking for missing fields or wrong values.
   pundit:
     default: Ця дія Вам не дозволена
     article_policy:

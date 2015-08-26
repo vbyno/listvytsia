@@ -34,12 +34,13 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
-  has_and_belongs_to_many :roles
+  has_many :articles, inverse_of: :author, autosave: true
+  has_and_belongs_to_many :roles, autosave: true
 
   def permitted_to?(action, resource)
     permission_identifiers.any? do |p|
-      p.action_identifier.to_sym == action &&
-      p.resource_identifier.to_sym == resource
+      p.action.to_sym == action &&
+      p.resource.to_sym == resource
     end
   end
 

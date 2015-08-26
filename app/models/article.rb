@@ -3,10 +3,10 @@ class Article
   field :permalink
   field :title
   field :content
-  field :active, type: Mongoid::Boolean
-  belongs_to :author, class_name: 'User'
+  field :published, type: Mongoid::Boolean
+  belongs_to :author, class_name: 'User', inverse_of: :articles
 
-  validates :title, :permalink, :content, :active, :author, presence: true
+  validates :title, :permalink, :content, :published, :author, presence: true
   validates :permalink, permalink: true, uniqueness: true
 
   def to_param

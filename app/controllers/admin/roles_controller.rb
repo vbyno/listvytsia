@@ -40,7 +40,7 @@ class Admin::RolesController < Admin::BaseController
   end
 
   def role_params
-    params.require(:role).permit(:title, permissions_attributes: [:id, :resource_identifier,
-                                                                  :action_identifier, :_destroy])
+    params.require(:role).permit(:title,
+                                 permissions_attributes: [:id, :resource, :action, :_destroy])
   end
 end

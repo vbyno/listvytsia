@@ -56,10 +56,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'faker'
   gem 'thin'
-  gem 'rspec-rails'
   gem 'byebug'
   gem 'web-console'
   gem 'spring'
@@ -71,8 +68,11 @@ group :production do
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'mongoid-rspec', '2.3.0.beta'
+  gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'fuubar', require: false
 end
