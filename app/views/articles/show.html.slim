@@ -1,2 +1,5 @@
-h1= article.title
-== article.content
+article.col-md-8.col-md-offset-2
+  == article.content
+
+- content_for :title do
+  = article.title

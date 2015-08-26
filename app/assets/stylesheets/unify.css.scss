@@ -34,3 +34,17 @@ $primary-color: #3498db;
 .map-high {
   height: 420px;
 }
+
+.topbar-v3 {
+  .right-topbar {
+    li {
+      text-transform: none;
+    }
+  }
+}
+
+article {
+  p {
+    text-indent: 25pt;
+  }
+}

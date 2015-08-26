@@ -1,7 +1,11 @@
 class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(published: true)
+      if user.permitted_to?(:update, :articles)
+        scope.for_author(user)
+      else
+        scope.published
+      end
     end
   end
 

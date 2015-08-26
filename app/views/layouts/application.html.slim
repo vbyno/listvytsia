@@ -1,7 +1,7 @@
 doctype html
 html lang==I18n.locale
   head
-    title= content_for?(:title) ? yield(:title) : t('site_info.name')
+    title= content_for?(:title) ? "#{yield(:title)} | #{t('site_info.name')}" : t('site_info.name')
     link href="favicon.ico" rel=("shortcut icon")
     meta name="description" content="#{content_for?(:description) ? yield(:description) : t('site_info.name')}"
     meta name="viewport" content="width=device-width, initial-scale=1.0"

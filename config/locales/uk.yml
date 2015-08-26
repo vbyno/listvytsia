@@ -32,6 +32,7 @@ uk:
         title: Заголовок
         published: Опублікована
         content: Контент
+        content_intro: Ввідний текст
         author: Автор
     errors:
       messages:
@@ -51,6 +52,8 @@ uk:
       timetable: Розклад
       seminar: Семінар
       contacts: &contacts Контакти
+      you_are_logged_in_as: Ви увійшли як
+      log_out: Вийти
     banner:
       main_text: *name
       subtext: Львівська міська громадська організація
@@ -167,3 +170,7 @@ uk:
       destroy:
         success: Користувач успішно видалений
         fail: Користувач не видалений
+  simple_form:
+    labels:
+      article:
+        published: Опублікувати
