@@ -1,4 +1,5 @@
 class EmailValidator < EachValidatorBase
+  # Need this constant for ContactForm
   REGEXP = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 
   def regexp

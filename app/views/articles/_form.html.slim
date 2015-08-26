@@ -1,0 +1,16 @@
+= simple_form_for article do |f|
+  fieldset.no-padding
+    .row.sky-space-20
+      .col-md-3
+        div= f.input :title
+        div= f.input :published, as: :boolean
+        div= f.input :permalink
+      .col-md-6
+        div= f.input :content_intro, as: :text, input_html: { rows: 7 }
+    .row.sky-space-20
+      .col-md-9.col-md-offset-0
+        div= f.cktext_area :content
+    .row.sky-space-20
+      .col-md-9.col-md-offset-0
+        br
+        div.pull-right= f.button :submit, t('.submit')

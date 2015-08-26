@@ -29,6 +29,7 @@ db/*.sqlite3
 .sass-cache
 /config/config.yml
 /config/database.yml
+/config/mongoid.yml
 /config/application.yml
 /coverage.data
 /coverage/
@@ -42,6 +43,7 @@ db/*.sqlite3
 /public/stylesheets/compiled
 /public/system/*
 /public/assets/*
+/public/uploads/*
 /spec/tmp/*
 /cache
 /capybara*

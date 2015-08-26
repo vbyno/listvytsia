@@ -1,0 +1,8 @@
+h1= t('.header')
+.col-md-7
+  table.table.table-striped
+    tr
+      th= Role.human_attribute_name(:title)
+      th= t('actions.actions')
+    = render roles
+= link_to t('actions.new'), new_admin_role_path, class: 'btn btn-big'

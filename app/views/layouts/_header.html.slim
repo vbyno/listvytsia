@@ -1,5 +1,19 @@
 .header-v5
   .topbar-v3
+    - if current_user.present?
+      .container
+        .row
+          .col-sm-6.col-sm-offset-6
+            ul.list-inline.right-topbar.pull-right
+              li
+                = t('.you_are_logged_in_as')
+                span<
+                  strong= current_user.email
+              li
+                ||
+              li
+                = link_to t('.log_out'), destroy_user_session_path(current_user), method: :delete
+
   .navbar.navbar-default.mega-menu role='navigation'
     .container
       .navbar-header
@@ -18,5 +32,7 @@
             = link_to t('.timetable'), timetable_path
           li class=('active' if current_page?(seminar_path))
             = no_turbolink_link_to t('.seminar'), seminar_path
+          li class=('active' if current_page?(articles_path))
+            = link_to t('.articles'), articles_path
           li class=('active' if current_page?(contacts_path))
             = link_to t('.contacts'), contacts_path

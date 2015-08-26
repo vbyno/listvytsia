@@ -1,0 +1,15 @@
+doctype html
+html lang==I18n.locale
+  head
+    title= content_for?(:title) ? yield(:title) : t('site_info.name')
+    link href="favicon.ico" rel=("shortcut icon")
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : t('site_info.name')}"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
+    == javascript_include_tag 'application', 'data-turbolinks-track' => true
+    == csrf_meta_tags
+  body class= "admin #{controller_name} #{action_name}_page"
+    .wrapper
+      .container.content.content-custom
+        == render 'layouts/messages'
+        == yield
