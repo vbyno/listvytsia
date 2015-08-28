@@ -18,33 +18,6 @@ uk:
     delete: Видалити
     new: Створити
     edit: Змінити
-  mongoid:
-    attributes:
-      role:
-        title: Назва
-        users: Користувачі
-        permissions: Дозволи
-      user:
-        roles: Ролі
-        email: Електронна адреса
-      article:
-        permalink: Посилання
-        title: Заголовок
-        published: Опублікована
-        content: Контент
-        content_intro: Ввідний текст
-        author: Автор
-    errors:
-      messages:
-        validations:
-          message: There was validation errors on %{document}
-          summary: "Errors:\n    %{errors}"
-          resolution: Check the instances for this model looking for missing fields or wrong values.
-  pundit:
-    default: Ця дія Вам не дозволена
-    article_policy:
-      update?: У Вас немає прав на змінювання статті!
-      create?: Ви не можете створювати нову статтю!
   layouts:
     header:
       listvytsia: *name
@@ -100,26 +73,6 @@ uk:
       invalid_captcha: Ви не підтвердили, що ви не робот
     thank_you_notice:
       message: Ваше повідомлення надіслане успішно!
-  mail_form:
-    models:
-      contact_form: Ваша контактна форма
-    attributes:
-      contact_form:
-        name: Ім’я
-        email: E-mail
-        message: Повідомлення
-    errors:
-      models:
-        contact_form:
-          attributes:
-            email:
-              invalid: Неправильно введена email-адреса
-              blank: Email-адреса не має бути пустою
-            name:
-              invalid: Неправильне ім’я
-              blank: Ім’я не має бути пустим
-            message:
-              blank: Повідомлення не має бути пустим
   articles:
     form:
       submit: Зберегти
@@ -133,44 +86,3 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
-  admin:
-    roles:
-      form:
-        submit: Зберегти
-      role:
-        confirm_msg: Ви справді хочете видалити роль?
-      index:
-        header: Ролі
-      edit:
-        header: Редагування ролі
-      new:
-        header: Створення ролі
-      create:
-        success: Роль успішно створена
-      update:
-        success: Роль успішно оновлена
-      destroy:
-        success: Роль успішно видалена
-        fail: Роль не видалена
-    users:
-      form:
-        submit: Зберегти
-      user:
-        confirm_msg: Ви справді хочете видалити користувача?
-      index:
-        header: Користувачі
-      edit:
-        header: Редагування користувача
-      new:
-        header: Створення користувача
-      create:
-        success: Користувач успішно створений
-      update:
-        success: Користувач успішно оновлений
-      destroy:
-        success: Користувач успішно видалений
-        fail: Користувач не видалений
-  simple_form:
-    labels:
-      article:
-        published: Опублікувати

@@ -1,0 +1,17 @@
+uk:
+  mongoid:
+    attributes:
+      role:
+        title: Назва
+        users: Користувачі
+        permissions: Дозволи
+      user:
+        roles: Ролі
+        email: Електронна адреса
+      article:
+        permalink: Посилання
+        title: Заголовок
+        published: Опублікована
+        content: Контент
+        content_intro: Ввідний текст
+        author: Автор

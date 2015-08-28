@@ -1,0 +1,21 @@
+uk:
+  mail_form:
+    models:
+      contact_form: Ваша контактна форма
+    attributes:
+      contact_form:
+        name: Ім’я
+        email: E-mail
+        message: Повідомлення
+    errors:
+      models:
+        contact_form:
+          attributes:
+            email:
+              invalid: Неправильно введена email-адреса
+              blank: Email-адреса не має бути пустою
+            name:
+              invalid: Неправильне ім’я
+              blank: Ім’я не має бути пустим
+            message:
+              blank: Повідомлення не має бути пустим
