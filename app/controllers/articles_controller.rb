@@ -14,6 +14,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    article.author ||= current_user
+
     if article.save
       redirect_to edit_article_path(article), notice: t('.success')
     else
