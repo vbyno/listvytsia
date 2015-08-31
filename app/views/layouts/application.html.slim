@@ -6,7 +6,6 @@ html lang==I18n.locale
     meta name="description" content="#{content_for?(:description) ? yield(:description) : t('site_info.name')}"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
-    == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
   body class= "#{controller_name} #{action_name}_page"
     .wrapper
@@ -20,3 +19,4 @@ html lang==I18n.locale
       .footer-v1
         == render 'layouts/footer'
         == render 'layouts/copyright'
+  == javascript_include_tag 'application', 'data-turbolinks-track' => true
