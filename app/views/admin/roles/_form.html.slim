@@ -2,7 +2,8 @@
   fieldset.no-padding
     .row.sky-space-20
       .col-md-7
-        div= f.input :title
+        div= f.input :title, input_html: { 'ng-model' => 'newRole.title' }
+        span {{newRole.title}}
     .row.sky-space-20
       - role.permissions.build
       - role.permissions.each do |permission|
