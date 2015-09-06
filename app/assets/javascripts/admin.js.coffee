@@ -1,10 +1,14 @@
 #= require jquery
 #= require jquery_ujs
 #= require bootstrap-sprockets
-#= require angular
-#= require angular-resource
-#= require angular-rails-templates
 #= require turbolinks
 
-#= require ./admin-module
-#= require_tree ./admin
+#= require angular
+#= require angular-resource
+#= require angular-route
+#= require angular-rails-templates
+
+#= require ./admin/modules
+#= require_tree ./admin/config
+#= require_tree ./admin/controllers
+#= require_tree ./admin/views

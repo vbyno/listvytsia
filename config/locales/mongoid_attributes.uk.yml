@@ -1,5 +1,9 @@
 uk:
   mongoid:
+    models:
+      role:
+        one: Роль
+        other: Ролі
     attributes:
       role:
         title: Назва

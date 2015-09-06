@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :contact_forms, only: :create
 
   namespace :admin do
+    root to: 'dashboard#index'
     resources :roles, :users
   end
 
