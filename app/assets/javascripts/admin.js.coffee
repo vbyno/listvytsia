@@ -6,6 +6,5 @@
 #= require angular-rails-templates
 #= require turbolinks
 
-#= require admin/main
-#= require admin/role
-#= require_tree ./admin/templates
+#= require ./admin-module
+#= require_tree ./admin

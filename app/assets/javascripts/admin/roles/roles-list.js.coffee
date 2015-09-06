@@ -1,8 +1,7 @@
-app = angular.module('role', ['ngResource', 'templates']);
-
-app.directive('rolesList', ->
+angular.module('roles', ['ngResource', 'templates'])
+.directive('rolesList', ->
   restrict: 'E',
-  templateUrl: 'admin/templates/roles-list.html'
+  templateUrl: 'admin/roles/list.html'
   controller: (($scope, $resource) ->
     Role = $resource('/admin/roles/:id.json', {id: '@id'}, {update: {method: 'PUT'}});
     $scope.roles = Role.query();
