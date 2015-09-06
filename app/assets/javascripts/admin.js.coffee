@@ -3,6 +3,9 @@
 #= require bootstrap-sprockets
 #= require angular
 #= require angular-resource
+#= require angular-rails-templates
 #= require turbolinks
-#= require admin/listvytsia
-#= require_tree ./admin/role
+
+#= require admin/main
+#= require admin/role
+#= require_tree ./admin/templates

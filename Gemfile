@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'mail_form'
 
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'sprockets', '2.12.3' # http://www.ademartutor.com/angular-rails-templates-gem-error-with-sprockets-3-0-o/
 gem 'jquery-rails'
 gem 'underscore-rails'
 gem 'coffee-rails'
