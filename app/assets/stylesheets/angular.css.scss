@@ -1,0 +1,11 @@
+$invalid-color: #FA787E;
+$valid-color: #78FA89;
+
+.ng-dirty {
+  &.ng-invalid {
+    border-color: $invalid-color;
+  }
+  &.ng-valid {
+    border-color: $valid-color;
+  }
+}

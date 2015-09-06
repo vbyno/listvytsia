@@ -248,6 +248,8 @@ GEM
       activesupport (>= 3.0.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
+    rabl (0.11.6)
+      activesupport (>= 2.3.14)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -435,6 +437,7 @@ DEPENDENCIES
   pry-rails
   pundit
   quiet_assets
+  rabl
   rails
   rails-i18n
   rails_layout

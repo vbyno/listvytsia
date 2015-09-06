@@ -5,4 +5,4 @@
 #= require angular-resource
 #= require turbolinks
 #= require admin/listvytsia
-#= require_tree ./admin
+#= require_tree ./admin/role

@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'underscore-rails'
 gem 'coffee-rails'
 gem 'turbolinks'
+gem 'rabl'
 
 gem 'slim-rails'
 gem 'sass-rails'
