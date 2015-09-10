@@ -85,9 +85,9 @@ namespace :deploy do
       execute "rm -f /var/www/log/upstart"
       sudo "ln -sf /var/log/upstart /var/www/log/upstart"
 
-      upload!('shared/mongoid.yml', "#{shared_path}/config/mongoid.yml")
+      upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
       upload!('config/application.yml', "#{shared_path}/config/application.yml")
-      upload!('Procfile', "#{shared_path}/Procfile")
+      upload!('shared/Procfile', "#{shared_path}/Procfile")
 
       # Commented this because several sites will be stored on one nginx server
       # so before first deploy of new app fix nginx.conf by hands

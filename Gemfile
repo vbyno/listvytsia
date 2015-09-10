@@ -31,6 +31,7 @@ gem 'gmaps4rails'
 gem 'awesome_print'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
+gem 'foreman'
 
 group :development do
   gem 'better_errors'
