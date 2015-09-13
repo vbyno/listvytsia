@@ -9,7 +9,10 @@ html lang==I18n.locale
     == csrf_meta_tags
   body class= "admin #{controller_name} #{action_name}_page"
     .wrapper
+      == render 'layouts/admin/header'
       .container.content.content-custom
         == render 'layouts/messages'
         == yield
+      .footer-v1
+        == render 'layouts/admin/footer'
   == javascript_include_tag 'admin', 'data-turbolinks-track' => true

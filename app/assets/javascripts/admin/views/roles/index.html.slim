@@ -1,5 +1,5 @@
 .col-md-7
-  h1= Role.model_name.human(count: Float::INFINITY)
+  h1= Role.human_list_name
   table.table.table-striped
     tr
       th= Role.human_attribute_name(:title)
