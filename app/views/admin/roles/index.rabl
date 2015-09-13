@@ -1,2 +1,2 @@
 extends 'admin/roles/role'
-collection roles
+collection roles.map { |role| present(role) }

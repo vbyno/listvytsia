@@ -1,5 +1,5 @@
-attributes :title
+attributes :id, :title
 
 child :permissions do
-  attributes :id, :action, :resource
+  attributes :action, :resource
 end

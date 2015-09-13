@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::BaseController
+  respond_to :json
   helper_method :users, :user
 
   def index; end

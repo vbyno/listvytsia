@@ -1,2 +1,2 @@
 extends 'admin/roles/role'
-object role
+object present(role)
