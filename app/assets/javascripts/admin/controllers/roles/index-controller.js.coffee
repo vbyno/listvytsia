@@ -8,8 +8,9 @@ angular.module('admin.controllers')
   );
 
   @deleteRole = (role) ->
+    role = role
     $http.delete("/admin/roles/#{role.id}").success((data) ->
-      console.log(data);
+      controller.roles.splice(controller.roles.indexOf(role), 1);
     );
 
   controller;

@@ -8,8 +8,8 @@
       td {{role.title}}
       td
         span>
-          a href= '#' data-ng-click= 'editRole()'
+          a href= '#/roles' data-ng-click= 'editRole()'
             i.fa.fa-pencil
         span
-          a href= '#' data-ng-click= 'indexCtrl.deleteRole(role)'
+          a href= '#/roles' data-ng-click= 'indexCtrl.deleteRole(role)' data-ng-confirm-click= I18n.t('admin.roles.role.confirm_msg')
             i.fa.fa-trash
