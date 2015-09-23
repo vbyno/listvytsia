@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('admin.config', ['ngRoute', 'templates']);
-angular.module('admin.controllers', []);
+angular.module('admin.controllers', ['ngRoute']);
 
 angular.module('admin', ['admin.config', 'admin.controllers']);
 

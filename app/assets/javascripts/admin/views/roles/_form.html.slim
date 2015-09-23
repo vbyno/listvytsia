@@ -1,0 +1,8 @@
+.form-group.required
+  label.string.required.control-label for="role_title"
+    abbr title="required"
+      | *
+      =< Role.human_attribute_name(:title)
+  input#role_title.string.required.form-control type='text' data-ng-model='ctrl.role.title' required=true autofocus=true
+.form-group
+  input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admin.roles.form.submit') data-ng-disabled='!roleForm.$valid'

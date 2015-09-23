@@ -1,15 +1,17 @@
-.col-md-7
-  h1= Role.human_list_name
-  table.table.table-striped
-    tr
-      th= Role.human_attribute_name(:title)
-      th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
-    tr data-ng-repeat= 'role in indexCtrl.roles'
-      td {{role.title}}
-      td
-        span>
-          a href= '#/roles' data-ng-click= 'editRole()'
-            i.fa.fa-pencil
-        span
-          a href= '#/roles' data-ng-click= 'indexCtrl.deleteRole(role)' data-ng-confirm-click= I18n.t('admin.roles.role.confirm_msg')
-            i.fa.fa-trash
+h1
+  = Role.human_list_name
+  a.pull-right href= '#/roles/new'
+    i.fa.fa-plus
+table.table.table-striped
+  tr
+    th= Role.human_attribute_name(:title)
+    th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tr data-ng-repeat= 'role in indexCtrl.roles'
+    td {{role.title}}
+    td
+      span>
+        a href= '#/roles/{{role.id}}/edit'
+          i.fa.fa-pencil
+      span
+        a href= '#/roles' data-ng-click= 'indexCtrl.deleteRole(role)' data-ng-confirm-click= I18n.t('admin.roles.role.confirm_msg')
+          i.fa.fa-trash

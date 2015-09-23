@@ -9,6 +9,16 @@ angular.module('admin.config')
     controller: 'RolesIndexController',
     controllerAs: 'indexCtrl'
   })
+  .when('/roles/new', {
+    templateUrl: 'admin/views/roles/new.html',
+    controller: 'RolesNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/roles/:id/edit', {
+    templateUrl: 'admin/views/roles/edit.html',
+    controller: 'RolesEditController',
+    controllerAs: 'ctrl'
+  })
   .when('/users', {
     templateUrl: 'admin/views/users/index.html'
   })
