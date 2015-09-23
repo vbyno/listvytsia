@@ -9,7 +9,9 @@ html lang==I18n.locale
     == csrf_meta_tags
   body class= "admin #{controller_name} #{action_name}_page"
     .wrapper
-      == render 'layouts/admin/header'
+      .header-v5
+        == render 'layouts/admin/login_info'
+        == render 'layouts/admin/navigation'
       .container.content.content-custom
         == render 'layouts/messages'
         == yield

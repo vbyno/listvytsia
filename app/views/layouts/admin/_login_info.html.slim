@@ -1,0 +1,16 @@
+.topbar-v3.primary-background-color
+  .container
+    .row
+      .col-md-6.col-sm-6
+        ul.list-inline.right-topbar
+          li= link_to t('.dashboard'), admin_root_path
+      .col-md-6.col-sm-6
+        ul.list-inline.right-topbar.pull-right
+          li
+            = t('.logged_in_as')
+            span<
+              strong= current_admin.email
+          li
+            ||
+          li
+            = link_to t('.log_out'), destroy_admin_session_path(current_admin), method: :delete

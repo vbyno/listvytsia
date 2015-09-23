@@ -1,0 +1,13 @@
+.topbar-v3
+  .container
+    .row
+      .col-sm-6.col-sm-offset-6
+        ul.list-inline.right-topbar.pull-right
+          li
+            = t('.logged_in_as')
+            span<
+              strong= current_user.email
+          li
+            ||
+          li
+            = link_to t('.log_out'), destroy_user_session_path(current_user), method: :delete

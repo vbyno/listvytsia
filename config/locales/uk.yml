@@ -19,14 +19,20 @@ uk:
     new: Створити
     edit: Змінити
   layouts:
+    admin:
+      login_info:
+        logged_in_as: Ви увійшли як адміністратор
+        log_out: Вийти
+        dashboard: Панель адміністратора
+    login_info:
+      logged_in_as: Ви увійшли як користувач
+      log_out: Вийти
     header:
       listvytsia: *name
       articles: Статті
       timetable: Розклад
       seminar: Семінар
       contacts: &contacts Контакти
-      you_are_logged_in_as: Ви увійшли як
-      log_out: Вийти
     banner:
       main_text: *name
       subtext: Львівська міська громадська організація

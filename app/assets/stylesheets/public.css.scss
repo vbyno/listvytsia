@@ -24,3 +24,7 @@ $main-font-size: 14px;
     background: #fff image-url('ajax-loader.gif') no-repeat 50% 50% !important;
   }
 }
+
+.primary-background-color {
+  background-color: $primary-color;
+}
