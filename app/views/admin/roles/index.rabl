@@ -1,2 +1,2 @@
-extends 'admin/roles/role'
+attributes :id, :title
 collection roles.map { |role| present(role) }

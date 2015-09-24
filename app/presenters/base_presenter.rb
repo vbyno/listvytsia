@@ -1,5 +1,5 @@
 class BasePresenter < SimpleDelegator
-  delegate :t, to: :h
+  delegate :t, :present, to: :h
 
   def self.presents(name)
     define_method(name) do
