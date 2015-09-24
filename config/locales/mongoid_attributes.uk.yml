@@ -13,6 +13,9 @@ uk:
       article:
         one: Стаття
         other: Статті
+      permission:
+        one: Дозвіл
+        other: Дозволи
     attributes:
       role:
         title: Назва

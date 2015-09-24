@@ -10,7 +10,7 @@ table.table.table-striped
     td {{role.title}}
     td
       span>
-        a href= '#/roles/{{role.id}}/edit'
+        a data-ng-href= '#/roles/{{role.id}}/edit'
           i.fa.fa-pencil
       span
         a href= '#/roles' data-ng-click= 'indexCtrl.deleteRole(role)' data-ng-confirm-click= I18n.t('admin.roles.role.confirm_msg')
