@@ -16,7 +16,12 @@ angular.module('admin.controllers')
     controller.role.permissions.push({});
 
   @deletePermission = (permission) ->
-    controller.role.permissions.splice(controller.role.permissions.indexOf(permission), 1);
+    $http.put("/admin/roles/#{controller.role.id}", @_deletePermissionParams(permission)).success( ->
+      controller.role.permissions.splice(controller.role.permissions.indexOf(permission), 1);
+    );
+
+  @locationPath = () ->
+    "##{$location.path()}";
 
   @_roleParams = () ->
     role: {
@@ -24,8 +29,13 @@ angular.module('admin.controllers')
       permissions_attributes: controller.role.permissions
     };
 
-  @locationPath = () ->
-    "##{$location.path()}";
+  @_deletePermissionParams = (permission) ->
+    role: {
+      permissions_attributes: [{
+        id: permission.id,
+        _destroy: true
+      }];
+    };
 
   controller;
 ]);
