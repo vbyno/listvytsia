@@ -13,3 +13,4 @@
 #= require_tree ./admin/config
 #= require_tree ./admin/controllers
 #= require_tree ./admin/views
+#= require_tree ./admin/directives

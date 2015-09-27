@@ -19,7 +19,7 @@ angular.module('admin.controllers')
 
   @_userParams = () ->
     user: {
-      email: controller.user.email
+      email: controller.user.email,
       role_ids: controller.user.role_ids
     };
 

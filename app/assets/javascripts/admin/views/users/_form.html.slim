@@ -9,7 +9,7 @@
   label.check_boxes.optional.control-label= User.human_attribute_name(:roles)
   span.checkbox data-ng-repeat= 'role in ctrl.allRoles'
     label
-      input.check_boxes.optional type="checkbox" data-ng-value="'{{role.id}}'"
+      input.check_boxes.optional type="checkbox" checklist-model="ctrl.user.role_ids" checklist-value="role.id"
       | {{role.title}}
   .form-group
     input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admin.users.form.submit') data-ng-disabled='!userForm.$valid'
