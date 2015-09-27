@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'dashboard#index'
-    resources :roles, :users
+    resources :roles, except: [:new, :edit]
+    resources :users, except: [:new, :edit, :destroy]
   end
 
   devise_for :users

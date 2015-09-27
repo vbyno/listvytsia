@@ -5,10 +5,6 @@ class Admin::RolesController < Admin::BaseController
   def index; end
   def show; end
 
-  def new
-    @role ||= Role.new
-  end
-
   def create
     role.save
   end
@@ -24,7 +20,7 @@ class Admin::RolesController < Admin::BaseController
   private
 
   def roles
-    @roles ||= Role.scoped
+    @roles ||= Role.all
   end
 
   def role

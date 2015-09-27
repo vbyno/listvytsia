@@ -1,8 +1,0 @@
-h1= t('.header')
-.col-md-7
-  table.table.table-striped
-    tr
-      th= User.human_attribute_name(:email)
-      th= t('actions.actions')
-    = render users
-= link_to t('actions.new'), new_admin_user_path, class: 'btn btn-big'

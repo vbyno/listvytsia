@@ -4,36 +4,19 @@ class Admin::UsersController < Admin::BaseController
 
   def index; end
   def show; end
-  def edit; end
-
-  def new
-    @user ||= User.new
-  end
 
   def create
-    if user.save
-      redirect_to admin_users_path, notice: t('.success')
-    else
-      render :new
-    end
+    user.save
   end
 
   def update
-    if user.update_attributes(user_params)
-      redirect_to admin_users_path, notice: t('.success')
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    redirect_to :back, notice: (user.destroy ? t('.success') : t('.fail'))
+    user.update_attributes(user_params)
   end
 
   private
 
   def users
-    @users ||= User.scoped
+    @users ||= User.all
   end
 
   def user

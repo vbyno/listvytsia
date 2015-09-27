@@ -20,7 +20,14 @@ angular.module('admin.config')
     controllerAs: 'ctrl'
   })
   .when('/users', {
-    templateUrl: 'admin/views/users/index.html'
+    templateUrl: 'admin/views/users/index.html',
+    controller: 'UsersIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/users/:id/edit', {
+    templateUrl: 'admin/views/users/edit.html',
+    controller: 'UsersEditController',
+    controllerAs: 'ctrl'
   })
   .otherwise({
     redirectTo: '/'
