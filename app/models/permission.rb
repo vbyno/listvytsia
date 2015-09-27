@@ -1,4 +1,4 @@
-class Permission
+class Permission < Base
   include Mongoid::Document
 
   ACTIONS = %w( read create update ).freeze

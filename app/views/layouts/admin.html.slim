@@ -2,14 +2,20 @@ doctype html
 html lang==I18n.locale
   head
     title= content_for?(:title) ? yield(:title) : t('site_info.name')
-    link href="favicon.ico" rel=("shortcut icon")
     meta name="description" content="#{content_for?(:description) ? yield(:description) : t('site_info.name')}"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    == favicon_link_tag 'favicon.ico'
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
-    == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
   body class= "admin #{controller_name} #{action_name}_page"
     .wrapper
+      .header-v5
+        == render 'layouts/admin/login_info'
+        == render 'layouts/admin/navigation'
       .container.content.content-custom
         == render 'layouts/messages'
-        == yield
+        .col-md-7
+          == yield
+      .footer-v1
+        == render 'layouts/admin/footer'
+  == javascript_include_tag 'admin', 'data-turbolinks-track' => true

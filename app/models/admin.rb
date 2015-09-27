@@ -1,4 +1,4 @@
-class Admin
+class Admin < Base
   include Mongoid::Document
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

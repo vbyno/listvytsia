@@ -3,6 +3,7 @@ uk:
     roles:
       form:
         submit: Зберегти
+        destroy: Видалити
       role:
         confirm_msg: Ви справді хочете видалити роль?
       index:

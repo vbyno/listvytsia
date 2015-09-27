@@ -1,4 +1,4 @@
-class Article
+class Article < Base
   include Mongoid::Document
   field :permalink
   field :title

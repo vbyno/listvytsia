@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   resources :contact_forms, only: :create
 
   namespace :admin do
-    resources :roles, :users
+    root to: 'dashboard#index'
+    resources :roles, except: [:new, :edit]
+    resources :users, except: [:new, :edit, :destroy]
   end
 
   devise_for :users
-  devise_for :admins
+  devise_for :admins, controllers: { sessions: 'admin/sessions' }
   mount Ckeditor::Engine => '/ckeditor'
 end

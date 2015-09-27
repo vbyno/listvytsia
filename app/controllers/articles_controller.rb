@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < PublicController
   helper_method :articles, :article
 
   after_action :verify_authorized, except: :index

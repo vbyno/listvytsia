@@ -1,5 +1,21 @@
 uk:
   mongoid:
+    models:
+      role:
+        one: Роль
+        other: Ролі
+      user:
+        one: Користувач
+        other: Користувачі
+      admin:
+        one: Адміністратор
+        other: Адміністратори
+      article:
+        one: Стаття
+        other: Статті
+      permission:
+        one: Дозвіл
+        other: Дозволи
     attributes:
       role:
         title: Назва
