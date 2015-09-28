@@ -29,7 +29,7 @@ gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'uglifier'
 
-gem 'ckeditor'
+gem 'ckeditor', github: 'mkaszubowski/ckeditor' # https://github.com/galetahub/ckeditor/issues/551
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
 gem 'font-awesome-rails'
