@@ -1,5 +1,6 @@
 class Article < Base
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :permalink
   field :title
   field :content
@@ -13,6 +14,7 @@ class Article < Base
   validates :title, :permalink, :content, :content_intro, :published, :author, presence: true
   validates :permalink, permalink: true, uniqueness: true
 
+  delegate :name, to: :author, prefix: true
 
   def to_param
     permalink

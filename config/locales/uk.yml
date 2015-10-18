@@ -80,6 +80,8 @@ uk:
     thank_you_notice:
       message: Ваше повідомлення надіслане успішно!
   articles:
+    article:
+      read_more: детальніше...
     form:
       submit: Зберегти
     index:

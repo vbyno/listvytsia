@@ -1,2 +1,18 @@
-article.col-md-8.col-md-offset-2
-  == article.content
+.row.blog.blog-medium.margin-bottom-40
+  .col-md-5
+    img.img-responsive alt="" src="assets/img/main/img22.jpg"
+  .col-md-7
+    h2
+      = link_to article.title, article
+    ul.list-unstyled.list-inline.blog-info
+      li
+        i.fa.fa-pencil
+        =< l(article.created_at, format: :long)
+      li
+        i.fa.fa-user
+        =< article.author_name
+    p== article.content_intro
+    p
+      a.btn-u.btn-u-sm href= article_path(article)
+        = t('.read_more')
+        i.fa.fa-angle-double-right.margin-left-5

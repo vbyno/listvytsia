@@ -1,4 +1,6 @@
-= render collection: articles, partial: 'article'
+.row.blog-page
+  .col-md-9.md-margin-bottom-40
+    = render articles
 
 - content_for :title do
   = t('layouts.header.articles')
