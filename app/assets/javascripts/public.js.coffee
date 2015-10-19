@@ -5,4 +5,6 @@
 #= require ckeditor/init
 #= require bootstrap-sprockets
 #= require turbolinks
-#= require_tree ./public
+#= require ./public/google_analytics
+#= require ./public/listvytsia
+#= require_tree ./public/listvytsia

@@ -1,4 +1,4 @@
-ready = function() {
+Listvytsia.seminarLocation = function() {
   var lat = 49.798381,
       lng = 24.035034;
   handler = Gmaps.build('Google');
@@ -22,5 +22,3 @@ ready = function() {
     handler.fitMapToBounds();
   });
 };
-
-$(document).on('ready page:load', ready)
