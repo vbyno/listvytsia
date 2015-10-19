@@ -64,7 +64,7 @@ uk:
     contacts:
       intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
       contacts: Контакти
-      groups:
+      groups: &social_networks
         intro: Соцмережі
         facebook: Ми у Facebook
         google_plus: Ми у Google Plus
@@ -86,6 +86,7 @@ uk:
       submit: Зберегти
     index:
       header: Статті
+      <<: *social_networks
     edit:
       header: Редагування статті
     new:
