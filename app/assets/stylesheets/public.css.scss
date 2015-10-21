@@ -28,3 +28,14 @@ $main-font-size: 14px;
 .primary-background-color {
   background-color: $primary-color;
 }
+
+.inline-radio-buttons {
+  label {
+    vertical-align: middle;
+    line-height: 50px;
+  }
+  span {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}

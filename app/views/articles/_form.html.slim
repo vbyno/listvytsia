@@ -13,7 +13,7 @@
     .row.sky-space-20
       br
       .col-md-9
-        div= f.input :picture_id, collection: Ckeditor::Picture.desc.limit(5), as: :radio_buttons
+        div= f.input :picture_id, collection: Ckeditor::PicturePresenter.latest(self), label_method: :thumb_image, as: :radio_buttons, wrapper_html: { class: 'inline-radio-buttons'}
     .row.sky-space-20
       .col-md-9.col-md-offset-0
         div.pull-right= f.button :submit, t('.submit')
