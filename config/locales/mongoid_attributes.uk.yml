@@ -31,3 +31,5 @@ uk:
         content: Контент
         content_intro: Ввідний текст
         author: Автор
+        picture: Головне зображення
+        picture_id: Головне зображення

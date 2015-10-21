@@ -8,9 +8,12 @@
       .col-md-6
         div= f.input :content_intro, as: :text, input_html: { rows: 7 }
     .row.sky-space-20
-      .col-md-9.col-md-offset-0
+      .col-md-12
         div= f.cktext_area :content
     .row.sky-space-20
+      br
+      .col-md-9
+        div= f.input :picture_id, collection: Ckeditor::Picture.desc.limit(5), as: :radio_buttons
+    .row.sky-space-20
       .col-md-9.col-md-offset-0
-        br
         div.pull-right= f.button :submit, t('.submit')

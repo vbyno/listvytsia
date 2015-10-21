@@ -7,6 +7,7 @@ class Article < Base
   field :content_intro
   field :published, type: Mongoid::Boolean
   belongs_to :author, class_name: 'User', inverse_of: :articles
+  belongs_to :picture, class_name: 'Ckeditor::Picture'
 
   scope :published, -> { where(published: true) }
   scope :for_author, ->(author) { any_of({ published: true }, { author_id: author }) }
@@ -22,5 +23,11 @@ class Article < Base
 
   def author?(user)
     user.present? && author == user
+  end
+
+  def picture_url
+    return '' unless picture
+
+    picture.data.medium.url
   end
 end

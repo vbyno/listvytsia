@@ -46,6 +46,7 @@ class ArticlesController < PublicController
   end
 
   def article_params
-    params.require(:article).permit(:permalink, :title, :content, :content_intro, :published)
+    params.require(:article).permit(:permalink, :title, :content,
+                                    :content_intro, :published, :picture_id)
   end
 end
