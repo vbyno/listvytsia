@@ -18,6 +18,7 @@ uk:
     delete: Видалити
     new: Створити
     edit: Змінити
+    cancel: Відмінити
   layouts:
     admin:
       login_info:
@@ -82,11 +83,14 @@ uk:
   articles:
     article:
       read_more: детальніше...
+      edit_article: &edit_article Редагувати статтю
     form:
       submit: Зберегти
     index:
       header: Статті
       <<: *social_networks
+    show:
+      edit_article: *edit_article
     edit:
       header: Редагування статті
     new:

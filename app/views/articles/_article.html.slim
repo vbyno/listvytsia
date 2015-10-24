@@ -4,6 +4,9 @@
   .col-md-7
     h2
       = link_to article.title, article
+      - if policy(article).update?
+        =< link_to edit_article_path(article), title: t('.edit_article') do
+          i.fa.fa-pencil
     ul.list-unstyled.list-inline.blog-info
       li
         i.fa.fa-calendar
@@ -12,7 +15,3 @@
         i.fa.fa-user
         =< article.author_name
     p== article.content_intro
-    p
-      a.btn-u.btn-u-sm href= article_path(article)
-        = t('.read_more')
-        i.fa.fa-angle-double-right.margin-left-5

@@ -1,4 +1,7 @@
 article.col-md-8.col-md-offset-2
+  - if policy(article).update?
+    = link_to edit_article_path(article), class: 'pull-right', title: t('.edit_article') do
+      i.fa.fa-2x.fa-pencil
   == article.content
 
 - content_for :title do

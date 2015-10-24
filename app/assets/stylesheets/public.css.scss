@@ -5,11 +5,11 @@ $main-font-size: 14px;
   font-size: $main-font-size;
   article {
     blockquote {
-      border: none;
-      padding: 18px;
-      font-size: $main-font-size;
-      background: #f3f3f3;
-      border-left: solid 2px $primary-color;
+      p {
+        font-style: italic;
+        font-size: 13px;
+        text-indent: 0;
+      }
     }
     p {
       text-indent: 25pt;
