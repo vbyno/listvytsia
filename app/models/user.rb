@@ -37,13 +37,21 @@ class User < Base
   has_many :articles, inverse_of: :author, autosave: true
   has_and_belongs_to_many :roles, autosave: true
 
-  def name;end
+  def name; end
 
   def permitted_to?(action, resource)
     permission_identifiers.any? do |p|
       p.action.to_sym == action &&
       p.resource.to_sym == resource
     end
+  end
+
+  def moderator?
+    permitted_to?(:moderate, :articles)
+  end
+
+  def author_of?(article)
+    article.author?(self)
   end
 
   private

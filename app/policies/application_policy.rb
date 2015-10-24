@@ -1,8 +1,27 @@
 class ApplicationPolicy
+  class Scope
+    attr_reader :user, :scope
+
+    def initialize(user, scope)
+      @user = user
+      @scope = scope
+    end
+
+    def resolve
+      scope
+    end
+  end
+
   attr_reader :user, :record
 
+  def self.permits(name)
+    define_method(name) do
+      record
+    end
+  end
+
   def initialize(user, record)
-    @user = user || MissedUser.new
+    @user = user
     @record = record
   end
 
@@ -36,18 +55,5 @@ class ApplicationPolicy
 
   def scope
     Pundit.policy_scope!(user, record.class)
-  end
-
-  class Scope
-    attr_reader :user, :scope
-
-    def initialize(user, scope)
-      @user = user || MissedUser.new
-      @scope = scope
-    end
-
-    def resolve
-      scope
-    end
   end
 end

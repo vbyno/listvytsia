@@ -10,7 +10,7 @@ class Article < Base
   belongs_to :picture, class_name: 'Ckeditor::Picture'
 
   scope :published, -> { where(published: true) }
-  scope :for_author, ->(author) { any_of({ published: true }, { author_id: author }) }
+  scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }) }
 
   validates :title, :permalink, :content, :content_intro, :published, :author, presence: true
   validates :permalink, permalink: true, uniqueness: true

@@ -1,22 +1,18 @@
 class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user.permitted_to?(:update, :articles)
-        scope.for_author(user)
-      else
-        scope.published
-      end
+      user.moderator? ? scope.all : scope.for_user(user)
     end
   end
 
-  alias_method :article, :record
+  permits :article
 
   def index?
     true
   end
 
   def show?
-    article.published? || article.author?(user)
+    user.moderator? || article.published? || user.author_of?(article)
   end
 
   def create?
@@ -24,6 +20,13 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def update?
-    article.author?(user) && user.permitted_to?(:update, :articles)
+    user.moderator? || (user.author_of?(article) && user.permitted_to?(:update, :articles))
+  end
+
+  def permitted_attributes
+    attributes = %i( permalink title content content_intro published picture_id )
+    attributes.push(:author_id) if user.moderator?
+
+    attributes
   end
 end

@@ -9,15 +9,16 @@ class ArticlesController < PublicController
   def edit; end
 
   def new
-    @article ||= articles.new
-    authorize @article
+    @article = Article.new
+
+    authorize article
   end
 
   def create
     article.author ||= current_user
 
     if article.save
-      redirect_to edit_article_path(article), notice: t('.success')
+      redirect_to articles_path, notice: t('.success')
     else
       render :new
     end
@@ -25,7 +26,7 @@ class ArticlesController < PublicController
 
   def update
     if article.update_attributes(article_params)
-      redirect_to edit_article_path(article.reload), notice: t('.success')
+      redirect_to articles_path, notice: t('.success')
     else
       render :edit
     end
@@ -40,13 +41,18 @@ class ArticlesController < PublicController
   def article
     return @article if defined?(@article)
 
-    @article = params[:id] ? articles.find_by(permalink: params[:id]) : articles.new(article_params)
+    @article = params[:id] ? articles.find_by(permalink: params[:id]) : Article.new(article_params)
     @article.present? ? authorize(@article) : skip_authorization
     @article
   end
 
   def article_params
-    params.require(:article).permit(:permalink, :title, :content,
-                                    :content_intro, :published, :picture_id)
+    params.require(:article).permit(current_policy.permitted_attributes)
+  end
+
+  def current_policy
+    return policy(@article) if defined?(@article)
+
+    ArticlePolicy.new(pundit_user, nil)
   end
 end
