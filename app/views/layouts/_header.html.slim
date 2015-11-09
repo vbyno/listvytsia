@@ -14,8 +14,6 @@
       ul.nav.navbar-nav
         li class=('active' if current_page?(timetable_path))
           = link_to t('.timetable'), timetable_path
-        li class=('active' if current_page?(seminar_path))
-          = no_turbolink_link_to t('.seminar'), seminar_path
         li class=('active' if current_page?(articles_path))
            = link_to t('.articles'), articles_path
         li class=('active' if current_page?(contacts_path))
