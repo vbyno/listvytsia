@@ -1,19 +1,22 @@
+require 'yaml'
+
 # config valid only for Capistrano 3.4
 lock '3.4.0'
 
-application = 'listvytsia'
-user_name = 'deployer'
-rvm_ruby_string = 'ruby-2.2.2@listvytsia'
+rails_env = fetch(:stage).to_s
+figaro_config = YAML.load_file('config/application.yml').fetch(rails_env)
+
+application = figaro_config.fetch('application_name')
+user_name = figaro_config.fetch('server_user')
 
 set :application, application
 set :repo_url, 'git@github.com:vbyno/listvytsia.git'
 set :rvm_type, :user
-set :rvm_ruby_version, rvm_ruby_string
+set :rvm_ruby_version, 'ruby-2.2.2@listvytsia'
 set :deploy_to, "/var/www/apps/#{application}"
 set :sudo, 'env rvmsudo_secure_path=1 rvmsudo'
-
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+set :branch, figaro_config.fetch('branch')
+set :rails_env, rails_env
 # Default value for :format is :pretty
 # set :format, :pretty
 # Default value for :log_level is :debug
@@ -87,9 +90,9 @@ namespace :deploy do
 
       upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
       upload!('config/application.yml', "#{shared_path}/config/application.yml")
-      upload!('shared/Procfile', "#{shared_path}/Procfile")
+      upload!("shared/#{rails_env}/Procfile", "#{shared_path}/Procfile")
 
-      # Commented this because several sites will be stored on one nginx server
+      # Commented out this because several sites will be stored on one nginx server
       # so before first deploy of new app fix nginx.conf by hands
       # sudo 'stop nginx'
       # sudo "rm -f /usr/local/nginx/conf/nginx.conf"

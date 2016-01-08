@@ -1,5 +1,10 @@
-worker_processes 2
-project_path = '/var/www/apps/listvytsia'
+if ENV['RAILS_ENV'] == 'production'
+  project_path = "/var/www/apps/listvytsia"
+  worker_processes 2
+else
+  project_path = "/var/www/apps/listvytsia_staging"
+  worker_processes 1
+end
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
@@ -9,7 +14,7 @@ working_directory "#{project_path}/current" # available in 0.94.0+
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
 listen "#{project_path}/socket/.unicorn.sock", backlog: 64
-listen 8080, tcp_nopush: true
+# listen 8080, tcp_nopush: true # does not work with multiple applications
 
 # feel free to point this anywhere accessible on the filesystem
 pid "#{project_path}/run/unicorn.pid"
