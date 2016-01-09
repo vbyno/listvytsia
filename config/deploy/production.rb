@@ -9,7 +9,7 @@ set :stage, :production
 # property set.  Don't declare `role :all`, it's a meta role.
 
 # Just to not load all environtment with Figaro gem
-figaro_config = YAML.load_file('config/application.yml')
+figaro_config = YAML.load_file('config/application.yml')['production']
 
 server_user = figaro_config['server_user']
 server_ip   = figaro_config['server_ip']
