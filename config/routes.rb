@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get :contacts,  to: 'static_pages#contacts'
   get :timetable, to: 'static_pages#timetable'
   get :seminar,   to: 'static_pages#seminar'
+  get :donate,    to: 'static_pages#donate'
 
   resources :articles
   resources :contact_forms, only: :create
