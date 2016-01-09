@@ -37,8 +37,6 @@ gem 'font-awesome-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'gmaps4rails'
 gem 'awesome_print'
-gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
-gem 'mini_magick'
 gem 'foreman'
 
 group :development do
@@ -50,6 +48,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm'
+  gem 'capistrano-faster-assets'
 
   gem 'mailcatcher'
 

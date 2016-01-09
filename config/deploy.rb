@@ -26,6 +26,7 @@ set :rails_env, rails_env
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
 # Default value for linked_dirs is []
+set :linked_dirs, fetch(:linked_dirs) + %w( public/system public/uploads )
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -83,7 +84,6 @@ namespace :deploy do
       execute "mkdir -p /var/www/apps/#{application}/run/"
       execute "mkdir -p /var/www/apps/#{application}/log/"
       execute "mkdir -p /var/www/apps/#{application}/socket/"
-      execute "mkdir -p #{shared_path}/system"
 
       execute "rm -f /var/www/log/upstart"
       sudo "ln -sf /var/log/upstart /var/www/log/upstart"
@@ -113,8 +113,6 @@ namespace :deploy do
       execute "ln -s #{shared_path}/config/mongoid.yml     #{release_path}/config/mongoid.yml"
       execute "ln -s #{shared_path}/config/application.yml #{release_path}/config/application.yml"
       execute "ln -s #{shared_path}/Procfile               #{release_path}/Procfile"
-      execute "ln -s #{shared_path}/system                 #{release_path}/public/system"
-      execute "ln -s #{shared_path}/public/uploads         #{release_path}/public/uploads"
     end
   end
 
