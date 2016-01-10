@@ -184,6 +184,7 @@ GEM
     kgio (2.9.3)
     launchy (2.4.3)
       addressable (~> 2.3)
+    liqpay (1.0.1)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -450,6 +451,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
+  liqpay
   mail_form
   mailcatcher
   mini_magick

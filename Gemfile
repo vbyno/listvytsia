@@ -15,6 +15,7 @@ gem 'pundit'
 gem 'figaro'
 gem 'simple_form'
 gem 'mail_form'
+gem 'liqpay'
 
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
