@@ -2,32 +2,27 @@ require 'liqpay'
 
 module Liqpay
   class PaymentService
-    attr_reader :donation, :controller
+    attr_reader :donation, :context
 
-    delegate :donate_url, :liqpay_execute_url, to: :controller
+    delegate :donate_url, :confirm_donations_url, to: :context
 
-    def self.handle(*atrs)
-      new(*atrs).handle
+    def self.request(*args)
+      new(*args).request
     end
 
-    def initialize(donation, controller)
+    def initialize(donation, context)
       @donation = donation
-      @controller = controller
+      @context = context
     end
 
-    def handle
-      # tODO
-      raise NotImplementedError
-    end
-
-    def liqpay_request
-      @liqpay_request ||=
-        Liqpay::Request.new(amount: donation.amount.to_s,
-                            currency: donation.amount.currency.to_s,
-                            order_id: donation.id.to_s,
+    def request
+      @request ||=
+        Liqpay::Request.new(amount:      donation.amount.to_s,
+                            currency:    donation.amount.currency.to_s,
+                            order_id:    donation.id.to_s,
                             description: Donation.model_name.human,
-                            result_url: donate_url,
-                            server_url: liqpay_execute_url)
+                            result_url:  donate_url,
+                            server_url:  confirm_donations_url)
     end
   end
 end

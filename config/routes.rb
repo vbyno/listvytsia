@@ -6,13 +6,11 @@ Rails.application.routes.draw do
   get :seminar,   to: 'static_pages#seminar'
   get :donate,    to: 'static_pages#donate'
 
-  namespace :liqpay do
-    post :execute, to: 'payments#execute'
-  end
-
   resources :articles
   resources :contact_forms, only: :create
-  resources :donations, only: :create
+  resources :donations, only: :create do
+    post :confirm, on: :collection
+  end
 
   namespace :admin do
     root to: 'dashboard#index'

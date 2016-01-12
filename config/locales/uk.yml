@@ -103,3 +103,5 @@ uk:
   donations:
     form:
       submit: Пожертвувати
+    payment_form:
+      submit: Сплатити %{amount} грн. карткою
