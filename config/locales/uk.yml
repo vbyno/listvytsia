@@ -73,8 +73,6 @@ uk:
     timetable:
       title_events: Зустрічі
       title_consultations: Особисті прийоми
-    donate:
-      title: Добровільні пожертви
   contact_forms:
     contact_form:
       subject: Повідомлення зі сторінки контактів
@@ -102,3 +100,6 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
+  donations:
+    form:
+      submit: Пожертвувати

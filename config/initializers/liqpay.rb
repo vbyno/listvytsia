@@ -1,5 +1,5 @@
 Liqpay.default_options = {
-  public_key: Figaro.env.liqpay.public_key,
-  private_key: Figaro.env.liqpay.private_key,
+  public_key: Figaro.env.liqpay_public_key,
+  private_key: Figaro.env.liqpay_private_key,
   currency: 'UAH'
 }

@@ -16,6 +16,9 @@ uk:
       permission:
         one: Дозвіл
         other: Дозволи
+      donation:
+        one: Добровільна пожертва
+        other: Добровільні пожертви
     attributes:
       role:
         title: Назва

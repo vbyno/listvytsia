@@ -1,0 +1,8 @@
+= simple_form_for donation do |f|
+  fieldset.no-padding
+    .row.sky-space-20
+      .col-md-3
+        div= f.input :amount
+    .row.sky-space-20
+      .col-md-9.col-md-offset-0
+        div.pull-right= f.button :submit, t('.submit')

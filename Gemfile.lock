@@ -209,6 +209,15 @@ GEM
     mini_magick (4.2.10)
     mini_portile (0.6.2)
     minitest (5.8.0)
+    monetize (1.1.0)
+      money (~> 6.5.0)
+    money (6.5.1)
+      i18n (>= 0.6.4, <= 0.7.0)
+    money-rails (1.4.1)
+      activesupport (>= 3.0)
+      monetize (~> 1.1.0)
+      money (~> 6.5.0)
+      railties (>= 3.0)
     mongo (2.1.0.beta)
       bson (~> 3.0)
     mongoid (5.0.0.beta)
@@ -455,6 +464,7 @@ DEPENDENCIES
   mail_form
   mailcatcher
   mini_magick
+  money-rails
   mongoid (~> 5.0.0.beta)
   mongoid-rspec (= 2.3.0.beta)
   mongoid_rails_migrations

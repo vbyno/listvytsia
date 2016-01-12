@@ -5,6 +5,7 @@ require 'rubygems'
 require 'rspec/rails'
 require 'factory_girl_rails'
 require 'rails/mongoid'
+require 'money-rails/test_helpers'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
