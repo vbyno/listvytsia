@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :contact_forms, only: :create
+  resources :donations, only: :create do
+    post :confirm, on: :collection
+  end
 
   namespace :admin do
     root to: 'dashboard#index'

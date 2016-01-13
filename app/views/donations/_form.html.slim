@@ -1,0 +1,4 @@
+= simple_form_for donation, remote: true do |f|
+  fieldset.no-padding
+    = f.input :amount, input_html: { autocomplete: 'off' }
+    .pull-right= f.button :submit, t('.submit'), class: 'btn btn-primary'

@@ -16,6 +16,9 @@ uk:
       permission:
         one: Дозвіл
         other: Дозволи
+      donation:
+        one: Добровільна пожертва
+        other: Добровільні пожертви
     attributes:
       role:
         title: Назва
@@ -32,3 +35,5 @@ uk:
         content_intro: Ввідний текст
         author: Автор
         picture: Головне зображення
+      donation:
+        amount: Сума
