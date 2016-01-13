@@ -1,2 +1,2 @@
-= liqpay_button Liqpay::PaymentService.request(donation, self) do
+= liqpay_button Liqpay::Requester.request(donation, self) do
   = submit_tag t('.submit', amount: donation.amount.to_s), class: 'btn btn-lg btn-success'

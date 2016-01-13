@@ -8,13 +8,15 @@ class DonationsController < PublicController
   end
 
   def confirm
-    if liqpay_response.success? &&
-      liqpay_response.order_id == ACTUAL_ORDER_ID &&
-      liqpay_reponse.amount == EXPECTED_AMOUNT
+    if liqpay_responder.valid?(params)
+      liqpay_responder.donation.confirm!
+      flash[:notice] = t('.confirmed')
     else
-
+      flash[:error] = t('.not_confirmed', error: liqpay_responder.errors.full_message)
     end
   rescue Liqpay::InvalidResponse
+    flash[:error] = t('.fail')
+  ensure
     redirect_to donate_url
   end
 
@@ -28,7 +30,7 @@ class DonationsController < PublicController
     params.require(:donation).permit(:amount)
   end
 
-  def liqpay_response
-    @liqpay_response ||= Liqpay::Response.new(params)
+  def liqpay_responder
+    @liqpay_responder ||= Liqpay::Responder.new(params)
   end
 end

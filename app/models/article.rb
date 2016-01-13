@@ -1,11 +1,10 @@
 class Article < Base
-  include Mongoid::Document
   include Mongoid::Timestamps
   field :permalink
   field :title
   field :content
   field :content_intro
-  field :published, type: Mongoid::Boolean
+  field :published, type: Mongoid::Boolean, default: false
   belongs_to :author, class_name: 'User', inverse_of: :articles
   belongs_to :picture, class_name: 'Ckeditor::Picture'
 
