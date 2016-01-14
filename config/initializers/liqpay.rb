@@ -1,1 +1,1 @@
-Liqpay.default_options = Rails.application.config_for(:liqpay)
+Liqpay.default_options = Rails.application.config_for(:liqpay).symbolize_keys
