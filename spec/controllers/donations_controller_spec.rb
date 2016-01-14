@@ -16,14 +16,12 @@ describe DonationsController do
       post :confirm, params
 
       expect(flash[:notice]).to eq confirmed_message
-      expect(response).to redirect_to "http://test.host/donate"
     end
 
     it 'redirects and displays flash error' do
       post :confirm, params.merge(order_id: '100500')
 
       expect(flash[:error]).to eq not_confirmed_message(invalid_order_id_error)
-      expect(response).to redirect_to "http://test.host/donate"
     end
 
     def not_confirmed_message(error)

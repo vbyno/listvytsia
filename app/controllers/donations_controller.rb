@@ -16,8 +16,6 @@ class DonationsController < PublicController
     end
   rescue Liqpay::InvalidResponse
     flash[:error] = t('.fail')
-  ensure
-    redirect_to donate_url
   end
 
   private
