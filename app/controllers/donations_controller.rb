@@ -8,16 +8,14 @@ class DonationsController < PublicController
   end
 
   def confirm
-    if liqpay_responder.valid?(params)
+    if liqpay_responder.valid?
       liqpay_responder.donation.confirm!
       flash[:notice] = t('.confirmed')
     else
-      flash[:error] = t('.not_confirmed', error: liqpay_responder.errors.full_message)
+      flash[:error] = t('.not_confirmed', error: liqpay_responder.errors.full_messages.to_sentence)
     end
   rescue Liqpay::InvalidResponse
     flash[:error] = t('.fail')
-  ensure
-    redirect_to donate_url
   end
 
   private
