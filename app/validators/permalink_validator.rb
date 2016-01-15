@@ -1,6 +1,6 @@
 class PermalinkValidator < EachValidatorBase
   def regexp
-    /\A([a-z0-9-_]*)\z/i
+    /\A([a-z0-9_-]*)\z/i
   end
 
   def error_message
