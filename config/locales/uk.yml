@@ -73,6 +73,9 @@ uk:
     timetable:
       title_events: Зустрічі
       title_consultations: Особисті прийоми
+    donate:
+      confirmed: Платіж пройшов успішно! Дякуємо за Вашу пожертву!
+      not_confirmed: Платіж поки не підтверджено
   contact_forms:
     contact_form:
       subject: Повідомлення зі сторінки контактів
@@ -105,7 +108,3 @@ uk:
       submit: Пожертвувати
     payment_form:
       submit: Сплатити %{amount} грн. карткою
-    confirm:
-      not_confirmed: "Сталася помилка під час оплати: %{error}"
-      confirmed: Платіж пройшов успішно! Дякуємо за Вашу пожертву!
-      fail: Стався збій при оплаті платіжною системою

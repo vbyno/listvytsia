@@ -2,28 +2,24 @@ require 'spec_helper'
 
 describe Liqpay::Responder do
   let(:donation) { create :donation }
-  let(:params) { { order_id: donation.id.to_s, status: 'success' }.with_indifferent_access }
+  let(:params) { { order_id: donation.id.to_s,
+                   status: 'success',
+                   amount: donation.amount.to_s }.with_indifferent_access }
   let(:responder) { described_class.new(params) }
 
   before { allow_any_instance_of(Liqpay::Response).to receive(:decode!).and_return true }
 
-  describe '#donation' do
-    it 'returns donation' do
-      expect(responder.donation).to eq donation
+  describe '#confirm' do
+    delegate :confirm, to: :responder
+
+    it 'updates paid attribute' do
+      expect { confirm }.to change { donation.reload.paid }.from(false).to(true)
     end
-  end
 
-  describe '#valid?' do
-    delegate :errors, to: :responder
-    let(:invalid_order_id) { I18n.t('activemodel.errors.models.liqpay/responder.attributes.base.invalid_order_id') }
-    let(:donation_is_already_paid) { I18n.t('activemodel.errors.models.liqpay/responder.attributes.base.donation_is_already_paid') }
-    let(:incorrect_amount) { I18n.t('activemodel.errors.models.liqpay/responder.attributes.base.incorrect_amount') }
+    it 'does not update paid attribute' do
+      params.merge!(amount: '222')
 
-    it 'adds invalid_order_id error' do
-      params[:order_id] = '100500'
-
-      expect(responder).not_to be_valid
-      expect(errors[:base]).to include invalid_order_id
+      expect { confirm }.not_to change { donation.reload.paid }
     end
   end
 end
