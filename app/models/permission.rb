@@ -1,4 +1,6 @@
 class Permission < Base
+  include Mongoid::Document
+
   ACTIONS = %w( read create update moderate ).freeze
   RESOURCES = %w( articles roles ).freeze
 

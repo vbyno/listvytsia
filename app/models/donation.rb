@@ -1,8 +1,11 @@
 class Donation < Base
+  include Mongoid::Document
   include Mongoid::Timestamps
 
   field :amount, type: Money
   field :paid, type: Mongoid::Boolean, default: false
+
+  scope :by_id, ->(id) { where(id: id) }
 
   validates :amount, numericality: { greater_than: 0 }
   validates :paid, inclusion: { in: [true, false] }

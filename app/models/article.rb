@@ -1,5 +1,7 @@
 class Article < Base
+  include Mongoid::Document
   include Mongoid::Timestamps
+
   field :permalink
   field :title
   field :content
