@@ -1,0 +1,6 @@
+uk:
+  number:
+    currency:
+      format:
+        delimiter: ","
+        separator: "."

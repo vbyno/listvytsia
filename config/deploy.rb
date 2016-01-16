@@ -23,9 +23,7 @@ set :rails_env, rails_env
 # set :log_level, :debug
 # Default value for :pty is false
 # set :pty, true
-# Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
-# Default value for linked_dirs is []
+set :linked_files, %w(config/mongoid.yml config/application.yml config/liqpay.yml Procfile)
 set :linked_dirs, fetch(:linked_dirs) + %w( public/system public/uploads )
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for default_env is {}
@@ -90,6 +88,7 @@ namespace :deploy do
 
       upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
       upload!('config/application.yml', "#{shared_path}/config/application.yml")
+      upload!('config/liqpay.yml', "#{shared_path}/config/liqpay.yml")
       upload!("shared/#{rails_env}/Procfile", "#{shared_path}/Procfile")
 
       # Commented out this because several sites will be stored on one nginx server
@@ -108,11 +107,12 @@ namespace :deploy do
   end
 
   desc 'Create symlink'
-  task :symlink do
+  task :upload_files do
     on roles(:all) do
-      execute "ln -s #{shared_path}/config/mongoid.yml     #{release_path}/config/mongoid.yml"
-      execute "ln -s #{shared_path}/config/application.yml #{release_path}/config/application.yml"
-      execute "ln -s #{shared_path}/Procfile               #{release_path}/Procfile"
+      upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
+      upload!('config/application.yml', "#{shared_path}/config/application.yml")
+      upload!('config/liqpay.yml', "#{shared_path}/config/liqpay.yml")
+      upload!("shared/#{rails_env}/Procfile", "#{shared_path}/Procfile")
     end
   end
 
@@ -143,9 +143,7 @@ namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after :finishing, 'deploy:restart'
 
-  after :updating, 'deploy:symlink'
   after :setup, 'deploy:foreman_init'
-
   after :foreman_init, 'foreman:start'
   before :foreman_init, 'rvm:hook'
 

@@ -33,6 +33,7 @@ uk:
       articles: Статті
       timetable: Розклад
       seminar: Семінар
+      donate: Пожертви
       contacts: &contacts Контакти
     banner:
       main_text: *name
@@ -51,7 +52,7 @@ uk:
       useful_links: Корисні сторінки
       latest_posts: Нові статті
     copyright:
-      rights_reserved: 2015 © Заборонене будь-яке копіювання матеріалів без узгодження із авторами
+      rights_reserved: 2016 © Заборонене будь-яке копіювання матеріалів без узгодження із авторами
       facebook:
         link: *facebook
         title: Ми у Facebook
@@ -72,6 +73,9 @@ uk:
     timetable:
       title_events: Зустрічі
       title_consultations: Особисті прийоми
+    donate:
+      confirmed: Платіж пройшов успішно! Дякуємо за Вашу пожертву!
+      not_confirmed: Платіж поки не підтверджено
   contact_forms:
     contact_form:
       subject: Повідомлення зі сторінки контактів
@@ -99,3 +103,8 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
+  donations:
+    form:
+      submit: Пожертвувати
+    payment_form:
+      submit: Сплатити %{amount} грн. карткою
