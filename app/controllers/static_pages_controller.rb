@@ -7,9 +7,9 @@ class StaticPagesController < PublicController
     return unless donation
 
     if donation.paid?
-      flash[:notice] = t('.confirmed')
+      flash.now[:notice] = t('.confirmed')
     else
-      flash[:error] = t('.not_confirmed')
+      flash.now[:error] = t('.not_confirmed')
     end
   end
 
