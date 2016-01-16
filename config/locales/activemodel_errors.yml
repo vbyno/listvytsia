@@ -5,6 +5,5 @@ uk:
         liqpay/responder:
           attributes:
             base:
-              invalid_order_id: Не співпадає ідентифікатор оплати і добровільної пожертви
               donation_is_already_paid: Пожертва вже сплачена
               incorrect_amount: Оплачена сума не співпадає із сумою добровільної пожертви
