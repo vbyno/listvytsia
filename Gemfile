@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.0'
 
 gem 'rails'
 gem 'rails-i18n'
-gem 'mongoid', '~> 5.0.0.beta'
+gem 'mongoid', '~> 5.0.0'
 gem 'mongoid_rails_migrations'
 gem 'bson_ext'
 
@@ -63,12 +63,12 @@ group :development do
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
+  gem 'web-console'
 end
 
 group :development, :test do
   gem 'thin'
   gem 'byebug'
-  gem 'web-console'
   gem 'spring'
   gem 'pry-rails'
 end
@@ -79,7 +79,7 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'mongoid-rspec', '2.3.0.beta'
+  gem 'mongoid-rspec'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
