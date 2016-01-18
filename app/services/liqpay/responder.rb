@@ -17,7 +17,7 @@ module Liqpay
     def valid?
       return false unless donation
 
-      !donation.paid? && donation.amount == response.amount
+      !donation.paid? && donation.amount.to_f == response.amount.to_f
     end
 
     def donation
