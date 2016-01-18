@@ -12,7 +12,7 @@ user_name = figaro_config.fetch('server_user')
 set :application, application
 set :repo_url, 'git@github.com:vbyno/listvytsia.git'
 set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.2.2@listvytsia'
+set :rvm_ruby_version, 'ruby-2.3.0@listvytsia'
 set :deploy_to, "/var/www/apps/#{application}"
 set :sudo, 'env rvmsudo_secure_path=1 rvmsudo'
 set :branch, figaro_config.fetch('branch')
@@ -24,7 +24,7 @@ set :rails_env, rails_env
 # Default value for :pty is false
 # set :pty, true
 set :linked_files, %w(config/mongoid.yml config/application.yml config/liqpay.yml Procfile)
-set :linked_dirs, fetch(:linked_dirs) + %w( public/system public/uploads )
+set :linked_dirs, %w( public/system public/uploads )
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
