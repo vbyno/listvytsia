@@ -23,7 +23,11 @@ set :rails_env, rails_env
 # set :log_level, :debug
 # Default value for :pty is false
 # set :pty, true
-set :linked_files, %w(config/mongoid.yml config/application.yml config/liqpay.yml Procfile)
+set :linked_files, %w( config/mongoid.yml
+                       config/application.yml
+                       config/liqpay.yml
+                       config/recaptcha.yml
+                       Procfile )
 set :linked_dirs, %w( public/system public/uploads )
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for default_env is {}
@@ -89,6 +93,7 @@ namespace :deploy do
       upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
       upload!('config/application.yml', "#{shared_path}/config/application.yml")
       upload!('config/liqpay.yml', "#{shared_path}/config/liqpay.yml")
+      upload!('config/recaptcha.yml', "#{shared_path}/config/recaptcha.yml")
       upload!("shared/#{rails_env}/Procfile", "#{shared_path}/Procfile")
 
       # Commented out this because several sites will be stored on one nginx server
@@ -112,6 +117,7 @@ namespace :deploy do
       upload!('config/mongoid.yml', "#{shared_path}/config/mongoid.yml")
       upload!('config/application.yml', "#{shared_path}/config/application.yml")
       upload!('config/liqpay.yml', "#{shared_path}/config/liqpay.yml")
+      upload!('config/recaptcha.yml', "#{shared_path}/config/recaptcha.yml")
       upload!("shared/#{rails_env}/Procfile", "#{shared_path}/Procfile")
     end
   end

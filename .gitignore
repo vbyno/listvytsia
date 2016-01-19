@@ -32,6 +32,7 @@ db/*.sqlite3
 /config/mongoid.yml
 /config/application.yml
 /config/liqpay.yml
+/config/recaptcha.yml
 /coverage.data
 /coverage/
 /db/*.javadb/
