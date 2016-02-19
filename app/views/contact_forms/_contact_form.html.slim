@@ -21,4 +21,4 @@
         span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'
         span[class='sr-only'] Error:
         = @contact_form.errors[:base].to_sentence
-    p= f.button :submit, t('.submit'), class: 'btn-u'
+    p= f.button :submit, t('.submit'), class: 'btn-u', data: { disable_with: t('.submit_wait') }

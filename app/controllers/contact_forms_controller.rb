@@ -7,7 +7,8 @@ class ContactFormsController < PublicController
     end
   end
 
-private
+  private
+
   def contact_form_params
     params.require(:contact_form).permit(:name, :email, :message, :nickname)
   end
