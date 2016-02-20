@@ -7,8 +7,9 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: I18n.t('contact_forms.contact_form.subject'),
-      to: I18n.t('site_info.email'),
+      to: Figaro.env.site_email,
       from: %("#{name}" <#{email}>)
     }
   end
 end
+
