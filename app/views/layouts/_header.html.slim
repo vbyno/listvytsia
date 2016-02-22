@@ -19,4 +19,4 @@
         li class=('active' if current_page?(donate_path))
            = link_to t('.donate'), donate_path
         li class=('active' if current_page?(contacts_path))
-          = link_to t('.contacts'), contacts_path
+          = link_to t('.contacts'), contacts_path, data: { no_turbolink: true }

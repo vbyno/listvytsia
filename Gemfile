@@ -36,7 +36,7 @@ gem 'ckeditor', github: 'mkaszubowski/ckeditor' # https://github.com/galetahub/c
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mini_magick'
 gem 'font-awesome-rails'
-gem 'recaptcha', '~> 0.4.0' # https://github.com/ambethia/recaptcha/issues/137
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'gmaps4rails'
 gem 'awesome_print'
 gem 'foreman'

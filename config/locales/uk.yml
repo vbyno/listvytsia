@@ -80,6 +80,7 @@ uk:
     contact_form:
       subject: Повідомлення зі сторінки контактів
       submit: Надіслати повідомлення
+      submit_wait: Обробляється...
     create:
       invalid_captcha: Ви не підтвердили, що ви не робот
     thank_you_notice:
