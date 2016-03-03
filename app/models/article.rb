@@ -1,26 +1,13 @@
-class Article < Base
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :permalink
-  field :title
-  field :content
+class Article < Page
   field :content_intro
-  field :published, type: Mongoid::Boolean, default: false
   belongs_to :author, class_name: 'User', inverse_of: :articles
   belongs_to :picture, class_name: 'Ckeditor::Picture'
 
-  scope :published, -> { where(published: true) }
   scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }) }
 
-  validates :title, :permalink, :content, :content_intro, :published, :author, presence: true
-  validates :permalink, permalink: true, uniqueness: true
+  validates :content_intro, :author, presence: true
 
-  delegate :name, to: :author, prefix: true
-
-  def to_param
-    permalink
-  end
+  delegate :name, to: :author, prefix: true # author_name
 
   def author?(user)
     user.present? && author == user
