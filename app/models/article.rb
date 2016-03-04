@@ -1,6 +1,7 @@
 class Article < Page
   field :content_intro
   belongs_to :author, class_name: 'User', inverse_of: :articles
+  belongs_to :section, inverse_of: :articles
   belongs_to :picture, class_name: 'Ckeditor::Picture'
 
   scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }) }
