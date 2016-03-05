@@ -2,6 +2,7 @@ angular.module('admin.controllers')
 .controller('StaticPagesNewController', ['$http', '$location', ($http, $location) ->
   controller = this;
   controller.staticPage = { permalink: '', title: '', content: '', published: false };
+  controller.staticPage.seo_content = { title: '', description: '', keywords: '' };
 
   @createStaticPage = () ->
     $http.post("/admin/static_pages", @_staticPageParams()).success( ->
@@ -13,7 +14,8 @@ angular.module('admin.controllers')
       permalink: controller.staticPage.permalink,
       title:     controller.staticPage.title,
       content:   controller.staticPage.content,
-      published: controller.staticPage.published
+      published: controller.staticPage.published,
+      seo_content_attributes: controller.staticPage.seo_content
     };
 
   @locationPath = () ->

@@ -22,6 +22,9 @@ uk:
       donation:
         one: Добровільна пожертва
         other: Добровільні пожертви
+      seo_content:
+        one: SEO-таги
+        other: SEO-таги
     attributes:
       role:
         title: Назва
@@ -41,3 +44,7 @@ uk:
         picture: Головне зображення
       donation:
         amount: Сума
+      seo_content:
+        title: SEO-заголовок
+        description: SEO-опис
+        keywords: Ключові слова

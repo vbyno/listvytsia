@@ -24,6 +24,7 @@ class Admin::StaticPagesController < Admin::BaseController
   end
 
   def static_page_params
-    params.require(:static_page).permit(:permalink, :title, :content, :published)
+    params.require(:static_page).permit(:permalink, :title, :content, :published,
+                                        seo_content_attributes: [:title, :description, :keywords])
   end
 end
