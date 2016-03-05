@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     root to: 'dashboard#index'
     resources :roles, except: [:new, :edit]
     resources :users, except: [:new, :edit, :destroy]
+    resources :static_pages, except: [:new, :edit, :destroy]
   end
 
   devise_for :users

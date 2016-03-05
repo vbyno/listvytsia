@@ -10,6 +10,5 @@ class Page < Base
 
   scope :published, -> { where(published: true) }
 
-  validates :title, :content, :published, presence: true
+  validates :title, :published, presence: true
 end
-

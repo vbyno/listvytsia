@@ -13,6 +13,9 @@ uk:
       article:
         one: Стаття
         other: Статті
+      static_page:
+        one: Сторінка
+        other: Сторінки
       permission:
         one: Дозвіл
         other: Дозволи
@@ -27,11 +30,12 @@ uk:
       user:
         roles: Ролі
         email: Електронна адреса
-      article:
+      page:
         permalink: Посилання
         title: Заголовок
         published: Опублікована
         content: Контент
+      article:
         content_intro: Ввідний текст
         author: Автор
         picture: Головне зображення

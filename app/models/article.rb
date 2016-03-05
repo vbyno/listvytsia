@@ -6,7 +6,7 @@ class Article < Page
 
   scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }) }
 
-  validates :content_intro, :author, presence: true
+  validates :content_intro, :author, :content, presence: true
 
   delegate :name, to: :author, prefix: true # author_name
 

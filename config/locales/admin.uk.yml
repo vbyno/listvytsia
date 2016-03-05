@@ -37,3 +37,16 @@ uk:
       destroy:
         success: Користувач успішно видалений
         fail: Користувач не видалений
+    static_pages:
+      form:
+        submit: Зберегти
+      index:
+        header: Сторінки
+      edit:
+        header: Редагування сторінки
+      new:
+        header: Створення сторінки
+      create:
+        success: Сторінка успішно створена
+      update:
+        success: Сторінка успішно оновлена

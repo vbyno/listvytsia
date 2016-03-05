@@ -6,6 +6,7 @@ describe Article, type: :model do
 
   it { is_expected.to validate_presence_of(:content_intro) }
   it { is_expected.to validate_presence_of(:author) }
+  it { is_expected.to validate_presence_of(:content) }
 
   describe '#author?' do
     let(:user) { build :user }

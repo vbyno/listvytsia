@@ -1,11 +1,6 @@
 .title-v1
-  h1= t('.title_events')
-  p Запис на курс ШЕП у Львові: #{phone_link_to("063 961-63-55")}, Лариса
-  p З 9.02 приїжджає Анатолій Кобзар - масаж. Запис: #{phone_link_to("067 705-02-60")}, Леся Шпак
-  p У квітні - Іван Кердяк (масаж)
-  p В травні приїжджає отець Геронтій
-  p Червень – Богдана, Святослав. Семінар
-  p Липень – 1,2 курси. Богдана
+  h1= static_page.title
+  == static_page.content
 
 .google-calendar
   = render 'static_pages/timetable/calendar_events'

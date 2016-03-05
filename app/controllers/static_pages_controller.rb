@@ -1,4 +1,6 @@
 class StaticPagesController < PublicController
+  helper_method :static_page
+
   def contacts
     @contact_form = ContactForm.new
   end
@@ -17,5 +19,13 @@ class StaticPagesController < PublicController
 
   def donation
     @donation ||= Donation.by_id(params[:donation_id]).first
+  end
+
+  def static_pages
+    @static_pages ||= StaticPage.published
+  end
+
+  def static_page
+    @static_page ||= static_pages.where(permalink: action_name).first || StaticPages::MissedModel.instance
   end
 end
