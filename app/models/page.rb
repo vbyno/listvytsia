@@ -8,7 +8,10 @@ class Page < Base
   field :content
   field :published, type: Mongoid::Boolean, default: false
 
+  embeds_one :seo_content
+
   scope :published, -> { where(published: true) }
 
-  validates :title, :published, presence: true
+  validates :title, :seo_content, presence: true
+  validates :seo_content, presence: true, if: :published?
 end
