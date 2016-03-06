@@ -1,5 +1,5 @@
 angular.module('admin.controllers')
-.controller('UsersIndexController', ($http) ->
+.controller('UsersIndexController', ['$http', ($http) ->
   controller = this;
   controller.users = [];
 
@@ -8,4 +8,4 @@ angular.module('admin.controllers')
   );
 
   controller;
-);
+]);
