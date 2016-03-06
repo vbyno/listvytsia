@@ -1,0 +1,18 @@
+h1
+  = StaticPage.human_list_name
+  a.pull-right href= '#/static_pages/new'
+    i.fa.fa-plus
+table.table.table-striped
+  tr
+    th= StaticPage.human_attribute_name(:permalink)
+    th= StaticPage.human_attribute_name(:title)
+    th= StaticPage.human_attribute_name(:published)
+    th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tr data-ng-repeat= 'staticPage in indexCtrl.staticPages'
+    td {{staticPage.permalink}}
+    td {{staticPage.title}}
+    td {{staticPage.published}}
+    td
+      span>
+        a data-ng-href= '#/static_pages/{{staticPage.id}}/edit'
+          i.fa.fa-pencil

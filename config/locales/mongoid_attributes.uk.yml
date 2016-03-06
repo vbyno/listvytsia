@@ -13,12 +13,18 @@ uk:
       article:
         one: Стаття
         other: Статті
+      static_page:
+        one: Сторінка
+        other: Сторінки
       permission:
         one: Дозвіл
         other: Дозволи
       donation:
         one: Добровільна пожертва
         other: Добровільні пожертви
+      seo_content:
+        one: SEO-таги
+        other: SEO-таги
     attributes:
       role:
         title: Назва
@@ -27,13 +33,18 @@ uk:
       user:
         roles: Ролі
         email: Електронна адреса
-      article:
+      page:
         permalink: Посилання
         title: Заголовок
         published: Опублікована
         content: Контент
+      article:
         content_intro: Ввідний текст
         author: Автор
         picture: Головне зображення
       donation:
         amount: Сума
+      seo_content:
+        title: SEO-заголовок
+        description: SEO-опис
+        keywords: Ключові слова

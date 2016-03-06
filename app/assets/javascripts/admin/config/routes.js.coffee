@@ -29,6 +29,21 @@ angular.module('admin.config')
     controller: 'UsersEditController',
     controllerAs: 'ctrl'
   })
+  .when('/static_pages', {
+    templateUrl: 'admin/views/static_pages/index.html',
+    controller: 'StaticPagesIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/static_pages/new', {
+    templateUrl: 'admin/views/static_pages/new.html',
+    controller: 'StaticPagesNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/static_pages/:id/edit', {
+    templateUrl: 'admin/views/static_pages/edit.html',
+    controller: 'StaticPagesEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

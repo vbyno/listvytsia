@@ -2,15 +2,11 @@ require 'spec_helper'
 
 describe Article, type: :model do
   it { is_expected.to belong_to(:author).of_type(User).as_inverse_of(:articles) }
+  it { is_expected.to belong_to(:section).of_type(Section).as_inverse_of(:articles) }
 
-  it { is_expected.to validate_presence_of(:title) }
-  it { is_expected.to validate_presence_of(:permalink) }
-  it { is_expected.to validate_presence_of(:content) }
   it { is_expected.to validate_presence_of(:content_intro) }
-  it { is_expected.to validate_presence_of(:published) }
   it { is_expected.to validate_presence_of(:author) }
-
-  it { is_expected.to validate_uniqueness_of(:permalink) }
+  it { is_expected.to validate_presence_of(:content) }
 
   describe '#author?' do
     let(:user) { build :user }
