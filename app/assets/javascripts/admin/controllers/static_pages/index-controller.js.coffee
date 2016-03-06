@@ -1,5 +1,5 @@
 angular.module('admin.controllers')
-.controller('StaticPagesIndexController', ($http) ->
+.controller('StaticPagesIndexController', ['$http', ($http) ->
   controller = this;
   controller.staticPages = [];
 
@@ -8,4 +8,4 @@ angular.module('admin.controllers')
   );
 
   controller;
-);
+]);

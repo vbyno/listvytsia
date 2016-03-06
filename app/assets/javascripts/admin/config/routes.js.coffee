@@ -1,5 +1,5 @@
 angular.module('admin.config')
-.config(($routeProvider) ->
+.config(['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when('/', {
     templateUrl: 'admin/views/index.html'
@@ -47,4 +47,4 @@ angular.module('admin.config')
   .otherwise({
     redirectTo: '/'
   });
-)
+]);

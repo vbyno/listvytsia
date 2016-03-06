@@ -1,5 +1,5 @@
 angular.module('admin.controllers')
-.controller('RolesIndexController', ($http) ->
+.controller('RolesIndexController', ['$http', ($http) ->
   controller = this;
   controller.roles = [];
 
@@ -14,4 +14,4 @@ angular.module('admin.controllers')
     );
 
   controller;
-);
+]);
