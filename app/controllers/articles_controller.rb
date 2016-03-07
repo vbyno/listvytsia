@@ -6,10 +6,13 @@ class ArticlesController < PublicController
 
   def index; end
   def show; end
-  def edit; end
+  def edit
+    article.build_seo_content unless article.seo_content
+  end
 
   def new
     @article = Article.new
+    article.build_seo_content
 
     authorize article
   end

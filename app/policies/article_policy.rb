@@ -26,6 +26,7 @@ class ArticlePolicy < ApplicationPolicy
   def permitted_attributes
     attributes = %i( permalink title content content_intro published picture_id )
     attributes.push(:author_id) if user.moderator?
+    attributes.push(seo_content_attributes: [:title, :description, :keywords])
 
     attributes
   end
