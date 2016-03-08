@@ -4,7 +4,7 @@
 #= require gmaps/google
 #= require ckeditor/init
 #= require bootstrap-sprockets
-#= require turbolinks
+#= require unify
 #= require ./public/google_analytics
 #= require ./public/listvytsia
 #= require_tree ./public/listvytsia

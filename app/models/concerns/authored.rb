@@ -4,7 +4,7 @@ module Authored
   included do
     belongs_to :author, class_name: 'User'
 
-    scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }).order_by(created_at: :desc) }
+    scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }).sorted_by_date }
 
     validates :author, presence: true
 

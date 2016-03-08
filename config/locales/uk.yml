@@ -34,6 +34,7 @@ uk:
       timetable: Розклад
       seminar: Семінар
       donate: Пожертви
+      events: Події
       contacts: &contacts Контакти
     banner:
       main_text: *name
