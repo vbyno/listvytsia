@@ -9,5 +9,11 @@ module Pictured
 
       picture.data.medium.url
     end
+
+    def picture_content_url
+      return '' unless picture
+
+      picture.data.content.url
+    end
   end
 end

@@ -16,6 +16,7 @@
           select.select.required.form-control data-ng-model='permission.resource'
             option value=''
             - Permission::RESOURCES.each do |value|
+
               option value="#{value}" = value
     .col-sm-5
       div
