@@ -22,4 +22,8 @@ module ApplicationHelper
   def phone_link_to(phone_number)
     link_to phone_number, Phone.new(phone_number).link_tel
   end
+
+  def static_page_path(static_page)
+    public_send "#{static_page.permalink}_path"
+  end
 end

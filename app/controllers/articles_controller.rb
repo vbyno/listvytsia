@@ -6,6 +6,7 @@ class ArticlesController < PublicController
 
   def index; end
   def show; end
+
   def edit
     article.build_seo_content unless article.seo_content
   end

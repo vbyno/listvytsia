@@ -2,8 +2,12 @@
 @import 'unify/headers/header-v5';
 @import 'unify/footers/footer-v1';
 @import 'unify/theme-colors/blue';
+@import 'unify/plugins/animate';
+@import 'unify/plugins/v1';
 @import 'unify/plugins/sky-forms-pro/skyforms/css/sky-forms';
 @import 'unify/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms';
+@import 'unify/plugins/cubeportfolio/cubeportfolio.css';
+@import 'unify/plugins/cubeportfolio/custom-cubeportfolio';
 @import 'unify/pages/page_contact';
 @import 'unify/pages/page_job_inner';
 
@@ -42,3 +46,8 @@ $primary-color: #3498db;
     }
   }
 }
+
+.cbp a:hover {
+  text-decoration: underline;
+}
+
