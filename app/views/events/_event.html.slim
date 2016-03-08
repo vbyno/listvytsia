@@ -1,0 +1,17 @@
+.cbp-item.graphic
+  .cbp-caption.margin-bottom-20
+    .cbp-caption-defaultWrap
+      = image_tag(event.picture_url, alt: '')
+    .cbp-caption-activeWrap
+      .cbp-l-caption-alignCenter
+        .cbp-l-caption-body
+          ul.link-captions.no-bottom-space
+            li
+              a href="portfolio_single_item.html"
+                i.rounded-x.fa.fa-link
+            li
+              a.cbp-lightbox data-title=(event.title) href=event.picture_content_url
+                i.rounded-x.fa.fa-search
+  .cbp-title-dark
+    .cbp-l-grid-agency-title= link_to event.title, event
+    .cbp-l-grid-agency-desc= event.content_intro

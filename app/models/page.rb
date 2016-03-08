@@ -9,7 +9,7 @@ class Page < Base
   field :published, type: Mongoid::Boolean, default: false
 
   embeds_one :seo_content
-  accepts_nested_attributes_for :seo_content, reject_if: :all_blank
+  accepts_nested_attributes_for :seo_content
 
   scope :published, -> { where(published: true) }
   scope :sorted_by_date, -> { order_by(created_at: :desc) }

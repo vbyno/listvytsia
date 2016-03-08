@@ -2,7 +2,7 @@ class Permission < Base
   include Mongoid::Document
 
   ACTIONS = %w( read create update moderate ).freeze
-  RESOURCES = %w( articles roles ).freeze
+  RESOURCES = %w( articles roles events ).freeze
 
   embedded_in :role
   field :resource
