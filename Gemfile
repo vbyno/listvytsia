@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+path 'components/pictures' do
+  gem 'pictures'
+end
+
 gem 'rails'
 gem 'rails-i18n'
 gem 'mongoid', '~> 5.0.0'
