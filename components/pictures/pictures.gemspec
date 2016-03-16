@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.email       = ["volodymyr.byno@gmail.com"]
   s.summary     = "Summary of Pictures"
   s.description = "Description of Pictures"
-  s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency 'rails', '4.2.5'
+  s.add_dependency 'rake', '10.5.0'
   s.add_dependency 'mongoid', '5.0.2'
 end
