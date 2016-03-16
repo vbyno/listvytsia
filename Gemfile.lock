@@ -6,6 +6,13 @@ GIT
       cocaine
       orm_adapter (~> 0.5.0)
 
+PATH
+  remote: components/pictures
+  specs:
+    pictures (0.0.1)
+      mongoid (= 5.0.2)
+      rails (= 4.2.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -471,6 +478,7 @@ DEPENDENCIES
   mongoid_rails_migrations
   omniauth
   omniauth-facebook
+  pictures!
   pry-rails
   pundit
   quiet_assets
