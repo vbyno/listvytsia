@@ -2,11 +2,11 @@ ENV["RAILS_ENV"] ||= 'test'
 
 require File.expand_path("../dummy/config/environment", __FILE__)
 
+require 'rubygems'
 require 'rspec/rails'
-require 'shoulda/matchers'
-require 'database_cleaner'
+require 'rails/mongoid'
 
-Dir[Games::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[Pictures::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -21,6 +21,4 @@ RSpec.configure do |config|
   config.profile_examples = nil
   config.order = :random
   Kernel.srand config.seed
-
-  #config.include Games::ObjectCreationMethods
 end
