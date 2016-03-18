@@ -1,0 +1,8 @@
+uk:
+  mongoid:
+    attributes:
+      pictures/picture:
+        title: Назва
+        alt: Опис
+        data: Файл
+        main: Головна

@@ -22,5 +22,7 @@
         = p.input :description
         = p.input :keywords
     .row.sky-space-20
+      = pictures_form(event.id)
+    .row.sky-space-20
       .col-md-9.col-md-offset-0
         div.pull-right= f.button :submit, t('.submit')
