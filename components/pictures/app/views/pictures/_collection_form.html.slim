@@ -1,3 +1,6 @@
+button#add-pictures.btn.btn-big.btn-primary
+ Додати
+
 .table-responsive
   table.table.table-striped.table-condensed.col-md-12#pictures
     tr
@@ -15,3 +18,7 @@
           td= f.input :title, label: false
           td= f.input :alt, label: false
           td= f.input :_destroy, as: :boolean, label: t('actions.delete')
+.hide
+  = semantic_form_for [Pictures::Picture.new(page_id: page_id)], html: { multipart: true }, remote: true do |f|
+    = f.inputs class: 'col-md-4' do
+      = f.file_field :data, multiple: true, name: 'picture[data]'
