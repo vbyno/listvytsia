@@ -1,4 +1,4 @@
-require "pictures/engine"
+require 'pictures/engine'
 
 module Pictures
 end
