@@ -18,6 +18,7 @@ PATH
       mongoid (= 5.0.2)
       rails (= 4.2.5)
       rake (= 10.5.0)
+      slim-rails (= 3.0.1)
 
 GEM
   remote: https://rubygems.org/

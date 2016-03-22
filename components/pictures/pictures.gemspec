@@ -19,8 +19,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'mini_magick', '4.3.6'
   s.add_dependency 'carrierwave-mongoid', '0.8.1'
   s.add_dependency 'coffee-rails', '4.1.1'
-  s.add_dependency 'angular-rails-templates', '0.2.0'
   s.add_dependency 'angularjs-rails', '1.5.0'
+  s.add_dependency 'angular-rails-templates', '0.2.0'
+  s.add_dependency 'slim-rails', '3.0.1'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'
