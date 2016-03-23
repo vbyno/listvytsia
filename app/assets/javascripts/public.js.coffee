@@ -10,9 +10,5 @@
 #= require ./public/listvytsia
 #= require_tree ./public/listvytsia
 
-#= require angular
-#= require angular-resource
-#= require angular-rails-templates
-
-# Engines
+# Pictures Engine
 #= require pictures

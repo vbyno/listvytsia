@@ -1,0 +1,13 @@
+h1
+  | Фотографії
+  a.pull-right href= '#/pictures/new'
+    i.fa.fa-plus
+.table-responsive
+  table.table.table-striped.table-condensed.col-md-12#pictures
+    tr
+      th.col-md-1= Pictures::Picture.human_attribute_name :data
+      th.col-md-1= Pictures::Picture.human_attribute_name :main
+      th= Pictures::Picture.human_attribute_name :title
+      th= Pictures::Picture.human_attribute_name :alt
+      th.col-md-1.col-sm-1.col-xs-2= 'дії'
+    picture-row ng-repeat='picture in $ctrl.pictures' picture='picture' on-delete='$ctrl.deletePicture(picture)' on-update='$ctrl.updatePicture(picture, prop, value)'
