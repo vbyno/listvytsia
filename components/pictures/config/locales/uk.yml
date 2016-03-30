@@ -6,3 +6,6 @@ uk:
         alt: Опис
         data: Файл
         main: Головна
+  pictures:
+    picture:
+      confirm_msg: Ви впевнені, що хочете видалити фотографію?

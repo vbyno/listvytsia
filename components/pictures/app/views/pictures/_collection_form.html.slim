@@ -1,24 +1,2 @@
-button#add-pictures.btn.btn-big.btn-primary
- Додати
-
-.table-responsive
-  table.table.table-striped.table-condensed.col-md-12#pictures
-    tr
-      th.col-md-1= Pictures::Picture.human_attribute_name :data
-      th.col-md-1= Pictures::Picture.human_attribute_name :main
-      th= Pictures::Picture.human_attribute_name :title
-      th= Pictures::Picture.human_attribute_name :alt
-      th.col-md-1
-
-    - Pictures::Picture.by_page_id(page_id).each do |picture|
-      tr
-        = form.simple_fields_for :picture, picture do |f|
-          td= image_tag picture.data.thumb.url, size: '80x40'
-          td= f.input :main, label: false, as: :radio_buttons
-          td= f.input :title, label: false
-          td= f.input :alt, label: false
-          td= f.input :_destroy, as: :boolean, label: t('actions.delete')
-.hide
-  = simple_form_for [Pictures::Picture.new(page_id: page_id)], html: { multipart: true }, remote: true do |f|
-    .col-md-4
-      = f.file_field :data, multiple: true, name: 'picture[data]'
+div
+  pictures-table-component page-id=page_id
