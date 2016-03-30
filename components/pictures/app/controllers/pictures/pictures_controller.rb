@@ -1,11 +1,11 @@
 module Pictures
   class PicturesController < ApplicationController
     def index
-
+      Picture.by_page_id(params[:page_id])
     end
 
     def create
-      @picture = Photo.create(picture_params)
+      @picture = Picture.create(picture_params)
     end
 
     private
