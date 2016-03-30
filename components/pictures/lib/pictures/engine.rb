@@ -1,3 +1,6 @@
+require 'mongoid'
+require 'carrierwave/mongoid'
+
 module Pictures
   class Engine < ::Rails::Engine
     isolate_namespace Pictures

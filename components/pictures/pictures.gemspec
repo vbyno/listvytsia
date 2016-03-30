@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '4.2.5'
   s.add_dependency 'rake', '10.5.0'
-  s.add_dependency 'mongoid', '5.0.2'
+  s.add_dependency 'mongoid', '5.1.1'
   s.add_dependency 'mini_magick', '4.3.6'
   s.add_dependency 'carrierwave-mongoid', '0.8.1'
   s.add_dependency 'coffee-rails', '4.1.1'
