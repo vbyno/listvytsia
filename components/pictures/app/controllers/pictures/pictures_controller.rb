@@ -1,7 +1,9 @@
 module Pictures
   class PicturesController < ApplicationController
+    respond_to :json
+
     def index
-      Picture.by_page_id(params[:page_id])
+      @pictures = Picture.by_page_id(params[:page_id])
     end
 
     def create

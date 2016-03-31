@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'angularjs-rails', '1.5.0'
   s.add_dependency 'angular-rails-templates', '1.0.0'
   s.add_dependency 'slim-rails', '3.0.1'
+  s.add_dependency 'rabl', '0.11.8'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'
