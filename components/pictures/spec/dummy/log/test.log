@@ -1,0 +1,150 @@
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcda7516719b3904d5385a'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:06:13 UTC, "created_at"=>2016-03-31 08:06:13 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.075125s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcda7516719b3904d5385b'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:06:13 UTC, "created_at"=>2016-03-31 08:06:13 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000399s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdad116719b3decfa2e80'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:07:45 UTC, "created_at"=>2016-03-31 08:07:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.00062s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdad116719b3decfa2e81'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:07:45 UTC, "created_at"=>2016-03-31 08:07:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.00042699999999999997s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.030388s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00042899999999999997s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00031s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000235s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000299s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000244s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000275s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000241s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000279s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdb1516719b414b316a80'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:08:53 UTC, "created_at"=>2016-03-31 08:08:53 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000703s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdb1516719b414b316a81'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:08:53 UTC, "created_at"=>2016-03-31 08:08:53 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000549s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.0005859999999999999s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00048s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000484s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000508s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000558s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000473s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}, "limit"=>1, "singleBatch"=>true}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.0005669999999999999s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000469s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000435s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000488s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.00044899999999999996s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000435s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000438s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000436s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000477s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00038899999999999997s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000252s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000252s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000293s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000264s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000247s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000248s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00027100000000000003s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.0005290000000000001s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.0028079999999999997s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000261s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000243s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.00025299999999999997s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000213s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000252s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000214s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdbfd16719b4d8f1ecce9'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:12:45 UTC, "created_at"=>2016-03-31 08:12:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.00040699999999999997s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdbfd16719b4d8f1eccea'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:12:45 UTC, "created_at"=>2016-03-31 08:12:45 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000427s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.00044300000000000003s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.00045999999999999996s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000567s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.0003s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000262s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000278s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000256s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.00021700000000000002s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000254s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.00021600000000000002s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdc2116719b4fd20d77e3'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:13:21 UTC, "created_at"=>2016-03-31 08:13:21 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000608s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdc2216719b4fd20d77e4'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:13:22 UTC, "created_at"=>2016-03-31 08:13:22 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000453s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000404s
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000452s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000442s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.000175s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.00018600000000000002s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.00025699999999999996s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.000219s
+MONGODB | localhost:27017 | listvytsia_test.count | STARTED | {"count"=>"pictures_pictures", "query"=>{}}
+MONGODB | localhost:27017 | listvytsia_test.count | SUCCEEDED | 0.00019s
+MONGODB | localhost:27017 | listvytsia_test.delete | STARTED | {"delete"=>"pictures_pictures", "deletes"=>[{"q"=>{}, "limit"=>0}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.delete | SUCCEEDED | 0.00021400000000000002s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdce416719b5a28bc2fd1'), "page_id"=>"page-1", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:16:36 UTC, "created_at"=>2016-03-31 08:16:36 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.00048s
+MONGODB | localhost:27017 | listvytsia_test.insert | STARTED | {"insert"=>"pictures_pictures", "documents"=>[{"_id"=>BSON::ObjectId('56fcdce416719b5a28bc2fd2'), "page_id"=>"page-2", "data_file_name"=>"picture.jpg", "updated_at"=>2016-03-31 08:16:36 UTC, "created_at"=>2016-03-31 08:16:36 UTC}], "ordered"=>true}
+MONGODB | localhost:27017 | listvytsia_test.insert | SUCCEEDED | 0.000442s
+MONGODB | localhost:27017 | listvytsia_test.find | STARTED | {"find"=>"pictures_pictures", "filter"=>{"page_id"=>"page-1"}}
+MONGODB | localhost:27017 | listvytsia_test.find | SUCCEEDED | 0.000428s

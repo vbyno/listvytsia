@@ -1,0 +1,13 @@
+uk:
+  mongoid:
+    models:
+      pictures/picture:
+        one: Фотографія
+        other: Фотографії
+    attributes:
+      pictures/picture:
+        page_id: Ідентифікатор сторінки
+        title: Назва
+        alt: Опис
+        data: Файл
+        main: Головна
