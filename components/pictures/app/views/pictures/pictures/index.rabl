@@ -1,0 +1,3 @@
+collection @pictures
+attributes :id
+
