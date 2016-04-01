@@ -1,0 +1,12 @@
+h1
+  | Фотографії
+  a.pull-right href='#' ngf-select="uploadFiles($files)" multiple=true accept="image/*" ngf-max-height="1000" ngf-max-size="1MB"
+    i.fa.fa-plus
+| Files:
+ul
+  li ng-repeat="f in files" style="font:smaller" {{f.name}} {{f.$errorParam}}
+    span class="progress" ng-show="f.progress >= 0"
+      div style="width:{{f.progress}}%"
+        ng-bind="f.progress + '%'"
+  li ng-repeat="f in errFiles" style="font:smaller" {{f.name}} {{f.$error}} {{f.$errorParam}}
+| {{errorMsg}}

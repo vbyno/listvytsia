@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('pictures', ['templates']);
+angular.module('pictures', ['templates', 'ngFileUpload']);
 
 # This will cause app to compile when Turbolinks loads a new page
 # and removes the need for ng-app in the DOM

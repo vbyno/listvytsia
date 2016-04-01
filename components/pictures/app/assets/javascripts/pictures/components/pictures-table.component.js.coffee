@@ -3,16 +3,16 @@ PicturesTableController = ($http) ->
 
   ctrl.pictures = []
 
-  $http.get("/pictures&page_id=#{ctrl.pageId}").success((data) ->
+  $http.get("/pictures.json&page_id=#{ctrl.pageId}").success((data) ->
     ctrl.pictures = data
   )
 
 PicturesTableController.$inject = ['$http']
 
 do () ->
-  angular.module('pictures').component('picturesTableComponent',
+  angular.module('pictures').component 'picturesTableComponent',
     templateUrl: 'pictures/pictures-table.template.html',
     controller: PicturesTableController,
     bindings:
       pageId: '@'
-  )
+
