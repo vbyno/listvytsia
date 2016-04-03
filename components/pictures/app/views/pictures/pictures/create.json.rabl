@@ -1,4 +1,2 @@
 extends 'pictures/pictures/picture'
-
-collection @pictures
-
+object @picture

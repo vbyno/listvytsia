@@ -15,8 +15,6 @@ module Pictures
     private
 
     def picture_params
-      params[:picture].reverse_merge!(page_id: params[:page_id])
-
       params.require(:picture).permit(:page_id, :alt, :title, :data)
     end
   end
