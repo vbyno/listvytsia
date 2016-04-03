@@ -1,5 +1,9 @@
 module Pictures
   module PicturesHelper
+    def pictures_engine
+      Pictures::Engine.routes.url_helpers
+    end
+
     def pictures_form(page_id)
       return unless page_id
 

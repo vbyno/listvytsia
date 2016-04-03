@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static_pages#index'
 
-  mount Pictures::Engine, at: Pictures::Engine.mount_path
+  mount Pictures::Engine, at: Pictures::Engine.mount_path, as: :pictures_engine
 
   get :contacts,  to: 'static_pages#contacts'
   get :timetable, to: 'static_pages#timetable'
