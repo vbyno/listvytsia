@@ -6,4 +6,13 @@
       th= Pictures::Picture.human_attribute_name :title
       th= Pictures::Picture.human_attribute_name :alt
       th.col-md-1.col-sm-1.col-xs-2= 'дії'
-    picture-row ng-repeat='picture in $ctrl.pictures' picture='picture' on-delete='$ctrl.deletePicture(picture)' on-update='$ctrl.updatePicture(picture, prop, value)'
+    tr data-ng-repeat='picture in $ctrl.pictures' picture='picture'
+      td
+        img data-ng-src="{{picture.thumb_url}}"
+      td {{picture.main}}
+      td {{picture.alt}}
+      td {{picture.title}}
+      td
+        span>
+          a data-ng-href= '#'
+            i.fa.fa-pencil
