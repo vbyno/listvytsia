@@ -3,7 +3,7 @@ PicturesTableController = ($http) ->
 
   ctrl.pictures = []
 
-  $http.get("/pictures.json&page_id=#{ctrl.pageId}").success((data) ->
+  $http.get("/pictures/pictures.json&page_id=#{ctrl.pageId}").success((data) ->
     ctrl.pictures = data
   )
 

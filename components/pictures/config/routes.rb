@@ -1,3 +1,3 @@
 Pictures::Engine.routes.draw do
-  resources :pictures, only: [:index, :create], path: '/', format: true
+  resources :pictures, only: [:index, :create], format: :true
 end

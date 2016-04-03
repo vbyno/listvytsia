@@ -1,9 +1,12 @@
 FileUploadController = ($scope, Upload, $timeout) ->
+ ctrl = this
+
  $scope.uploadFiles = (files) ->
   $scope.files = files
   if files and files.length
     Upload.upload(
-      url: 'https://angular-file-upload-cors-srv.appspot.com/upload'
+      url: ctrl.uploadUrl,
+      method: 'POST',
       data: files: files).then ((response) ->
       $timeout ->
         $scope.result = response.data
@@ -20,5 +23,5 @@ do () ->
     templateUrl: 'pictures/file-upload.template.html',
     controller: FileUploadController,
     bindings:
-      picture: '<'
+      uploadUrl: '@'
   )

@@ -1,3 +1,5 @@
+require_dependency 'pictures/application_controller'
+
 module Pictures
   class PicturesController < ApplicationController
     respond_to :json

@@ -19,6 +19,7 @@ PATH
       rabl (= 0.11.8)
       rails (= 4.2.5)
       rake (= 10.5.0)
+      sass (= 3.4.21)
       slim-rails (= 3.0.1)
 
 GEM
