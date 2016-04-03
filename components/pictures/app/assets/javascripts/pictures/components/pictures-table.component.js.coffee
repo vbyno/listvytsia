@@ -1,14 +1,14 @@
 PicturesTableController = ($http) ->
   ctrl = this
-
   ctrl.pictures = []
 
   $http.get('/pictures/pictures.json',
     params:
       page_id: ctrl.pageId
-  ).success((data) ->
+  ).success (data) ->
     ctrl.pictures = data
-  )
+
+  ctrl
 
 PicturesTableController.$inject = ['$http']
 
@@ -18,4 +18,3 @@ do () ->
     controller: PicturesTableController,
     bindings:
       pageId: '@'
-

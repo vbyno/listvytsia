@@ -8,8 +8,12 @@ module Pictures
 
     delegate :url, :current_path, :size, :content_type, :filename, to: :data
 
-    validates :data, :page_id,  presence: true
+    validates :data, :page_id, presence: true
 
     scope :by_page_id, ->(page_id) { where(page_id: page_id) }
+
+    def thumb_url
+      data.thumb.url
+    end
   end
 end
