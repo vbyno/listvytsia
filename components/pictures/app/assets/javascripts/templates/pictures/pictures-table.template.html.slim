@@ -5,7 +5,6 @@
       th.col-md-1= Pictures::Picture.human_attribute_name :main
       th= Pictures::Picture.human_attribute_name :title
       th= Pictures::Picture.human_attribute_name :alt
-      th.col-md-1.col-sm-1.col-xs-2= 'дії'
     tr data-ng-repeat='picture in $ctrl.pictures' picture='picture'
       td
         img data-ng-src="{{picture.thumb_url}}"
@@ -14,8 +13,5 @@
       td
         editable-field-component field-value="{{picture.alt}}" field-type='text' on-update="$ctrl.updatePicture(picture, 'alt', value)"
       td
-        | {{picture.title}}
-      td
-        span>
-          a data-ng-href= '#'
-            i.fa.fa-pencil
+        editable-field-component field-value="{{picture.title}}" field-type='text' on-update="$ctrl.updatePicture(picture, 'title', value)"
+

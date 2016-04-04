@@ -4,8 +4,8 @@ span ng-switch="$ctrl.editMode"
    | {{$ctrl.fieldValue}}
 
 span<
-  a data-ng-href='' data-ng-click="$ctrl.handleModeChange()"
+  a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.handleModeChange()"
     i.fa data-ng-class="$ctrl.editMode ? 'fa-check' : 'fa-pencil'"
-button ng-if="$ctrl.editMode" ng-click="$ctrl.reset()"
-  Reset
-
+span<
+  a data-ng-href='javascript:void(0)' data-ng-if="$ctrl.editMode" data-ng-click="$ctrl.reset()"
+    i.fa.fa-close

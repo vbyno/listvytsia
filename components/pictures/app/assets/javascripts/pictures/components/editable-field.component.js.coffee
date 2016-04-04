@@ -10,6 +10,7 @@ EditableFieldController = ($scope, $element, $attrs) ->
 
   ctrl.reset = ->
     ctrl.fieldValue = ctrl.fieldValueCopy
+    ctrl.editMode = !ctrl.editMode
 
   ctrl.$onInit = ->
     ctrl.fieldValueCopy = ctrl.fieldValue
