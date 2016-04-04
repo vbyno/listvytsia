@@ -4,6 +4,8 @@ module Pictures
     include Mongoid::Timestamps
 
     field :page_id
+    field :alt
+    field :title
     mount_uploader :data, PictureUploader, mount_on: :data_file_name
 
     delegate :url, :current_path, :size, :content_type, :filename, to: :data
