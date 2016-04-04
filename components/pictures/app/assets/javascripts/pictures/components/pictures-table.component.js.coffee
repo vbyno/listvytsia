@@ -3,9 +3,12 @@ PicturesTableController = ($http) ->
   ctrl.pictures = []
 
   ctrl.updatePicture = (picture, field, value) ->
-    $http.put('/pictures/pictures/#{picture.id}.json',
-      params:
-        field : value
+    params = {}
+    params['picture'] = {}
+    params['picture'][field] = value
+
+    $http.put("/pictures/pictures/#{picture.id}.json",
+      params
     ).success (data) ->
       picture[field] = value
 
