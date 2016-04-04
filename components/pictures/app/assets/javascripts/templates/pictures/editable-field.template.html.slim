@@ -1,0 +1,11 @@
+span ng-switch="$ctrl.editMode"
+  input ng-switch-when="true" type="{{$ctrl.fieldType}}" ng-model="$ctrl.fieldValue"
+  span ng-switch-default='true'
+   | {{$ctrl.fieldValue}}
+
+span<
+  a data-ng-href='' data-ng-click="$ctrl.handleModeChange()"
+    i.fa data-ng-class="$ctrl.editMode ? 'fa-check' : 'fa-pencil'"
+button ng-if="$ctrl.editMode" ng-click="$ctrl.reset()"
+  Reset
+

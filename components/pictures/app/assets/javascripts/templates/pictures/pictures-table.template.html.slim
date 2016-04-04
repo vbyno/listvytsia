@@ -9,9 +9,12 @@
     tr data-ng-repeat='picture in $ctrl.pictures' picture='picture'
       td
         img data-ng-src="{{picture.thumb_url}}"
-      td {{picture.main}}
-      td {{picture.alt}}
-      td {{picture.title}}
+      td
+        | {{picture.main}}
+      td
+        editable-field-component field-value="{{picture.alt}}" field-type='text' on-update="$ctrl.updatePicture(picture, 'alt', value)"
+      td
+        | {{picture.title}}
       td
         span>
           a data-ng-href= '#'

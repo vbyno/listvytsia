@@ -2,6 +2,13 @@ PicturesTableController = ($http) ->
   ctrl = this
   ctrl.pictures = []
 
+  ctrl.updatePicture = (picture, field, value) ->
+    $http.put('/pictures/pictures/#{picture.id}.json',
+      params:
+        field : value
+    ).success (data) ->
+      picture[field] = value
+
   $http.get('/pictures/pictures.json',
     params:
       page_id: ctrl.pageId
