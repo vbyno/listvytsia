@@ -16,6 +16,10 @@ module Pictures
       picture.update_attributes(picture_params)
     end
 
+    def destroy
+      picture.destroy
+    end
+
     private
 
     def picture_params
