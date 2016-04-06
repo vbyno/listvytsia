@@ -12,6 +12,11 @@ PicturesTableController = ($http) ->
     ).success (data) ->
       picture[field] = value
 
+  ctrl.deletePicture = (picture) ->
+    $http.delete("/pictures/pictures/#{picture.id}.json"
+    ).success (data) ->
+      ctrl.pictures.splice(ctrl.pictures.indexOf(picture), 1)
+
   $http.get('/pictures/pictures.json',
     params:
       page_id: ctrl.pageId

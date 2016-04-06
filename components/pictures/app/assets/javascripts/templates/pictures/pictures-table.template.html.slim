@@ -5,6 +5,7 @@
       th.col-md-1= Pictures::Picture.human_attribute_name :main
       th= Pictures::Picture.human_attribute_name :title
       th= Pictures::Picture.human_attribute_name :alt
+      th
     tr data-ng-repeat='picture in $ctrl.pictures' picture='picture'
       td
         img data-ng-src="{{picture.thumb_url}}"
@@ -14,4 +15,8 @@
         editable-field-component field-value="{{picture.alt}}" field-type='text' on-update="$ctrl.updatePicture(picture, 'alt', value)"
       td
         editable-field-component field-value="{{picture.title}}" field-type='text' on-update="$ctrl.updatePicture(picture, 'title', value)"
+      td
+        span
+          a data-ng-href='javascript:void(0)' data-ng-click='$ctrl.deletePicture(picture)' confirm=I18n.t('pictures.picture.confirm_msg')
+            i.fa.fa-trash
 
