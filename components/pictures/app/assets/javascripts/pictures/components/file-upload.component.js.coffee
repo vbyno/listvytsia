@@ -13,11 +13,13 @@ FileUploadController = ($scope, Upload, $timeout) ->
       file.upload.then ((response) ->
         $timeout ->
           file.result = response.data
+        ctrl.onAdd()
       ), ((response) ->
         if response.status > 0
           $scope.errorMsg = response.status + ': ' + response.data
       ), (evt) ->
         file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total))
+
   ctrl
 
 FileUploadController.$inject = ['$scope', 'Upload', '$timeout']
@@ -29,4 +31,5 @@ do () ->
     bindings:
       uploadUrl: '@'
       pageId: '@'
+      onAdd: '&'
   )

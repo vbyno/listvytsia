@@ -4,11 +4,10 @@ PicturesTableController = ($http) ->
 
   ctrl.updatePicture = (picture, field, value) ->
     params = {}
-    params['picture'] = {}
-    params['picture'][field] = value
+    params[field] = value
 
     $http.put("/pictures/pictures/#{picture.id}.json",
-      params
+      picture: params
     ).success (data) ->
       picture[field] = value
 
@@ -17,12 +16,17 @@ PicturesTableController = ($http) ->
     ).success (data) ->
       ctrl.pictures.splice(ctrl.pictures.indexOf(picture), 1)
 
-  $http.get('/pictures/pictures.json',
-    params:
-      page_id: ctrl.pageId
-  ).success (data) ->
-    ctrl.pictures = data
+  ctrl.addPicture = (picture) ->
+    ctrl.pictures.push(picture)
 
+  ctrl.loadPictures = ->
+    $http.get('/pictures/pictures.json',
+      params:
+        page_id: ctrl.pageId
+    ).success (data) ->
+      ctrl.pictures = data
+
+  ctrl.loadPictures()
   ctrl
 
 PicturesTableController.$inject = ['$http']
@@ -33,3 +37,4 @@ do () ->
     controller: PicturesTableController,
     bindings:
       pageId: '@'
+      uploadUrl: '@'
