@@ -36,7 +36,7 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   end
 
   version :medium do
-    process resize_to_limit: [800, 455]
+    process resize_to_fill: [800, 455]
     process quality: 75
   end
 

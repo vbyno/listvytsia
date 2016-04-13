@@ -1,27 +1,15 @@
-#portfolio-carousel.carousel.slide.carousel-v2.margin-bottom-40
-  ol.carousel-indicators
-    li.rounded-x.active data-slide-to="0" data-target="#portfolio-carousel"
-    li.rounded-x data-slide-to="1" data-target="#portfolio-carousel"
-    li.rounded-x data-slide-to="2" data-target="#portfolio-carousel"
-  .carousel-inner
-    .item.active
-      img.full-width.img-responsive alt="" src="assets/img/mockup/img2.jpg" /
-    .item
-      img.full-width.img-responsive alt="" src="assets/img/mockup/img1.jpg" /
-    .item
-      img.full-width.img-responsive alt="" src="assets/img/mockup/img4.jpg" /
-  a.left.carousel-control.rounded-x data-slide="prev" href="#portfolio-carousel" role="button"
-    i.fa.fa-angle-left.arrow-prev
-  a.right.carousel-control.rounded-x data-slide="next" href="#portfolio-carousel" role="button"
-    i.fa.fa-angle-right.arrow-next
+.title-v1
+  h1= event.title
+
+= pictures_gallery(event.id)
 .row.margin-bottom-60
   .col-sm-8
     .headline
-      h2 Product Description
+      h2 Description
     == event.content
   .col-sm-4
     .headline
-      h2 Product Details
+      h2 Details
     ul.list-unstyled.project-details
       li
         strong Client:

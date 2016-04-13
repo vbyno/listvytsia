@@ -1,0 +1,14 @@
+#portfolio-carousel.carousel.slide.carousel-v2.margin-bottom-40
+  ol.carousel-indicators
+    li.rounded-x.active data-slide-to="0" data-target="#portfolio-carousel"
+    li.rounded-x data-slide-to="1" data-target="#portfolio-carousel"
+    li.rounded-x data-slide-to="2" data-target="#portfolio-carousel"
+  .carousel-inner
+    - Pictures::Picture.by_page_id(target_id).each_with_index do |picture, index|
+      .item class=('active' if index == 0)
+        img.full-width1.img-responsive alt="#{picture.alt}" title="#{picture.title}" src="#{picture.data.medium.url}"
+  a.left.carousel-control.rounded-x data-slide="prev" href="#portfolio-carousel" role="button"
+    i.fa.fa-angle-left.arrow-prev
+  a.right.carousel-control.rounded-x data-slide="next" href="#portfolio-carousel" role="button"
+    i.fa.fa-angle-right.arrow-next
+

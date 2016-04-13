@@ -9,5 +9,11 @@ module Pictures
 
       render('pictures/pictures/collection_form', page_id: page_id)
     end
+
+    def pictures_gallery(target_id)
+      return unless target_id
+
+      render('pictures/pictures/gallery', target_id: target_id.to_s)
+    end
   end
 end
