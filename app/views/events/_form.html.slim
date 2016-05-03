@@ -28,10 +28,7 @@
       fieldset.no-padding
         .row.sky-space-20
           .col-md-9
-            = f.simple_fields_for :seo_content do |p|
-              = p.input :title
-              = p.input :description
-              = p.input :keywords
+            = seo_contents_form(event.id)
     .tab-pane.fade.in#pictures
       br
       fieldset.no-padding

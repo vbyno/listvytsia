@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-path 'components/pictures' do
+path 'components' do
   gem 'pictures'
+  gem 'seo_contents'
 end
 
 gem 'rails'
@@ -86,7 +87,7 @@ group :test do
   gem 'mongoid-rspec'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'launchy'
   gem 'fuubar', require: false
 end

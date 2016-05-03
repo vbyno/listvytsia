@@ -6,14 +6,10 @@ class EventsController < PublicController
 
   def index; end
   def show; end
-
-  def edit
-    event.build_seo_content unless event.seo_content
-  end
+  def edit; end
 
   def new
     @event = Event.new
-    event.build_seo_content
 
     authorize event
   end

@@ -17,10 +17,7 @@
       .col-md-9
         div= f.association :picture, collection: Ckeditor::PicturePresenter.latest(self), label_method: :thumb_image, as: :radio_buttons, wrapper_html: { class: 'inline-radio-buttons'}
     .row.sky-space-20
-      = f.simple_fields_for :seo_content do |p|
-        = p.input :title
-        = p.input :description
-        = p.input :keywords
+      = seo_contents_form(article.id)
     .row.sky-space-20
       .col-md-9.col-md-offset-0
         div.pull-right= f.button :submit, t('.submit')
