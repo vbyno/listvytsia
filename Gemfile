@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 path 'components' do
+  gem 'app_component'
   gem 'pictures'
   gem 'seo_contents'
 end

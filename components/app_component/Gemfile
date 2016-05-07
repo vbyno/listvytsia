@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+
+# Declare your gem's dependencies in app_component.gemspec.
+# Bundler will treat runtime dependencies like base dependencies, and
+# development dependencies will be added by default to the :development group.
+gemspec
+
+path '../' do
+  gem 'pictures'
+  gem 'seo_contents'
+end
+
+gem 'ckeditor', github: 'mkaszubowski/ckeditor', ref: 'c9b5ea842222976c2d7f646f2d1210f4cb619fc2'
+
+group :test do
+  gem 'mongoid-rspec'
+end

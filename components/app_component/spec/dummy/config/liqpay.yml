@@ -1,0 +1,20 @@
+production:
+  public_key: i73229323032
+  private_key: 3WGd8sHzDOY2M0lx8rjDbFwCoJdTDP2vUNuCcF48
+  currency: UAH
+  sandbox: 0
+staging:
+  public_key: i19049578900
+  private_key: ir5ayx8ReUgsuP9XjvarggC89fdaOcgWU9A8Jc7R
+  currency: UAH
+  sandbox: 1
+development:
+  public_key: public_key
+  private_key: private_key
+  currency: UAH
+  sandbox: 1
+test:
+  public_key: public_key
+  private_key: private_key
+  currency: UAH
+  sandbox: 1
