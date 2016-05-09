@@ -6,6 +6,17 @@ GIT
       cocaine
       orm_adapter (~> 0.5.0)
 
+GIT
+  remote: git://github.com/vbyno/mongoid_rails_migrations.git
+  revision: 0cacfa5b94e48b9eccc2ade56804d167c33ca1a3
+  specs:
+    mongoid_rails_migrations (1.1.0)
+      activesupport (>= 4.2.0)
+      bundler (>= 1.0.0)
+      mongoid (>= 4.0.0)
+      rails (>= 4.2.0)
+      railties (>= 4.2.0)
+
 PATH
   remote: components
   specs:
@@ -21,6 +32,7 @@ PATH
       mini_magick (= 4.3.6)
       money-rails (= 1.6.0)
       mongoid (= 5.1.1)
+      mongoid_rails_migrations
       pictures
       pundit (= 1.1.0)
       rabl (= 0.11.8)
@@ -282,12 +294,6 @@ GEM
       mongoid (~> 5.0)
       rake
       rspec (~> 3.3)
-    mongoid_rails_migrations (1.1.0)
-      activesupport (>= 4.2.0)
-      bundler (>= 1.0.0)
-      mongoid (>= 4.0.0)
-      rails (>= 4.2.0)
-      railties (>= 4.2.0)
     multi_json (1.11.3)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -368,7 +374,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    recaptcha (1.1.0)
+    recaptcha (1.3.0)
       json
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
@@ -515,7 +521,7 @@ DEPENDENCIES
   money-rails
   mongoid (~> 5.1.0)
   mongoid-rspec
-  mongoid_rails_migrations
+  mongoid_rails_migrations!
   omniauth
   omniauth-facebook
   pictures!

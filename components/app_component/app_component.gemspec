@@ -29,8 +29,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'pundit', '1.1.0'
   s.add_dependency 'figaro', '1.1.1'
   s.add_dependency 'liqpay', '1.0.1'
-  s.add_dependency 'ckeditor'
   s.add_dependency 'simple_form', '3.2.1'
+  s.add_dependency 'ckeditor'
+  s.add_dependency 'mongoid_rails_migrations'
 
   s.add_dependency 'pictures'
   s.add_dependency 'seo_contents'

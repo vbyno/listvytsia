@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :article do
+  factory :article, class: 'AppComponent::Article' do
     title 'MyString'
     sequence(:permalink) { |n| "permalink_#{n}" }
     content '<p>My loooong Text</p>'

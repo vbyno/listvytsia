@@ -33,7 +33,13 @@ RSpec.configure do |config|
   # Clean/Reset Mongoid DB prior to running each test.
   config.before(:each) do
     # Temporary fix while database cleaning does not work
-    [Role, Permission, Page, User, Admin].each(&:delete_all)
+    [
+      AppComponent::Role,
+      AppComponent::Permission,
+      AppComponent::Page,
+      AppComponent::User,
+      AppComponent::Admin
+    ].each(&:delete_all)
     # Mongoid::Sessions.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
   end
 end

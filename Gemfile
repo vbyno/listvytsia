@@ -10,7 +10,7 @@ end
 gem 'rails'
 gem 'rails-i18n'
 gem 'mongoid', '~> 5.1.0'
-gem 'mongoid_rails_migrations'
+gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations'
 gem 'bson_ext'
 
 gem 'devise'

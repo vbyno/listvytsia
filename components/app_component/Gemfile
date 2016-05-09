@@ -10,7 +10,8 @@ path '../' do
   gem 'seo_contents'
 end
 
-gem 'ckeditor', github: 'mkaszubowski/ckeditor', ref: 'c9b5ea842222976c2d7f646f2d1210f4cb619fc2'
+gem 'ckeditor',                 github: 'mkaszubowski/ckeditor',          ref: 'c9b5ea842222976c2d7f646f2d1210f4cb619fc2'
+gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations', ref: '0cacfa5b94e48b9eccc2ade56804d167c33ca1a3'
 
 group :test do
   gem 'mongoid-rspec'

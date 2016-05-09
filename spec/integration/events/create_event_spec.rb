@@ -4,7 +4,7 @@ describe 'create event', js: true do
   let(:user) { create :user }
 
   before do
-    allow_any_instance_of(EventPolicy).to receive(:create?).and_return true
+    allow_any_instance_of(AppComponent::EventPolicy).to receive(:create?).and_return true
   end
 
   it 'creates' do
