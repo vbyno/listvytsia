@@ -9,6 +9,7 @@ require 'simple_form'
 require 'rabl'
 require 'slim-rails'
 require 'mongoid_rails_migrations'
+require 'ckeditor'
 
 module AppComponent
   class Engine < ::Rails::Engine
