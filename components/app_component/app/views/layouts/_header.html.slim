@@ -16,8 +16,9 @@
           = link_to t('.timetable'), timetable_path
         li class=('active' if current_page?(articles_path))
            = link_to t('.articles'), articles_path
-        li class=('active' if current_page?(events_path))
-           = link_to t('.events'), events_path
+        - if AppComponent::Event.published.exists?
+          li class=('active' if current_page?(events_path))
+             = link_to t('.events'), events_path
         li class=('active' if current_page?(donate_path))
            = link_to t('.donate'), donate_path
         li class=('active' if current_page?(contacts_path))

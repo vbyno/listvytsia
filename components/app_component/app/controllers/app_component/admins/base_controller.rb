@@ -1,5 +1,5 @@
 module AppComponent
-  module Admin
+  module Admins
     class BaseController < ::AppComponent::ApplicationController
       before_action :authenticate_admin!
       layout 'admin'

@@ -73,7 +73,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'thin'
+  gem 'puma'
   gem 'byebug'
   gem 'spring'
   gem 'pry-rails'

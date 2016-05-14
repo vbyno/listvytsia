@@ -1,7 +1,7 @@
 require_relative 'base_controller'
 
 module AppComponent
-  module Admin
+  module Admins
     class UsersController < BaseController
       respond_to :json
       helper_method :users, :user

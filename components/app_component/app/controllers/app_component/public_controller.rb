@@ -1,8 +1,10 @@
+require_relative 'application_controller'
+
 module AppComponent
   class PublicController < ApplicationController
-    include Pundit
+    include ::Pundit
 
-    rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+    rescue_from ::Pundit::NotAuthorizedError, with: :user_not_authorized
 
     layout 'public'
 

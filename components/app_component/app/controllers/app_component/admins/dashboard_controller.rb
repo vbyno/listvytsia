@@ -1,7 +1,7 @@
 require_relative 'base_controller'
 
 module AppComponent
-  module Admin
+  module Admins
     class DashboardController < BaseController
       def index; end
     end

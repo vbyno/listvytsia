@@ -1,7 +1,7 @@
 require_relative 'base_controller'
 
 module AppComponent
-  module Admin
+  module Admins
     class StaticPagesController < BaseController
       respond_to :json
       helper_method :static_pages, :static_page
