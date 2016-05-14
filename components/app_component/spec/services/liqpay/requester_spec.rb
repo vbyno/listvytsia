@@ -12,7 +12,11 @@ describe AppComponent::Liqpay::Requester do
     let(:http_request) { double(host: host, optional_port: port, protocol: protocol,
                                 path_parameters: {:controller=>"donations", :action=>"create"}) }
     let(:controller) do
-      ctrl = ApplicationController.new
+      class CustomController < ApplicationController
+        include AppComponent::Engine.routes.url_helpers
+      end
+
+      ctrl = CustomController.new
       allow(ctrl).to receive(:request).and_return http_request
 
       ctrl

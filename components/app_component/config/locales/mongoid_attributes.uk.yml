@@ -1,50 +1,50 @@
 uk:
   mongoid:
     models:
-      role:
+      app_component/role:
         one: Роль
         other: Ролі
-      user:
+      app_component/user:
         one: Користувач
         other: Користувачі
-      admin:
+      app_component/admin:
         one: Адміністратор
         other: Адміністратори
-      article:
+      app_component/article:
         one: Стаття
         other: Статті
-      static_page:
+      app_component/static_page:
         one: Сторінка
         other: Сторінки
-      permission:
+      app_component/permission:
         one: Дозвіл
         other: Дозволи
-      donation:
+      app_component/donation:
         one: Добровільна пожертва
         other: Добровільні пожертви
-      seo_content:
+      app_component/seo_content:
         one: SEO-таги
         other: SEO-таги
     attributes:
-      role:
+      app_component/role:
         title: Назва
         users: Користувачі
         permissions: Дозволи
-      user:
+      app_component/user:
         roles: Ролі
         email: Електронна адреса
-      page:
+      app_component/page:
         permalink: Посилання
         title: Заголовок
         published: Опублікована
         content: Контент
-      article:
+      app_component/article:
         content_intro: Ввідний текст
         author: Автор
         picture: Головне зображення
-      donation:
+      app_component/donation:
         amount: Сума
-      seo_content:
+      app_component/seo_content:
         title: SEO-заголовок
         description: SEO-опис
         keywords: Ключові слова
