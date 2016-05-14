@@ -15,7 +15,7 @@ AppComponent::Engine.routes.draw do
     post :confirm, on: :collection
   end
 
-  namespace :admin do
+  namespace :admins do
     root to: 'dashboard#index'
     resources :roles, except: [:new, :edit]
     resources :users, except: [:new, :edit, :destroy]

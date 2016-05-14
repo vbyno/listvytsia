@@ -20,7 +20,7 @@ module AppComponent
       private
 
       def static_pages
-        @static_pages ||= StaticPage.all
+        @static_pages ||= AppComponent::StaticPage.all
       end
 
       def static_page

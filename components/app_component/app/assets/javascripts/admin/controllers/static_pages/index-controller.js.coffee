@@ -3,7 +3,7 @@ angular.module('admin.controllers')
   controller = this;
   controller.staticPages = [];
 
-  $http.get('/admin/static_pages').success((data) ->
+  $http.get('/admins/static_pages').success((data) ->
     controller.staticPages = data;
   );
 

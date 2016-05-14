@@ -4,12 +4,12 @@ angular.module('admin.controllers')
   controller.staticPage = { permalink: '', title: '', content: '', published: false };
   controller.staticPage.seo_content = { title: '', description: '', keywords: '' };
 
-  $http.get("/admin/static_pages/#{$routeParams.id}").success((data) ->
+  $http.get("/admins/static_pages/#{$routeParams.id}").success((data) ->
     controller.staticPage = data;
   );
 
   @updateStaticPage = () ->
-    $http.put("/admin/static_pages/#{controller.staticPage.id}", @_staticPageParams()).success( ->
+    $http.put("/admins/static_pages/#{controller.staticPage.id}", @_staticPageParams()).success( ->
       $location.path('/static_pages');
     );
 

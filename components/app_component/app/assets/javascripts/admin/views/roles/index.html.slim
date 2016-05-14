@@ -1,10 +1,10 @@
 h1
-  = Role.human_list_name
+  = AppComponent::Role.human_list_name
   a.pull-right href= '#/roles/new'
     i.fa.fa-plus
 table.table.table-striped
   tr
-    th= Role.human_attribute_name(:title)
+    th= AppComponent::Role.human_attribute_name(:title)
     th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
   tr data-ng-repeat= 'role in indexCtrl.roles'
     td {{role.title}}

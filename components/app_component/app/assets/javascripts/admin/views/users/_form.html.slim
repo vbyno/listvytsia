@@ -2,11 +2,11 @@
   label.string.required.control-label for="user_email"
     abbr title="required"
       | *
-      =< User.human_attribute_name(:email)
+      =< AppComponent::User.human_attribute_name(:email)
   input#user_email.string.required.form-control type='text' data-ng-model='ctrl.user.email' required=true autofocus=true
   br
   .form-group.check_boxes.optional.user_roles
-  label.check_boxes.optional.control-label= User.human_attribute_name(:roles)
+  label.check_boxes.optional.control-label= AppComponent::User.human_attribute_name(:roles)
   span.checkbox data-ng-repeat= 'role in ctrl.allRoles'
     label
       input.check_boxes.optional type="checkbox" checklist-model="ctrl.user.role_ids" checklist-value="role.id"

@@ -4,7 +4,7 @@ angular.module('admin.controllers')
   controller.role = { title: '', permissions: [] };
 
   @createRole = () ->
-    $http.post("/admin/roles", @_role_params()).success( ->
+    $http.post("/admins/roles", @_role_params()).success( ->
       $location.path('/roles');
     );
 

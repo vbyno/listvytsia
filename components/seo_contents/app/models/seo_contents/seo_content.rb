@@ -16,5 +16,9 @@ module SeoContents
     def self.for_target(target_id)
       where(target_id: target_id).first || new(target_id: target_id)
     end
+
+    def self.human_list_name
+      model_name.human(count: Float::INFINITY)
+    end
   end
 end

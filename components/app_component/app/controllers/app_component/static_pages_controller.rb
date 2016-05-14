@@ -5,7 +5,7 @@ module AppComponent
     helper_method :static_page
 
     def contacts
-      @contact_form = ContactForm.new
+      @contact_form = AppComponent::ContactForm.new
     end
 
     def donate
@@ -21,15 +21,15 @@ module AppComponent
     private
 
     def donation
-      @donation ||= Donation.by_id(params[:donation_id]).first
+      @donation ||= AppComponent::Donation.by_id(params[:donation_id]).first
     end
 
     def static_pages
-      @static_pages ||= StaticPage.published
+      @static_pages ||= AppComponent::StaticPage.published
     end
 
     def static_page
-      @static_page ||= static_pages.where(permalink: action_name).first || StaticPages::MissedModel.instance
+      @static_page ||= static_pages.where(permalink: action_name).first || AppComponent::StaticPages::MissedModel.instance
     end
   end
 end
