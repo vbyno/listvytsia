@@ -22,7 +22,7 @@ AppComponent::Engine.routes.draw do
     resources :static_pages, except: [:new, :edit, :destroy]
   end
 
-  devise_for :users, class_name: 'AppComponent::User'
+  devise_for :users, class_name: 'AppComponent::User', controllers: { sessions: 'app_component/sessions' }
   devise_for :admins, class_name: 'AppComponent::Admin', controllers: { sessions: 'app_component/admin/sessions' }
   mount Ckeditor::Engine => '/ckeditor'
 end

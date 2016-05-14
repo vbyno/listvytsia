@@ -9,7 +9,7 @@ module AppComponent
     ACTIONS = %w( read create update moderate ).freeze
     RESOURCES = %w( articles roles events ).freeze
 
-    embedded_in :role
+    embedded_in :role, class_name: 'AppComponent::Role'
     field :resource
     field :action
 

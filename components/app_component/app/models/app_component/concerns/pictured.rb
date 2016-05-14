@@ -4,7 +4,7 @@ module AppComponent
       extend ActiveSupport::Concern
 
       included do
-        belongs_to :picture, class_name: 'Ckeditor::Picture'
+        belongs_to :picture, class_name: 'AppComponent::Ckeditor::Picture'
 
         def picture_url
           return '' unless picture

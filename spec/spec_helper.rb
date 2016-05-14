@@ -20,7 +20,6 @@ RSpec.configure do |config|
   # http://stackoverflow.com/questions/6296235/undefined-method-get-for-rspeccoreexamplegroupnested-10x00000106db51f
   config.infer_spec_type_from_file_location!
 
-  config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, type: :controller
   config.include Warden::Test::Helpers
   config.include Rails.application.routes.url_helpers

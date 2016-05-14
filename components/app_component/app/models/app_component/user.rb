@@ -39,8 +39,8 @@ module AppComponent
     # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
     # field :locked_at,       type: Time
 
-    has_many :articles, inverse_of: :author, autosave: true
-    has_and_belongs_to_many :roles, autosave: true
+    has_many :articles, class_name: 'AppComponent::Article', inverse_of: :author, autosave: true
+    has_and_belongs_to_many :roles, class_name: 'AppComponent::Role', autosave: true
 
     def name; end
 
