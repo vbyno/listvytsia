@@ -1,6 +1,6 @@
 module AppComponent
   module Ckeditor
-    class PicturePolicy < ApplicationPolicy
+    class PicturePolicy < ::AppComponent::ApplicationPolicy
       permits :picture
 
       def index?
