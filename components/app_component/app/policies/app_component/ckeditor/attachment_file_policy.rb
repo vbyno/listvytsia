@@ -1,6 +1,6 @@
 module AppComponent
   module Ckeditor
-    class AttachmentFilePolicy < ApplicationPolicy
+    class AttachmentFilePolicy < ::AppComponent::ApplicationPolicy
       permits :attachment
 
       def index?
