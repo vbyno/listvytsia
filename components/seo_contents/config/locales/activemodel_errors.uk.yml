@@ -1,0 +1,8 @@
+uk:
+  mongoid:
+    errors:
+      models:
+        seo_contents/seo_content:
+          attributes:
+            target_id:
+              blank: відсутній

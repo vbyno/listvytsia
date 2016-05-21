@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+path 'components' do
+  gem 'app_component'
+  gem 'pictures'
+  gem 'seo_contents'
+end
+
 gem 'rails'
 gem 'rails-i18n'
-gem 'mongoid', '~> 5.0.0'
-gem 'mongoid_rails_migrations'
+gem 'mongoid', '~> 5.1.0'
+gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations'
 gem 'bson_ext'
 
 gem 'devise'
@@ -20,7 +26,7 @@ gem 'money-rails'
 
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
-gem 'sprockets', '2.12.3' # http://www.ademartutor.com/angular-rails-templates-gem-error-with-sprockets-3-0-o/
+gem 'sprockets'
 gem 'jquery-rails'
 gem 'underscore-rails'
 gem 'coffee-rails'
@@ -67,7 +73,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'thin'
+  gem 'puma'
   gem 'byebug'
   gem 'spring'
   gem 'pry-rails'
@@ -82,7 +88,7 @@ group :test do
   gem 'mongoid-rspec'
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'launchy'
   gem 'fuubar', require: false
 end

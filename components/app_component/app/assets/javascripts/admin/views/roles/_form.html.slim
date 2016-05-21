@@ -1,0 +1,33 @@
+.form-group.required
+  label.string.required.control-label for="role_title"
+    abbr title="required"
+      | *
+      =< AppComponent::Role.human_attribute_name(:title)
+  input#role_title.string.required.form-control type='text' data-ng-model='ctrl.role.title' required=true autofocus=true
+  br
+  h2
+    => AppComponent::Permission.human_list_name
+    a data-ng-href= '{{ctrl.locationPath()}}' data-ng-click= 'ctrl.newPermission()'
+      i.fa.fa-plus
+  .row data-ng-repeat= 'permission in ctrl.role.permissions'
+    .col-sm-5.col-sm-offset-1
+      div
+        .form-group.select.required
+          select.select.required.form-control data-ng-model='permission.resource'
+            option value=''
+            - AppComponent::Permission::RESOURCES.each do |value|
+
+              option value="#{value}" = value
+    .col-sm-5
+      div
+        .form-group.select.required
+          select.select.required.form-control data-ng-model='permission.action'
+            option value=''
+            - AppComponent::Permission::ACTIONS.each do |value|
+              option value="#{value}" = value
+    .col-sm-1
+      span
+        a data-ng-href= '{{ctrl.locationPath()}}' data-ng-click= 'ctrl.deletePermission(permission)'
+          i.fa.fa-trash
+  .form-group
+    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admin.roles.form.submit') data-ng-disabled='!roleForm.$valid'

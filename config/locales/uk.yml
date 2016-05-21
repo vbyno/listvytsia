@@ -34,6 +34,7 @@ uk:
       timetable: Розклад
       seminar: Семінар
       donate: Пожертви
+      events: Події
       contacts: &contacts Контакти
     banner:
       main_text: *name
@@ -104,6 +105,25 @@ uk:
       success: Стаття успішно створена
     update:
       success: Стаття успішно оновлена
+  events:
+    event:
+      read_more: детальніше...
+      edit_event: &edit_event Редагувати подію
+    form:
+      submit: Зберегти
+    index:
+      header: Події
+      <<: *social_networks
+    show:
+      edit_event: *edit_event
+    edit:
+      header: Редагування події
+    new:
+      header: Створення події
+    create:
+      success: Подія успішно створена
+    update:
+      success: Подія успішно оновлена
   donations:
     form:
       submit: Пожертвувати

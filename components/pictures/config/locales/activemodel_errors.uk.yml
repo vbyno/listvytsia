@@ -1,0 +1,8 @@
+uk:
+  mongoid:
+    errors:
+      models:
+        pictures/picture:
+          attributes:
+            data:
+              blank: відсутній

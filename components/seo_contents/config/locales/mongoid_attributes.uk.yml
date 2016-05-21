@@ -1,0 +1,12 @@
+uk:
+  mongoid:
+    models:
+      seo_contents/seo_content:
+        one: SEO-контент
+        other: SEO-контенти
+    attributes:
+      seo_contents/seo_content:
+        target_id: Ідентифікатор сторінки
+        title: SEO-заголовок
+        description: SEO-опис
+        keywords: SEO ключові слова

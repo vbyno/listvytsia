@@ -1,0 +1,14 @@
+h1
+  = AppComponent::User.human_list_name
+  a.pull-right href= '#/users/new'
+    i.fa.fa-plus
+table.table.table-striped
+  tr
+    th= AppComponent::User.human_attribute_name(:email)
+    th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tr data-ng-repeat= 'user in indexCtrl.users'
+    td {{user.email}}
+    td
+      span>
+        a data-ng-href= '#/users/{{user.id}}/edit'
+          i.fa.fa-pencil

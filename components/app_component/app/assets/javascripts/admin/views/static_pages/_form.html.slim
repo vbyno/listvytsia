@@ -1,0 +1,46 @@
+  .form-group.required
+    label.string.required.control-label for="static_page_permalink"
+      abbr title="required"
+        | *
+        =< AppComponent::StaticPage.human_attribute_name(:permalink)
+    input#static_page_permalink.string.required.form-control type='text' data-ng-model='ctrl.staticPage.permalink' required=true autofocus=true
+
+  .form-group.required
+    label.string.required.control-label for="static_page_title"
+      abbr title="required"
+        | *
+        =< AppComponent::StaticPage.human_attribute_name(:title)
+    input#static_page_title.string.required.form-control type='text' data-ng-model='ctrl.staticPage.title' required=true
+
+  .form-group
+    label.boolean for='static_page_published'
+      input#static_page_published.boolean data-ng-model='ctrl.staticPage.published' type='checkbox' required=false
+      =< AppComponent::StaticPage.human_attribute_name(:published)
+
+  .form-group
+    label.text for='static_page_content'
+      =< AppComponent::StaticPage.human_attribute_name(:content)
+    div
+      textarea#static_page_content.text.form-control rows=10 data-ng-model='ctrl.staticPage.content' required=false
+  br
+  h2=> SeoContents::SeoContent.human_list_name
+  div
+    .form-group.select.required
+      label.string.required.control-label for="seo_content_title"
+        abbr title="required"
+          | *
+          =< SeoContents::SeoContent.human_attribute_name(:title)
+      input#seo_content_title.string.required.form-control type='text' data-ng-model='ctrl.staticPage.seo_content.title' required=true
+    .form-group.select.required
+      label.string.required.control-label for="seo_content_description"
+        abbr title="required"
+          | *
+          =< SeoContents::SeoContent.human_attribute_name(:description)
+      input#seo_content_description.string.required.form-control type='text' data-ng-model='ctrl.staticPage.seo_content.description' required=true
+    .form-group.select
+      label.string.required.control-label for="seo_content_keywords"
+        =< SeoContents::SeoContent.human_attribute_name(:keywords)
+      input#seo_content_keywords.string.form-control type='text' data-ng-model='ctrl.staticPage.seo_content.keywords'
+  br
+  .form-group
+    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admin.static_pages.form.submit') data-ng-disabled='!staticPageForm.$valid'

@@ -1,0 +1,5 @@
+- form.object.build_seo_content unless form.object.seo_content
+= form.simple_fields_for :seo_content do |s|
+  = s.input :title, label: SeoContents::SeoContent.human_attribute_name(:title)
+  = s.input :description, label: SeoContents::SeoContent.human_attribute_name(:description)
+  = s.input :keywords, label: SeoContents::SeoContent.human_attribute_name(:keywords)

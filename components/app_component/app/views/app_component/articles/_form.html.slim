@@ -1,0 +1,30 @@
+= simple_form_for article do |f|
+  ul.nav.nav-tabs
+    li.active= link_to 'Main Info', '#main-info', data: { toggle: 'tab' }
+    li= link_to 'Seo Content', '#seo-content', data: { toggle: 'tab' }
+  .tab-content
+    .tab-pane.fade.in.active#main-info
+      br
+      fieldset.no-padding
+        .row.sky-space-20
+          .col-md-3
+            div= f.input :title
+            div= f.input :published, as: :boolean
+            div= f.input :permalink
+            - if pundit_user.moderator?
+              div= f.association :author, as: :select, label_method: :email, collection: AppComponent::User.all
+          .col-md-6
+            div= f.input :content_intro, as: :text, input_html: { rows: 7 }
+        .row.sky-space-20
+          .col-md-9
+            div= f.cktext_area :content
+    .tab-pane.fade.in#seo-content
+      br
+      fieldset.no-padding
+        .row.sky-space-20
+          .col-md-9
+            = seo_contents_form(article, form: f)
+  br
+  .row.sky-space-20
+    .col-md-9
+      div.pull-right= f.button :submit, t('.submit')

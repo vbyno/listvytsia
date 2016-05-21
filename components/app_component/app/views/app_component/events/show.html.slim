@@ -1,0 +1,33 @@
+.title-v1
+  h1= event.title
+
+= pictures_gallery(event.id)
+.row.margin-bottom-60
+  .col-sm-8
+    .headline
+      h2 Description
+    == event.content
+  .col-sm-4
+    .headline
+      h2 Details
+    ul.list-unstyled.project-details
+      li
+        strong Client:
+        | Web Design
+      li
+        strong Date:
+        | 17 October 2014
+      li
+        strong Categories:
+        a href="#"  Web Design,
+        a href="#"  Graphic
+.cube-portfolio
+  #grid-container.cbp-l-grid-agency.cbp.cbp-caption-active.cbp-caption-zoom.cbp-ready style=("height: 604px;")
+    .cbp-wrapper-outer
+      .cbp-wrapper
+        = render partial: 'related_event', collection: Event.related_to(event).limit(4)
+
+- content_for :title do
+  = event.seo_content&.title
+- content_for :description do
+  = event.seo_content&.description

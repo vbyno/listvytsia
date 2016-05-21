@@ -1,0 +1,132 @@
+uk:
+  app_component:
+    site_info:
+      name: &name Ліствиця
+      email: &email listvycja@gmail.com
+      phone: &phone +38 (093) 657 02 19
+      site: &site listvycja.org
+      address: &address Україна, м. Львів
+      facebook: &facebook 'https://www.facebook.com/pages/ЛМГО-Ліствиця/1433298123589114'
+      google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
+    error_messages:
+      invalid_permalink_format: "Посилання не повинно містити пробілів, лише латинські символи і символи '-' та '_'"
+      invalid_email_format: Очікується валідний формат електронної пошти
+      not_authorized: Ви не маєте дозволів для завершення цієї дії
+    actions:
+      actions: Дії
+      create: Створити
+      update: Змінити
+      delete: Видалити
+      new: Створити
+      edit: Змінити
+      cancel: Відмінити
+    layouts:
+      admin:
+        login_info:
+          logged_in_as: Ви увійшли як адміністратор
+          log_out: Вийти
+          dashboard: Панель адміністратора
+      login_info:
+        logged_in_as: Ви увійшли як користувач
+        log_out: Вийти
+      header:
+        listvytsia: *name
+        articles: Статті
+        timetable: Розклад
+        seminar: Семінар
+        donate: Пожертви
+        events: Події
+        contacts: &contacts Контакти
+      banner:
+        main_text: *name
+        subtext: Львівська міська громадська організація
+      footer:
+        about_1: Ліствиця є добровільною, нерелігійною і некомерційною, неприбутковою організацією
+        about_2: Cтворена з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актів милосердя, добродійності у всіх регіонах тощо
+        contacts: *contacts
+        address: *address
+        phone:
+          title: Телефон
+          value: *phone
+        email:
+          title: Email
+          value: *email
+        useful_links: Корисні сторінки
+        latest_posts: Нові статті
+      copyright:
+        rights_reserved: 2016 © Заборонене будь-яке копіювання матеріалів без узгодження із авторами
+        facebook:
+          link: *facebook
+          title: Ми у Facebook
+        google_plus:
+          link: *google_plus
+          title: Ми у Google Plus
+    static_pages:
+      index:
+        title: ЛМГО "Ліствиця"
+        content: Львівська міська громадська організація ”Ліствиця” є добровільною, нерелігійною і некомерційною, неприбутковою організацією, створеною з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актах милосердя, добродійності у всіх регіонах, громадських місцях, лікарнях, дитячих будинках, будинках пристарілих, по необхідності громадян. Сприяти створенню умов для розкриття духовного, творчого, інтелектуального, морального потенціалу народу.
+      contacts:
+        intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
+        contacts: Контакти
+        groups: &social_networks
+          intro: Соцмережі
+          facebook: Ми у Facebook
+          google_plus: Ми у Google Plus
+      timetable:
+        title_events: Зустрічі
+        title_consultations: Особисті прийоми
+      donate:
+        confirmed: Платіж пройшов успішно! Дякуємо за Вашу пожертву!
+        not_confirmed: Платіж поки не підтверджено
+    contact_forms:
+      contact_form:
+        subject: Повідомлення зі сторінки контактів
+        submit: Надіслати повідомлення
+        submit_wait: Обробляється...
+      create:
+        invalid_captcha: Ви не підтвердили, що ви не робот
+      thank_you_notice:
+        message: Ваше повідомлення надіслане успішно!
+    articles:
+      article:
+        read_more: детальніше...
+        edit_article: &edit_article Редагувати статтю
+      form:
+        submit: Зберегти
+      index:
+        header: Статті
+        <<: *social_networks
+      show:
+        edit_article: *edit_article
+      edit:
+        header: Редагування статті
+      new:
+        header: Створення статті
+      create:
+        success: Стаття успішно створена
+      update:
+        success: Стаття успішно оновлена
+    events:
+      event:
+        read_more: детальніше...
+        edit_event: &edit_event Редагувати подію
+      form:
+        submit: Зберегти
+      index:
+        header: Події
+        <<: *social_networks
+      show:
+        edit_event: *edit_event
+      edit:
+        header: Редагування події
+      new:
+        header: Створення події
+      create:
+        success: Подія успішно створена
+      update:
+        success: Подія успішно оновлена
+    donations:
+      form:
+        submit: Пожертвувати
+      payment_form:
+        submit: Сплатити %{amount} грн. карткою
