@@ -2,7 +2,6 @@ AppComponent::Engine.routes.draw do
   root to: 'static_pages#index'
 
   mount Pictures::Engine, at: Pictures::Engine.mount_path, as: :pictures_engine
-  mount SeoContents::Engine, at: SeoContents::Engine.mount_path, as: :seo_contents_engine
 
   get :contacts,  to: 'static_pages#contacts'
   get :timetable, to: 'static_pages#timetable'

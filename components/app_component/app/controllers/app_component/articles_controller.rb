@@ -9,14 +9,10 @@ module AppComponent
 
     def index; end
     def show; end
-
-    def edit
-      article.build_seo_content unless article.seo_content
-    end
+    def edit; end
 
     def new
-      @article = Article.new
-      article.build_seo_content
+      @article = AppComponent::Article.new
 
       authorize article
     end
@@ -27,7 +23,8 @@ module AppComponent
       if article.save
         redirect_to articles_path, notice: t('.success')
       else
-        render :new
+        flash.now[:error] = article.errors.full_messages.to_sentence
+        render action: 'new'
       end
     end
 
@@ -35,20 +32,21 @@ module AppComponent
       if article.update_attributes(article_params)
         redirect_to articles_path, notice: t('.success')
       else
-        render :edit
+        flash.now[:error] = article.errors.full_messages.to_sentence
+        render action: 'edit'
       end
     end
 
     private
 
     def articles
-      @articles ||= policy_scope(Article)
+      @articles ||= policy_scope(AppComponent::Article)
     end
 
     def article
       return @article if defined?(@article)
 
-      @article = params[:id] ? articles.find_by(permalink: params[:id]) : Article.new(article_params)
+      @article = params[:id] ? articles.find_by(permalink: params[:id]) : AppComponent::Article.new(article_params)
       @article.present? ? authorize(@article) : skip_authorization
       @article
     end
@@ -60,7 +58,7 @@ module AppComponent
     def current_policy
       return policy(@article) if defined?(@article)
 
-      ArticlePolicy.new(pundit_user, nil)
+      AppComponent::ArticlePolicy.new(pundit_user, nil)
     end
   end
 end

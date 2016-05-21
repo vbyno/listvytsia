@@ -1,13 +1,15 @@
 module SeoContents
   module SeoContentsHelper
-    def seo_contents_engine
-      SeoContents::Engine.routes.url_helpers
+    def seo_contents_form(target, form:)
+      return unless target
+
+      render('seo_contents/seo_contents/form', form: form, target: target)
     end
 
-    def seo_contents_form(target_id)
-      return unless target_id
+    def seo_contents_seo_content(target)
+      return unless target
 
-      render('seo_contents/seo_contents/form', seo_content: SeoContents::SeoContent.for_target(target_id))
+      render('seo_contents/seo_contents/seo_content', seo_content: target.seo_content)
     end
   end
 end

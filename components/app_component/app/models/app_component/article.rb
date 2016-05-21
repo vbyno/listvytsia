@@ -6,7 +6,6 @@ module AppComponent
   class Article < Page
     include Concerns::Authored
     include Concerns::Pictured
-    include Concerns::ModelMethods
 
     field :content_intro
 
