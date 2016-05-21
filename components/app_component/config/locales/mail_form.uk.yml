@@ -1,15 +1,15 @@
 uk:
   mail_form:
     models:
-      contact_form: Ваша контактна форма
+      app_component/contact_form: Ваша контактна форма
     attributes:
-      contact_form:
+      app_component/contact_form:
         name: Ім’я
         email: E-mail
         message: Повідомлення
     errors:
       models:
-        contact_form:
+        app_component/contact_form:
           attributes:
             email:
               invalid: Неправильно введена email-адреса
