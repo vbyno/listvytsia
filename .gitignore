@@ -28,10 +28,9 @@ db/*.sqlite3
 .redcar/
 .sass-cache
 /config/config.yml
-/config/database.yml
-/config/mongoid.yml
-/config/application.yml
-/config/liqpay.yml
+mongoid.yml
+application.yml
+liqpay.yml
 /config/recaptcha.yml
 /coverage.data
 /coverage/
