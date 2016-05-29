@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'simple_form', '3.2.1'
   s.add_dependency 'ckeditor'
   s.add_dependency 'mongoid_rails_migrations'
+  s.add_dependency 'gmaps4rails', '2.1.2'
 
   s.add_dependency 'pictures'
   s.add_dependency 'seo_contents'

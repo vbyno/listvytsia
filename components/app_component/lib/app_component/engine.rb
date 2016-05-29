@@ -10,6 +10,7 @@ require 'rabl'
 require 'slim-rails'
 require 'mongoid_rails_migrations'
 require 'ckeditor'
+require 'gmaps4rails'
 
 module AppComponent
   class Engine < ::Rails::Engine
