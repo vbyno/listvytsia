@@ -1,6 +1,10 @@
 .title-v1
   h1= event.title
 
+- if policy(event).update?
+  = link_to edit_event_path(event), class: 'pull-right', title: t('.edit_event') do
+    i.fa.fa-2x.fa-pencil
+
 = pictures_gallery(event.id)
 .row.margin-bottom-60
   .col-sm-8
@@ -25,7 +29,7 @@
   #grid-container.cbp-l-grid-agency.cbp.cbp-caption-active.cbp-caption-zoom.cbp-ready style=("height: 604px;")
     .cbp-wrapper-outer
       .cbp-wrapper
-        = render partial: 'related_event', collection: Event.related_to(event).limit(4)
+        = render partial: 'related_event', collection: AppComponent::Event.related_to(event).limit(4)
 
 - content_for :title do
   = event.seo_content&.title

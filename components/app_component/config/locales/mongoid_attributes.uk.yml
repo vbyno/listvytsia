@@ -38,10 +38,12 @@ uk:
         title: Заголовок
         published: Опублікована
         content: Контент
-      app_component/article:
+      app_component/article: &article_params
         content_intro: Ввідний текст
         author: Автор
         picture: Головне зображення
+      app_component/event:
+        <<: *article_params
       app_component/donation:
         amount: Сума
       app_component/seo_content:

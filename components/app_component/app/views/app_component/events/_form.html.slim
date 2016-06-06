@@ -1,8 +1,8 @@
 = simple_form_for event do |f|
   ul.nav.nav-tabs
-    li.active= link_to 'Main Info', '#main-info', data: { toggle: 'tab' }
-    li= link_to 'Seo Content', '#seo-content', data: { toggle: 'tab' }
-    li= link_to 'Pictures', '#pictures', data: { toggle: 'tab' }
+    li.active= link_to t('simple_form.main_info'), '#main-info', data: { toggle: 'tab' }
+    li= link_to SeoContents::SeoContent.human_list_name, '#seo-content', data: { toggle: 'tab' }
+    li= link_to Pictures::Picture.human_list_name, '#pictures', data: { toggle: 'tab' }
   .tab-content
     .tab-pane.fade.in.active#main-info
       br
