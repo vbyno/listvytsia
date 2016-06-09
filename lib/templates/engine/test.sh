@@ -2,7 +2,8 @@
 
 exit_code=0
 
-echo "*** Running <%= file_name %> engine specs"
+echo "*** Running app_component engine specs"
+cp ../../config/liqpay.yml spec/dummy/config/liqpay.yml
 bundle install | grep Installing
 bundle exec rspec spec
 exit_code+=$?

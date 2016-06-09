@@ -7,15 +7,18 @@ class EngineGenerator < Rails::Generators::NamedBase
       'Rakefile' => 'Rakefile',
       'README.rdoc' => 'README.rdoc',
       'gemspec' => "#{ file_name }.gemspec",
+      'test.sh' => 'test.sh',
       'lib/my_engine.rb' => "lib/#{ file_name }.rb",
       'lib/my_engine/engine.rb' => "lib/#{ file_name }/engine.rb",
       'lib/my_engine/version.rb' => "lib/#{ file_name }/version.rb",
       'config/routes.rb' => 'config/routes.rb',
       'bin/rails' => 'bin/rails',
+      'spec/models/my_engine_model_spec.rb' => "spec/models/#{ file_name.singular }_spec.rb",
       'app/models/my_engine/my_engine_model.rb' => "app/models/#{ file_name }/#{ file_name.singularize }.rb",
+      'spec/spec_helper.rb' => 'spec/spec_helper.rb'
     }.each_pair { |name, new_name| copy_as_template(name, new_name) }
 
-    Dir.glob("lib/templates/engine/spec/**/*").each do |name|
+    Dir.glob("lib/templates/engine/spec/dummy/**/*").each do |name|
       next unless File.file?(name)
 
       new_name = name.partition('engine/').last

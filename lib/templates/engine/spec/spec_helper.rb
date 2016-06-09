@@ -7,6 +7,7 @@ require 'rspec/rails'
 require 'factory_girl'
 require 'rails/mongoid'
 require 'pry'
+require 'mongoid/rspec'
 
 Dir[Hotels::Engine.root.join('spec/support/**/*.rb')].each { |f| require f }
 
