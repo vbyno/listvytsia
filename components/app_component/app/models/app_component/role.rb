@@ -1,9 +1,7 @@
-require_relative 'concerns/model_methods'
-
 module AppComponent
   class Role
     include Mongoid::Document
-    include Concerns::ModelMethods
+    include Core::ModelMethods
 
     field :title
     has_and_belongs_to_many :users, class_name: 'AppComponent::User', autosave: true

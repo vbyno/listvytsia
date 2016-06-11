@@ -6,6 +6,7 @@ require 'rubygems'
 require 'rspec/rails'
 require 'factory_girl_rails'
 require 'rails/mongoid'
+require 'mongoid/rspec'
 require 'money-rails/test_helpers'
 require 'pry'
 

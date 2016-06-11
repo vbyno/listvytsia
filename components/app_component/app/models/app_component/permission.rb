@@ -1,10 +1,9 @@
 require_relative 'concerns/authored'
-require_relative 'concerns/model_methods'
 
 module AppComponent
   class Permission
     include Mongoid::Document
-    include Concerns::ModelMethods
+    include Core::ModelMethods
 
     ACTIONS = %w( read create update moderate ).freeze
     RESOURCES = %w( articles roles events ).freeze

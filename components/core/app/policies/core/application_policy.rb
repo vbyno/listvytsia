@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class ApplicationPolicy
     class Scope
       attr_reader :user, :scope
@@ -55,7 +55,7 @@ module AppComponent
     end
 
     def scope
-      Pundit.policy_scope!(user, record.class)
+      ::Pundit.policy_scope!(user, record.class)
     end
   end
 end

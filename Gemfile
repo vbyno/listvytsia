@@ -5,6 +5,7 @@ path 'components' do
   gem 'app_component'
   gem 'pictures'
   gem 'seo_contents'
+  gem 'core'
 end
 
 gem 'rails'

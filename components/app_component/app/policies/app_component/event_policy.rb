@@ -1,7 +1,5 @@
-require_relative 'application_policy'
-
 module AppComponent
-  class EventPolicy < ApplicationPolicy
+  class EventPolicy < Core::ApplicationPolicy
     class Scope < Scope
       def resolve
         user.permitted_to?(:moderate, :events) ? scope.all : scope.for_user(user)

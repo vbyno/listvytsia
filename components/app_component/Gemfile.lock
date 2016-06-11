@@ -22,6 +22,11 @@ GIT
 PATH
   remote: ../
   specs:
+    core (0.0.1)
+      mongoid (= 5.1.1)
+      mongoid_rails_migrations
+      pundit (= 1.1.0)
+      rails (= 4.2.5)
     pictures (0.0.1)
       angular-rails-templates (= 1.0.0)
       angularjs-rails (= 1.5.0)
@@ -56,6 +61,7 @@ PATH
       carrierwave-mongoid (= 0.8.1)
       ckeditor
       coffee-rails (= 4.1.1)
+      core
       devise (= 3.5.3)
       figaro (= 1.1.1)
       gmaps4rails (= 2.1.2)
@@ -305,6 +311,7 @@ PLATFORMS
 DEPENDENCIES
   app_component!
   ckeditor!
+  core!
   factory_girl_rails
   fuubar
   mongoid-rspec

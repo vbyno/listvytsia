@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class MissedUser
     include Singleton
 

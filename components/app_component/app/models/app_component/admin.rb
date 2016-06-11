@@ -1,9 +1,7 @@
-require_relative 'concerns/model_methods'
-
 module AppComponent
   class Admin
     include Mongoid::Document
-    include Concerns::ModelMethods
+    include Core::ModelMethods
 
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable

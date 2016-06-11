@@ -1,7 +1,5 @@
-require_relative 'application_policy'
-
 module AppComponent
-  class ArticlePolicy < ApplicationPolicy
+  class ArticlePolicy < Core::ApplicationPolicy
     class Scope < Scope
       def resolve
         user.moderator? ? scope.all : scope.for_user(user)

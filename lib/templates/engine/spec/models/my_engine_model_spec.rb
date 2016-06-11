@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe <%= name %>::<%= name.singular %>, type: :model do
+describe <%= name %>::<%= name.singularize %>, type: :model do
 
 end

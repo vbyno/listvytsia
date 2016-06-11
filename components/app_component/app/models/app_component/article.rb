@@ -1,6 +1,5 @@
 require_relative 'concerns/authored'
 require_relative 'concerns/pictured'
-require_relative 'concerns/model_methods'
 
 module AppComponent
   class Article < Page

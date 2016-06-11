@@ -13,7 +13,7 @@ class EngineGenerator < Rails::Generators::NamedBase
       'lib/my_engine/version.rb' => "lib/#{ file_name }/version.rb",
       'config/routes.rb' => 'config/routes.rb',
       'bin/rails' => 'bin/rails',
-      'spec/models/my_engine_model_spec.rb' => "spec/models/#{ file_name.singular }_spec.rb",
+      'spec/models/my_engine_model_spec.rb' => "spec/models/#{ file_name.singularize }_spec.rb",
       'app/models/my_engine/my_engine_model.rb' => "app/models/#{ file_name }/#{ file_name.singularize }.rb",
       'spec/spec_helper.rb' => 'spec/spec_helper.rb'
     }.each_pair { |name, new_name| copy_as_template(name, new_name) }
