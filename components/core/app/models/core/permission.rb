@@ -1,6 +1,6 @@
 require_relative 'concerns/authored'
 
-module AppComponent
+module Core
   class Permission
     include Mongoid::Document
     include Core::ModelMethods
@@ -8,7 +8,7 @@ module AppComponent
     ACTIONS = %w( read create update moderate ).freeze
     RESOURCES = %w( articles roles events ).freeze
 
-    embedded_in :role, class_name: 'AppComponent::Role'
+    embedded_in :role, class_name: 'Core::Role'
     field :resource
     field :action
 

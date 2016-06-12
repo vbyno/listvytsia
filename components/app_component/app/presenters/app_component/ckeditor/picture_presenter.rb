@@ -1,6 +1,6 @@
 module AppComponent
   module Ckeditor
-    class PicturePresenter < BasePresenter
+    class PicturePresenter < Core::BasePresenter
       presents :picture
 
       def self.latest(view_context)

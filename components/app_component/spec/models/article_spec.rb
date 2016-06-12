@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe AppComponent::Article, type: :model do
-  it { is_expected.to belong_to(:author).of_type(AppComponent::User) }
+  it { is_expected.to belong_to(:author).of_type(Core::User) }
 
   it { is_expected.to validate_presence_of(:content_intro) }
   it { is_expected.to validate_presence_of(:author) }

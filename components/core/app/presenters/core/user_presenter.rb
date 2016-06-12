@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class UserPresenter < BasePresenter
     presents :user
 

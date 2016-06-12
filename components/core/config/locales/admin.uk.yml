@@ -1,0 +1,39 @@
+uk:
+  admin:
+    roles:
+      form:
+        submit: Зберегти
+        destroy: Видалити
+      role:
+        confirm_msg: Ви справді хочете видалити роль?
+      index:
+        header: Ролі
+      edit:
+        header: Редагування ролі
+      new:
+        header: Створення ролі
+      create:
+        success: Роль успішно створена
+      update:
+        success: Роль успішно оновлена
+      destroy:
+        success: Роль успішно видалена
+        fail: Роль не видалена
+    users:
+      form:
+        submit: Зберегти
+      user:
+        confirm_msg: Ви справді хочете видалити користувача?
+      index:
+        header: Користувачі
+      edit:
+        header: Редагування користувача
+      new:
+        header: Створення користувача
+      create:
+        success: Користувач успішно створений
+      update:
+        success: Користувач успішно оновлений
+      destroy:
+        success: Користувач успішно видалений
+        fail: Користувач не видалений

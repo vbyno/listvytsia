@@ -1,5 +1,5 @@
 module AppComponent
-  class StaticPagePresenter < BasePresenter
+  class StaticPagePresenter < Core::BasePresenter
     presents :static_page
 
     def id

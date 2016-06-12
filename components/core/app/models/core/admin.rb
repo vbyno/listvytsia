@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class Admin
     include Mongoid::Document
     include Core::ModelMethods

@@ -1,6 +1,6 @@
 require_relative 'base_controller'
 
-module AppComponent
+module Core
   module Admins
     class RolesController < BaseController
       respond_to :json

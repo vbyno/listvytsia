@@ -1,6 +1,6 @@
-module AppComponent
+module Core
   module Admins
-    class BaseController < ::AppComponent::ApplicationController
+    class BaseController < ::Core::ApplicationController
       before_action :authenticate_admin!
       layout 'admin'
 

@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class BasePresenter < SimpleDelegator
     delegate :t, :present, to: :h
 

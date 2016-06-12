@@ -1,8 +1,6 @@
-require_relative 'base_controller'
-
 module AppComponent
   module Admins
-    class DashboardController < BaseController
+    class DashboardController < Core::Admins::BaseController
       def index; end
     end
   end
