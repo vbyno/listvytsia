@@ -4,7 +4,6 @@ require File.expand_path('../dummy/config/environment', __FILE__)
 
 require 'rubygems'
 require 'rspec/rails'
-require 'factory_girl'
 require 'rails/mongoid'
 require 'pry'
 require 'mongoid/rspec'
@@ -22,7 +21,6 @@ RSpec.configure do |config|
   # http://stackoverflow.com/questions/6296235/undefined-method-get-for-rspeccoreexamplegroupnested-10x00000106db51f
   config.infer_spec_type_from_file_location!
 
-  config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
   config.include Core::Engine.routes.url_helpers
   config.include Mongoid::Matchers, type: :model

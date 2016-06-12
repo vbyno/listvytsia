@@ -1,8 +1,8 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.router_name = :app_component
-  config.parent_controller = 'AppComponent::ApplicationController'
+  config.router_name = :core
+  config.parent_controller = 'Core::ApplicationController'
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing

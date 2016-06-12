@@ -1,5 +1,3 @@
-require_relative 'concerns/authored'
-
 module Core
   class Permission
     include Mongoid::Document

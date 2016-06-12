@@ -16,7 +16,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongoid_rails_migrations'
   s.add_dependency 'pundit', '1.1.0'
   s.add_dependency 'rails', '4.2.5'
+  s.add_dependency 'devise', '3.5.3'
+  s.add_dependency 'figaro', '1.1.1'
 
+  s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'fuubar'

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe AppComponent::User, type: :model do
-  it { is_expected.to have_many(:articles).as_inverse_of(:author).with_autosave }
+describe Core::User, type: :model do
   it { is_expected.to have_and_belong_to_many(:roles).with_autosave }
 
   describe '#permitted_to?' do
