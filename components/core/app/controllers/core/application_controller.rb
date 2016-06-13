@@ -8,6 +8,8 @@ module Core
 
     helper_method :pundit_user
 
+    layout 'core/public'
+
     private
 
     def pundit_user
@@ -16,7 +18,7 @@ module Core
 
     def user_not_authorized
       flash[:alert] = t('error_messages.not_authorized')
-      redirect_to root_path
+      redirect_to core.root_path
     end
   end
 end

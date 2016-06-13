@@ -3,7 +3,7 @@
     .row
       .col-md-6.col-sm-6
         ul.list-inline.right-topbar
-          li= link_to t('.dashboard'), admins_root_path
+          li= link_to t('.dashboard'), core.admins_root_path
       .col-md-6.col-sm-6
         ul.list-inline.right-topbar.pull-right
           li
@@ -13,4 +13,4 @@
           li
             ||
           li
-            = link_to t('.log_out'), destroy_admin_session_path(current_admin), method: :delete
+            = link_to t('.log_out'), core.destroy_admin_session_path(current_admin), method: :delete

@@ -10,12 +10,12 @@ html lang==I18n.locale
   body class= "admin #{controller_name} #{action_name}_page"
     .wrapper
       .header-v5
-        == render 'layouts/admin/login_info'
-        == render 'layouts/admin/navigation'
+        == render 'layouts/core/admin/login_info'
+        == render 'layouts/core/admin/navigation'
       .container.content.content-custom
-        == render 'layouts/messages'
+        == render 'layouts/core/messages'
         .col-md-7
           == yield
       .footer-v1
-        == render 'layouts/admin/footer'
+        == render 'layouts/core/admin/footer'
     == javascript_include_tag 'admin', 'data-turbolinks-track' => true

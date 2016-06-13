@@ -1,6 +1,5 @@
 AppComponent::Engine.routes.draw do
-  root to: 'static_pages#index'
-
+  mount Core::Engine, at: '/', as: :core
   mount Pictures::Engine, at: Pictures::Engine.mount_path, as: :pictures_engine
 
   get :contacts,  to: 'static_pages#contacts'
@@ -15,9 +14,6 @@ AppComponent::Engine.routes.draw do
   end
 
   namespace :admins do
-    root to: 'dashboard#index'
-    resources :roles, except: [:new, :edit]
-    resources :users, except: [:new, :edit, :destroy]
     resources :static_pages, except: [:new, :edit, :destroy]
   end
 
