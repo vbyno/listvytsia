@@ -2,7 +2,7 @@
 
 exit_code=0
 
-echo "*** Running <%= file_name %> engine specs"
+echo "*** Running app_component engine specs"
 bundle install | grep Installing
 bundle exec rspec spec
 exit_code+=$?

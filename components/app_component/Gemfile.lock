@@ -23,6 +23,8 @@ PATH
   remote: ../
   specs:
     core (0.0.1)
+      devise (= 3.5.3)
+      figaro (= 1.1.1)
       mongoid (= 5.1.1)
       mongoid_rails_migrations
       pundit (= 1.1.0)
@@ -62,18 +64,12 @@ PATH
       ckeditor
       coffee-rails (= 4.1.1)
       core
-      devise (= 3.5.3)
-      figaro (= 1.1.1)
       gmaps4rails (= 2.1.2)
       liqpay (= 1.0.1)
       mini_magick (= 4.3.6)
       money-rails (= 1.6.0)
-      mongoid (= 5.1.1)
-      mongoid_rails_migrations
       pictures
-      pundit (= 1.1.0)
       rabl (= 0.11.8)
-      rails (= 4.2.5)
       rake (= 10.5.0)
       sass (= 3.4.21)
       seo_contents

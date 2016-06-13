@@ -1,7 +1,5 @@
-# Maintain your gem's version:
 require_relative "lib/app_component/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "app_component"
   s.version     = AppComponent::VERSION
