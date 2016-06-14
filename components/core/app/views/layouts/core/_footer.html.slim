@@ -10,33 +10,11 @@
         .posts
           .headline
             h2= t('.latest_posts')
-          ul.list-unstyled.latest-list
-            - AppComponent::Page.latest(5).each do |page|
-              li
-                = link_to page.title, page
-                small
+          ul.list-unstyled.latest-list data-core-hook='latest_pages'
       .col-md-3.md-margin-bottom-40
         .headline
           h2= t('.useful_links')
-        ul.list-unstyled.link-list
-          li
-            = link_to t('layouts.core.header.timetable'), timetable_path
-            i.fa.fa-angle-right
-          li
-            = link_to t('layouts.core.header.seminar'), seminar_path
-            i.fa.fa-angle-right
-          li
-            = link_to t('layouts.core.header.articles'), articles_path
-            i.fa.fa-angle-right
-          li
-            = link_to t('layouts.core.header.events'), events_path
-            i.fa.fa-angle-right
-          li
-            = link_to t('layouts.core.header.donate'), donate_path
-            i.fa.fa-angle-right
-          li
-            = link_to t('layouts.core.header.contacts'), contacts_path, data: { no_turbolink: true }
-            i.fa.fa-angle-right
+        ul.list-unstyled.link-list data-core-hook='useful_links'
       .col-md-3.md-margin-bottom-40
         .headline
           h2= t('.contacts')

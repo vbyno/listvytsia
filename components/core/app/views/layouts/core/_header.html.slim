@@ -1,27 +1,14 @@
 .navbar.navbar-default.mega-menu role='navigation'
   .container
     .navbar-header
-      button.navbar-toggle data={target: '.navbar-responsive-collapse', toggle: 'collapse'} type="button"
+      button.navbar-toggle data-target='.navbar-responsive-collapse' data-toggle='collapse' type='button'
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      - if current_page?(root_path)
+      - if current_page?(core.root_path)
         span.navbar-brand.logo-link= t('.listvytsia')
       - else
-        a.navbar-brand.logo-link[href=root_path]= t('.listvytsia')
+        a.navbar-brand.logo-link[href=core.root_path]= t('.listvytsia')
     .collapse.navbar-collapse.navbar-responsive-collapse
-      ul.nav.navbar-nav
-        li class=('active' if current_page?(timetable_path))
-          = link_to t('.timetable'), timetable_path
-        li class=('active' if current_page?(seminar_path))
-          = link_to t('.seminar'), seminar_path
-        li class=('active' if current_page?(articles_path))
-           = link_to t('.articles'), articles_path
-        - if AppComponent::Event.published.exists?
-          li class=('active' if current_page?(events_path))
-             = link_to t('.events'), events_path
-        li class=('active' if current_page?(donate_path))
-           = link_to t('.donate'), donate_path
-        li class=('active' if current_page?(contacts_path))
-          = link_to t('.contacts'), contacts_path, data: { no_turbolink: true }
+      ul.nav.navbar-nav data-core-hook='navigation_menu'

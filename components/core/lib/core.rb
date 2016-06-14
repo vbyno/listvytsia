@@ -4,6 +4,7 @@ require 'mongoid_rails_migrations'
 require 'pundit'
 require 'devise'
 require 'figaro'
+require 'deface'
 
 module Core
   require 'core/engine'

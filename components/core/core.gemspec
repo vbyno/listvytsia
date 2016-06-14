@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '4.2.5'
   s.add_dependency 'devise', '3.5.3'
   s.add_dependency 'figaro', '1.1.1'
+  s.add_dependency 'deface', '1.0.2'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'mongoid-rspec'
