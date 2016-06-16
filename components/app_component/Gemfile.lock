@@ -30,6 +30,11 @@ PATH
       mongoid_rails_migrations
       pundit (= 1.1.0)
       rails (= 4.2.5)
+    hotels (0.0.1)
+      core
+      mongoid (= 5.1.1)
+      mongoid_rails_migrations
+      rails (= 4.2.5)
     pictures (0.0.1)
       angular-rails-templates (= 1.0.0)
       angularjs-rails (= 1.5.0)
@@ -66,6 +71,7 @@ PATH
       coffee-rails (= 4.1.1)
       core
       gmaps4rails (= 2.1.2)
+      hotels
       liqpay (= 1.0.1)
       mini_magick (= 4.3.6)
       money-rails (= 1.6.0)
@@ -315,6 +321,7 @@ DEPENDENCIES
   core!
   factory_girl
   fuubar
+  hotels!
   mongoid-rspec
   mongoid_rails_migrations!
   pictures!

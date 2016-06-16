@@ -17,14 +17,14 @@ Rails.application.configure do
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
-  # config.consider_all_requests_local       = true
-  # config.action_controller.perform_caching = false
+  config.consider_all_requests_local       = true
+  config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.
-  # config.action_dispatch.show_exceptions = false
+  config.action_dispatch.show_exceptions = false
 
   # Disable request forgery protection in test environment.
-  # config.action_controller.allow_forgery_protection = false
+  config.action_controller.allow_forgery_protection = false
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -38,5 +38,5 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
   # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
+  config.action_view.raise_on_missing_translations = true
 end

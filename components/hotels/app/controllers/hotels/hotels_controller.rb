@@ -1,16 +1,14 @@
-require_relative 'application_controller'
-
 module Hotels
-  class HotelsController < ApplicationController
+  class HotelsController < ::Core::ApplicationController
     respond_to :json
 
-    helper_method :hotel
+    helper_method :hotel, :hotels
 
     def index; end
     def create; end
 
     def update
-      hotel.update_attributes(picture_params)
+      hotel.update_attributes(hotel_params)
     end
 
     def destroy
@@ -20,7 +18,7 @@ module Hotels
     private
 
     def hotel_params
-      params.require(:hotel).permit(:page_id, :alt, :title, :data)
+      params.require(:hotel).permit(:link, :address, :title, :phone, :price, :published)
     end
 
     def hotels
@@ -28,7 +26,7 @@ module Hotels
     end
 
     def hotel
-      @hotel ||= params[:id] ? Hotel.find(params[:id]) : Picture.create(picture_params)
+      @hotel ||= params[:id] ? Hotel.find(params[:id]) : Hotel.create(hotel_params)
     end
   end
 end

@@ -17,7 +17,6 @@ RSpec.configure do |config|
   config.tty = true
   config.use_transactional_fixtures = false
   config.infer_base_class_for_anonymous_controllers = false
-  config.order = 'random'
 
   # http://stackoverflow.com/questions/6296235/undefined-method-get-for-rspeccoreexamplegroupnested-10x00000106db51f
   config.infer_spec_type_from_file_location!

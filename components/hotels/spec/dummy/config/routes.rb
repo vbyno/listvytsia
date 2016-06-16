@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  mount Hotels::Engine => '/hotels'
+  mount Hotels::Engine, at: Hotels::Engine.mount_path, as: :hotels
 end
+

@@ -10,6 +10,8 @@ require 'ckeditor'
 require 'gmaps4rails'
 
 require 'core'
+require 'hotels'
+require 'pictures'
 
 module AppComponent
   require 'app_component/engine'
