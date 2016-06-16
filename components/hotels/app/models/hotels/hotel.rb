@@ -11,5 +11,7 @@ module Hotels
     field :published, type: Mongoid::Boolean, default: false
 
     validates :title, :phone, :price, :address, presence: true
+
+    scope :published, ->{ where(published: true) }
   end
 end

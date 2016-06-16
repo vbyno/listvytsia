@@ -18,9 +18,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_base_class_for_anonymous_controllers = false
 
-  # http://stackoverflow.com/questions/6296235/undefined-method-get-for-rspeccoreexamplegroupnested-10x00000106db51f
-  config.infer_spec_type_from_file_location!
-
   config.include Devise::TestHelpers, type: :controller
   config.include Warden::Test::Helpers
   config.include AppComponent::Engine.routes.url_helpers

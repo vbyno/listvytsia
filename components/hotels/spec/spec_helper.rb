@@ -12,9 +12,10 @@ Dir[Hotels::Engine.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.tty = true
-  config.order = 'random'
 
   config.include FactoryGirl::Syntax::Methods
   config.include Hotels::Engine.routes.url_helpers
+  config.include Warden::Test::Helpers
+  config.include Devise::TestHelpers, type: :controller
   config.include Mongoid::Matchers, type: :model
 end

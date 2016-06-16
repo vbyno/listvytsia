@@ -22,7 +22,7 @@ module Hotels
     end
 
     def hotels
-      @hotels ||= policy_scope(Hotels::Hotel)
+      @hotels ||= policy_scope(Hotel)
     end
 
     def hotel

@@ -9,7 +9,15 @@ describe Hotels::HotelsController, type: :controller do
     it 'returns hotels array' do
       get :index
 
-      expect(response.body).to eq [hotel]
+      expect(JSON.parse(response.body)).to contain_exactly(
+        'id' => hotel.id.to_s,
+        "link"=>nil,
+        "address"=> hotel.address,
+        "title"=>hotel.title,
+        "phone"=>hotel.phone,
+        "price"=>hotel.price,
+        "published"=>hotel.published
+      )
     end
   end
 end

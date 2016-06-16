@@ -23,6 +23,7 @@ RSpec.configure do |config|
 
   config.include Warden::Test::Helpers
   config.include Core::Engine.routes.url_helpers
+  config.include Devise::TestHelpers, type: :controller
   config.include Mongoid::Matchers, type: :model
 
   config.before do

@@ -5,6 +5,8 @@ require 'pundit'
 require 'devise'
 require 'figaro'
 require 'deface'
+require 'rabl'
+require 'slim-rails'
 
 module Core
   require 'core/engine'

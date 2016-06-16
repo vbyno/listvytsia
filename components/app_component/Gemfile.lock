@@ -34,6 +34,7 @@ PATH
       core
       mongoid (= 5.1.1)
       mongoid_rails_migrations
+      rabl (= 0.11.8)
       rails (= 4.2.5)
     pictures (0.0.1)
       angular-rails-templates (= 1.0.0)
