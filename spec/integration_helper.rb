@@ -3,11 +3,10 @@ require 'capybara/rails'
 
 Capybara.default_max_wait_time = 5
 
-Capybara.register_driver :firefox do |app|
-  Capybara::Selenium::Driver.new(app, browser: :firefox)
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
-Capybara.javascript_driver = :firefox
 Capybara.default_max_wait_time = 5
 
 RSpec.configure do |config|
