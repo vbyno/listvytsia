@@ -10,17 +10,17 @@ html lang==I18n.locale
   body class= "#{controller_name} #{action_name}_page"
     .wrapper
       .header-v5
-        == render 'layouts/core/admin/login_info' if current_admin
-        == render 'layouts/core/login_info' if current_user
-        == render 'layouts/core/header'
+        == render 'layouts/admins/login_info' if current_admin
+        == render 'layouts/login_info' if current_user
+        == render 'layouts/header'
       - if current_page?(core.root_path)
-        == render 'layouts/core/messages'
-        == render 'layouts/core/banner'
+        == render 'layouts/messages'
+        == render 'layouts/banner'
       .container.content.content-custom
-        == render 'layouts/core/messages' unless current_page?(core.root_path)
+        == render 'layouts/messages' unless current_page?(core.root_path)
         == yield
       .footer-v1
-        == render 'layouts/core/footer'
-        == render 'layouts/core/copyright'
+        == render 'layouts/footer'
+        == render 'layouts/copyright'
     == javascript_include_tag 'public', 'data-turbolinks-track' => true
     == yield :script

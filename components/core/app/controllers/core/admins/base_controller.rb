@@ -2,7 +2,7 @@ module Core
   module Admins
     class BaseController < ::Core::ApplicationController
       before_action :authenticate_admin!
-      layout 'core/admin'
+      layout 'admins/application'
 
       after_filter :set_csrf_cookie_for_ng
 

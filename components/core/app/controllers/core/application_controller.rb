@@ -8,7 +8,7 @@ module Core
 
     helper_method :pundit_user
 
-    layout 'core/public'
+    layout 'application'
 
     private
 

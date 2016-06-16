@@ -9,8 +9,7 @@ describe Hotels::HotelsController, type: :controller do
     it 'returns hotels array' do
       get :index
 
-      binding.pry
-      expect(response).to eq [hotel]
+      expect(response.body).to eq [hotel]
     end
   end
 end

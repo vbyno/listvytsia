@@ -1,15 +1,5 @@
 module AppComponent
   module ApplicationHelper
-    def present(object, presenter_class = nil)
-      presenter_class ||= "#{object.class}Presenter".safe_constantize ||
-                          "#{object.class.base_class}Presenter".constantize
-
-      presenter = presenter_class.new(object, self)
-
-      yield(presenter) if block_given?
-      presenter
-    end
-
     def no_turbolink_link_to(*params)
       options = params.extract_options!.merge('data-no-turbolink': true)
 
