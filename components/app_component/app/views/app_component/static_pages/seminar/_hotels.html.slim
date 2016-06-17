@@ -2,7 +2,12 @@
   .container
     i.center-icon.rounded-x.fa.icon-bg-u.fa-building
   .title-box-v2
-    h2 Готелі і хостели
+    h2
+      | Готелі і хостели
+      - if pundit_user.moderator?
+        =< link_to hotels.hotels_path, title: t('actions.edit') do
+          i.fa.fa-pencil
+hotels-list-component
 .row
   .col-md-3.col-sm-6.md-margin-bottom-40
     .easy-block-v2
