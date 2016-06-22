@@ -4,7 +4,7 @@ HotelsListController = ($http) ->
 
   ctrl.loadHotels = ->
     $http.get(
-      '/hotels/hotels.json'
+      '/hotels.json'
     ).success (data) ->
       ctrl.hotels = data
 
@@ -17,3 +17,5 @@ do () ->
   angular.module('hotels').component 'hotelsListComponent',
     templateUrl: 'hotels/hotels-list.template.html',
     controller: HotelsListController
+    bindings:
+      hotels: '&'

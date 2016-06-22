@@ -1,0 +1,17 @@
+.easy-block-v2
+  .easy-bg-v2
+  = image_tag('hotels/suputnyk.jpeg', alt: 'Готель Супутник')
+  h3.margin-top-20
+    a href='{{$ctrl.hotel.link}}'
+      | {{$ctrl.hotel.title}}
+  ul.list-unstyled.who
+    li
+      i.fa.fa-home
+      | {{$ctrl.hotel.address}}
+    li
+      i.fa.fa-phone
+      | {{$ctrl.hotel.phone}}
+    li
+      i.fa.fa-dollar
+      | {{$ctrl.hotel.price}}
+
