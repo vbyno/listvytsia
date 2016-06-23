@@ -6,13 +6,13 @@ HotelsDashboardController = ($http) ->
     params = {}
     params[field] = value
 
-    $http.put("/hotels/hotels/#{hotel.id}.json",
+    $http.put("/hotels/#{hotel.id}.json",
       hotel: params
     ).success (data) ->
       hotel[field] = value
 
   ctrl.deleteHotel = (hotel) ->
-    $http.delete("/hotels/hotels/#{hotel.id}.json"
+    $http.delete("/hotels/#{hotel.id}.json"
     ).success (data) ->
       ctrl.hotels.splice(ctrl.hotels.indexOf(hotel), 1)
 
@@ -21,7 +21,7 @@ HotelsDashboardController = ($http) ->
 
   ctrl.loadHotels = ->
     $http.get(
-      '/hotels/hotels.json'
+      '/hotels.json'
     ).success (data) ->
       ctrl.hotels = data
 
@@ -34,3 +34,5 @@ do () ->
   angular.module('hotels').component 'hotelsDashboardComponent',
     templateUrl: 'hotels/hotels-dashboard.template.html',
     controller: HotelsDashboardController
+    bindings:
+      hotels: '&'

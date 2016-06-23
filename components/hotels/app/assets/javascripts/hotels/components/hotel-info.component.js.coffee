@@ -8,3 +8,4 @@ do () ->
     controller: HotelInfoController,
     bindings:
       hotel: '='
+      editable: '<'

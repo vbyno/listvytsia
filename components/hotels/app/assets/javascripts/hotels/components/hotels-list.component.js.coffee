@@ -4,7 +4,7 @@ HotelsListController = ($http) ->
 
   ctrl.loadHotels = ->
     $http.get(
-      '/hotels.json'
+      '/hotels.json?published=1'
     ).success (data) ->
       ctrl.hotels = data
 

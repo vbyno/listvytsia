@@ -22,7 +22,7 @@ module Hotels
     end
 
     def hotels
-      @hotels ||= policy_scope(Hotel)
+      @hotels ||= params[:published] ? policy_scope(Hotel).published : policy_scope(Hotel)
     end
 
     def hotel

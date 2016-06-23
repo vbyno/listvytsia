@@ -19,3 +19,4 @@ do () ->
     controller: HotelsController,
     bindings:
       editable: '<'
+      editMode: '&'
