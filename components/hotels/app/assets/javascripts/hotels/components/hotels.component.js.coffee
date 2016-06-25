@@ -8,7 +8,10 @@ HotelsController = () ->
   ctrl.turnEditModeOff = () ->
     ctrl.editMode = false
 
-  ctrl.isEditable = () ->
+  ctrl.showCheckButton = () ->
+    ctrl.editable && ctrl.editMode
+
+  ctrl.showEditButton =() ->
     ctrl.editable && !ctrl.editMode
 
   ctrl

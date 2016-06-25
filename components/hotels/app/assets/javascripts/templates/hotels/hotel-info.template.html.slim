@@ -1,10 +1,10 @@
-.easy-block-v2
+.easy-block-v2 data-ng-if='!$ctrl.ownEditMode($ctrl.hotel.id)'
   .easy-bg-v2
   = image_tag('hotels/suputnyk.jpeg', alt: 'Готель Супутник')
   h3.margin-top-20
     a href='{{$ctrl.hotel.link}}'
       | {{$ctrl.hotel.title}}
-    a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.turnEditModeOn()" data-ng-if="$ctrl.editable"
+    a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.turnEditModeOn($ctrl.hotel.id)" data-ng-if="$ctrl.editable"
       i.fa.fa-pencil
   ul.list-unstyled.who
     li
@@ -16,4 +16,13 @@
     li
       i.fa.fa-dollar
       | {{$ctrl.hotel.price}}
-
+.easy-block-v2 data-ng-if='$ctrl.ownEditMode($ctrl.hotel.id)'
+  .form-group.required
+    label.string.required.control-label for="hotel_title"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:title)
+    input#hotel_title.string.required.form-control type='text' data-ng-model='$ctrl.hotel.title' required=true autofocus=true
+    br
+  a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.updateHotel($ctrl.hotel)"
+      i.fa.fa-check
