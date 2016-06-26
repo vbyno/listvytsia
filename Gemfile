@@ -4,6 +4,7 @@ ruby '2.3.0'
 path 'components' do
   gem 'app_component'
   gem 'pictures'
+  gem 'hotels'
   gem 'seo_contents'
   gem 'core'
 end

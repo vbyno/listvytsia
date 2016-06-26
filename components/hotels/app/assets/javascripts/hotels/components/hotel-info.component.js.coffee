@@ -12,13 +12,29 @@ HotelInfoController = ($http) ->
     ctrl.editableIds.indexOf(hotelId) != -1
 
   ctrl.updateHotel = (hotel) ->
-    $http.put("/hotels/#{hotel.id}", @_hotelParams(hotel)).success( ->
+    $http.put("/hotels/#{hotel.id}.json", @_hotelParams(hotel)).success( ->
       ctrl.turnEditModeOff(hotel.id)
     );
+
+  ctrl.createHotel = (hotel) ->
+    $http.post("/hotels", @_hotelParams(hotel)).success((data) ->
+      hotel.id = data.id
+      ctrl.turnEditModeOff(data.id)
+    );
+
+  ctrl.deleteHotel = (hotel) ->
+    $http.delete("/hotels/#{hotel.id}.json"
+    ).success (data) ->
+      ctrl.hotels.splice(ctrl.hotels.indexOf(hotel), 1)
 
   @_hotelParams = (hotel) ->
     hotel:
       title: hotel.title
+      link: hotel.link
+      address: hotel.address
+      phone: hotel.phone
+      price: hotel.price
+      published: hotel.published
 
   ctrl
 

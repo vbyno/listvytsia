@@ -2,22 +2,8 @@ HotelsDashboardController = ($http) ->
   ctrl = this
   ctrl.hotels = []
 
-  ctrl.updateHotel = (hotel, field, value) ->
-    params = {}
-    params[field] = value
-
-    $http.put("/hotels/#{hotel.id}.json",
-      hotel: params
-    ).success (data) ->
-      hotel[field] = value
-
-  ctrl.deleteHotel = (hotel) ->
-    $http.delete("/hotels/#{hotel.id}.json"
-    ).success (data) ->
-      ctrl.hotels.splice(ctrl.hotels.indexOf(hotel), 1)
-
-  ctrl.addHotel= (hotel) ->
-    ctrl.hotels.push(hotel)
+  ctrl.addHotel = () ->
+    ctrl.hotels.push({})
 
   ctrl.loadHotels = ->
     $http.get(
@@ -36,3 +22,4 @@ do () ->
     controller: HotelsDashboardController
     bindings:
       hotels: '&'
+      deleteHotel: '&'

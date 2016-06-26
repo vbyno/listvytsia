@@ -1,7 +1,7 @@
 .row
   .col-md-3.col-sm-6.md-margin-bottom-40 data-ng-repeat='hotel in $ctrl.hotels'
     hotel-info-component hotel='hotel'
-.row
+.row data-ng-if='$ctrl.hotels.length === 0'
   .col-md-3.col-sm-6.md-margin-bottom-40
     .easy-block-v2
       .easy-bg-v2

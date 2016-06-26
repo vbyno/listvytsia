@@ -1,23 +1,23 @@
 uk:
   mongoid:
     models:
-      app_component/role:
+      core/role:
         one: Роль
         other: Ролі
-      app_component/user:
+      core/user:
         one: Користувач
         other: Користувачі
-      app_component/admin:
+      core/admin:
         one: Адміністратор
         other: Адміністратори
-      app_component/permission:
+      core/permission:
         one: Дозвіл
         other: Дозволи
     attributes:
-      app_component/role:
+      core/role:
         title: Назва
         users: Користувачі
         permissions: Дозволи
-      app_component/user:
+      core/user:
         roles: Ролі
         email: Електронна адреса

@@ -541,6 +541,7 @@ DEPENDENCIES
   guard-bundler
   guard-rails
   guard-rspec
+  hotels!
   jquery-rails
   launchy
   liqpay
