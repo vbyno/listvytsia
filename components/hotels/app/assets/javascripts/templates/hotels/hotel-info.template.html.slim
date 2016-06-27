@@ -28,6 +28,12 @@
         =< Hotels::Hotel.human_attribute_name(:title)
     input#hotel_title.string.required.form-control type='text' data-ng-model='$ctrl.hotel.title' required=true autofocus=true
     br
+    label.string.required.control-label for="hotel_link"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:link)
+    input#hotel_link.string.required.form-control type='text' data-ng-model='$ctrl.hotel.link' required=true
+    br
     label.string.required.control-label for="hotel_address"
       abbr title="required"
         | *
