@@ -4,6 +4,7 @@ require 'rails'
 require 'rabl'
 
 require 'core'
+require 'pictures'
 
 module Hotels
   require 'hotels/engine'

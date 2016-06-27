@@ -1,6 +1,6 @@
 .easy-block-v2 data-ng-if='!$ctrl.ownEditMode($ctrl.hotel.id)'
   .easy-bg-v2
-  = image_tag('hotels/suputnyk.jpeg', alt: 'Готель Супутник')
+  img data-ng-src='{{$ctrl.hotel.picture_url}}'
   h3.margin-top-20
     a href='{{$ctrl.hotel.link}}'
       | {{$ctrl.hotel.title}}
@@ -20,6 +20,8 @@
       | {{$ctrl.hotel.price}}
 .easy-block-v2 data-ng-if='$ctrl.ownEditMode($ctrl.hotel.id)'
   .form-group.required
+    single-file-upload-component upload-url="pictures/pictures.json" page-id="{{$ctrl.hotel.id}}" on-add='$ctrl.loadPictures()' data-ng-if='$ctrl.hotel.id !== undefined'
+    img data-ng-src="{{$ctrl.hotel.picture_url}}"
     label.string.required.control-label for="hotel_title"
       abbr title="required"
         | *

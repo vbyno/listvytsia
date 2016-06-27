@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '4.2.5'
   s.add_dependency 'rabl', '0.11.8'
   s.add_dependency 'core'
+  s.add_dependency 'pictures'
 
   s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'rspec-rails'

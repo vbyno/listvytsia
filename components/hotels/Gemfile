@@ -6,4 +6,5 @@ gemspec
 
 path '../' do
   gem 'core'
+  gem 'pictures'
 end
