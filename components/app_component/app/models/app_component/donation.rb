@@ -1,10 +1,8 @@
-require_relative 'concerns/model_methods'
-
 module AppComponent
   class Donation
     include Mongoid::Document
     include Mongoid::Timestamps
-    include Concerns::ModelMethods
+    include Core::ModelMethods
 
     field :amount, type: Money
     field :paid, type: Mongoid::Boolean, default: false

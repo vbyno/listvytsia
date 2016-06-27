@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AppComponent::Donation, model: true do
+describe AppComponent::Donation, type: :model do
   let(:donation) { build :donation, amount: 56 }
 
   it { is_expected.to monetize(:amount) }

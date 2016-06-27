@@ -1,0 +1,14 @@
+.navbar.navbar-default.mega-menu role='navigation'
+  .container
+    .navbar-header
+      button.navbar-toggle data={target: '.navbar-responsive-collapse', toggle: 'collapse'} type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.logo-link[href=core.root_path]= t('site_info.name')
+    .collapse.navbar-collapse.navbar-responsive-collapse
+      ul.nav.navbar-nav
+        li= link_to Core::Role.human_list_name, '#/roles'
+        li= link_to Core::User.human_list_name, '#/users'
+        li= link_to AppComponent::StaticPage.human_list_name, '#/static_pages'

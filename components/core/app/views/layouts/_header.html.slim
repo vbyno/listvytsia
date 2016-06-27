@@ -1,0 +1,14 @@
+.navbar.navbar-default.mega-menu role='navigation'
+  .container
+    .navbar-header
+      button.navbar-toggle data-target='.navbar-responsive-collapse' data-toggle='collapse' type='button'
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      - if current_page?(core.root_path)
+        span.navbar-brand.logo-link= t('.listvytsia')
+      - else
+        a.navbar-brand.logo-link[href=core.root_path]= t('.listvytsia')
+    .collapse.navbar-collapse.navbar-responsive-collapse
+      ul.nav.navbar-nav data-core-hook='navigation_menu'

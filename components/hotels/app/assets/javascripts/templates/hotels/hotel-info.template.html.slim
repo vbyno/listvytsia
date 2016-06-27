@@ -1,0 +1,59 @@
+.easy-block-v2 data-ng-if='!$ctrl.ownEditMode($ctrl.hotel.id)'
+  .easy-bg-v2
+  img data-ng-src='{{$ctrl.hotel.picture_url}}'
+  h3.margin-top-20
+    a href='{{$ctrl.hotel.link}}'
+      | {{$ctrl.hotel.title}}
+    a<> data-ng-href='javascript:void(0)' data-ng-click="$ctrl.turnEditModeOn($ctrl.hotel.id)" data-ng-if="$ctrl.editable"
+      i.fa.fa-pencil
+    a<> data-ng-href='javascript:void(0)' data-ng-click='$ctrl.deleteHotel($ctrl.hotel)' confirm=I18n.t('hotels.hotel.confirm_msg') data-ng-if="$ctrl.editable"
+      i.fa.fa-trash
+  ul.list-unstyled.who
+    li
+      i.fa.fa-home
+      | {{$ctrl.hotel.address}}
+    li
+      i.fa.fa-phone
+      | {{$ctrl.hotel.phone}}
+    li
+      i.fa.fa-dollar
+      | {{$ctrl.hotel.price}}
+.easy-block-v2 data-ng-if='$ctrl.ownEditMode($ctrl.hotel.id)'
+  .form-group.required
+    single-file-upload-component upload-url="pictures/pictures.json" page-id="{{$ctrl.hotel.id}}" on-add='$ctrl.loadPictures()' data-ng-if='$ctrl.hotel.id !== undefined'
+    img data-ng-src="{{$ctrl.hotel.picture_url}}"
+    label.string.required.control-label for="hotel_title"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:title)
+    input#hotel_title.string.required.form-control type='text' data-ng-model='$ctrl.hotel.title' required=true autofocus=true
+    br
+    label.string.required.control-label for="hotel_address"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:address)
+    input#hotel_address.string.required.form-control type='text' data-ng-model='$ctrl.hotel.address' required=true
+    br
+    label.string.required.control-label for="hotel_phone"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:phone)
+    input#hotel_phone.string.required.form-control type='text' data-ng-model='$ctrl.hotel.phone' required=true
+    br
+    label.string.required.control-label for="hotel_price"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:price)
+    input#hotel_price.string.required.form-control type='text' data-ng-model='$ctrl.hotel.price' required=true
+    br
+    br
+    input#hotel_published.boolean type='checkbox' data-ng-model='$ctrl.hotel.published'
+    label.string.required.control-label for="hotel_published"
+      abbr title="required"
+        | *
+        =< Hotels::Hotel.human_attribute_name(:published)
+    br
+  a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.updateHotel($ctrl.hotel)" data-ng-if='$ctrl.hotel.id !== undefined'
+    i.fa.fa-check.fa-3x
+  a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.createHotel($ctrl.hotel)" data-ng-if='$ctrl.hotel.id === undefined'
+    i.fa.fa-check.fa-3x

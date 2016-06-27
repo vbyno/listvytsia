@@ -1,0 +1,22 @@
+$:.push File.expand_path('../lib', __FILE__)
+
+require '<%= file_name %>/version'
+
+Gem::Specification.new do |s|
+  s.name        = '<%= file_name %>'
+  s.version     = <%= name %>::VERSION
+  s.authors     = ['<%= author.name %>']
+  s.email       = ['<%= author.email %>']
+  s.summary     = 'Summary of <%= name %>.'
+  s.description = 'Description of <%= name %>.'
+
+  s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.rdoc']
+
+  s.add_dependency 'mongoid', '5.1.1'
+  s.add_dependency 'mongoid_rails_migrations'
+
+  s.add_development_dependency 'mongoid-rspec'
+  s.add_development_dependency 'factory_girl'
+  s.add_development_dependency 'fuubar'
+  s.add_development_dependency 'pry'
+end

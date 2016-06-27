@@ -7,6 +7,7 @@ uk:
       mark: '*'
     error_notification:
       default_message: "Please review the problems below:"
+    main_info: Загальна інформація
     labels:
       article:
         published: Опублікувати

@@ -1,0 +1,12 @@
+.contacts.padding-bottom-0
+  .container
+    i.center-icon.rounded-x.fa.icon-bg-u.fa-building
+  .title-box-v2
+    h2
+      | Готелі і хостели
+      a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.turnEditModeOn()" data-ng-if="$ctrl.showEditButton()"
+        i.fa.fa-pencil
+      a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.turnEditModeOff()" data-ng-if="$ctrl.showCheckButton()"
+        i.fa.fa-check
+hotels-list-component data-ng-if="!$ctrl.editMode"
+hotels-dashboard-component data-ng-if="$ctrl.editMode"

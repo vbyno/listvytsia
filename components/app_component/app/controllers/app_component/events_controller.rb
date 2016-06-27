@@ -23,6 +23,7 @@ module AppComponent
       if event.save
         redirect_to events_path, notice: t('.success')
       else
+        flash.now[:error] = event.errors.full_messages.to_sentence
         render :new
       end
     end
@@ -31,6 +32,7 @@ module AppComponent
       if event.update_attributes(event_params)
         redirect_to events_path, notice: t('.success')
       else
+        flash.now[:error] = event.errors.full_messages.to_sentence
         render :edit
       end
     end

@@ -1,5 +1,4 @@
 require_relative 'concerns/permalinkable'
-require_relative 'concerns/model_methods'
 
 module AppComponent
   class Page
@@ -7,7 +6,7 @@ module AppComponent
     include Mongoid::Timestamps
 
     include Concerns::Permalinkable
-    include Concerns::ModelMethods
+    include Core::ModelMethods
 
     field :title
     field :content

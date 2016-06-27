@@ -12,7 +12,7 @@
             div= f.input :published, as: :boolean
             div= f.input :permalink
             - if pundit_user.moderator?
-              div= f.association :author, as: :select, label_method: :email, collection: AppComponent::User.all
+              div= f.association :author, as: :select, label_method: :email, collection: Core::User.all
           .col-md-6
             div= f.input :content_intro, as: :text, input_html: { rows: 7 }
         .row.sky-space-20

@@ -14,6 +14,10 @@ module Pictures
 
     scope :by_page_id, ->(page_id) { where(page_id: page_id) }
 
+    def self.human_list_name
+      model_name.human(count: Float::INFINITY)
+    end
+
     def thumb_url
       data.thumb.url
     end

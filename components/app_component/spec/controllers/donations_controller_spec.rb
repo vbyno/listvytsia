@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AppComponent::DonationsController do
+describe AppComponent::DonationsController, type: :controller do
   routes { AppComponent::Engine.routes }
 
   describe 'POST confirm' do

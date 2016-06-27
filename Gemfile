@@ -4,7 +4,9 @@ ruby '2.3.0'
 path 'components' do
   gem 'app_component'
   gem 'pictures'
+  gem 'hotels'
   gem 'seo_contents'
+  gem 'core'
 end
 
 gem 'rails'
@@ -89,6 +91,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'launchy'
   gem 'fuubar', require: false
 end

@@ -1,0 +1,27 @@
+.footer
+  .container
+    .row
+      .col-md-3.md-margin-bottom-40
+        br
+        br
+        p= t('.about_1')
+        p= t('.about_2')
+      .col-md-3.md-margin-bottom-40
+        .posts
+          .headline
+            h2= t('.latest_posts')
+          ul.list-unstyled.latest-list data-core-hook='latest_pages'
+      .col-md-3.md-margin-bottom-40
+        .headline
+          h2= t('.useful_links')
+        ul.list-unstyled.link-list data-core-hook='useful_links'
+      .col-md-3.md-margin-bottom-40
+        .headline
+          h2= t('.contacts')
+        address.md-margin-bottom-40
+          = t('.address')
+          br
+          = "#{t('.phone.title')}: #{t('.phone.value')}"
+          br
+          = "#{t('.email.title')}:"
+          a<[href="mailto:#{t('.email.value')}"]= t('.email.value')

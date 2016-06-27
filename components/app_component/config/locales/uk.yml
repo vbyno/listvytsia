@@ -1,70 +1,10 @@
 uk:
   app_component:
-    site_info:
-      name: &name Ліствиця
-      email: &email listvycja@gmail.com
-      phone: &phone +38 (093) 657 02 19
-      site: &site listvycja.org
-      address: &address Україна, м. Львів
-      facebook: &facebook 'https://www.facebook.com/pages/ЛМГО-Ліствиця/1433298123589114'
-      google_plus: &google_plus 'https://plus.google.com/104507973399257434696?prsrc=5'
     error_messages:
       invalid_permalink_format: "Посилання не повинно містити пробілів, лише латинські символи і символи '-' та '_'"
       invalid_email_format: Очікується валідний формат електронної пошти
       not_authorized: Ви не маєте дозволів для завершення цієї дії
-    actions:
-      actions: Дії
-      create: Створити
-      update: Змінити
-      delete: Видалити
-      new: Створити
-      edit: Змінити
-      cancel: Відмінити
-    layouts:
-      admin:
-        login_info:
-          logged_in_as: Ви увійшли як адміністратор
-          log_out: Вийти
-          dashboard: Панель адміністратора
-      login_info:
-        logged_in_as: Ви увійшли як користувач
-        log_out: Вийти
-      header:
-        listvytsia: *name
-        articles: Статті
-        timetable: Розклад
-        seminar: Семінар
-        donate: Пожертви
-        events: Події
-        contacts: &contacts Контакти
-      banner:
-        main_text: *name
-        subtext: Львівська міська громадська організація
-      footer:
-        about_1: Ліствиця є добровільною, нерелігійною і некомерційною, неприбутковою організацією
-        about_2: Cтворена з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актів милосердя, добродійності у всіх регіонах тощо
-        contacts: *contacts
-        address: *address
-        phone:
-          title: Телефон
-          value: *phone
-        email:
-          title: Email
-          value: *email
-        useful_links: Корисні сторінки
-        latest_posts: Нові статті
-      copyright:
-        rights_reserved: 2016 © Заборонене будь-яке копіювання матеріалів без узгодження із авторами
-        facebook:
-          link: *facebook
-          title: Ми у Facebook
-        google_plus:
-          link: *google_plus
-          title: Ми у Google Plus
     static_pages:
-      index:
-        title: ЛМГО "Ліствиця"
-        content: Львівська міська громадська організація ”Ліствиця” є добровільною, нерелігійною і некомерційною, неприбутковою організацією, створеною з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актах милосердя, добродійності у всіх регіонах, громадських місцях, лікарнях, дитячих будинках, будинках пристарілих, по необхідності громадян. Сприяти створенню умов для розкриття духовного, творчого, інтелектуального, морального потенціалу народу.
       contacts:
         intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
         contacts: Контакти

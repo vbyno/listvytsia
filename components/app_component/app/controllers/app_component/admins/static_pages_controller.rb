@@ -1,8 +1,6 @@
-require_relative 'base_controller'
-
 module AppComponent
   module Admins
-    class StaticPagesController < BaseController
+    class StaticPagesController < Core::Admins::BaseController
       respond_to :json
       helper_method :static_pages, :static_page
 

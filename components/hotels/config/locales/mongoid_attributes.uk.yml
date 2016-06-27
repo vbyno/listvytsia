@@ -1,0 +1,14 @@
+uk:
+  mongoid:
+    models:
+      hotels/hotel:
+        one: Готель
+        other: Готелі
+    attributes:
+      hotels/hotel:
+        link: Посилання
+        title: Заголовок
+        published: Опубліковати
+        price: Ціна
+        phone: Телефон
+        address: Адреса

@@ -41,4 +41,4 @@ end
 # I have to add this because i am getting error
 # app/controllers/ckeditor/application_controller.rb:1:in `<top (required)>':
 # unitialized constant ApplicationController (NameError)
-ApplicationController = Class.new(AppComponent::ApplicationController)
+ApplicationController = Class.new(Core::ApplicationController)

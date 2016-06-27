@@ -1,7 +1,7 @@
 AppComponent::Engine.routes.draw do
-  root to: 'static_pages#index'
-
+  mount Core::Engine, at: '/', as: :core
   mount Pictures::Engine, at: Pictures::Engine.mount_path, as: :pictures_engine
+  mount Hotels::Engine, at: Hotels::Engine.mount_path, as: :hotels
 
   get :contacts,  to: 'static_pages#contacts'
   get :timetable, to: 'static_pages#timetable'
@@ -15,13 +15,8 @@ AppComponent::Engine.routes.draw do
   end
 
   namespace :admins do
-    root to: 'dashboard#index'
-    resources :roles, except: [:new, :edit]
-    resources :users, except: [:new, :edit, :destroy]
     resources :static_pages, except: [:new, :edit, :destroy]
   end
 
-  devise_for :users, class_name: 'AppComponent::User', controllers: { sessions: 'app_component/sessions' }
-  devise_for :admins, class_name: 'AppComponent::Admin', controllers: { sessions: 'app_component/admins/sessions' }
   mount Ckeditor::Engine => '/ckeditor'
 end

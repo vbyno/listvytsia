@@ -26,6 +26,11 @@ module Pictures
       process quality: 70
     end
 
+    version :small do
+      process resize_to_fill: [300, 200]
+      process quality: 70
+    end
+
     version :medium do
       process resize_to_limit: [800, 455]
       process quality: 75

@@ -1,0 +1,6 @@
+.row
+  .col-md-3.col-sm-6.md-margin-bottom-40 data-ng-repeat='hotel in $ctrl.hotels'
+    hotel-info-component hotel='hotel' editable='true'
+  .col-md-3.col-sm-6.md-margin-bottom-40
+    a data-ng-href='javascript:void(0)' data-ng-click="$ctrl.addHotel()"
+      i.fa.fa-plus.fa-3x

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AppComponent::StaticPagesController do
+describe AppComponent::StaticPagesController, type: :controller do
   routes { AppComponent::Engine.routes }
 
   describe 'GET donate' do

@@ -4,7 +4,7 @@ module AppComponent
       extend ActiveSupport::Concern
 
       included do
-        belongs_to :author, class_name: 'AppComponent::User'
+        belongs_to :author, class_name: 'Core::User'
 
         scope :for_user, ->(user) { any_of({ published: true }, { author_id: user }).sorted_by_date }
 
