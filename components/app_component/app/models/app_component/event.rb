@@ -7,9 +7,13 @@ module AppComponent
     include Concerns::Pictured
 
     field :content_intro
+    field :started_at, type: DateTime
+    field :place
+
+    embeds_many :categories, class_name: 'AppComponent::EventCategory'
 
     scope :related_to, ->(event) { where(:id.ne => event.id) }
 
-    validates :content_intro, :content, presence: true
+    validates :content_intro, :content, :started_at, :place, presence: true
   end
 end

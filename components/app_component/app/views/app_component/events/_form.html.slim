@@ -16,6 +16,8 @@
               div= f.association :author, as: :select, label_method: :email, collection: Core::User.all
           .col-md-6
             div= f.input :content_intro, as: :text, input_html: { rows: 7 }
+            .col-md-6= f.input :place
+            .col-md-6= f.input :started_at, as: :string, input_html: { class: 'datepicker date-mask' }
         .row.sky-space-20
           .col-md-9
             div= f.cktext_area :content

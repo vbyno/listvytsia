@@ -8,23 +8,19 @@
 = pictures_gallery(event.id)
 .row.margin-bottom-60
   .col-sm-8
-    .headline
-      h2 Description
     == event.content
   .col-sm-4
-    .headline
-      h2 Details
     ul.list-unstyled.project-details
       li
-        strong Client:
-        | Web Design
+        strong= AppComponent::Event.human_attribute_name(:place)
+        = event.place
       li
-        strong Date:
-        | 17 October 2014
+        strong= AppComponent::Event.human_attribute_name(:started_at)
+        = l(event.started_at, format: :long)
       li
-        strong Categories:
-        a href="#"  Web Design,
-        a href="#"  Graphic
+        strong= AppComponent::Event.human_attribute_name(:categories)
+        - event.categories.each do |category|
+          link_to events_path, category.title
 .cube-portfolio
   #grid-container.cbp-l-grid-agency.cbp.cbp-caption-active.cbp-caption-zoom.cbp-ready style=("height: 604px;")
     .cbp-wrapper-outer

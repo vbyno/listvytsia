@@ -5,6 +5,8 @@
 #= require ckeditor/init
 #= require bootstrap-sprockets
 #= require unify
+#= require bootstrap-datepicker
+#= require bootstrap-datepicker/locales/bootstrap-datepicker.uk.js
 
 #= require ./public/google_analytics
 #= require ./public/listvytsia
