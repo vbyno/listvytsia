@@ -1,5 +1,5 @@
 .cube-portfolio.container.margin-bottom-60#body1
-  .content-xs
+  .content-xs.hidden
     #filters-container.cbp-l-filters-text.content-xs
       .cbp-filter-item-active.cbp-filter-item data-filter="*"  All
       | |
@@ -10,5 +10,10 @@
       .cbp-filter-item data-filter=".graphic"  Graphic
       | |
       .cbp-filter-item data-filter=".logos"  Logo
+  .title-v1
+    h1
+      = t('.activities')
+      =< link_to new_event_path do
+        i.fa.fa-plus
   #grid-container.cbp-l-grid-agency
     = render events

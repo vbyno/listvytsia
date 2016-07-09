@@ -54,6 +54,7 @@ uk:
         submit: Зберегти
       index:
         header: Події
+        activities: Наша Діяльність
         <<: *social_networks
       show:
         edit_event: *edit_event

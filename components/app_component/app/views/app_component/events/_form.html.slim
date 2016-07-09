@@ -24,7 +24,7 @@
         .row.sky-space-20
           br
           .col-md-9
-            div= f.association :picture, collection: AppComponent::Ckeditor::PicturePresenter.latest(self), label_method: :thumb_image, as: :radio_buttons, wrapper_html: { class: 'inline-radio-buttons'}
+            div= f.association :picture, collection: AppComponent::Ckeditor::PicturePresenter.latest(self, Pictures::Picture), label_method: :thumb_image, as: :radio_buttons, wrapper_html: { class: 'inline-radio-buttons'}
     .tab-pane.fade.in#seo-content
       br
       fieldset.no-padding

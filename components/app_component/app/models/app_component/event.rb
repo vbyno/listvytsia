@@ -6,6 +6,8 @@ module AppComponent
     include Concerns::Authored
     include Concerns::Pictured
 
+    belongs_to :picture, class_name: 'Pictures::Picture'
+
     field :content_intro
     field :started_at, type: DateTime
     field :place

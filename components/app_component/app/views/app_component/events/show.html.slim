@@ -17,10 +17,11 @@
       li
         strong= AppComponent::Event.human_attribute_name(:started_at)
         = l(event.started_at, format: :long)
-      li
-        strong= AppComponent::Event.human_attribute_name(:categories)
-        - event.categories.each do |category|
-          link_to events_path, category.title
+      - if event.categories.exists?
+        li
+          strong= AppComponent::Event.human_attribute_name(:categories)
+          - event.categories.each do |category|
+            link_to events_path, category.title
 .cube-portfolio
   #grid-container.cbp-l-grid-agency.cbp.cbp-caption-active.cbp-caption-zoom.cbp-ready style=("height: 604px;")
     .cbp-wrapper-outer
