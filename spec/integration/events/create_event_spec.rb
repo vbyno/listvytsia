@@ -11,7 +11,7 @@ describe 'create event', js: true do
   it 'creates' do
     login_as(user)
 
-    visit '/events/new'
+    visit '/activities/new'
 
     fill_in 'Заголовок', with: 'Подія 1'
     fill_in 'Посилання', with: 'podiya_1'
@@ -23,6 +23,13 @@ describe 'create event', js: true do
     fill_in_ckeditor 'event_content', with: 'Наповнення статті'
 
     click_button 'Зберегти'
+    expect(page).to have_error 'Дата не може бути пустим'
+    expect(page).to have_error 'Місце не може бути пустим'
+
+    fill_in 'Дата', with: '2016-05-04'
+    fill_in 'Місце', with: 'Львів'
+    click_button 'Зберегти'
+
     expect(page).to have_notice 'Подія успішно створена'
 
     click_link 'Подія 1'
