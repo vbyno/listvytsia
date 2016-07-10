@@ -25,7 +25,7 @@ module AppComponent
     end
 
     def permitted_attributes
-      attributes = %i( permalink title content content_intro published picture_id )
+      attributes = %i( permalink title content content_intro published picture_id place started_at )
       attributes.push(:author_id) if user.permitted_to?(:moderate, :events)
       attributes.push(seo_content_attributes: [:title, :description, :keywords])
 

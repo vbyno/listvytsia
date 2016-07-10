@@ -19,7 +19,7 @@ describe 'sign-in user', js: true do
       sign_in_as(email: user.email, password: password)
 
       expect(page).to have_notice 'Вхід успішний'
-      expect(page).to have_current_path app_component.root_path, only_path: true
+      expect(page).to have_current_path core.root_path, only_path: true
     end
   end
 end

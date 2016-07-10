@@ -11,12 +11,13 @@ describe Hotels::HotelsController, type: :controller do
 
       expect(JSON.parse(response.body)).to contain_exactly(
         'id' => hotel.id.to_s,
-        "link"=>nil,
-        "address"=> hotel.address,
-        "title"=>hotel.title,
-        "phone"=>hotel.phone,
-        "price"=>hotel.price,
-        "published"=>hotel.published
+        'link' => nil,
+        'address' => hotel.address,
+        'title' => hotel.title,
+        'phone' => hotel.phone,
+        'price' => hotel.price,
+        'published' => hotel.published,
+        'picture_url' => '#'
       )
     end
   end

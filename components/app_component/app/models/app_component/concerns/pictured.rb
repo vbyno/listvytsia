@@ -1,22 +1,16 @@
 module AppComponent
   module Concerns
     module Pictured
-      extend ActiveSupport::Concern
+      def picture_url
+        return '' unless picture
 
-      included do
-        belongs_to :picture, class_name: 'AppComponent::Ckeditor::Picture'
+        picture.data.medium.url
+      end
 
-        def picture_url
-          return '' unless picture
+      def picture_content_url
+        return '' unless picture
 
-          picture.data.medium.url
-        end
-
-        def picture_content_url
-          return '' unless picture
-
-          picture.data.content.url
-        end
+        picture.data.content.url
       end
     end
   end

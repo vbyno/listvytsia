@@ -8,6 +8,7 @@ require 'slim-rails'
 require 'mongoid_rails_migrations'
 require 'ckeditor'
 require 'gmaps4rails'
+require 'bootstrap-datepicker-rails'
 
 require 'core'
 require 'hotels'

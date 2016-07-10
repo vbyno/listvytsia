@@ -25,6 +25,9 @@ uk:
         picture: Головне зображення
       app_component/event:
         <<: *article_params
+        started_at: Дата
+        place: Місце
+        categories: Категорії
       app_component/donation:
         amount: Сума
       app_component/seo_content:

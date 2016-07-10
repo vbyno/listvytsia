@@ -8,6 +8,8 @@ module AppComponent
     include Concerns::Permalinkable
     include Core::ModelMethods
 
+    include SeoContents::Seo
+
     field :title
     field :content
     field :published, type: Mongoid::Boolean, default: false

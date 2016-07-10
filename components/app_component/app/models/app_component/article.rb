@@ -6,6 +6,8 @@ module AppComponent
     include Concerns::Authored
     include Concerns::Pictured
 
+    belongs_to :picture, class_name: 'AppComponent::Ckeditor::Picture'
+
     field :content_intro
 
     validates :content_intro, :content, presence: true
