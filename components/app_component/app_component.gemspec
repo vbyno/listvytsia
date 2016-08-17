@@ -11,13 +11,14 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
   s.test_files = Dir["spec/**/*"]
 
+  s.add_dependency 'rails', '4.2.6'
   s.add_dependency 'rake', '10.5.0'
   s.add_dependency 'mini_magick', '4.3.6'
   s.add_dependency 'carrierwave-mongoid', '0.8.1'
   s.add_dependency 'coffee-rails', '4.1.1'
   s.add_dependency 'angularjs-rails', '1.5.0'
   s.add_dependency 'angular-rails-templates', '1.0.0'
-  s.add_dependency 'sass', '3.4.21'
+  s.add_dependency 'sass', '3.4.22'
   s.add_dependency 'money-rails', '1.6.0'
   s.add_dependency 'liqpay', '1.0.1'
   s.add_dependency 'simple_form', '3.2.1'

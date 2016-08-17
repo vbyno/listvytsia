@@ -26,8 +26,8 @@ describe 'create article', js: true do
     expect(page).to have_notice 'Стаття успішно створена'
 
     click_link 'Стаття 1'
-    expect(page.current_path).to eq '/articles/stattya_1'
     expect(page).to have_text 'Наповнення статті'
+    expect(page.current_path).to eq '/articles/stattya_1'
 
     click_link 'Редагувати статтю'
     check 'Опублікувати'
