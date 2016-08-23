@@ -18,7 +18,7 @@ module AppComponent
     end
 
     def create
-      article.author ||= current_user
+      article.author ||= pundit_user
 
       if article.save
         redirect_to articles_path, notice: t('.success')

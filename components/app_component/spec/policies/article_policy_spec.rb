@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe AppComponent::ArticlePolicy do
   let(:user) { build :user }
-  let(:current_user) { build :user }
-  let(:user_decorator) { Core::UserDecorators::User.new(current_user) }
+  let(:registered_user) { build :user }
+  let(:user_decorator) { Core::UserDecorators::User.new(registered_user) }
   let(:article) { build :article, author: user }
   let(:policy) { described_class.new(user_decorator, article) }
 
@@ -18,7 +18,7 @@ describe AppComponent::ArticlePolicy do
       it { is_expected.to be_falsey }
 
       context 'current user is an author' do
-        let(:article) { build :article, published: false, author: current_user }
+        let(:article) { build :article, published: false, author_id: registered_user.id }
 
         it { is_expected.to be_truthy }
       end

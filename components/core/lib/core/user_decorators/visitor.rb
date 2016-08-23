@@ -3,6 +3,8 @@ module Core
     class Visitor
       include Singleton
 
+      EMPTY_STRING = ''.freeze
+
       delegate :bson_type, :to_bson, to: :_id
 
       def _id
@@ -18,6 +20,18 @@ module Core
       end
 
       def author_of?(*)
+        false
+      end
+
+      def permission_identifiers
+        []
+      end
+
+      def email
+        EMPTY_STRING
+      end
+
+      def registered?
         false
       end
     end

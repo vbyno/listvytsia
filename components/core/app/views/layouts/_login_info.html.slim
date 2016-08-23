@@ -6,8 +6,8 @@
           li
             = t('.logged_in_as')
             span<
-              strong= current_user.email
+              strong= pundit_user.email
           li
             ||
           li
-            = link_to t('.log_out'), core.destroy_user_session_path(current_user), method: :delete
+            = link_to t('.log_out'), core.destroy_user_session_path, method: :delete

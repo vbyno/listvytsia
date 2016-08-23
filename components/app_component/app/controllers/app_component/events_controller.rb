@@ -18,7 +18,7 @@ module AppComponent
     end
 
     def create
-      event.author ||= current_user
+      event.author ||= pundit_user
 
       if event.save
         redirect_to events_path, notice: t('.success')
