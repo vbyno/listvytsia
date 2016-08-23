@@ -3,8 +3,9 @@ require 'spec_helper'
 describe AppComponent::ArticlePolicy do
   let(:user) { build :user }
   let(:current_user) { build :user }
+  let(:user_decorator) { Core::UserDecorators::User.new(current_user) }
   let(:article) { build :article, author: user }
-  let(:policy) { described_class.new(current_user, article) }
+  let(:policy) { described_class.new(user_decorator, article) }
 
   describe '#show?' do
     subject { policy.show? }

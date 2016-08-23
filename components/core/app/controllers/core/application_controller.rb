@@ -24,7 +24,7 @@ module Core
     end
 
     def pundit_user
-      current_user || MissedUser.instance
+      UserDecorators.build(current_user)
     end
 
     def user_not_authorized
