@@ -20,12 +20,12 @@ module Generators
         'lib/my_engine/version.rb' => "lib/#{ file_name }/version.rb",
         'config/routes.rb' => 'config/routes.rb',
         'bin/rails' => 'bin/rails',
-        'spec/models/my_engine_model_spec.rb' => "spec/models/#{ file_name.singularize }_spec.rb",
+        'spec/models/my_engine/my_engine_model_spec.rb' => "spec/models/#{ file_name }/#{ file_name.singularize }_spec.rb",
         'app/models/my_engine/my_engine_model.rb' => "app/models/#{ file_name }/#{ file_name.singularize }.rb",
         'spec/spec_helper.rb' => 'spec/spec_helper.rb'
       }.each_pair { |name, new_name| copy_as_template(name, new_name) }
 
-      Dir.glob("lib/templates/engine/spec/dummy/**/*").each do |name|
+      Dir.glob("#{File.expand_path('../templates/engine/spec/dummy', __FILE__)}/**/*").each do |name|
         next unless File.file?(name)
 
         new_name = name.partition('engine/').last

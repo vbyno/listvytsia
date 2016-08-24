@@ -6,7 +6,6 @@ require File.expand_path('../boot', __FILE__)
 # require 'sprockets/railtie'
 require 'rails/mongoid'
 
-Bundler.require(*Rails.groups)
 require '<%= file_name %>'
 
 module Dummy
