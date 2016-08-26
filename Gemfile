@@ -7,6 +7,7 @@ path 'components' do
   gem 'hotels'
   gem 'seo_contents'
   gem 'core'
+  gem 'generators'
 end
 
 gem 'rails'
@@ -70,14 +71,12 @@ group :development do
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-inotify', require: false
-  gem 'spring-commands-rspec'
   gem 'web-console'
 end
 
 group :development, :test do
   gem 'puma'
   gem 'byebug'
-  gem 'spring'
   gem 'pry-rails'
 end
 

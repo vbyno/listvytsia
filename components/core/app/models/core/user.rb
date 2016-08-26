@@ -38,28 +38,6 @@ module Core
     # field :locked_at,       type: Time
 
     has_and_belongs_to_many :roles, class_name: 'Core::Role', autosave: true
-
     def name; end
-
-    def permitted_to?(action, resource)
-      permission_identifiers.any? do |p|
-        p.action.to_sym == action &&
-        p.resource.to_sym == resource
-      end
-    end
-
-    def moderator?
-      permitted_to?(:moderate, :articles)
-    end
-
-    def author_of?(article)
-      article.author?(self)
-    end
-
-    private
-
-    def permission_identifiers
-      @permission_identifiers ||= roles.map(&:permissions).flatten
-    end
   end
 end

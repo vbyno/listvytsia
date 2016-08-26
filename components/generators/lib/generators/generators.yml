@@ -1,0 +1,6 @@
+engine:
+  directory_name: components
+  author: &author
+    name: Volodymyr Byno
+    email: 'volodymyr.byno@gmail.com'
+

@@ -10,6 +10,5 @@ require 'slim-rails'
 
 module Core
   require 'core/engine'
-
-  autoload :MissedUser, 'core/missed_user'
+  require 'core/user_decorators'
 end

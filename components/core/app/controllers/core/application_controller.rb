@@ -13,6 +13,10 @@ module Core
 
     protected
 
+    def pundit_user
+      UserDecorators.build(current_user)
+    end
+
     def verified_request?
       super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
     end
@@ -21,10 +25,6 @@ module Core
 
     def set_csrf_cookie_for_ng
       cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
-    end
-
-    def pundit_user
-      current_user || MissedUser.instance
     end
 
     def user_not_authorized
