@@ -44,7 +44,10 @@
               br
               span=< t('brief_info.russian_invitation.text')
               span=<> phone_link_to(t('brief_info.russian_invitation.phone'))
-              = t('brief_info.russian_invitation.name')
+              span=<> t('brief_info.russian_invitation.name')
+              span<>
+                a href= "mailto:#{t('brief_info.russian_invitation.email')}"
+                  = t('brief_info.russian_invitation.email')
               br
               span=< t('brief_info.kids.text')
               span=<> phone_link_to(t('brief_info.kids.phone'))
