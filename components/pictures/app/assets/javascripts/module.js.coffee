@@ -10,4 +10,3 @@ angular.module('pictures', [
 angular.module('pictures').config(['$compileProvider', ($compileProvider) ->
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/)
 ])
-

@@ -44,6 +44,21 @@ angular.module('admin.config')
     controller: 'StaticPagesEditController',
     controllerAs: 'ctrl'
   })
+  .when('/chunks', {
+    templateUrl: 'admin/views/chunks/index.html',
+    controller: 'ChunksIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/chunks/new', {
+    templateUrl: 'admin/views/chunks/new.html',
+    controller: 'ChunksNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/chunks/:id/edit', {
+    templateUrl: 'admin/views/chunks/edit.html',
+    controller: 'ChunksEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

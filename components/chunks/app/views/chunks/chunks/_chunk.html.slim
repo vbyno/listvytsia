@@ -1,0 +1,8 @@
+- if current_admin && chunk
+  h2= link_to "admins#/chunks/#{chunk.id}/edit", data: { no_turbolink: true }, target: '_blank' do
+    i.fa.fa-pencil
+- elsif current_admin
+  h2= link_to "admins?identifier=#{identifier}#/chunks/new", data: { no_turbolink: true }, target: '_blank' do
+    i.fa.fa-plus
+- if chunk
+  == chunk.body

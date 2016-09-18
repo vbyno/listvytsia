@@ -25,6 +25,7 @@ PATH
       angularjs-rails (= 1.5.0)
       bootstrap-datepicker-rails (= 1.6.1.1)
       carrierwave-mongoid (= 0.8.1)
+      chunks
       ckeditor
       coffee-rails (= 4.1.1)
       core
@@ -39,6 +40,10 @@ PATH
       sass (= 3.4.22)
       seo_contents
       simple_form (= 3.2.1)
+    chunks (0.0.1)
+      core
+      mongoid (= 5.1.1)
+      mongoid_rails_migrations
     core (0.0.1)
       deface (= 1.0.2)
       devise (= 3.5.3)

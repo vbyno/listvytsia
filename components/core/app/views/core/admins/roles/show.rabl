@@ -1,2 +1,2 @@
-extends 'app_component/admins/roles/role'
+extends 'core/admins/roles/role'
 object present(role)
