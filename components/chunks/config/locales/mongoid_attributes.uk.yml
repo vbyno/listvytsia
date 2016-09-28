@@ -1,0 +1,10 @@
+uk:
+  mongoid:
+    models:
+      chunks/chunk:
+        one: HTML-вставка
+        other: HTML-вставки
+    attributes:
+      chunks/chunk:
+        identifier: Унікальний ідентифікатор
+        body: HTML-код

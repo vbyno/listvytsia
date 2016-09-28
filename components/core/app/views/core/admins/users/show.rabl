@@ -1,2 +1,2 @@
-extends 'app_component/admins/users/user'
+extends 'core/admins/users/user'
 object present(user)

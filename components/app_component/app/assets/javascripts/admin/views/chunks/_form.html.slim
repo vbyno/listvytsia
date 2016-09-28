@@ -1,0 +1,14 @@
+.form-group.required
+  label.string.required.control-label for='chunk_identifier'
+    abbr title='required'
+      | *
+      =< Chunks::Chunk.human_attribute_name(:identifier)
+  input#chunk_identifier.string.required.form-control type='text' data-ng-model='ctrl.chunk.identifier' required=true data-ng-readonly='ctrl.readonlyIdentifier()'
+  label.string.required.control-label for='chunk_body'
+    abbr title='required'
+      | *
+      =< Chunks::Chunk.human_attribute_name(:body)
+  textarea#chunk_body.string.required.form-control type='text' data-ng-model='ctrl.chunk.body' required=true autofocus=true rows=20
+  br
+  .form-group
+    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.roles.form.submit') data-ng-disabled='!chunkForm.$valid'

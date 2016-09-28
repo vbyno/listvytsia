@@ -2,9 +2,10 @@
   .title-v1.margin-bottom-0
     h1 П’ятий cемінар
 
-= render 'app_component/static_pages/seminar/brief_info'
 = render 'app_component/static_pages/seminar/location'
-= render 'app_component/static_pages/seminar/hotels'
+
+hotels-component editable='#{pundit_user.moderator?}'
+
 = render 'app_component/static_pages/seminar/google_map_scripts'
 
 - content_for :title do

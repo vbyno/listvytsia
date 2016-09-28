@@ -9,6 +9,8 @@ require 'rabl'
 require 'slim-rails'
 
 module Core
-  require 'core/engine'
-  require 'core/user_decorators'
+  require_relative 'core/engine'
+  require_relative 'core/user_decorators'
+  require_relative 'core/application_policy'
+  require_relative 'core/base_presenter'
 end

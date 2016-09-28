@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'seo_contents'
   s.add_dependency 'core'
   s.add_dependency 'hotels'
+  s.add_dependency 'chunks'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'

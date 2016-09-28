@@ -37,3 +37,21 @@ uk:
       destroy:
         success: Користувач успішно видалений
         fail: Користувач не видалений
+    chunks:
+      form:
+        submit: Зберегти
+      chunk:
+        confirm_msg: Ви справді хочете видалити HTML-вставку?
+      index:
+        header: HTML-вставки
+      edit:
+        header: Редагування HTML-вставки
+      new:
+        header: Створення HTML-вставки
+      create:
+        success: HTML-вставка успішно створена
+      update:
+        success: HTML-вставка успішно оновлена
+      destroy:
+        success: HTML-вставка успішно видалена
+        fail: HTML-вставка не видалена
