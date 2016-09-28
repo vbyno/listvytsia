@@ -18,5 +18,9 @@ module Core
     def h
       @view
     end
+
+    def id
+      @model.id.to_s
+    end
   end
 end

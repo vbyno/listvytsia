@@ -1,0 +1,17 @@
+h1
+  = Chunks::Chunk.human_list_name
+  a.pull-right href= '#/chunks/new'
+    i.fa.fa-plus
+table.table.table-striped
+  tr
+    th= Chunks::Chunk.human_attribute_name(:identifier)
+    th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tr data-ng-repeat= 'chunk in indexCtrl.chunks'
+    td {{chunk.identifier}}
+    td
+      span>
+        a data-ng-href= '#/chunks/{{chunk.id}}/edit'
+          i.fa.fa-pencil
+      //span
+      //  a href= '#/chunks' data-ng-click= 'indexCtrl.deleteChunk(chunk)' data-ng-confirm-click= I18n.t('admins.chunks.chunk.confirm_msg')
+      //    i.fa.fa-trash
