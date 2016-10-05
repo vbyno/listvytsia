@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'carrierwave-mongoid', '0.8.1'
   s.add_dependency 'coffee-rails', '4.1.1'
   s.add_dependency 'angularjs-rails', '1.5.0'
-  s.add_dependency 'angular-rails-templates', '1.0.0'
+  s.add_dependency 'angular-rails-templates', '1.0.2'
   s.add_dependency 'sass', '3.4.22'
   s.add_dependency 'money-rails', '1.6.0'
   s.add_dependency 'liqpay', '1.0.1'
