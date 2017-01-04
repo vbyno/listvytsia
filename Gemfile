@@ -77,7 +77,8 @@ end
 group :development, :test do
   gem 'puma'
   gem 'byebug'
-  gem 'pry-rails'
+  gem 'pry'
+  gem 'rb-readline'
 end
 
 group :production do

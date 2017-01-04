@@ -14,8 +14,8 @@ class MovePageToAppComponentNamespace < Mongoid::Migration
   def self.up
     Mongoid::Clients.default.use('admin').database.
       command({
-                renameCollection: "listvytsia_#{Rails.env}.pages",
-                to:               "listvytsia_#{Rails.env}.app_component_pages"
+                renameCollection: "#{current_database_name}.pages",
+                to:               "#{current_database_name}.app_component_pages"
               })
 
     AppComponent::Page.where(_type: 'StaticPage').update_all(_type: 'AppComponent::StaticPage')
@@ -26,12 +26,16 @@ class MovePageToAppComponentNamespace < Mongoid::Migration
   def self.down
     Mongoid::Clients.default.use('admin').database.
       command({
-                renameCollection: "listvytsia_#{Rails.env}.app_component_pages",
-                to:               "listvytsia_#{Rails.env}.pages"
+                renameCollection: "#{current_database_name}.app_component_pages",
+                to:               "#{current_database_name}.pages"
               })
 
     Page.where(_type: 'AppComponent::StaticPage').update_all(_type: 'StaticPage')
     Page.where(_type: 'AppComponent::Event').update_all(_type: 'Event')
     Page.where(_type: 'AppComponent::Article').update_all(_type: 'Article')
+  end
+
+  def self.current_database_name
+    Mongoid.default_client.options[:database]
   end
 end

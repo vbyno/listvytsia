@@ -18,8 +18,8 @@ class MoveCkeditorAssetToAppComponentNamespace < Mongoid::Migration
   def self.up
     Mongoid::Clients.default.use('admin').database.
       command({
-                renameCollection: "listvytsia_#{Rails.env}.ckeditor_assets",
-                to:               "listvytsia_#{Rails.env}.app_component_ckeditor_assets"
+                renameCollection: "#{current_database_name}.ckeditor_assets",
+                to:               "#{current_database_name}.app_component_ckeditor_assets"
               })
     AppComponent::Ckeditor::Asset.where(_type: 'Ckeditor::AttachmentFile').
                                   update_all(_type: 'AppComponent::Ckeditor::AttachmentFile')
@@ -30,12 +30,16 @@ class MoveCkeditorAssetToAppComponentNamespace < Mongoid::Migration
   def self.down
     Mongoid::Clients.default.use('admin').database.
       command({
-                renameCollection: "listvytsia_#{Rails.env}.app_component_ckeditor_assets",
-                to:               "listvytsia_#{Rails.env}.ckeditor_assets"
+                renameCollection: "#{current_database_name}.app_component_ckeditor_assets",
+                to:               "#{current_database_name}.ckeditor_assets"
               })
     Ckeditor::Asset.where(_type: 'AppComponent::Ckeditor::AttachmentFile').
                     update_all(_type: 'Ckeditor::AttachmentFile')
     Ckeditor::Asset.where(_type: 'AppComponent::Ckeditor::Picture').
                     update_all(_type: 'Ckeditor::Picture')
+  end
+
+  def self.current_database_name
+    Mongoid.default_client.options[:database]
   end
 end
