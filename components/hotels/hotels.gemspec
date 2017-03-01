@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.rdoc']
 
-  s.add_dependency 'mongoid', '5.1.1'
+  s.add_dependency 'mongoid'
   s.add_dependency 'mongoid_rails_migrations'
-  s.add_dependency 'rails', '4.2.6'
-  s.add_dependency 'rabl', '0.11.8'
+  s.add_dependency 'rails'
+  s.add_dependency 'rabl'
   s.add_dependency 'core'
   s.add_dependency 'pictures'
 
