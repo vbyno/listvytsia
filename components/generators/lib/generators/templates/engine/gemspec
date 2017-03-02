@@ -1,4 +1,4 @@
-$:.push File.expand_path('../lib', __FILE__)
+$:.push File.expand_path('lib', __dir__)
 
 require '<%= file_name %>/version'
 
@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongoid', '5.1.1'
   s.add_dependency 'mongoid_rails_migrations'
 
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry'

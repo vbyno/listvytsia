@@ -5,7 +5,6 @@ require File.expand_path('../dummy/config/environment', __FILE__)
 require 'rubygems'
 require 'rspec/rails'
 require 'rails/mongoid'
-require 'mongoid/rspec'
 require 'money-rails/test_helpers'
 require 'pry'
 
@@ -21,7 +20,6 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
   config.include Warden::Test::Helpers
   config.include AppComponent::Engine.routes.url_helpers
-  config.include Mongoid::Matchers, type: :model
 
   config.before do
     I18n.locale = :uk

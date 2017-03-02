@@ -1,17 +1,15 @@
-# Maintain your gem's version:
-require_relative "lib/seo_contents/version"
+$:.push File.expand_path('lib', __dir__)
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "seo_contents"
-  s.version     = SeoContents::VERSION
-  s.authors     = ["Volodymyr Byno"]
-  s.email       = ["volodymyr.byno@gmail.com"]
-  s.summary     = "Summary of SeoContents"
-  s.description = "Description of SeoContents"
+  s.name        = 'seo_contents'
+  s.version     = '0.0.1'
+  s.authors     = ['Volodymyr Byno']
+  s.email       = ['volodymyr.byno@gmail.com']
+  s.summary     = 'Summary of SeoContents'
+  s.description = 'Description of SeoContents'
 
-  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
-  s.test_files = Dir["spec/**/*"]
+  s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile']
+  s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails'
   s.add_dependency 'rake'
@@ -27,7 +25,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'factory_girl_rails'
 end

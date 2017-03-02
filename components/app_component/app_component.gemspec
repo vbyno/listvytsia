@@ -1,15 +1,13 @@
-require_relative "lib/app_component/version"
-
 Gem::Specification.new do |s|
-  s.name        = "app_component"
-  s.version     = AppComponent::VERSION
-  s.authors     = ["Volodymyr Byno"]
-  s.email       = ["volodymyr.byno@gmail.com"]
-  s.summary     = "Summary of AppComponent"
-  s.description = "Description of AppComponent"
+  s.name        = 'app_component'
+  s.version     = '0.0.1'
+  s.authors     = ['Volodymyr Byno']
+  s.email       = ['volodymyr.byno@gmail.com']
+  s.summary     = 'Summary of AppComponent'
+  s.description = 'Description of AppComponent'
 
-  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
-  s.test_files = Dir["spec/**/*"]
+  s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile']
+  s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails'
   s.add_dependency 'rake'
@@ -34,6 +32,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry-rails'
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'factory_girl'
 end

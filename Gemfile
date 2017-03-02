@@ -8,6 +8,7 @@ path 'components' do
   gem 'seo_contents'
   gem 'core'
   gem 'generators'
+  gem 'aaa'
 end
 
 gem 'rails', '5.0.1'

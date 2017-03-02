@@ -1,10 +1,8 @@
-$:.push File.expand_path('../lib', __FILE__)
-
-require 'core/version'
+$:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'core'
-  s.version     = Core::VERSION
+  s.version     = '0.0.1'
   s.authors     = ['Volodymyr Byno']
   s.email       = ['volodymyr.byno@gmail.com']
   s.summary     = 'Summary of Core.'
@@ -24,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'slim-rails'
 
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry'

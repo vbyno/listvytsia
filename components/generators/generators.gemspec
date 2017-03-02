@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'generators/version'
 
 Gem::Specification.new do |s|
   s.name          = 'generators'
-  s.version       = EngineGenerator::VERSION
+  s.version       = '0.0.1'
   s.authors       = ['Volodymyr Byno']
   s.email         = ['volodymyr.byno@gmail.com']
   s.summary       = 'Rails Engine generator'

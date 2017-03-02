@@ -9,12 +9,5 @@ module AppComponent
         Mongoid::Migrator.migrations_path += ['components/app_component/db/migrate']
       end
     end
-
-    config.generators do |g|
-      g.orm             :mongoid
-      g.test_framework  :rspec
-      g.assets          false
-      g.helper          false
-    end
   end
 end

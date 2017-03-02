@@ -1,10 +1,8 @@
-$:.push File.expand_path('../lib', __FILE__)
-
-require 'hotels/version'
+$:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'hotels'
-  s.version     = Hotels::VERSION
+  s.version     = '0.0.1'
   s.authors     = ['Volodymyr Byno']
   s.email       = ['volodymyr.byno@gmail.com']
   s.summary     = 'Summary of Hotels.'
@@ -19,7 +17,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'core'
   s.add_dependency 'pictures'
 
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'fuubar'
