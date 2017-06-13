@@ -3,3 +3,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations', branch: 'development'
+
+group :test do
+  gem 'mongoid-rspec', github: 'mongoid-rspec/mongoid-rspec'
+end

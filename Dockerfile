@@ -2,8 +2,10 @@ FROM ruby:2.4.0
 
 RUN apt-get update -yqq \
   && apt-get install -yqq build-essential \
-  && apt-get install -y --no-install-recommends apt-utils \
-  && apt-get install -y libxml2-dev libxslt1-dev \ # for nokogiri
+  && apt-get install -yqq apt-utils
+
+# for nokogiri
+RUN apt-get install -y libxml2-dev libxslt1-dev
 
 RUN apt-get install -y nodejs
 
@@ -13,13 +15,19 @@ RUN mkdir $APP_HOME
 
 WORKDIR $APP_HOME
 
-ADD components/*/*.gemspec $APP_HOME
-ADD Gemfile* $APP_HOME
+ADD components/core/core.gemspec                   components/core/core.gemspec
+ADD components/chunks/chunks.gemspec               components/chunks/chunks.gemspec
+ADD components/generators/generators.gemspec       components/generators/generators.gemspec
+ADD components/hotels/hotels.gemspec               components/hotels/hotels.gemspec
+ADD components/pictures/pictures.gemspec           components/pictures/pictures.gemspec
+ADD components/seo_contents/seo_contents.gemspec   components/seo_contents/seo_contents.gemspec
+ADD components/app_component/app_component.gemspec components/app_component/app_component.gemspec
+ADD Gemfile* $APP_HOME/
 
-RUN bundle config git.allow_insecure true
-RUN bundle install
+RUN bundle config git.allow_insecure true \
+  && bundle install
 
-ADD . $APP_HOME
+ADD . $APP_HOME/
 
 EXPOSE 3000
 

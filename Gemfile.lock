@@ -55,7 +55,7 @@ PATH
       rabl
       rails
       slim-rails
-    generators (0.1.0)
+    generators (0.0.1)
     hotels (0.0.1)
       core
       mongoid
@@ -66,6 +66,7 @@ PATH
     pictures (0.0.1)
       angular-rails-templates
       angularjs-rails
+      carrierwave-mongoid
       coffee-rails
       mini_magick
       mongoid
@@ -570,4 +571,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.3
+   1.14.6

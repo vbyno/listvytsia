@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'core'
 
   s.add_development_dependency 'factory_girl'
+  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rspec-rails'

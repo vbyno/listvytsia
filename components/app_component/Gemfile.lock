@@ -47,6 +47,7 @@ PATH
     pictures (0.0.1)
       angular-rails-templates
       angularjs-rails
+      carrierwave-mongoid
       coffee-rails
       mini_magick
       mongoid

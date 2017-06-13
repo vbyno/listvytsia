@@ -7,8 +7,6 @@ path 'components' do
   gem 'hotels'
   gem 'seo_contents'
   gem 'core'
-  gem 'generators'
-  gem 'aaa'
 end
 
 gem 'rails', '5.0.1'
@@ -51,6 +49,7 @@ gem 'awesome_print'
 gem 'foreman'
 
 group :development do
+  gem 'generators', path: 'components'
   gem 'better_errors'
   gem 'binding_of_caller', platforms: [:mri_21]
 

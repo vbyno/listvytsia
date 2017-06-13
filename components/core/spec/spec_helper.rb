@@ -19,7 +19,7 @@ RSpec.configure do |config|
 
   config.include Warden::Test::Helpers
   config.include Core::Engine.routes.url_helpers
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   config.before do
     I18n.locale = :uk

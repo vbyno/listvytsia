@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rake'
   s.add_dependency 'mongoid'
   s.add_dependency 'mini_magick'
+  s.add_dependency 'carrierwave-mongoid'
   s.add_dependency 'coffee-rails'
   s.add_dependency 'angularjs-rails'
   s.add_dependency 'angular-rails-templates'
@@ -23,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass'
 
   s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'factory_girl_rails'

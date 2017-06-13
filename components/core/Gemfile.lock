@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/mongoid-rspec/mongoid-rspec.git
+  revision: f392d24abc6853895bd959b4916cd82a1b12f6f4
+  specs:
+    mongoid-rspec (4.0.0.pre.alpha1)
+      activesupport (>= 4.0.0)
+      mongoid (~> 6.0)
+      rspec (~> 3.3)
+
+GIT
   remote: git://github.com/vbyno/mongoid_rails_migrations.git
   revision: 71560ed7c5ab4d89aa8406a78a223705f7351175
   branch: development
@@ -152,6 +161,10 @@ GEM
     rake (12.0.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -204,6 +217,7 @@ DEPENDENCIES
   core!
   factory_girl
   fuubar
+  mongoid-rspec!
   mongoid_rails_migrations!
   pry
   rspec-rails

@@ -8,7 +8,10 @@ require 'factory_girl'
 require 'rails/mongoid'
 require 'pry'
 
-Dir[Chunks::Engine.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[
+  Chunks::Engine.root.join('spec/support/**/*.rb'),
+  Core::Engine.root.join('spec/support/**/*.rb')
+].each { |f| require f }
 
 RSpec.configure do |config|
   # config.color_enabled = true
@@ -21,7 +24,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
   config.include Chunks::Engine.routes.url_helpers
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   config.before do
     I18n.locale = :uk

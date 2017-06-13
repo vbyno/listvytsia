@@ -1,15 +1,11 @@
 version: '2'
 
-volumes:
-  db-data:
-    external: false
-
 services:
   db:
     image: mongo:3.4.2
     env_file: .env
     volumes:
-      - db-data:/var/lib/mongo/db-data
+      - /Users/vbyno/dev/data/listvytsia/database:/data/db
   app:
     build: ./
     env_file: .env
@@ -19,4 +15,3 @@ services:
       - '3000:3000'
     depends_on:
       - db
-

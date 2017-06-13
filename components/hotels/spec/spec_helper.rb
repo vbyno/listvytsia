@@ -7,7 +7,10 @@ require 'rspec/rails'
 require 'rails/mongoid'
 require 'pry'
 
-Dir[Hotels::Engine.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[
+  Hotels::Engine.root.join('spec/support/**/*.rb'),
+  Core::Engine.root.join('spec/support/**/*.rb')
+].each { |f| require f }
 
 RSpec.configure do |config|
   config.tty = true
@@ -15,5 +18,5 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Hotels::Engine.routes.url_helpers
   config.include Warden::Test::Helpers
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
 end

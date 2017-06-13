@@ -17,7 +17,7 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
   config.order = 'random'
 
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Warden::Test::Helpers
   config.include Rails.application.routes.url_helpers
 
