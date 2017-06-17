@@ -4,8 +4,6 @@ services:
   db:
     image: mongo:3.4.2
     env_file: .env
-    volumes:
-      - /Users/vbyno/dev/data/listvytsia/database:/data/db
   app:
     build: ./
     env_file: .env
