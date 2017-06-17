@@ -9,7 +9,7 @@ require 'rails/mongoid'
 require 'mongoid-rspec'
 require 'pry'
 
-Dir[Pictures::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
+Dir[Pictures::Engine.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

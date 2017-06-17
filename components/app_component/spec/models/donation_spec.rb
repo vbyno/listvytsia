@@ -3,9 +3,6 @@ require 'spec_helper'
 describe AppComponent::Donation, type: :model do
   let(:donation) { build :donation, amount: 56 }
 
-  it { is_expected.to monetize(:amount) }
-  it { is_expected.to validate_inclusion_of(:paid).to_allow(true, false) }
-
   it 'sets amount of money' do
     expect(donation.amount.to_s).to eq '56.00'
     expect(donation.amount.cents).to eq 5600

@@ -39,27 +39,6 @@ uk:
     banner:
       main_text: *name
       subtext: Львівська міська громадська організація
-    footer:
-      about_1: Ліствиця є добровільною, нерелігійною і некомерційною, неприбутковою організацією
-      about_2: Cтворена з метою проведення культурно-просвітницької та науково-дослідницької діяльності, актів милосердя, добродійності у всіх регіонах тощо
-      contacts: *contacts
-      address: *address
-      phone:
-        title: Телефон
-        value: *phone
-      email:
-        title: Email
-        value: *email
-      useful_links: Корисні сторінки
-      latest_posts: Нові статті
-    copyright:
-      rights_reserved: 2016 © Заборонене будь-яке копіювання матеріалів без узгодження із авторами
-      facebook:
-        link: *facebook
-        title: Ми у Facebook
-      google_plus:
-        link: *google_plus
-        title: Ми у Google Plus
   static_pages:
     index:
       title: ЛМГО "Ліствиця"

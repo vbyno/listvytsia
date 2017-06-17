@@ -1,4 +1,9 @@
 angular.module('admin.config')
+.config(['$locationProvider', ($locationProvider) ->
+  $locationProvider.hashPrefix('')
+]);
+
+angular.module('admin.config')
 .config(['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when('/', {

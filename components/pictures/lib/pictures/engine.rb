@@ -12,12 +12,5 @@ module Pictures
         app.config.paths['db/migrate'].concat config.paths['db/migrate'].expanded
       end
     end
-
-    config.generators do |g|
-      g.orm             :mongoid
-      g.test_framework  :rspec
-      g.assets          false
-      g.helper          false
-    end
   end
 end

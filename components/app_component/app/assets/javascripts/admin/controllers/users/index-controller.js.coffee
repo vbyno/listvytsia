@@ -3,8 +3,8 @@ angular.module('admin.controllers')
   controller = this;
   controller.users = [];
 
-  $http.get('/admins/users').success((data) ->
-    controller.users = data;
+  $http.get('/admins/users').then((response) ->
+    controller.users = response.data;
   );
 
   controller;

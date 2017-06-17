@@ -1,4 +1,3 @@
-require 'generators/version'
 require 'yaml'
 
 module Generators

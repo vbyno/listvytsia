@@ -4,16 +4,16 @@ angular.module('admin.controllers')
   controller.user = { email: '', role_ids: [] };
   controller.allRoles = [];
 
-  $http.get("/admins/roles").success((data) ->
-    controller.allRoles = data;
+  $http.get("/admins/roles").then((response) ->
+    controller.allRoles = response.data;
   );
 
-  $http.get("/admins/users/#{$routeParams.id}").success((data) ->
-    controller.user = data;
+  $http.get("/admins/users/#{$routeParams.id}").then((response) ->
+    controller.user = response.data;
   );
 
   @updateUser = () ->
-    $http.put("/admins/users/#{controller.user.id}", @_userParams()).success( ->
+    $http.put("/admins/users/#{controller.user.id}", @_userParams()).then( ->
       $location.path('/users');
     );
 
