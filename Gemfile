@@ -9,9 +9,9 @@ path 'components' do
   gem 'core'
 end
 
-gem 'rails', '5.0.1'
+gem 'rails'
 gem 'rails-i18n'
-gem 'mongoid', '6.1.0'
+gem 'mongoid'
 gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations', branch: 'development'
 
 gem 'devise'

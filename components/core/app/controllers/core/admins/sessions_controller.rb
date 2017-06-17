@@ -1,7 +1,7 @@
 module Core
   module Admins
     class SessionsController < ::Devise::SessionsController
-      after_filter :set_csrf_headers, only: [:create, :destroy]
+      after_action :set_csrf_headers, only: [:create, :destroy]
 
       protected
 

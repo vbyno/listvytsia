@@ -7,24 +7,21 @@ require 'rails/test_unit/railtie'
 require 'rails/mongoid'
 
 Bundler.require(*Rails.groups)
-require "app_component"
+require 'app_component'
 
 module Dummy
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    # config.active_record.raise_in_transactional_callbacks = true
+    config.cache_classes = true
+    config.eager_load = false
+    config.public_file_server.enabled = true
+    config.consider_all_requests_local = true
+    config.action_controller.perform_caching = false
+    config.action_dispatch.show_exceptions = false
+    config.action_controller.allow_forgery_protection = false
+    config.action_mailer.delivery_method = :test
+    config.active_support.test_order = :random
+    config.active_support.deprecation = :stderr
+    config.action_mailer.default_url_options = { host: 'localhost' }
   end
 end
 

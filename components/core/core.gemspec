@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongoid'
   s.add_dependency 'mongoid_rails_migrations'
   s.add_dependency 'pundit'
-  s.add_dependency 'rails'
+  s.add_dependency 'rails', '5.1.1'
   s.add_dependency 'devise'
   s.add_dependency 'figaro'
   s.add_dependency 'deface'
