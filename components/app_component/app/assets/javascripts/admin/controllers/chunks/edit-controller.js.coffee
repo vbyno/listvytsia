@@ -3,12 +3,12 @@ angular.module('admin.controllers')
   controller = this;
   controller.chunk = { identifier: '', body: '' };
 
-  $http.get("/admins/chunks/#{$routeParams.id}").success((data) ->
-    controller.chunk = data;
+  $http.get("/admins/chunks/#{$routeParams.id}").then((response) ->
+    controller.chunk = response.data;
   );
 
   @updateChunk = () ->
-    $http.put("/admins/chunks/#{controller.chunk.id}", @_chunkParams()).success( ->
+    $http.put("/admins/chunks/#{controller.chunk.id}", @_chunkParams()).then( ->
       $location.path('/chunks');
     );
 

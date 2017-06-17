@@ -8,6 +8,8 @@ RUN apt-get update -yqq \
 RUN apt-get install -y libxml2-dev libxslt1-dev
 
 RUN apt-get install -y nodejs
+RUN npm install npm -g
+RUN npm install -g @angular/cli
 
 ENV APP_HOME /listvytsia
 

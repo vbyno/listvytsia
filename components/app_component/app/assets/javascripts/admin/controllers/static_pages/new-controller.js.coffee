@@ -5,7 +5,7 @@ angular.module('admin.controllers')
   controller.staticPage.seo_content = { title: '', description: '', keywords: '' };
 
   @createStaticPage = () ->
-    $http.post("/admins/static_pages", @_staticPageParams()).success( ->
+    $http.post("/admins/static_pages", @_staticPageParams()).then( ->
       $location.path('/static_pages');
     );
 
