@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/mkaszubowski/ckeditor.git
-  revision: c9b5ea842222976c2d7f646f2d1210f4cb619fc2
-  specs:
-    ckeditor (4.1.3)
-      cocaine
-      orm_adapter (~> 0.5.0)
-
-GIT
   remote: git://github.com/vbyno/mongoid_rails_migrations.git
   revision: c0b264d334069454a5b9fe4afaee2fc7562012bd
   branch: development
@@ -201,7 +193,10 @@ GEM
     chromedriver-helper (1.0.0)
       archive-zip (~> 0.7.0)
       nokogiri (~> 1.6)
-    climate_control (0.1.0)
+    ckeditor (4.2.3)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
@@ -516,7 +511,7 @@ DEPENDENCIES
   capybara
   carrierwave
   chromedriver-helper
-  ckeditor!
+  ckeditor
   coffee-rails
   core!
   devise
