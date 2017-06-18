@@ -4,8 +4,7 @@
   .row
     .col-sm-4.col-sm-offset-0
       == chunks_chunk(:office_location)
-    .col-sm-8
-      #office_map.map.map-middle
+
 = render 'app_component/static_pages/seminar/location'
 
 hotels-component editable='#{pundit_user.moderator?}'
@@ -17,5 +16,4 @@ hotels-component editable='#{pundit_user.moderator?}'
 
 - content_for :script do
   javascript:
-    Listvytsia.officeLocation();
     Listvytsia.seminarLocation();
