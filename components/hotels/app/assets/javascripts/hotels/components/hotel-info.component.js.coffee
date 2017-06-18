@@ -1,31 +1,26 @@
 HotelInfoController = ($http) ->
   ctrl = this
-  ctrl.editableIds = []
 
-  ctrl.turnEditModeOn = (hotelId) ->
-    ctrl.editableIds.push(hotelId)
+  ctrl.turnEditModeOn = (hotel) ->
+    hotel.editable = true
 
-  ctrl.turnEditModeOff = (hotelId) ->
-    ctrl.editableIds.splice(ctrl.editableIds.indexOf(hotelId), 1);
-
-  ctrl.ownEditMode = (hotelId) ->
-    ctrl.editableIds.indexOf(hotelId) != -1
+  ctrl.turnEditModeOff = (hotel) ->
+    hotel.editable = false
 
   ctrl.updateHotel = (hotel) ->
     $http.put("/hotels/#{hotel.id}.json", @_hotelParams(hotel)).then( ->
-      ctrl.turnEditModeOff(hotel.id)
+      ctrl.turnEditModeOff(hotel)
     );
 
   ctrl.createHotel = (hotel) ->
-    $http.post("/hotels", @_hotelParams(hotel)).then((data) ->
-      hotel.id = data.id
-      ctrl.turnEditModeOff(data.id)
+    $http.post("/hotels", @_hotelParams(hotel)).then((response) ->
+      hotel.id = response.data.id
+      ctrl.turnEditModeOff(hotel)
     );
 
   ctrl.deleteHotel = (hotel) ->
-    $http.delete("/hotels/#{hotel.id}.json"
-    ).success (data) ->
-      ctrl.hotels.splice(ctrl.hotels.indexOf(hotel), 1)
+    $http.delete("/hotels/#{hotel.id}.json").then (response) ->
+      hotel.deleted = true
 
   @_hotelParams = (hotel) ->
     hotel:
@@ -47,4 +42,3 @@ do () ->
     bindings:
       hotel: '='
       editable: '<'
-      ownEditMode: '&'

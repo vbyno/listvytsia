@@ -3,10 +3,8 @@ HotelsListController = ($http) ->
   ctrl.hotels = []
 
   ctrl.loadHotels = ->
-    $http.get(
-      '/hotels.json?published=1'
-    ).success (data) ->
-      ctrl.hotels = data
+    $http.get('/hotels.json?published=1').then (response) ->
+      ctrl.hotels = response.data
 
   ctrl.loadHotels()
   ctrl

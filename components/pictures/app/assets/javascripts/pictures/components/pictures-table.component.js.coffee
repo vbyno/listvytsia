@@ -8,12 +8,12 @@ PicturesTableController = ($http) ->
 
     $http.put("/pictures/pictures/#{picture.id}.json",
       picture: params
-    ).success (data) ->
+    ).then (response) ->
       picture[field] = value
 
   ctrl.deletePicture = (picture) ->
     $http.delete("/pictures/pictures/#{picture.id}.json"
-    ).success (data) ->
+    ).then (response) ->
       ctrl.pictures.splice(ctrl.pictures.indexOf(picture), 1)
 
   ctrl.addPicture = (picture) ->
@@ -23,8 +23,8 @@ PicturesTableController = ($http) ->
     $http.get('/pictures/pictures.json',
       params:
         page_id: ctrl.pageId
-    ).success (data) ->
-      ctrl.pictures = data
+    ).then (response) ->
+      ctrl.pictures = response.data
 
   ctrl.loadPictures()
   ctrl
