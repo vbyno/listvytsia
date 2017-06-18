@@ -16,13 +16,13 @@ describe AppComponent::StaticPagesController, type: :controller do
       let!(:donation) { create :donation, paid: true }
 
       it 'displays successful notice' do
-        get :donate, valid_params
+        get :donate, params: valid_params
 
         expect(flash[:notice]).to eq confirmed_message
       end
 
       it 'displays nothing' do
-        get :donate, invalid_params
+        get :donate, params: invalid_params
 
         expect(flash[:notice]).to be_nil
         expect(flash[:error]).to be_nil
@@ -33,13 +33,13 @@ describe AppComponent::StaticPagesController, type: :controller do
       let!(:donation) { create :donation, paid: false }
 
       it 'displays successful notice' do
-        get :donate, valid_params
+        get :donate, params: valid_params
 
         expect(flash[:error]).to eq not_confirmed_message
       end
 
       it 'displays nothing' do
-        get :donate, invalid_params
+        get :donate, params: invalid_params
 
         expect(flash[:notice]).to be_nil
         expect(flash[:error]).to be_nil

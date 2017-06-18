@@ -9,7 +9,7 @@ module AppComponent
 
     scope :by_id, ->(id) { where(id: id) }
 
-    validates :amount, numericality: { greater_than: 0 }
+    validates :amount, :'app_component/positive_money' => true
     validates :paid, inclusion: { in: [true, false] }
 
     def confirm!

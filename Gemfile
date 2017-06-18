@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
+ruby '2.4.1'
 
 path 'components' do
   gem 'app_component'
@@ -7,14 +7,12 @@ path 'components' do
   gem 'hotels'
   gem 'seo_contents'
   gem 'core'
-  gem 'generators'
 end
 
 gem 'rails'
 gem 'rails-i18n'
-gem 'mongoid', '~> 5.1.0'
-gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations'
-gem 'bson_ext'
+gem 'mongoid'
+gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations', branch: 'development'
 
 gem 'devise'
 gem 'devise-i18n'
@@ -41,8 +39,8 @@ gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'uglifier'
 
-gem 'ckeditor', github: 'mkaszubowski/ckeditor' # https://github.com/galetahub/ckeditor/issues/551
-gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'ckeditor'
+gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
@@ -51,6 +49,7 @@ gem 'awesome_print'
 gem 'foreman'
 
 group :development do
+  gem 'generators', path: 'components'
   gem 'better_errors'
   gem 'binding_of_caller', platforms: [:mri_21]
 
@@ -61,12 +60,9 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-faster-assets'
 
-  gem 'mailcatcher'
-
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
@@ -87,7 +83,6 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'mongoid-rspec'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'selenium-webdriver'

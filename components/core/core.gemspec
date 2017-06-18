@@ -1,10 +1,8 @@
-$:.push File.expand_path('../lib', __FILE__)
-
-require 'core/version'
+$:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'core'
-  s.version     = Core::VERSION
+  s.version     = '0.0.1'
   s.authors     = ['Volodymyr Byno']
   s.email       = ['volodymyr.byno@gmail.com']
   s.summary     = 'Summary of Core.'
@@ -12,16 +10,16 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.rdoc']
 
-  s.add_dependency 'mongoid', '5.1.1'
+  s.add_dependency 'mongoid'
   s.add_dependency 'mongoid_rails_migrations'
-  s.add_dependency 'pundit', '1.1.0'
-  s.add_dependency 'rails', '4.2.6'
-  s.add_dependency 'devise', '3.5.3'
-  s.add_dependency 'figaro', '1.1.1'
-  s.add_dependency 'deface', '1.0.2'
-  s.add_dependency 'rabl', '0.11.8'
-  s.add_dependency 'oj', '2.15.1'
-  s.add_dependency 'slim-rails', '3.0.1'
+  s.add_dependency 'pundit'
+  s.add_dependency 'rails', '5.1.1'
+  s.add_dependency 'devise'
+  s.add_dependency 'figaro'
+  s.add_dependency 'deface'
+  s.add_dependency 'rabl'
+  s.add_dependency 'oj'
+  s.add_dependency 'slim-rails'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'mongoid-rspec'

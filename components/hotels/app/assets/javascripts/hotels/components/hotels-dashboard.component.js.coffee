@@ -3,13 +3,11 @@ HotelsDashboardController = ($http) ->
   ctrl.hotels = []
 
   ctrl.addHotel = () ->
-    ctrl.hotels.push({})
+    ctrl.hotels.push({editable: true})
 
   ctrl.loadHotels = ->
-    $http.get(
-      '/hotels.json'
-    ).success (data) ->
-      ctrl.hotels = data
+    $http.get('/hotels.json').then (response) ->
+      ctrl.hotels = response.data
 
   ctrl.loadHotels()
   ctrl

@@ -3,12 +3,12 @@ angular.module('admin.controllers')
   controller = this;
   controller.role = { title: '', permissions: [] };
 
-  $http.get("/admins/roles/#{$routeParams.id}").success((data) ->
-    controller.role = data;
+  $http.get("/admins/roles/#{$routeParams.id}").then((response) ->
+    controller.role = response.data;
   );
 
   @updateRole = () ->
-    $http.put("/admins/roles/#{controller.role.id}", @_roleParams()).success( ->
+    $http.put("/admins/roles/#{controller.role.id}", @_roleParams()).then( ->
       $location.path('/roles');
     );
 
@@ -16,7 +16,7 @@ angular.module('admin.controllers')
     controller.role.permissions.push({});
 
   @deletePermission = (permission) ->
-    $http.put("/admins/roles/#{controller.role.id}", @_deletePermissionParams(permission)).success( ->
+    $http.put("/admins/roles/#{controller.role.id}", @_deletePermissionParams(permission)).then( ->
       controller.role.permissions.splice(controller.role.permissions.indexOf(permission), 1);
     );
 

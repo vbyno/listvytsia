@@ -4,7 +4,7 @@ module Core
       before_action :authenticate_admin!
       layout 'admins/application'
 
-      after_filter :set_csrf_cookie_for_ng
+      after_action :set_csrf_cookie_for_ng
 
       rescue_from ActionController::InvalidAuthenticityToken do |exception|
         sign_out(current_admin)

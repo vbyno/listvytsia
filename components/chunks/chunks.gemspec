@@ -1,10 +1,8 @@
-$:.push File.expand_path('../lib', __FILE__)
-
-require 'chunks/version'
+$:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |s|
   s.name        = 'chunks'
-  s.version     = Chunks::VERSION
+  s.version     = '0.0.1'
   s.authors     = ['Volodymyr Byno']
   s.email       = ['volodymyr.byno@gmail.com']
   s.summary     = 'Summary of Chunks.'
@@ -12,12 +10,12 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.rdoc']
 
-  s.add_dependency 'mongoid', '5.1.1'
+  s.add_dependency 'mongoid'
   s.add_dependency 'mongoid_rails_migrations'
   s.add_dependency 'core'
 
-  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'factory_girl'
+  s.add_development_dependency 'mongoid-rspec'
   s.add_development_dependency 'fuubar'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rspec-rails'

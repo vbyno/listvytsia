@@ -3,7 +3,7 @@ module Core
     include ::Pundit
 
     protect_from_forgery with: :exception
-    after_filter :set_csrf_cookie_for_ng
+    after_action :set_csrf_cookie_for_ng
 
     rescue_from ::Pundit::NotAuthorizedError, with: :user_not_authorized
 

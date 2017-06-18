@@ -4,7 +4,7 @@ angular.module('admin.controllers')
   controller.chunk = { identifier: '', body: '' };
 
   @createChunk = () ->
-    $http.post('/admins/chunks', @_chunk_params()).success( ->
+    $http.post('/admins/chunks', @_chunk_params()).then( ->
       $location.path('/chunks');
     );
 

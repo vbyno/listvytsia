@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  db:
+    image: mongo:3.4.2
+    env_file: .env
+  app:
+    build: ./
+    env_file: .env
+    volumes:
+      - .:/listvytsia
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db

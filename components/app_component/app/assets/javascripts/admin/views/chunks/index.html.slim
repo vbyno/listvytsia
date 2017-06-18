@@ -6,7 +6,7 @@ table.table.table-striped
   tr
     th= Chunks::Chunk.human_attribute_name(:identifier)
     th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
-  tr data-ng-repeat= 'chunk in indexCtrl.chunks'
+  tr data-ng-repeat = 'chunk in indexCtrl.chunks'
     td {{chunk.identifier}}
     td
       span>

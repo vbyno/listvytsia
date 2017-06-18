@@ -1,7 +1,7 @@
 require 'yaml'
 
 # config valid only for Capistrano 3.4
-lock '3.4.0'
+lock '3.7.2'
 
 rails_env = fetch(:stage).to_s
 figaro_config = YAML.load_file('config/application.yml').fetch(rails_env)
@@ -12,7 +12,7 @@ user_name = figaro_config.fetch('server_user')
 set :application, application
 set :repo_url, 'git@github.com:vbyno/listvytsia.git'
 set :rvm_type, :user
-set :rvm_ruby_version, 'ruby-2.3.0@listvytsia'
+set :rvm_ruby_version, 'ruby-2.4.1@listvytsia'
 set :deploy_to, "/var/www/apps/#{application}"
 set :sudo, 'env rvmsudo_secure_path=1 rvmsudo'
 set :branch, figaro_config.fetch('branch')

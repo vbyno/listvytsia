@@ -3,13 +3,13 @@ angular.module('admin.controllers')
   controller = this;
   controller.roles = [];
 
-  $http.get('/admins/roles').success((data) ->
-    controller.roles = data;
+  $http.get('/admins/roles').then((response) ->
+    controller.roles = response.data;
   );
 
   @deleteRole = (role) ->
     role = role
-    $http.delete("/admins/roles/#{role.id}").success((data) ->
+    $http.delete("/admins/roles/#{role.id}").then((response) ->
       controller.roles.splice(controller.roles.indexOf(role), 1);
     );
 
