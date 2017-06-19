@@ -21,3 +21,4 @@ do () ->
     bindings:
       hotels: '&'
       deleteHotel: '&'
+      editable: '<'

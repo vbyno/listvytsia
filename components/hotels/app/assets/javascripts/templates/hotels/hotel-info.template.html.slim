@@ -1,4 +1,4 @@
-.easy-block-v2 data-ng-if='!$ctrl.hotel.editable'
+.easy-block-v2 data-ng-if='!$ctrl.editMode || !$ctrl.hotel.editable'
   .easy-bg-v2
   img data-ng-src='{{$ctrl.hotel.picture_url}}'
   h3.margin-top-20
@@ -18,7 +18,7 @@
     li
       i.fa.fa-dollar
       | {{$ctrl.hotel.price}}
-.easy-block-v2 data-ng-if='$ctrl.hotel.editable'
+.easy-block-v2 data-ng-if='$ctrl.editMode && $ctrl.hotel.editable'
   .form-group.required
     single-file-upload-component upload-url="pictures/pictures.json" page-id="{{$ctrl.hotel.id}}" on-add='$ctrl.loadPictures()' data-ng-if='$ctrl.hotel.id !== undefined'
     img data-ng-src="{{$ctrl.hotel.picture_url}}"
