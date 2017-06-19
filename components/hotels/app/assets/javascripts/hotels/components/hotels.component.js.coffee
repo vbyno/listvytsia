@@ -1,6 +1,5 @@
 HotelsController = () ->
   ctrl = this
-  ctrl.editMode = false
 
   ctrl.turnEditModeOn = () ->
     ctrl.editMode = true
@@ -22,4 +21,4 @@ do () ->
     controller: HotelsController,
     bindings:
       editable: '<'
-      editMode: '&'
+      editMode: '<'
