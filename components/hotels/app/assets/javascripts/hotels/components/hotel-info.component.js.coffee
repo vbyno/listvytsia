@@ -1,35 +1,35 @@
 HotelInfoController = ($http) ->
   ctrl = this
 
-  ctrl.turnEditModeOn = (hotel) ->
-    hotel.editable = true
+  ctrl.turnEditModeOn = () ->
+    ctrl.editMode = true
 
-  ctrl.turnEditModeOff = (hotel) ->
-    hotel.editable = false
+  ctrl.turnEditModeOff = () ->
+    ctrl.editMode = false
 
-  ctrl.updateHotel = (hotel) ->
-    $http.put("/hotels/#{hotel.id}.json", @_hotelParams(hotel)).then( ->
-      ctrl.turnEditModeOff(hotel)
+  ctrl.updateHotel = () ->
+    $http.put("/hotels/#{ctrl.hotel.id}.json", @_hotelParams()).then( ->
+      ctrl.turnEditModeOff()
     );
 
-  ctrl.createHotel = (hotel) ->
-    $http.post("/hotels", @_hotelParams(hotel)).then((response) ->
-      hotel.id = response.data.id
-      ctrl.turnEditModeOff(hotel)
+  ctrl.createHotel = () ->
+    $http.post("/hotels", @_hotelParams()).then((response) ->
+      ctrl.hotel.id = response.data.id
+      ctrl.turnEditModeOff()
     );
 
-  ctrl.deleteHotel = (hotel) ->
-    $http.delete("/hotels/#{hotel.id}.json").then (response) ->
-      hotel.deleted = true
+  ctrl.deleteHotel = () ->
+    $http.delete("/hotels/#{ctrl.hotel.id}.json").then (response) ->
+      ctrl.hotel.deleted = true
 
-  @_hotelParams = (hotel) ->
+  @_hotelParams = () ->
     hotel:
-      title: hotel.title
-      link: hotel.link
-      address: hotel.address
-      phone: hotel.phone
-      price: hotel.price
-      published: hotel.published
+      title: ctrl.hotel.title
+      link: ctrl.hotel.link
+      address: ctrl.hotel.address
+      phone: ctrl.hotel.phone
+      price: ctrl.hotel.price
+      published: ctrl.hotel.published
 
   ctrl
 
