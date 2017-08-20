@@ -22,6 +22,7 @@ module Dummy
     config.active_support.test_order = :random
     config.active_support.deprecation = :stderr
     config.action_mailer.default_url_options = { host: 'localhost' }
+    Mongoid.load!(File.expand_path('../../../../component_mongoid.yml', __dir__), :test)
   end
 end
 
