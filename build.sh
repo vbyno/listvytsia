@@ -8,7 +8,7 @@ failing_components=''
 for test_script in $(find . -name test.sh); do
   pushd `dirname $test_script` > /dev/null
 
-  if [ $key -eq $with_bundle ]; then
+  if [ "$key" = "$with_bundle" ]; then
     rm Gemfile.lock && bundle install
   fi
 

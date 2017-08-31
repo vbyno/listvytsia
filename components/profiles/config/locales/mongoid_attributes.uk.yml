@@ -1,0 +1,11 @@
+uk:
+  mongoid:
+    models:
+      profiles/profile:
+        one: Профіль
+        other: Профелі
+    attributes:
+      profiles/profile:
+        first_name: "Ім'я"
+        last_name: Прізвище
+        published: Опублікований
