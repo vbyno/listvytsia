@@ -1,0 +1,12 @@
+.hotels-flex-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hotels-flex-item {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  flex: 1 300px;
+}
