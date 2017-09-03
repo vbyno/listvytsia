@@ -1,12 +1,14 @@
 .hotels-flex-container {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 .hotels-flex-item {
-  width: 400px;
+  width: 350px;
   height: 400px;
-  margin: 10px;
-  flex: 1 300px;
+  margin: 0;
+  flex-grow: 0;
+  flex-shrink: 100;
 }
