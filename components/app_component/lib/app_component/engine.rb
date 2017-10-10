@@ -1,4 +1,6 @@
 module AppComponent
+  SHOW_SEMINAR_PAGE = false
+
   class Engine < ::Rails::Engine
     isolate_namespace AppComponent
 
