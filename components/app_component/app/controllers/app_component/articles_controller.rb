@@ -40,7 +40,7 @@ module AppComponent
     private
 
     def articles
-      @articles ||= policy_scope(AppComponent::Article)
+      @articles ||= policy_scope(AppComponent::Article).order(created_at: :desc)
     end
 
     def article
