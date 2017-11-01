@@ -31,7 +31,7 @@ uk:
       seminar: Семінар
       donate: Пожертви
       events: Події
-      contacts: &contacts Контакти
+      contacts: &contacts Про нас
     banner:
       main_text: *name
       subtext: Львівська міська громадська організація
