@@ -28,4 +28,3 @@ angular.module('pictures').component 'editableFieldComponent',
     fieldValue: '@'
     fieldType: '@?'
     onUpdate: '&'
-

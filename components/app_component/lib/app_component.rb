@@ -14,6 +14,7 @@ require 'core'
 require 'hotels'
 require 'pictures'
 require 'chunks'
+require 'profiles'
 
 module AppComponent
   require 'app_component/engine'

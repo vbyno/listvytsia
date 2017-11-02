@@ -19,12 +19,12 @@
 #= require ng-file-upload-all
 #= require ui-bootstrap-tpls-1.3.1
 #= require angular-confirm
-#= require pictures
 
-# Hotels Engine
+#= require pictures
+#= require profiles
 #= require hotels
 
 # This will cause app to compile when Turbolinks loads a new page
 # and removes the need for ng-app in the DOM
 $(document).on 'ready page:load', ->
-  angular.bootstrap(document, ['pictures', 'hotels'], { strictDi: true })
+  angular.bootstrap(document, ['pictures', 'hotels', 'profiles'], { strictDi: true })
