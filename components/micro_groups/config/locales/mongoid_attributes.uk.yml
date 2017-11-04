@@ -1,0 +1,11 @@
+uk:
+  mongoid:
+    models:
+      micro_groups/micro_group:
+        one: Профіль
+        other: Профелі
+    attributes:
+      micro_groups/micro_group:
+        first_name: "Ім'я"
+        last_name: Прізвище
+        published: Опублікований
