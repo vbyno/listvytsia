@@ -2,10 +2,14 @@ uk:
   mongoid:
     models:
       micro_groups/micro_group:
-        one: Профіль
-        other: Профелі
+        one: Мікрогрупа
+        other: Мікрогрупи
     attributes:
       micro_groups/micro_group:
-        first_name: "Ім'я"
-        last_name: Прізвище
-        published: Опублікований
+        name: Назва
+        city: Місто
+        idea: Ідея
+        leaders: Ведучі, представники
+        contacts: Кантактна інформація
+        methodologies: Примітки, методики
+        published: Назва

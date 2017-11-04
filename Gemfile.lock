@@ -24,6 +24,7 @@ PATH
       gmaps4rails
       hotels
       liqpay
+      micro_groups
       mini_magick
       money-rails
       pictures
@@ -49,6 +50,13 @@ PATH
       slim-rails
     generators (0.0.1)
     hotels (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
+    micro_groups (0.0.1)
       core
       mongoid
       mongoid_rails_migrations
@@ -532,6 +540,7 @@ DEPENDENCIES
   launchy
   liqpay
   mail_form
+  micro_groups!
   mini_magick
   money-rails
   mongoid

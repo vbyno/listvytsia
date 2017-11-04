@@ -64,6 +64,21 @@ angular.module('admin.config')
     controller: 'ChunksEditController',
     controllerAs: 'ctrl'
   })
+  .when('/micro_groups', {
+    templateUrl: 'admin/views/micro_groups/index.html',
+    controller: 'MicroGroupsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/micro_groups/new', {
+    templateUrl: 'admin/views/micro_groups/new.html',
+    controller: 'MicroGroupsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/micro_groups/:id/edit', {
+    templateUrl: 'admin/views/micro_groups/edit.html',
+    controller: 'MicroGroupsEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

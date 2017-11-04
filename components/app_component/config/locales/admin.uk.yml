@@ -1,5 +1,5 @@
 uk:
-  admin:
+  admins:
     static_pages:
       form:
         submit: Зберегти
@@ -9,6 +9,19 @@ uk:
         header: Редагування сторінки
       new:
         header: Створення сторінки
+      create:
+        success: Сторінка успішно створена
+      update:
+        success: Сторінка успішно оновлена
+    micro_groups:
+      form:
+        submit: Зберегти
+      index:
+        header: Сторінки
+      edit:
+        header: Редагування інформації про мікрогрупу
+      new:
+        header: Додавання мікрогрупи
       create:
         success: Сторінка успішно створена
       update:

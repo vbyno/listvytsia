@@ -1,0 +1,17 @@
+h1
+  = MicroGroups::MicroGroup.human_list_name
+  a.pull-right href= '#/micro_groups/new'
+    i.fa.fa-plus
+table.table.table-striped
+  tr
+    th= MicroGroups::MicroGroup.human_attribute_name(:name)
+    th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tr data-ng-repeat = 'micro_group in indexCtrl.micro_groups'
+    td {{micro_group.name}}
+    td
+      span>
+        a data-ng-href= '#/micro_groups/{{micro_group.id}}/edit'
+          i.fa.fa-pencil
+      //span
+      //  a href= '#/micro_groups' data-ng-click= 'indexCtrl.deleteMicroGroup(micro_group)' data-ng-confirm-click= I18n.t('admins.micro_groups.micro_group.confirm_msg')
+      //    i.fa.fa-trash

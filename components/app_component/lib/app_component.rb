@@ -15,6 +15,7 @@ require 'hotels'
 require 'pictures'
 require 'chunks'
 require 'profiles'
+require 'micro_groups'
 
 module AppComponent
   require 'app_component/engine'

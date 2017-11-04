@@ -2,6 +2,7 @@ module MicroGroups
   class MicroGroup
     include Mongoid::Document
     include Mongoid::Timestamps
+    include Core::ModelMethods
 
     field :name
     field :city
