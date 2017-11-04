@@ -1,8 +1,9 @@
 $primary-color: #3498db;
-$main-font-size: 14px;
+$main-font-size: 15px;
 
 .content-custom {
   font-size: $main-font-size;
+  font-family: Helvetica, Verdana;
   article {
     blockquote {
       p {
