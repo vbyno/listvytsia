@@ -14,8 +14,7 @@ html lang==I18n.locale
         == render 'layouts/admins/navigation'
       .container.content.content-custom
         == render 'layouts/messages'
-        .col-md-7
-          == yield
+        == yield
       .footer-v1
         == render 'layouts/admins/footer'
     == javascript_include_tag 'admin', 'data-turbolinks-track' => true

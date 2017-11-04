@@ -8,10 +8,11 @@ angular.module('admin.controllers')
   );
 
   @deleteMicroGroup = (micro_group) ->
-    micro_group = micro_group
-    $http.delete("/admins/micro_groups/#{micro_group.id}").then((response) ->
-      controller.micro_groups.splice(controller.micro_groups.indexOf(micro_group), 1);
-    );
+    if confirm('Видалити інформацію про мікрогрупу?')
+      $http.delete("/admins/micro_groups/#{micro_group.id}").then((response) ->
+        controller.micro_groups.splice(controller.micro_groups.indexOf(micro_group), 1);
+      );
+
 
   controller;
 ]);
