@@ -3,7 +3,7 @@ AppComponent::Engine.routes.draw do
   mount Pictures::Engine, at: Pictures::Engine.mount_path, as: :pictures_engine
   mount Hotels::Engine, at: Hotels::Engine.mount_path, as: :hotels
   mount Chunks::Engine, at: Chunks::Engine.mount_path, as: :chunks
-  mount MicroGroups::Engine, at: MicroGroups::Engine.mount_path, as: :micro_groups
+  mount MicroGroups::Engine, at: MicroGroups::Engine.mount_path, as: :micro_groups_component
 
   get :contacts,  to: 'static_pages#contacts'
   get :timetable, to: 'static_pages#timetable'
