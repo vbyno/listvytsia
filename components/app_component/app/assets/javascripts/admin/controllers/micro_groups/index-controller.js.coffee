@@ -1,16 +1,18 @@
 angular.module('admin.controllers')
-.controller('MicroGroupsIndexController', ['$http', ($http) ->
+.controller('MicroGroupsIndexController', ['$scope', '$http', ($scope, $http) ->
   controller = this;
-  controller.micro_groups = [];
+  $scope.micro_groups = [];
 
   $http.get('/admins/micro_groups').then((response) ->
-    controller.micro_groups = response.data;
+    $scope.micro_groups = response.data;
   );
+
+  $scope.displayed_micro_groups = [].concat($scope.micro_groups);
 
   @deleteMicroGroup = (micro_group) ->
     if confirm('Видалити інформацію про мікрогрупу?')
       $http.delete("/admins/micro_groups/#{micro_group.id}").then((response) ->
-        controller.micro_groups.splice(controller.micro_groups.indexOf(micro_group), 1);
+        $scope.micro_groups.splice($scope.micro_groups.indexOf(micro_group), 1);
       );
 
 
