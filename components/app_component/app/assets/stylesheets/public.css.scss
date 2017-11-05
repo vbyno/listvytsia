@@ -30,6 +30,10 @@ $main-font-size: 15px;
   background-color: $primary-color;
 }
 
+.primary-color {
+  color: $primary-color;
+}
+
 .inline-radio-buttons {
   label {
     vertical-align: middle;
