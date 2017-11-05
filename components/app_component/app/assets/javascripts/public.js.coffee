@@ -23,8 +23,9 @@
 #= require pictures
 #= require profiles
 #= require hotels
+#= require micro_groups
 
 # This will cause app to compile when Turbolinks loads a new page
 # and removes the need for ng-app in the DOM
 $(document).on 'ready page:load', ->
-  angular.bootstrap(document, ['pictures', 'hotels', 'profiles'], { strictDi: true })
+  angular.bootstrap(document, ['pictures', 'hotels', 'profiles', 'micro_groups'], { strictDi: true })

@@ -1,1 +1,1 @@
-attributes :id, :name, :city, :idea, :leaders, :contacts, :methodologies, :published
+ Випуск 1 - 0

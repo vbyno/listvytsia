@@ -1,0 +1,25 @@
+.col-md-5.col.col-md-offset-7
+  input class='form-control form-control-md margin-bottom-30' data-ng-model='query' type='text' placeholder='Пошук'
+
+.col-lg-4.g-mb-30 data-ng-repeat='micro_group in micro_groups | filter: search'
+  .g-pa-25.u-shadow-v11.rounded
+    h2.h4
+      a href='micro_groups/{{micro_group.id}}'
+        | {{micro_group.name}}
+    ul.list-inline.d-flex.justify-content-between.g-mb-20
+      li.list-inline-item.g-mr-10
+        i.fa.fa-user-o.primary-color
+        span<
+          | {{micro_group.leaders}}
+      li.list-inline-item
+        i.fa.fa-subway.primary-color
+        span<
+          | {{micro_group.city}}
+    .g-mb-15
+      p
+        | {{micro_group.idea}}
+    .g-mb-15
+      i.fa.fa-info.primary-color
+      span<
+        | {{micro_group.contacts}}
+
