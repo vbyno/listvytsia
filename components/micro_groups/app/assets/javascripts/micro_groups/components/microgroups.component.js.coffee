@@ -7,11 +7,12 @@ MicroGroupsController = ($http, $scope) ->
       $scope.micro_groups = response.data
 
   $scope.search = (micro_group) ->
-    if !$scope.query ||
+    if (!$scope.query ||
       ("#{ micro_group.name }
         #{ micro_group.city }
         #{ micro_group.leaders }
-        #{ micro_group.idea }".toLowerCase().indexOf($scope.query.toLowerCase()) != -1)
+        #{ micro_group.idea }".toLowerCase().indexOf($scope.query.toLowerCase()) != -1)) &&
+      (!$scope.city_search || $scope.city_search == 'Всі міста' || $scope.city_search == micro_group.city)
         true
     else
       false

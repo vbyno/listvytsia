@@ -14,7 +14,7 @@ table.table.table-hover st-table='displayed_micro_groups' st-safe-src='micro_gro
       th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
     tr
       th
-        select st-search='city'
+        select.form-control st-search='city'
           option value='' Всі
           option data-ng-repeat="micro_group in displayed_micro_groups | unique:'city'" value='{{micro_group.city}}' {{micro_group.city}}
       th colspan='2'

@@ -1,6 +1,9 @@
-.col-md-5.col.col-md-offset-7
-  input class='form-control form-control-md margin-bottom-30' data-ng-model='query' type='text' placeholder='Пошук'
-
+.col-md-2.col-md-offset-5
+  select.form-control data-ng-model='city_search'
+    option value='' Всі міста
+    option data-ng-repeat="micro_group in micro_groups | unique:'city'" value='{{micro_group.city}}' {{micro_group.city}}
+.col-md-5
+  input.form-control.form-control-md.margin-bottom-30 data-ng-model='query' type='text' placeholder='Пошук'
 .col-lg-4.g-mb-30 data-ng-repeat='micro_group in micro_groups | filter: search'
   .g-pa-25.u-shadow-v11.rounded
     h2.h4
