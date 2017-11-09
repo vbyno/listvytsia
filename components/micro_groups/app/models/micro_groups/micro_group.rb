@@ -10,6 +10,7 @@ module MicroGroups
     field :leaders
     field :contacts
     field :methodologies
+    field :calendar_url
     field :published, type: Mongoid::Boolean, default: false
 
     validates :name, :city, :idea, :leaders, :contacts, presence: true

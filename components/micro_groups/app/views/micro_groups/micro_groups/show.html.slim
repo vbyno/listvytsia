@@ -1,3 +1,10 @@
 article
   .title-v1
     h1= micro_group.name
+  - if micro_group.calendar_url.present?
+    iframe width='800' height='600' frameborder='0' scrolling='no' src=micro_group.calendar_url
+  p= micro_group.leaders
+  p= micro_group.idea
+  p= micro_group.city
+  p= micro_group.contacts
+  p= micro_group.methodologies

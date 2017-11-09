@@ -38,6 +38,7 @@ module MicroGroups
                       :contacts,
                       :methodologies,
                       :published,
+                      :calendar_url,
                       permissions_attributes: [:id, :_destroy])
       end
     end

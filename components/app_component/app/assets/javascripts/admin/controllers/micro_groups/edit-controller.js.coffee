@@ -7,7 +7,8 @@ angular.module('admin.controllers')
     idea: '',
     leaders: '',
     contacts: '',
-    methodologies: ''
+    methodologies: '',
+    calendar_url: null
   };
 
   $http.get("/admins/micro_groups/#{$routeParams.id}").then((response) ->
@@ -33,6 +34,7 @@ angular.module('admin.controllers')
       leaders: controller.micro_group.leaders,
       contacts: controller.micro_group.contacts,
       methodologies: controller.micro_group.methodologies
+      calendar_url: controller.micro_group.calendar_url
     }
 
   @_deleteMicroGroupParams = (micro_group) ->
