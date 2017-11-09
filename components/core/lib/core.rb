@@ -13,4 +13,5 @@ module Core
   require_relative 'core/user_decorators'
   require_relative 'core/application_policy'
   require_relative 'core/base_presenter'
+  require_relative '../app/models/core/concerns/permalinkable'
 end

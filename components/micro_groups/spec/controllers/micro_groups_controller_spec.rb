@@ -5,7 +5,7 @@ describe MicroGroups::MicroGroupsController, type: :controller do
     let!(:micro_group) { create :micro_group }
 
     it 'returns micro_groups array' do
-      get :index
+      get :index, format: :json
 
       expect(JSON.parse(response.body)).to contain_exactly(
         'id'            => micro_group.id.to_s,

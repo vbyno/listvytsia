@@ -1,11 +1,9 @@
-require_relative 'concerns/permalinkable'
-
 module AppComponent
   class Page
     include Mongoid::Document
     include Mongoid::Timestamps
 
-    include Concerns::Permalinkable
+    include Core::Concerns::Permalinkable
     include Core::ModelMethods
 
     include SeoContents::Seo

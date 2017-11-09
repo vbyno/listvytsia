@@ -9,6 +9,7 @@
       a.navbar-brand.logo-link[href=core.root_path]= t('site_info.name')
     .collapse.navbar-collapse.navbar-responsive-collapse
       ul.nav.navbar-nav
+        li= link_to MicroGroups::Region.human_list_name, '#/regions'
         li= link_to MicroGroups::MicroGroup.human_list_name, '#/micro_groups'
         li= link_to Core::Role.human_list_name, '#/roles'
         li= link_to Core::User.human_list_name, '#/users'

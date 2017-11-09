@@ -79,6 +79,21 @@ angular.module('admin.config')
     controller: 'MicroGroupsEditController',
     controllerAs: 'ctrl'
   })
+  .when('/regions', {
+    templateUrl: 'admin/views/regions/index.html',
+    controller: 'RegionsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/regions/new', {
+    templateUrl: 'admin/views/regions/new.html',
+    controller: 'RegionsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/regions/:id/edit', {
+    templateUrl: 'admin/views/regions/edit.html',
+    controller: 'RegionsEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

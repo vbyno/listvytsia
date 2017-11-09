@@ -4,6 +4,9 @@ uk:
       micro_groups/micro_group:
         one: Мікрогрупа
         other: Мікрогрупи
+      micro_groups/region:
+        one: Регіон
+        other: Регіони
     attributes:
       micro_groups/micro_group:
         name: Назва
@@ -12,4 +15,10 @@ uk:
         leaders: Ведучі, представники
         contacts: Кантактна інформація
         methodologies: Примітки, методики
-        published: Назва
+        published: Опублікована
+      micro_groups/region:
+        name: Назва міста
+        info: Додаткова інформація
+        permalink: Посилання
+        calendar_url: Календар
+        published: Опублікований

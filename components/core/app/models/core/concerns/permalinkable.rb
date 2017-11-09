@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   module Concerns
     module Permalinkable
       extend ActiveSupport::Concern
@@ -8,7 +8,7 @@ module AppComponent
 
         scope :by_permalink, ->(permalink) { where(permalink: permalink) }
 
-        validates :permalink, permalink: true, uniqueness: true, presence: true
+        validates :permalink, :'core/permalink' => true, uniqueness: true, presence: true
       end
 
       def to_param

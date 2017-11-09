@@ -1,4 +1,4 @@
-module AppComponent
+module Core
   class EachValidatorBase < ActiveModel::EachValidator
     def validate_each(record, attribute, value)
       unless value =~ regexp
