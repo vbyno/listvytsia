@@ -13,7 +13,7 @@ module MicroGroups
     field :priority, type: Integer, default: 1
     field :published, type: Mongoid::Boolean, default: false
 
-    validates :name, presence: true
+    validates :name, presence: true, uniqueness: true
 
     scope :published, ->{ where(published: true) }
   end
