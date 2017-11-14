@@ -15,7 +15,7 @@ p {{ctrl.errors}}
   label.string.required.control-label
     abbr
       =< MicroGroups::Region.human_attribute_name(:info)
-  textarea#region_info.string.required.form-control type='text' data-ng-model='ctrl.region.info' required=false rows=5
+  textarea#region_info.string.required.form-control type='text' ckeditor='' data-ng-model='ctrl.region.info' required=false rows=5
 .form-group
   label.string.required.control-label
     abbr =< MicroGroups::Region.human_attribute_name(:calendar_url)
