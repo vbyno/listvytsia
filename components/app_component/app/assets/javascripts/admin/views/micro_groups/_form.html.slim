@@ -1,40 +1,41 @@
 .form-group.required
-  label.string.required.control-label for='micro_group_city'
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:city)
-  input#micro_group_city.string.required.form-control type='text' data-ng-model='ctrl.micro_group.city' required=true autofocus=true
+  select.form-control data-ng-model='ctrl.micro_group.city'
+    option data-ng-repeat= 'name in ctrl.city_names' value='{{name}}' {{name}}
 .form-group.required
-  label.string.required.control-label for='micro_group_name'
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:name)
-  input#micro_group_name.string.required.form-control type='text' data-ng-model='ctrl.micro_group.name' required=true
+  input#micro_group_name.string.required.form-control type='text' data-ng-model='ctrl.micro_group.name' required=true autofocus=true
 .form-group.required
-  label.string.required.control-label for='micro_group_idea'
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:idea)
   input#micro_group_idea.string.required.form-control type='text' data-ng-model='ctrl.micro_group.idea' required=true
 .form-group.required
-  label.string.required.control-label for='micro_group_leaders'
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:leaders)
   input#micro_group_leaders.string.required.form-control type='text' data-ng-model='ctrl.micro_group.leaders' required=true
 .form-group.required
-  label.string.required.control-label for='micro_group_contacts'
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:contacts)
   textarea#micro_group_contacts.string.required.form-control type='text' data-ng-model='ctrl.micro_group.contacts' required=true rows=5
 .form-group
-  label.string.required.control-label for='micro_group_methodologies'
+  label.string.required.control-label
     abbr
       =< MicroGroups::MicroGroup.human_attribute_name(:methodologies)
   textarea#micro_group_methodologies.string.required.form-control type='text' data-ng-model='ctrl.micro_group.methodologies' required=false  rows=5
 .form-group
-  label.string.required.control-label for='micro_group_calendar_url'
+  label.string.required.control-label
     abbr =< MicroGroups::MicroGroup.human_attribute_name(:calendar_url)
   input#micro_group_calendar_url.string.form-control type='text' data-ng-model='ctrl.micro_group.calendar_url'
   br

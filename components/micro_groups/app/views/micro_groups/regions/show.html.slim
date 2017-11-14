@@ -1,0 +1,10 @@
+.col-md-3
+  == render 'micro_groups/regions/left_navigation', active_region_id: region.id
+
+.col-md-9
+  article
+    .title-v1
+      h1= region.name
+    p= region.info
+    - if region.calendar_url.present? && false
+      iframe width='800' height='600' frameborder='0' scrolling='no' src=region.calendar_url

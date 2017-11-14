@@ -16,5 +16,6 @@ module MicroGroups
     validates :name, presence: true, uniqueness: true
 
     scope :published, ->{ where(published: true) }
+    scope :ordered,   ->{ order(priority: :desc) }
   end
 end

@@ -1,6 +1,13 @@
 $primary-color: #3498db;
 $main-font-size: 15px;
 
+.menu-pills {
+  a.nav-link.active {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
 .content-custom {
   font-size: $main-font-size;
   font-family: Helvetica, Verdana;

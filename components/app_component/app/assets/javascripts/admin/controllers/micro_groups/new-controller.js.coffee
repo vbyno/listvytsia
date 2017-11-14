@@ -11,6 +11,12 @@ angular.module('admin.controllers')
     calendar_url: null
   };
 
+  controller.city_names = []
+
+  $http.get('/admins/regions').then((response) ->
+    controller.city_names = _.map(response.data, ((obj) -> obj.name));
+  );
+
   @createMicroGroup = () ->
     $http.post('/admins/micro_groups', @_microGroupParams()).then( ->
       $location.path('/micro_groups');

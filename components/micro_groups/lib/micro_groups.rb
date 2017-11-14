@@ -11,6 +11,14 @@ module MicroGroups
   extend self
 
   def region_names
-    Region.order(priority: :desc).pluck(:name)
+    Region.published.ordered.pluck(:name)
+  end
+
+  def region_permalinks
+    Region.published.ordered.pluck(:permalink)
+  end
+
+  def region_path(permalink)
+    "/#{ permalink }"
   end
 end
