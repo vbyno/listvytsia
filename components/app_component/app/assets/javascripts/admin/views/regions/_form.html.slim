@@ -20,6 +20,10 @@ p {{ctrl.errors}}
   label.string.required.control-label
     abbr =< MicroGroups::Region.human_attribute_name(:calendar_url)
   input#region_calendar_url.string.form-control type='text' data-ng-model='ctrl.region.calendar_url'
+.form-group
+  label.string.required.control-label
+    abbr =< MicroGroups::Region.human_attribute_name(:additional_calendar_url)
+  input#region_calendar_url.string.form-control type='text' data-ng-model='ctrl.region.additional_calendar_url'
   br
   .form-group
     input.pull-right.btn.btn-primary type='submit' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!regionForm.$valid'

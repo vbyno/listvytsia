@@ -20,5 +20,6 @@ uk:
         name: Назва міста
         info: Інформація
         permalink: Посилання
-        calendar_url: Календар
+        calendar_url: Календар мікрогруп
+        additional_calendar_url: Календар особистих прийомів
         published: Опублікований

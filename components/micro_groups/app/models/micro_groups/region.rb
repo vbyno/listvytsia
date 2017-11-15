@@ -1,6 +1,6 @@
 module MicroGroups
   class Region
-    ATTRIBUTES = %i( name info permalink calendar_url priority published )
+    ATTRIBUTES = %i( name info permalink calendar_url additional_calendar_url priority published )
 
     include Mongoid::Document
     include Mongoid::Timestamps
@@ -10,6 +10,7 @@ module MicroGroups
     field :name
     field :info
     field :calendar_url
+    field :additional_calendar_url
     field :priority, type: Integer, default: 1
     field :published, type: Mongoid::Boolean, default: false
 

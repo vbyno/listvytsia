@@ -7,7 +7,8 @@ angular.module('admin.controllers')
     permalink: '',
     priority: 1,
     published: true,
-    calendar_url: null
+    calendar_url: null,
+    additional_calendar_url: null
   };
 
   $http.get("/admins/regions/#{$routeParams.id}").then((response) ->
@@ -36,7 +37,8 @@ angular.module('admin.controllers')
       permalink: controller.region.permalink,
       priority: controller.region.priority,
       published: controller.region.published,
-      calendar_url: controller.region.calendar_url
+      calendar_url: controller.region.calendar_url,
+      additional_calendar_url: controller.region.additional_calendar_url
     }
 
   @_deleteRegionParams = (region) ->
