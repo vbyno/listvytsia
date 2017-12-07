@@ -17,7 +17,7 @@
             div= f.input :content_intro, as: :text, input_html: { rows: 7 }
         .row.sky-space-20
           .col-md-9
-            div= f.cktext_area :content
+            div= f.input :content, as: :ckeditor, input_html: { ckeditor: { language: 'uk' } }
     .tab-pane.fade.in#seo-content
       br
       fieldset.no-padding

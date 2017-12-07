@@ -6,7 +6,7 @@ module AppComponent
     include Concerns::Authored
     include Concerns::Pictured
 
-    belongs_to :picture, class_name: 'AppComponent::Ckeditor::Picture'
+    belongs_to :picture, class_name: 'AppComponent::Ckeditor::Picture', optional: true
 
     field :content_intro
 

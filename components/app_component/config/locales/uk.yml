@@ -6,8 +6,11 @@ uk:
       not_authorized: Ви не маєте дозволів для завершення цієї дії
     static_pages:
       contacts:
+        write_us: Написати нам
         intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
+        message: Повідомлення
         contacts: Контакти
+        our_faces: Наші обличчя
         groups: &social_networks
           intro: Соцмережі
           facebook: Ми у Facebook
