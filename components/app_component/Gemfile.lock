@@ -56,6 +56,13 @@ PATH
       rake
       sass
       slim-rails
+    profiles (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
     seo_contents (0.0.1)
       angular-rails-templates
       angularjs-rails
@@ -333,6 +340,7 @@ DEPENDENCIES
   hotels!
   mongoid_rails_migrations!
   pictures!
+  profiles!
   pry-rails
   rspec-rails
   seo_contents!
