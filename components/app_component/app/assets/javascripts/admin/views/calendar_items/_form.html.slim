@@ -3,31 +3,31 @@
     abbr title='required'
       | *
       =< Calendars::Item.human_attribute_name(:city)
-  select.form-control data-ng-model='ctrl.calendar_item.city'
+  input#calendar_item_city.string.required.form-control type='text' data-ng-model='ctrl.calendar_item.city' required=true autofocus=true
     option data-ng-repeat= 'name in ctrl.city_names' value='{{name}}' {{name}}
+.form-group
+  label.string.required.control-label
+    abbr =< Calendars::Item.human_attribute_name(:course)
+  input#calendar_item_course.string.form-control type='text' data-ng-model='ctrl.calendar_item.course'
 .form-group.required
   label.string.required.control-label
     abbr title='required'
       | *
       =< Calendars::Item.human_attribute_name(:start_date)
-  input#calendar_item_start_date.string.required.form-control type='text' data-ng-model='ctrl.calendar_item.start_date' required=true autofocus=true
+  input#calendar_item_start_date.string.required.form-control type='date' data-ng-model='ctrl.calendar_item.start_date' required=true
 .form-group.required
   label.string.required.control-label
     abbr title='required'
       | *
       =< Calendars::Item.human_attribute_name(:end_date)
-  input#calendar_item_end_date.string.required.form-control type='text' data-ng-model='ctrl.calendar_item.end_date' required=true
+  input#calendar_item_end_date.string.required.form-control type='date' data-ng-model='ctrl.calendar_item.end_date' required=true
 .form-group.required
   label.string.required.control-label
     abbr title='required'
       | *
       =< Calendars::Item.human_attribute_name(:contacts)
-  textarea#calendar_item_contacts.string.required.form-control type='text' data-ng-model='ctrl.calendar_item.contacts' required=true rows=5
-.form-group
-  label.string.required.control-label
-    abbr =< Calendars::Item.human_attribute_name(:course)
-  input#calendar_item_course.string.form-control type='text' data-ng-model='ctrl.calendar_item.course'
+  .small_ck_editor
+    textarea#calendar_item_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.calendar_item.contacts' required=true rows=5
   br
   .form-group
-    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!microGroupForm.$valid'
-
+    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!calendarItemForm.$valid'

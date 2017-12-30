@@ -21,7 +21,7 @@ angular.module('admin.controllers')
     );
 
   @_microGroupParams = () ->
-    calendar_item: {
+    item: {
       city: controller.calendar_item.city,
       start_date: controller.calendar_item.start_date,
       end_date: controller.calendar_item.end_date,

@@ -10,7 +10,14 @@ angular.module('admin.controllers')
   };
 
   $http.get("/admins/items/#{$routeParams.id}").then((response) ->
-    controller.calendar_item = response.data;
+    controller.calendar_item = {
+      id:         response.data.id,
+      city:       response.data.city,
+      start_date: new Date(response.data.start_date),
+      end_date:   new Date(response.data.end_date),
+      contacts:   response.data.contacts,
+      course:     response.data.course
+    };
   );
 
   @updateCalendarItem = () ->
@@ -25,7 +32,7 @@ angular.module('admin.controllers')
     true
 
   @_calendarItemParams = () ->
-    calendar_item: {
+    item: {
       city: controller.calendar_item.city,
       start_date: controller.calendar_item.start_date,
       end_date: controller.calendar_item.end_date,
