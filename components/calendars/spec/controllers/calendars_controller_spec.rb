@@ -2,18 +2,24 @@ describe Calendars::CalendarsController, type: :controller do
   routes { Calendars::Engine.routes }
 
   describe 'GET show' do
-    let!(:item) { create :item }
+    let(:start_date) { Time.new(2017, 01, 02) }
+    let(:end_date) { Time.new(2017, 02, 03) }
+    let!(:item) { create :item, start_date: start_date, end_date: end_date }
+    let(:result) { JSON.parse(response.body) }
 
     it 'returns items array' do
       get :show, format: :json
 
-      expect(JSON.parse(response.body)).to contain_exactly(
+      expect(result.size).to eq 1
+
+      expect(result.first).to eq(
         'id'         => item.id.to_s,
         'city'       => item.city,
-        'start_date' => item.start_date,
-        'end_date'   => item.end_date,
+        'start_date' => '2017-01-02',
+        'end_date'   => '2017-02-03',
         'course'     => item.course,
-        'contacts'   => item.contacts
+        'contacts'   => item.contacts,
+        'dates'      => '2 січня - 3 лютого'
       )
     end
   end

@@ -37,6 +37,17 @@ PATH
       sass
       slim-rails
 
+PATH
+  remote: .
+  specs:
+    calendars (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,7 +140,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.4)
-    json (2.0.3)
+    json (2.1.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -254,10 +265,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  calendars!
   core!
   factory_girl
   fuubar
-  micro_groups!
   mongoid-rspec
   mongoid_rails_migrations!
   pry

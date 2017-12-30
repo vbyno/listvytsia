@@ -10,6 +10,10 @@ module Calendars
       str_time(super)
     end
 
+    def dates
+      "#{ DateFormatter.(item.start_date) } - #{ DateFormatter.(item.end_date) }"
+    end
+
     private
 
     def str_time(time)

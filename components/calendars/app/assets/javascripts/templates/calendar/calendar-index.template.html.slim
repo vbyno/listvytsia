@@ -1,11 +1,10 @@
 table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
   thead
     tr
-      th st-sort='city'       = Calendars::Item.human_attribute_name(:city)
-      th st-sort='course'     = Calendars::Item.human_attribute_name(:course)
-      th st-sort='start_date' = Calendars::Item.human_attribute_name(:start_date)
-      th st-sort='end_date'   = Calendars::Item.human_attribute_name(:end_date)
-      th st-sort='contacts'   = Calendars::Item.human_attribute_name(:contacts)
+      th st-sort='city'     = Calendars::Item.human_attribute_name(:city)
+      th st-sort='course'   = Calendars::Item.human_attribute_name(:course)
+      th st-sort='dates'    = Calendars::Item.human_attribute_name(:dates)
+      th st-sort='contacts' = Calendars::Item.human_attribute_name(:contacts)
     tr
       th
         select.form-control st-search='city'
@@ -19,6 +18,5 @@ table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
     tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
       td {{calendar_item.city}}
       td {{calendar_item.course}}
-      td {{calendar_item.start_date}}
-      td {{calendar_item.end_date}}
+      td {{calendar_item.dates}}
       td.none-style-list ng-bind-html='renderHtml(calendar_item.contacts)'
