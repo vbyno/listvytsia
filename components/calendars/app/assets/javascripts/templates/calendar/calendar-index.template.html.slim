@@ -1,26 +1,24 @@
-.col-md-2.col-md-offset-5 data-ng-show='$ctrl.searchable'
-  select.form-control data-ng-model='city_search'
-    option value='' Всі міста
-    option data-ng-repeat="item in items | unique:'city'" value='{{item.city}}' {{item.city}}
-.col-md-5 data-ng-show='$ctrl.searchable'
-  input.form-control.form-control-md.margin-bottom-30 data-ng-model='query' type='text' placeholder='Пошук'
-.col-lg-4.g-mb-30 data-ng-repeat='item in items | filter: search'
-  .g-pa-25.u-shadow-v11.rounded
-    h2.h4
-      //a href='items/{{item.id}}'
-      | {{item.name}}
-    ul.list-inline.d-flex.justify-content-between.g-mb-20
-      li.list-inline-item
-        i.fa.fa-subway.primary-color
-        span<
-          | {{item.city}}
-    .g-mb-15
-      p
-        span= Calendars::Item.human_attribute_name(:idea)
-        |:
-        |  {{item.idea}}
-      p data-ng-if='item.methodologies'
-        = Calendars::Item.human_attribute_name(:methodologies)
-        |:
-        |  {{item.methodologies}}
-
+table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
+  thead
+    tr
+      th st-sort='city'       = Calendars::Item.human_attribute_name(:city)
+      th st-sort='course'     = Calendars::Item.human_attribute_name(:course)
+      th st-sort='start_date' = Calendars::Item.human_attribute_name(:start_date)
+      th st-sort='end_date'   = Calendars::Item.human_attribute_name(:end_date)
+      th st-sort='contacts'   = Calendars::Item.human_attribute_name(:contacts)
+    tr
+      th
+        select.form-control st-search='city'
+          option value='' Всі
+          option data-ng-repeat="calendar_item in displayed_calendar_items | unique:'city'" value='{{calendar_item.city}}' {{calendar_item.city}}
+      th colspan='2'
+        input.input-sm.form-control st-search='name' placeholder='Пошук по назві мікрогрупи' type='search'
+      th colspan='5'
+        input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
+  tbody
+    tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
+      td {{calendar_item.city}}
+      td {{calendar_item.course}}
+      td {{calendar_item.start_date}}
+      td {{calendar_item.end_date}}
+      td.none-style-list ng-bind-html='renderHtml(calendar_item.contacts)'

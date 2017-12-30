@@ -55,3 +55,8 @@ $primary-color: #3498db;
   text-decoration: underline;
 }
 
+.none-style-list {
+  ul {
+    list-style: none
+  }
+}

@@ -1,10 +1,15 @@
-CalendarController = ($http, $scope) ->
+CalendarController = ($http, $scope, $sce) ->
   ctrl = this
   $scope.items = []
+  $scope.displayed_calendar_items = []
+
+  $scope.renderHtml = (html_code) ->
+    $sce.trustAsHtml(html_code);
 
   ctrl.loadCalendar = ->
     $http.get('/calendar.json').then (response) ->
       $scope.items = response.data
+      $scope.displayed_calendar_items = [].concat($scope.items);
 
   $scope.search = (item) ->
     if ctrl.cityName
@@ -20,7 +25,7 @@ CalendarController = ($http, $scope) ->
   ctrl.loadCalendar()
   ctrl
 
-CalendarController.$inject = ['$http', '$scope']
+CalendarController.$inject = ['$http', '$scope', '$sce']
 
 do () ->
   angular.module('calendar').component 'generalCalendarComponent',
