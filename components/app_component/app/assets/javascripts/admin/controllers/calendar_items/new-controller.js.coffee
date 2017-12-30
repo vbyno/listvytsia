@@ -11,12 +11,12 @@ angular.module('admin.controllers')
 
   controller.city_names = []
 
-  $http.get('/admins/regions').then((response) ->
+  $http.get('/admins/items').then((response) ->
     controller.city_names = _.map(response.data, ((obj) -> obj.name));
   );
 
   @createCalendarItem = () ->
-    $http.post('/admins/calendar_items', @_microGroupParams()).then( ->
+    $http.post('/admins/items', @_microGroupParams()).then( ->
       $location.path('/calendar_items');
     );
 

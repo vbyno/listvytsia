@@ -9,12 +9,12 @@ angular.module('admin.controllers')
     course: ''
   };
 
-  $http.get("/admins/calendar_items/#{$routeParams.id}").then((response) ->
+  $http.get("/admins/items/#{$routeParams.id}").then((response) ->
     controller.calendar_item = response.data;
   );
 
   @updateCalendarItem = () ->
-    $http.put("/admins/calendar_items/#{controller.calendar_item.id}", @_calendarItemParams()).then( ->
+    $http.put("/admins/items/#{controller.calendar_item.id}", @_calendarItemParams()).then( ->
       $location.path('/calendar_items');
     );
 

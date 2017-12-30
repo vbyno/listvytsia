@@ -8,6 +8,7 @@ path 'components' do
   gem 'seo_contents'
   gem 'core'
   gem 'micro_groups'
+  gem 'calendars'
 end
 
 gem 'rails'

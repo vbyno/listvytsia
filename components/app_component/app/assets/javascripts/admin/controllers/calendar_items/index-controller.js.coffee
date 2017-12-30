@@ -3,7 +3,7 @@ angular.module('admin.controllers')
   controller = this;
   $scope.calendar_items = [];
 
-  $http.get('/admins/calendar_items').then((response) ->
+  $http.get('/admins/items').then((response) ->
     $scope.calendar_items = response.data;
   );
 
@@ -11,7 +11,7 @@ angular.module('admin.controllers')
 
   @deleteCalendarItem = (calendar_item) ->
     if confirm('Видалити запис із календаря?')
-      $http.delete("/admins/calendar_items/#{calendar_item.id}").then((response) ->
+      $http.delete("/admins/items/#{calendar_item.id}").then((response) ->
         $scope.calendar_items.splice($scope.calendar_items.indexOf(calendar_item), 1);
       );
 
