@@ -94,6 +94,21 @@ angular.module('admin.config')
     controller: 'RegionsEditController',
     controllerAs: 'ctrl'
   })
+  .when('/calendar_items', {
+    templateUrl: 'admin/views/calendar_items/index.html',
+    controller: 'CalendarItemsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/calendar_items/new', {
+    templateUrl: 'admin/views/calendar_items/new.html',
+    controller: 'CalendarItemsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/calendar_items/:id/edit', {
+    templateUrl: 'admin/views/calendar_items/edit.html',
+    controller: 'CalendarItemsEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

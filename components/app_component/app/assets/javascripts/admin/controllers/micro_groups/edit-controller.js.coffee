@@ -1,5 +1,5 @@
 angular.module('admin.controllers')
-.controller('MicroGroupsEditController', ['$http', '$location', '$routeParams', ($http, $location, $routeParams) ->
+.controller('OAEditController', ['$http', '$location', '$routeParams', ($http, $location, $routeParams) ->
   controller = this;
   controller.micro_group = {
     name: '',
