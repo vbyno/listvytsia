@@ -1,12 +1,12 @@
 'use strict'
 
-angular.module('calendars', [
+angular.module('calendar', [
   'templates',
   'ngFileUpload',
   'uib/template/modal/window.html',
   'uib/template/modal/backdrop.html',
   'angular.filter'
 ])
-angular.module('calendars').config(['$compileProvider', ($compileProvider) ->
+angular.module('calendar').config(['$compileProvider', ($compileProvider) ->
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/)
 ])

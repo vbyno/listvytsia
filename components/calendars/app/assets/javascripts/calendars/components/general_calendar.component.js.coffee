@@ -1,10 +1,10 @@
 CalendarController = ($http, $scope) ->
   ctrl = this
-  $scope.micro_groups = []
+  $scope.items = []
 
-  ctrl.loadCalendars = ->
-    $http.get('/micro_groups.json').then (response) ->
-      $scope.micro_groups = response.data
+  ctrl.loadCalendar = ->
+    $http.get('/calendar.json').then (response) ->
+      $scope.items = response.data
 
   $scope.search = (item) ->
     if ctrl.cityName
@@ -17,16 +17,16 @@ CalendarController = ($http, $scope) ->
         #{ item.idea }".toLowerCase().indexOf($scope.query.toLowerCase()) != -1)) &&
     (!$scope.city_search || $scope.city_search == 'Всі міста' || $scope.city_search == item.city)
 
-  ctrl.loadCalendars()
+  ctrl.loadCalendar()
   ctrl
 
-CalendarsController.$inject = ['$http', '$scope']
+CalendarController.$inject = ['$http', '$scope']
 
 do () ->
-  angular.module('micro_groups').component 'microGroupsComponent',
-    templateUrl: 'micro_groups/micro_groups-index.template.html',
-    controller: CalendarsController
+  angular.module('calendar').component 'generalCalendarComponent',
+    templateUrl: 'calendar/calendar-index.template.html',
+    controller: CalendarController
     bindings:
-      micro_groups: '&'
+      items: '&'
       searchable: '<'
       cityName: '@'

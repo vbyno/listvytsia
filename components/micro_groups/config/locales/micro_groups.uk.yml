@@ -5,3 +5,6 @@ uk:
     micro_groups:
       index:
         title: Мікрогрупи
+    regions:
+      show:
+        general_calendar: О. Асауляк 2018 р.
