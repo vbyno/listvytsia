@@ -1,24 +1,25 @@
 table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
   thead
     tr
-      th st-sort='city'     = Calendars::Item.human_attribute_name(:city)
-      th st-sort='course'   = Calendars::Item.human_attribute_name(:course)
       th st-sort='dates'    = Calendars::Item.human_attribute_name(:dates)
+      th st-sort='course'   = Calendars::Item.human_attribute_name(:course)
+      th st-sort='city'     = Calendars::Item.human_attribute_name(:city)
       th st-sort='contacts' = Calendars::Item.human_attribute_name(:contacts)
     tr
+      th
+      th colspan='1'
+        select.form-control st-search='course'
+          option value='' Всі
+          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'course' | unique:'course'" value='{{calendar_item.course}}' {{calendar_item.course}}
       th
         select.form-control st-search='city'
           option value='' Всі
           option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'city' | unique:'city'" value='{{calendar_item.city}}' {{calendar_item.city}}
       th colspan='1'
-        select.form-control st-search='course'
-          option value='' Всі
-          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'course' | unique:'course'" value='{{calendar_item.course}}' {{calendar_item.course}}
-      th colspan='6'
         input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
   tbody
     tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
-      td {{calendar_item.city}}
-      td {{calendar_item.course}}
       td {{calendar_item.dates}}
+      td {{calendar_item.course}}
+      td {{calendar_item.city}}
       td.none-style-list ng-bind-html='renderHtml(calendar_item.contacts)'
