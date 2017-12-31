@@ -1,0 +1,26 @@
+.col-md-2.col-md-offset-5 data-ng-show='$ctrl.searchable'
+  select.form-control data-ng-model='city_search'
+    option value='' Всі міста
+    option data-ng-repeat="micro_group in micro_groups | unique:'city'" value='{{micro_group.city}}' {{micro_group.city}}
+.col-md-5 data-ng-show='$ctrl.searchable'
+  input.form-control.form-control-md.margin-bottom-30 data-ng-model='query' type='text' placeholder='Пошук'
+.col-lg-4.g-mb-30 data-ng-repeat='micro_group in micro_groups | filter: search'
+  .g-pa-25.u-shadow-v11.rounded
+    h2.h4
+      //a href='micro_groups/{{micro_group.id}}'
+      | {{micro_group.name}}
+    ul.list-inline.d-flex.justify-content-between.g-mb-20
+      li.list-inline-item
+        i.fa.fa-subway.primary-color
+        span<
+          | {{micro_group.city}}
+    .g-mb-15
+      p
+        span= MicroGroups::MicroGroup.human_attribute_name(:idea)
+        |:
+        |  {{micro_group.idea}}
+      p data-ng-if='micro_group.methodologies'
+        = MicroGroups::MicroGroup.human_attribute_name(:methodologies)
+        |:
+        |  {{micro_group.methodologies}}
+

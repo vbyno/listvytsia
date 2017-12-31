@@ -1,0 +1,23 @@
+h1
+  = MicroGroups::Region.human_list_name
+  a.pull-right href= '#/regions/new'
+    i.fa.fa-plus
+table.table.table-hover st-table='displayed_regions' st-safe-src='regions'
+  thead
+    tr
+      th st-sort='name'          = MicroGroups::Region.human_attribute_name(:name)
+      th st-sort='info'          = MicroGroups::Region.human_attribute_name(:info)
+      th st-sort='permalink'     = MicroGroups::Region.human_attribute_name(:permalink)
+      th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+  tbody
+    tr data-ng-repeat = 'region in displayed_regions'
+      td {{region.name}}
+      td {{region.info}}
+      td {{region.permalink}}
+      td
+        span>
+          a data-ng-href= '#/regions/{{region.id}}/edit'
+            i.fa.fa-pencil
+        span
+          a href= '#/regions' data-ng-click= 'indexCtrl.deleteRegion(region)'
+            i.fa.fa-trash

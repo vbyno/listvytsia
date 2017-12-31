@@ -1,5 +1,5 @@
 uk:
-  admin:
+  admins:
     static_pages:
       form:
         submit: Зберегти
@@ -13,3 +13,18 @@ uk:
         success: Сторінка успішно створена
       update:
         success: Сторінка успішно оновлена
+    micro_groups:
+      form:
+        submit: Зберегти
+      index:
+        header: Сторінки
+      edit:
+        header: Редагування інформації про мікрогрупу
+      new:
+        header: Додавання мікрогрупи
+      create:
+        success: Сторінка успішно створена
+      update:
+        success: Сторінка успішно оновлена
+      micro_group:
+        confirm_msg: Ви справді хочете видалити інформацію про цю мікрогрупу?

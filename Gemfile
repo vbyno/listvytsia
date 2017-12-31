@@ -7,6 +7,8 @@ path 'components' do
   gem 'hotels'
   gem 'seo_contents'
   gem 'core'
+  gem 'micro_groups'
+  gem 'calendars'
 end
 
 gem 'rails'

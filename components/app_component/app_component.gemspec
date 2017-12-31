@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'core'
   s.add_dependency 'hotels'
   s.add_dependency 'chunks'
+  s.add_dependency 'micro_groups'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'

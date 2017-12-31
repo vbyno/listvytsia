@@ -64,6 +64,51 @@ angular.module('admin.config')
     controller: 'ChunksEditController',
     controllerAs: 'ctrl'
   })
+  .when('/micro_groups', {
+    templateUrl: 'admin/views/micro_groups/index.html',
+    controller: 'MicroGroupsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/micro_groups/new', {
+    templateUrl: 'admin/views/micro_groups/new.html',
+    controller: 'MicroGroupsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/micro_groups/:id/edit', {
+    templateUrl: 'admin/views/micro_groups/edit.html',
+    controller: 'MicroGroupsEditController',
+    controllerAs: 'ctrl'
+  })
+  .when('/regions', {
+    templateUrl: 'admin/views/regions/index.html',
+    controller: 'RegionsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/regions/new', {
+    templateUrl: 'admin/views/regions/new.html',
+    controller: 'RegionsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/regions/:id/edit', {
+    templateUrl: 'admin/views/regions/edit.html',
+    controller: 'RegionsEditController',
+    controllerAs: 'ctrl'
+  })
+  .when('/calendar_items', {
+    templateUrl: 'admin/views/calendar_items/index.html',
+    controller: 'CalendarItemsIndexController',
+    controllerAs: 'indexCtrl'
+  })
+  .when('/calendar_items/new', {
+    templateUrl: 'admin/views/calendar_items/new.html',
+    controller: 'CalendarItemsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/calendar_items/:id/edit', {
+    templateUrl: 'admin/views/calendar_items/edit.html',
+    controller: 'CalendarItemsEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

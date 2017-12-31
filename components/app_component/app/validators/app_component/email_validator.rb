@@ -1,7 +1,5 @@
-require_relative 'each_validator_base'
-
 module AppComponent
-  class EmailValidator < EachValidatorBase
+  class EmailValidator < Core::EachValidatorBase
     # Need this constant for ContactForm
     REGEXP = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 

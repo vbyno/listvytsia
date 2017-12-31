@@ -1,0 +1,25 @@
+uk:
+  mongoid:
+    models:
+      micro_groups/micro_group:
+        one: Мікрогрупа
+        other: Мікрогрупи
+      micro_groups/region:
+        one: Регіон
+        other: Регіони
+    attributes:
+      micro_groups/micro_group:
+        name: Назва
+        city: Місто
+        idea: Ідея
+        leaders: Ведучі, представники
+        contacts: Кантактна інформація
+        methodologies: Примітки, методики
+        published: Опублікована
+      micro_groups/region:
+        name: Назва міста
+        info: Інформація
+        permalink: Посилання
+        calendar_url: Календар мікрогруп
+        additional_calendar_url: Календар особистих прийомів
+        published: Опублікований

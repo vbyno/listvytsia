@@ -1,0 +1,38 @@
+h1
+  = MicroGroups::MicroGroup.human_list_name
+  a.pull-right href= '#/micro_groups/new'
+    i.fa.fa-plus
+table.table.table-hover st-table='displayed_micro_groups' st-safe-src='micro_groups'
+  thead
+    tr
+      th st-sort='city'          = MicroGroups::MicroGroup.human_attribute_name(:city)
+      th st-sort='name'          = MicroGroups::MicroGroup.human_attribute_name(:name)
+      th st-sort='leaders'       = MicroGroups::MicroGroup.human_attribute_name(:leaders)
+      th st-sort='idea'          = MicroGroups::MicroGroup.human_attribute_name(:idea)
+      th st-sort='contacts'      = MicroGroups::MicroGroup.human_attribute_name(:contacts)
+      th st-sort='methodologies' = MicroGroups::MicroGroup.human_attribute_name(:methodologies)
+      th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+    tr
+      th
+        select.form-control st-search='city'
+          option value='' Всі
+          option data-ng-repeat="micro_group in displayed_micro_groups | unique:'city'" value='{{micro_group.city}}' {{micro_group.city}}
+      th colspan='2'
+        input.input-sm.form-control st-search='name' placeholder='Пошук по назві мікрогрупи' type='search'
+      th colspan='5'
+        input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
+  tbody
+    tr data-ng-repeat = 'micro_group in displayed_micro_groups'
+      td {{micro_group.city}}
+      td {{micro_group.name}}
+      td {{micro_group.leaders}}
+      td {{micro_group.idea}}
+      td {{micro_group.contacts}}
+      td {{micro_group.methodologies}}
+      td
+        span>
+          a data-ng-href= '#/micro_groups/{{micro_group.id}}/edit'
+            i.fa.fa-pencil
+        span
+          a href= '#/micro_groups' data-ng-click= 'indexCtrl.deleteMicroGroup(micro_group)'
+            i.fa.fa-trash

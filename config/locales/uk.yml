@@ -32,6 +32,7 @@ uk:
       listvytsia: *name
       articles: Статті
       timetable: Розклад
+      micro_groups: Мікрогрупи
       seminar: Семінар
       donate: Пожертви
       events: Наша Діяльність
@@ -50,9 +51,6 @@ uk:
         intro: Соцмережі
         facebook: Ми у Facebook
         google_plus: Ми у Google Plus
-    timetable:
-      title_events: Зустрічі
-      title_consultations: Особисті прийоми
     donate:
       confirmed: Платіж пройшов успішно! Дякуємо за Вашу пожертву!
       not_confirmed: Платіж поки не підтверджено

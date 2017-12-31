@@ -24,6 +24,7 @@ PATH
       gmaps4rails
       hotels
       liqpay
+      micro_groups
       mini_magick
       money-rails
       pictures
@@ -32,6 +33,13 @@ PATH
       sass
       seo_contents
       simple_form
+    calendars (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
     chunks (0.0.1)
       core
       mongoid
@@ -49,6 +57,13 @@ PATH
       slim-rails
     generators (0.0.1)
     hotels (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
+    micro_groups (0.0.1)
       core
       mongoid
       mongoid_rails_migrations
@@ -503,6 +518,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   byebug
+  calendars!
   capistrano
   capistrano-bundler
   capistrano-faster-assets
@@ -532,6 +548,7 @@ DEPENDENCIES
   launchy
   liqpay
   mail_form
+  micro_groups!
   mini_magick
   money-rails
   mongoid

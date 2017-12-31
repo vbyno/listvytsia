@@ -1,8 +1,16 @@
 $primary-color: #3498db;
-$main-font-size: 14px;
+$main-font-size: 15px;
+
+.menu-pills {
+  a.nav-link.active {
+    background-color: $primary-color;
+    color: white;
+  }
+}
 
 .content-custom {
   font-size: $main-font-size;
+  font-family: Helvetica, Verdana;
   article {
     blockquote {
       p {
@@ -29,6 +37,10 @@ $main-font-size: 14px;
   background-color: $primary-color;
 }
 
+.primary-color {
+  color: $primary-color;
+}
+
 .inline-radio-buttons {
   label {
     vertical-align: middle;
@@ -37,5 +49,11 @@ $main-font-size: 14px;
   span {
     display: inline-block;
     padding-left: 10px;
+  }
+}
+
+.small_ck_editor {
+  .cke_contents {
+    height: 100% !important;
   }
 }
