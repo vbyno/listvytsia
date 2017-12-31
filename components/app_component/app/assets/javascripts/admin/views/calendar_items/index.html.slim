@@ -1,0 +1,36 @@
+h1
+  = Calendars::Item.human_list_name
+  a.pull-right href= '#/calendar_items/new'
+    i.fa.fa-plus
+table.table.table-hover st-table='displayed_calendar_items' st-safe-src='calendar_items'
+  thead
+    tr
+      th st-sort='city'       = Calendars::Item.human_attribute_name(:city)
+      th st-sort='course'     = Calendars::Item.human_attribute_name(:course)
+      th st-sort='start_date' = Calendars::Item.human_attribute_name(:start_date)
+      th st-sort='end_date'   = Calendars::Item.human_attribute_name(:end_date)
+      th st-sort='contacts'   = Calendars::Item.human_attribute_name(:contacts)
+      th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+    tr
+      th
+        select.form-control st-search='city'
+          option value='' Всі
+          option data-ng-repeat="calendar_item in displayed_calendar_items | unique:'city'" value='{{calendar_item.city}}' {{calendar_item.city}}
+      th colspan='2'
+        input.input-sm.form-control st-search='name' placeholder='Пошук по назві мікрогрупи' type='search'
+      th colspan='5'
+        input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
+  tbody
+    tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
+      td {{calendar_item.city}}
+      td {{calendar_item.course}}
+      td {{calendar_item.start_date}}
+      td {{calendar_item.end_date}}
+      td {{calendar_item.contacts}}
+      td
+        span>
+          a data-ng-href= '#/calendar_items/{{calendar_item.id}}/edit'
+            i.fa.fa-pencil
+        span
+          a href= '#/calendar_items' data-ng-click= 'indexCtrl.deleteCalendarItem(calendar_item)'
+            i.fa.fa-trash

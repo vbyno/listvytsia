@@ -33,6 +33,13 @@ PATH
       sass
       seo_contents
       simple_form
+    calendars (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
     chunks (0.0.1)
       core
       mongoid
@@ -511,6 +518,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   byebug
+  calendars!
   capistrano
   capistrano-bundler
   capistrano-faster-assets

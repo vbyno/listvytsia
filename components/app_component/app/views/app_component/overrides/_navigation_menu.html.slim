@@ -1,9 +1,10 @@
 - if AppComponent::SHOW_SEMINAR_PAGE
   li class=('active' if current_page? app_component.seminar_path)
     = link_to t('.seminar'), app_component.seminar_path
-li class=('active' if current_page? app_component.timetable_path)
-  = link_to t('.timetable'), MicroGroups.region_path('lviv')
-- if MicroGroups::MicroGroup.exists?
+- timetable_path = MicroGroups.region_path('timetable')
+li class=('active' if current_page?(timetable_path))
+  = link_to t('.timetable'), timetable_path
+- if MicroGroups::MicroGroup.exists? && false
   li class=('active' if current_page? micro_groups_component.micro_groups_path)
     = link_to t('.micro_groups'), micro_groups_component.micro_groups_path
 li class=('active' if current_page?(app_component.articles_path))

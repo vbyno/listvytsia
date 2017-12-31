@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('admin.config', ['ngRoute', 'templates']);
-angular.module('admin.controllers', ['ngRoute', 'smart-table', 'angular.filter', 'ngCkeditor']);
+angular.module('admin.controllers', ['ngRoute',
+                                     'smart-table',
+                                     'angular.filter',
+                                     'ngCkeditor']);
 angular.module('admin.directives', []);
 
 angular.module('admin', ['admin.config', 'admin.controllers', 'admin.directives']);

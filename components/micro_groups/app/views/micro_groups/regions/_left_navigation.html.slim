@@ -1,5 +1,0 @@
-ul.nav.nav-pills.nav-stacked.menu-pills
-  - MicroGroups::Region.published.ordered.each do |region|
-    li.nav-item
-      = link_to region.name, MicroGroups.region_path(region.permalink),
-        class: ['nav-link', ('active' if region.id == active_region_id)]
