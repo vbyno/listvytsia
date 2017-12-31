@@ -12,15 +12,12 @@ CalendarController = ($http, $scope, $sce) ->
       $scope.displayed_calendar_items = [].concat($scope.items);
 
   $scope.search = (item) ->
-    if ctrl.cityName
-      return(item.city == ctrl.cityName)
-
     (!$scope.query ||
-      ("#{ item.name }
+      ("#{ item.course }
         #{ item.city }
-        #{ item.leaders }
-        #{ item.idea }".toLowerCase().indexOf($scope.query.toLowerCase()) != -1)) &&
-    (!$scope.city_search || $scope.city_search == 'Всі міста' || $scope.city_search == item.city)
+        #{ item.contacts }
+        #{ item.dates }".toLowerCase().indexOf($scope.query.toLowerCase()) != -1)) &&
+    ($scope.city_search == 'Всі' || $scope.city_search == item.city)
 
   ctrl.loadCalendar()
   ctrl
@@ -34,4 +31,3 @@ do () ->
     bindings:
       items: '&'
       searchable: '<'
-      cityName: '@'

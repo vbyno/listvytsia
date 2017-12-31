@@ -5,7 +5,8 @@ angular.module('calendar', [
   'ngFileUpload',
   'uib/template/modal/window.html',
   'uib/template/modal/backdrop.html',
-  'angular.filter'
+  'angular.filter',
+  'smart-table'
 ])
 angular.module('calendar').config(['$compileProvider', ($compileProvider) ->
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/)

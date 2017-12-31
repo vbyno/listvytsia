@@ -9,10 +9,12 @@ table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
       th
         select.form-control st-search='city'
           option value='' Всі
-          option data-ng-repeat="calendar_item in displayed_calendar_items | unique:'city'" value='{{calendar_item.city}}' {{calendar_item.city}}
-      th colspan='2'
-        input.input-sm.form-control st-search='name' placeholder='Пошук по назві мікрогрупи' type='search'
-      th colspan='5'
+          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'city' | unique:'city'" value='{{calendar_item.city}}' {{calendar_item.city}}
+      th colspan='1'
+        select.form-control st-search='course'
+          option value='' Всі
+          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'course' | unique:'course'" value='{{calendar_item.course}}' {{calendar_item.course}}
+      th colspan='6'
         input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
   tbody
     tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
