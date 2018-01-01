@@ -11,7 +11,7 @@ module Calendars
     end
 
     def dates
-      "#{ DateFormatter.(item.start_date) } - #{ DateFormatter.(item.end_date) }"
+      DateFormatter.to_period(item.start_date, item.end_date)
     end
 
     private

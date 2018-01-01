@@ -42,8 +42,8 @@ module Calendars
       end
 
       def prepare(params_hash)
-        params_hash['start_date'] = params_hash['start_date'].to_date.to_time
-        params_hash['end_date'] = params_hash['end_date'].to_date.to_time
+        params_hash['start_date'] = params_hash['start_date'].to_time
+        params_hash['end_date'] = params_hash['end_date'].to_time
 
         params_hash
       end
