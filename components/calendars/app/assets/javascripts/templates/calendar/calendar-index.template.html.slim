@@ -10,7 +10,7 @@ table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
       th colspan='1'
         select.form-control st-search='course'
           option value='' Всі
-          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'course' | unique:'course'" value='{{calendar_item.course}}' {{calendar_item.course}}
+          option data-ng-repeat="calendar_item in displayed_calendar_items | orderBy:'course' | unique:'course' | notEmpty:'course'" value='{{calendar_item.course}}' {{calendar_item.course}}
       th
         select.form-control st-search='city'
           option value='' Всі
