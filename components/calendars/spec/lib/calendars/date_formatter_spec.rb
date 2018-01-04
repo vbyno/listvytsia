@@ -11,13 +11,24 @@ describe Calendars::DateFormatter do
     delegate :to_period, to: :described_class
 
     specify do
-      expect(to_period(Time.new(2011, 03, 17), Time.new(2011, 04, 02))).
-        to eq '17 березня - 2 квітня'
+      expect(to_period(Time.new(2011, 03, 19), Time.new(2011, 03, 20))).to eq '19 - 20.03.2011'
     end
 
     specify do
-      expect(to_period(Time.new(2011, 03, 19), Time.new(2011, 03, 20))).
-        to eq '19 - 20 березня'
+      expect(to_period(Time.new(2011, 03, 17), Time.new(2011, 04, 02))).to eq '17.03 - 2.04.2011'
+    end
+
+    specify do
+      expect(to_period(Time.new(2010, 03, 19), Time.new(2011, 03, 20))).to eq '19.03.2010 - 20.03.2011'
+    end
+  end
+
+  describe '.treat_as_utc' do
+    delegate :treat_as_utc, to: :described_class
+
+    specify do
+      expect(treat_as_utc('2018-01-04T22:00:00.000Z')).to eq Time.utc(2018, 01, 05, 00)
+      expect(treat_as_utc('2018-02-06T02:00:00.000Z')).to eq Time.utc(2018, 02, 06, 04)
     end
   end
 end

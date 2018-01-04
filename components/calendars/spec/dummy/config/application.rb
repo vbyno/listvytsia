@@ -9,6 +9,7 @@ require 'calendars'
 
 module Dummy
   class Application < Rails::Application
+    config.time_zone = 'Kyiv'
     config.cache_classes = true
     config.eager_load = false
     config.public_file_server.enabled = true
