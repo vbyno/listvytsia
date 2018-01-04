@@ -19,12 +19,18 @@ module Calendars
       new(*args).call
     end
 
-    def self.to_period(start_date, end_date)
-      if start_date.month == end_date.month && start_date.year == end_date.year
-        "#{ start_date.day } - #{ end_date.day } #{ MONTHS[start_date.month - 1] }"
+    def self.to_period(from, till)
+      if from.month == till.month && from.year == till.year
+        "%d - %d.%02d.%d" % [from.day, till.day, till.month, till.year]
+      elsif from.year == till.year
+        "%d.%02d - %d.%02d.%d" % [from.day, from.month, till.day, till.month, till.year]
       else
-        "#{ to_day_and_month(start_date) } - #{ to_day_and_month(end_date) }"
+        "%d.%02d.%d - %d.%02d.%d" % [ from.day, from.month, from.year, till.day, till.month, till.year]
       end
+    end
+
+    def self.treat_as_utc(date)
+      (date.to_time + date.to_time.utc_offset).utc
     end
 
     attr_reader :date
