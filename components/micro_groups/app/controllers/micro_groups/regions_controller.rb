@@ -1,6 +1,6 @@
 module MicroGroups
   class RegionsController < Core::ApplicationController
-    helper_method :regions, :region
+    helper_method :region, :micro_groups
 
     def show; end
 
@@ -15,6 +15,10 @@ module MicroGroups
         regions.find_by!(permalink: params[:permalink]).tap do |_region|
           authorize(_region)
         end
+    end
+
+    def micro_groups
+      @micro_groups ||= MicroGroup.all
     end
   end
 end
