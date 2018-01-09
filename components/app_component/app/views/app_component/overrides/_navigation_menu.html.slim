@@ -7,7 +7,7 @@ li.dropdown
     span.caret
   ul.dropdown-menu
     - MicroGroups.links_info.each do |region_info|
-      li= link_to region_info.name, region_info.permalink
+      li= link_to region_info.name, "/#{ region_info.permalink }"
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path
 li class=('active' if current_page?(app_component.events_path))

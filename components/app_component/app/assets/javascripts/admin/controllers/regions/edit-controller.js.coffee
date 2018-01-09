@@ -6,7 +6,7 @@ angular.module('admin.controllers')
     info: '',
     permalink: '',
     priority: 1,
-    published: true,
+    published: false,
     calendar_url: null,
     additional_calendar_url: null
   };
@@ -33,8 +33,8 @@ angular.module('admin.controllers')
   @_params = () ->
     region: {
       name: controller.region.name,
-      info: controller.region.info,
       permalink: controller.region.permalink,
+      info: controller.region.info,
       priority: controller.region.priority,
       published: controller.region.published,
       calendar_url: controller.region.calendar_url,

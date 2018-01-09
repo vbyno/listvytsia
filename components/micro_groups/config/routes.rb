@@ -1,4 +1,6 @@
 MicroGroups::Engine.routes.draw do
+  get '/timetable', to: redirect(path: '/lviv')
+
   resources :micro_groups, only: %i( index show )
 
   namespace :admins do
@@ -12,5 +14,9 @@ MicroGroups::Engine.routes.draw do
     get MicroGroups.region_path(permalink),
         to: 'regions#show',
         defaults: { permalink: permalink }
+
+    get "/#{ permalink }/:permalink",
+      to: 'micro_groups#show',
+      defaults: { region_permalink: permalink }
   end
 end

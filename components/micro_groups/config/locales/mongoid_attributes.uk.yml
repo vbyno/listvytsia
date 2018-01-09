@@ -10,6 +10,7 @@ uk:
     attributes:
       micro_groups/micro_group:
         name: Назва
+        permalink: Посилання
         city: Місто
         idea: Ідея
         leaders: Ведучі, представники

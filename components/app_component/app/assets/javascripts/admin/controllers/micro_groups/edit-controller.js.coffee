@@ -1,8 +1,9 @@
 angular.module('admin.controllers')
-.controller('OAEditController', ['$http', '$location', '$routeParams', ($http, $location, $routeParams) ->
+.controller('MicroGroupsEditController', ['$http', '$location', '$routeParams', ($http, $location, $routeParams) ->
   controller = this;
   controller.micro_group = {
     name: '',
+    permalink: '',
     city: '',
     idea: '',
     leaders: '',
@@ -31,6 +32,7 @@ angular.module('admin.controllers')
   @_microGroupParams = () ->
     micro_group: {
       name: controller.micro_group.name,
+      permalink: controller.micro_group.permalink,
       city: controller.micro_group.city,
       idea: controller.micro_group.idea,
       leaders: controller.micro_group.leaders,
