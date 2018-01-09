@@ -18,6 +18,12 @@ module MicroGroups
     Region.published.ordered.pluck(:permalink)
   end
 
+  def links_info
+    Region.published.ordered.map do |region|
+      Struct.new(:name, :permalink).new(region.name, region.permalink).freeze
+    end
+  end
+
   def region_path(permalink)
     "/#{ permalink }"
   end

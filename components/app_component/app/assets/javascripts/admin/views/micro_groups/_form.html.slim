@@ -15,6 +15,12 @@
   label.string.required.control-label
     abbr title='required'
       | *
+      =< MicroGroups::MicroGroup.human_attribute_name(:permalink)
+  input#micro_group_permalink.string.required.form-control type='text' data-ng-model='ctrl.micro_group.permalink' required=true autofocus=true
+.form-group.required
+  label.string.required.control-label
+    abbr title='required'
+      | *
       =< MicroGroups::MicroGroup.human_attribute_name(:idea)
   input#micro_group_idea.string.required.form-control type='text' data-ng-model='ctrl.micro_group.idea' required=true
 .form-group.required
