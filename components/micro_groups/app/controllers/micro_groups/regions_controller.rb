@@ -1,6 +1,6 @@
 module MicroGroups
   class RegionsController < Core::ApplicationController
-    helper_method :regions, :region
+    helper_method :region, :micro_groups
 
     def show; end
 
@@ -11,10 +11,11 @@ module MicroGroups
     end
 
     def region
-      @region ||=
-        regions.find_by!(permalink: params[:permalink]).tap do |_region|
-          authorize(_region)
-        end
+      @region ||= regions.find_by!(permalink: params[:permalink]).tap(&method(:authorize))
+    end
+
+    def micro_groups
+      @micro_groups ||= MicroGroup.of_city(region.name).ordered_created_at
     end
   end
 end

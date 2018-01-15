@@ -31,14 +31,7 @@ module MicroGroups
 
       def micro_group_params
         params.require(:micro_group).
-               permit(:name,
-                      :city,
-                      :idea,
-                      :leaders,
-                      :contacts,
-                      :methodologies,
-                      :published,
-                      :calendar_url,
+               permit(*MicroGroup::ATTRIBUTES,
                       permissions_attributes: [:id, :_destroy])
       end
     end

@@ -8,12 +8,12 @@ module MicroGroups
     private
 
     def micro_groups
-      @micro_groups ||= policy_scope(MicroGroup).order(created_at: :desc)
+      @micro_groups ||= policy_scope(MicroGroup).ordered_created_at
     end
 
     def micro_group
       @micro_group ||= begin
-        micro_group = micro_groups.find(params[:id])
+        micro_group = micro_groups.find_by(permalink: params[:permalink])
 
         authorize(micro_group)
 
