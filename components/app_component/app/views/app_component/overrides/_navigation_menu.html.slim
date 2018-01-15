@@ -1,13 +1,16 @@
 - if AppComponent::SHOW_SEMINAR_PAGE
   li class=('active' if current_page? app_component.seminar_path)
     = link_to t('.seminar'), app_component.seminar_path
-li.dropdown
-  a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
-    = t('.timetable')
-    span.caret
-  ul.dropdown-menu
-    - MicroGroups.links_info.each do |region_info|
-      li= link_to region_info.name, "/#{ region_info.permalink }"
+- timetable_path = MicroGroups.region_path('lviv')
+li class=('active' if current_page?(timetable_path))
+  = link_to t('.timetable'), timetable_path
+/ li.dropdown
+/   a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
+/     = t('.timetable')
+/     span.caret
+/   ul.dropdown-menu
+/     - MicroGroups.links_info.each do |region_info|
+/       li= link_to region_info.name, "/#{ region_info.permalink }"
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path
 li class=('active' if current_page?(app_component.events_path))

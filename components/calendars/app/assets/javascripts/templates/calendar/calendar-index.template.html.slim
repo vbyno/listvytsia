@@ -5,7 +5,7 @@ table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
       th st-sort='course'   = Calendars::Item.human_attribute_name(:course)
       th st-sort='city'     = Calendars::Item.human_attribute_name(:city)
       th st-sort='contacts' = Calendars::Item.human_attribute_name(:contacts)
-    tr
+    tr.hidden
       th
       th colspan='1'
         select.form-control st-search='course'

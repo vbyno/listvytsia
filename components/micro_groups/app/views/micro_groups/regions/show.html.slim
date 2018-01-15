@@ -14,10 +14,10 @@ article
       li.nav-item#calendar-tab data-toggle="tab" href="#additional_calendar" role="tab" aria-controls="additional-calendar" aria-selected=false
         a.nav-link href="#additional_calendar"
           = MicroGroups::Region.human_attribute_name(:additional_calendar_url)
-    - if micro_groups.any?
-      li.nav-item#micro_groups-tab data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
-        a.nav-link href="#micro_groups"
-          = t('mongoid.models.micro_groups/micro_group.other')
+    / - if micro_groups.any?
+    /   li.nav-item#micro_groups-tab data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
+    /     a.nav-link href="#micro_groups"
+    /       = t('mongoid.models.micro_groups/micro_group.other')
     li.nav-item#calendar-tab data-toggle="tab" href="#general_calendar" role="tab" aria-controls="calendar" aria-selected=false
       a.nav-link href="#general_calendar"
         = t('.general_calendar')
