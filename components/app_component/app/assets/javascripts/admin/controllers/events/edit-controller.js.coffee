@@ -7,7 +7,8 @@ angular.module('admin.controllers')
     start_time: '',
     end_time: '',
     contacts: '',
-    course: ''
+    course: '',
+    permalink: ''
   };
 
   controller.city_names = []
@@ -25,6 +26,7 @@ angular.module('admin.controllers')
       end_time:   new Date(response.data.end_time),
       contacts:   response.data.contacts,
       course:     response.data.course
+      permalink:  response.data.permalink
     };
   );
 
@@ -46,7 +48,8 @@ angular.module('admin.controllers')
       start_time: controller.event_info.start_time,
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
-      course: controller.event_info.course
+      course: controller.event_info.course,
+      permalink: controller.event_info.permalink
     }
 
   @_deleteEventParams = (event_info) ->

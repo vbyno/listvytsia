@@ -1,1 +1,0 @@
-attributes *Events::Event::ATTRIBUTES

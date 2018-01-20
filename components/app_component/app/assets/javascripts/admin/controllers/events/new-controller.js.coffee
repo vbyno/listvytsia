@@ -7,7 +7,8 @@ angular.module('admin.controllers')
     start_time: '',
     end_time: '',
     contacts: '',
-    course: ''
+    course: '',
+    permalink: ''
   };
 
   controller.city_names = []
@@ -28,7 +29,8 @@ angular.module('admin.controllers')
       start_time: controller.event_info.start_time,
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
-      course: controller.event_info.course
+      course: controller.event_info.course,
+      permalink: controller.event_info.permalink
     }
 
   @locationPath = () ->
