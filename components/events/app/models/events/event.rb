@@ -6,8 +6,8 @@ module Events
 
     field :title
     field :city
-    field :start_time
-    field :end_time
+    field :start_time, type: DateTime
+    field :end_time, type: DateTime
     field :contacts
 
     ATTRIBUTES = %i( id title city start_time end_time contacts )

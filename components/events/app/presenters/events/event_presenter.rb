@@ -17,8 +17,7 @@ module Events
     private
 
     def str_time(time)
-      time.to_time.strftime('%Y-%m-%d')
-      # time.to_time.strftime('%Y-%d-%m')
+      time.strftime('%Y-%m-%d')
     end
   end
 end

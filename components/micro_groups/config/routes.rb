@@ -15,8 +15,12 @@ MicroGroups::Engine.routes.draw do
         to: 'regions#show',
         defaults: { permalink: permalink }
 
-    get "/#{ permalink }/:permalink",
+    get "/#{ permalink }/micro_groups/:permalink",
       to: 'micro_groups#show',
+      defaults: { region_permalink: permalink }
+
+    get "/#{ permalink }/events/:permalink",
+      to: 'events#show',
       defaults: { region_permalink: permalink }
   end
 end

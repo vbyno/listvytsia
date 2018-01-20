@@ -1,4 +1,6 @@
-require_relative 'base'
-require_relative 'command_runner'
-require_rel 'db'
-require_rel 'images'
+require_rel 'base',
+            'command_runner',
+            'runnable_via_console',
+            'db',
+            'images',
+            'events'

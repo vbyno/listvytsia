@@ -1,16 +1,7 @@
 module Tasks
   module DB
     class DumpProduction < Base
-      attr_reader :runner, :config, :time
-
-      def initialize(runner: CommandRunner.new,
-                     config: OpenStruct.new(YAML.load_file('config/application.yml').
-                                                     fetch('production')),
-                     time: Time.now)
-        @runner = runner
-        @config = config
-        @time = time
-      end
+      include RunnableViaConsole
 
       def call
         puts 'Dump on production database...'

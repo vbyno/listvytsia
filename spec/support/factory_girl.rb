@@ -1,4 +1,6 @@
 FactoryGirl.definition_file_paths << 'components/core/spec/factories'
+FactoryGirl.definition_file_paths << 'components/calendars/spec/factories'
+FactoryGirl.definition_file_paths << 'components/micro_groups/spec/factories'
 FactoryGirl.definition_file_paths << 'components/app_component/spec/factories'
 FactoryGirl.find_definitions
 

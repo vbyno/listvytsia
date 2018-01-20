@@ -231,6 +231,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    database_cleaner (1.6.2)
     debug_inspector (0.0.2)
     deface (1.2.0)
       nokogiri (~> 1.6)
@@ -539,6 +540,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails
   core!
+  database_cleaner
   devise
   devise-i18n
   events!
