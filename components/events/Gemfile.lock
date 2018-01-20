@@ -1,31 +1,18 @@
 GIT
-  remote: git://github.com/mkaszubowski/ckeditor.git
-  revision: c9b5ea842222976c2d7f646f2d1210f4cb619fc2
-  ref: c9b5ea842222976c2d7f646f2d1210f4cb619fc2
-  specs:
-    ckeditor (4.1.3)
-      cocaine
-      orm_adapter (~> 0.5.0)
-
-GIT
   remote: git://github.com/vbyno/mongoid_rails_migrations.git
-  revision: c0b264d334069454a5b9fe4afaee2fc7562012bd
-  branch: development
+  revision: 0cacfa5b94e48b9eccc2ade56804d167c33ca1a3
+  ref: 0cacfa5b94e48b9eccc2ade56804d167c33ca1a3
   specs:
     mongoid_rails_migrations (1.1.0)
-      activesupport (>= 5.0.0)
+      activesupport (>= 4.2.0)
       bundler (>= 1.0.0)
-      mongoid
-      rails (>= 5.0.0)
-      railties (>= 5.0.0)
+      mongoid (>= 4.0.0)
+      rails (>= 4.2.0)
+      railties (>= 4.2.0)
 
 PATH
   remote: ..
   specs:
-    chunks (0.0.1)
-      core
-      mongoid
-      mongoid_rails_migrations
     core (0.0.1)
       deface
       devise
@@ -37,40 +24,7 @@ PATH
       rabl
       rails (= 5.1.1)
       slim-rails
-    hotels (0.0.1)
-      core
-      mongoid
-      mongoid_rails_migrations
-      pictures
-      rabl
-      rails
-    micro_groups (0.0.1)
-      core
-      mongoid
-      mongoid_rails_migrations
-      pictures
-      rabl
-      rails
     pictures (0.0.1)
-      angular-rails-templates
-      angularjs-rails
-      carrierwave-mongoid
-      coffee-rails
-      mini_magick
-      mongoid
-      rabl
-      rails
-      rake
-      sass
-      slim-rails
-    profiles (0.0.1)
-      core
-      mongoid
-      mongoid_rails_migrations
-      pictures
-      rabl
-      rails
-    seo_contents (0.0.1)
       angular-rails-templates
       angularjs-rails
       carrierwave-mongoid
@@ -86,26 +40,13 @@ PATH
 PATH
   remote: .
   specs:
-    app_component (0.0.1)
-      angular-rails-templates
-      angularjs-rails
-      bootstrap-datepicker-rails
-      chunks
-      ckeditor
-      coffee-rails
+    events (0.0.1)
       core
-      gmaps4rails
-      hotels
-      liqpay
-      micro_groups
-      mini_magick
-      money-rails
+      mongoid
+      mongoid_rails_migrations
       pictures
+      rabl
       rails
-      rake
-      sass
-      seo_contents
-      simple_form
 
 GEM
   remote: https://rubygems.org/
@@ -154,8 +95,6 @@ GEM
     angularjs-rails (1.6.2)
     arel (8.0.0)
     bcrypt (3.1.11)
-    bootstrap-datepicker-rails (1.6.4.1)
-      railties (>= 3.0)
     bson (4.2.1)
     builder (3.2.3)
     carrierwave (0.11.2)
@@ -168,9 +107,6 @@ GEM
       carrierwave (>= 0.8.0, < 0.12.0)
       mongoid (>= 3.0, < 7.0)
       mongoid-grid_fs (>= 1.3, < 3.0)
-    climate_control (0.2.0)
-    cocaine (0.5.8)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -203,10 +139,8 @@ GEM
       ruby-progressbar (~> 1.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    gmaps4rails (2.1.2)
     i18n (0.8.4)
     json (2.1.0)
-    liqpay (1.0.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -219,16 +153,6 @@ GEM
     mini_magick (4.7.1)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
-    monetize (1.6.0)
-      money (~> 6.8)
-    money (6.8.4)
-      i18n (>= 0.6.4, < 0.9)
-      sixarm_ruby_unaccent (>= 1.1.1, < 2)
-    money-rails (1.8.0)
-      activesupport (>= 3.0)
-      monetize (~> 1.6.0)
-      money (~> 6.8.1)
-      railties (>= 3.0)
     mongo (2.4.2)
       bson (>= 4.2.1, < 5.0.0)
     mongoid (6.2.0)
@@ -237,6 +161,10 @@ GEM
     mongoid-grid_fs (2.3.0)
       mime-types (>= 1.0, < 4.0)
       mongoid (>= 3.0, < 7.0)
+    mongoid-rspec (1.10.0)
+      mongoid (>= 3.0.1)
+      rake
+      rspec (>= 2.14)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -247,8 +175,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-rails (0.3.6)
-      pry (>= 0.10.4)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rabl (0.13.1)
@@ -285,6 +211,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -304,10 +234,6 @@ GEM
     rspec-support (3.6.0)
     ruby-progressbar (1.8.1)
     sass (3.4.24)
-    simple_form (3.5.0)
-      actionpack (> 4, < 5.2)
-      activemodel (> 4, < 5.2)
-    sixarm_ruby_unaccent (1.1.2)
     slim (3.0.8)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
@@ -339,19 +265,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  app_component!
-  chunks!
-  ckeditor!
   core!
+  events!
   factory_girl
   fuubar
-  hotels!
+  mongoid-rspec
   mongoid_rails_migrations!
-  pictures!
-  profiles!
-  pry-rails
+  pry
   rspec-rails
-  seo_contents!
 
 BUNDLED WITH
    1.15.1

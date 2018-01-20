@@ -1,0 +1,17 @@
+uk:
+  mongoid:
+    models:
+      events/event:
+        one: Запис
+        other: Записи
+      events/event:
+        one: Календар
+        other: Календарі
+    attributes:
+      events/event:
+        city: Місто
+        start_time: Час початку
+        end_time: Час завершення
+        contacts: Кантакти
+        course: Курс
+        dates: Дати
