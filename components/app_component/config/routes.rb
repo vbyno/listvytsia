@@ -5,6 +5,7 @@ AppComponent::Engine.routes.draw do
   mount Chunks::Engine,      at: Chunks::Engine.mount_path,      as: :chunks
   mount MicroGroups::Engine, at: MicroGroups::Engine.mount_path, as: :micro_groups_component
   mount Calendars::Engine,   at: Calendars::Engine.mount_path,   as: :calendars_component
+  mount Events::Engine,      at: Events::Engine.mount_path,      as: :events_component
 
   get :contacts,  to: 'static_pages#contacts'
   get :seminar,   to: 'static_pages#seminar'

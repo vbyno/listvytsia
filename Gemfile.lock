@@ -21,6 +21,7 @@ PATH
       ckeditor
       coffee-rails
       core
+      events
       gmaps4rails
       hotels
       liqpay
@@ -55,6 +56,13 @@ PATH
       rabl
       rails (= 5.1.1)
       slim-rails
+    events (0.0.1)
+      core
+      mongoid
+      mongoid_rails_migrations
+      pictures
+      rabl
+      rails
     generators (0.0.1)
     hotels (0.0.1)
       core
@@ -533,6 +541,7 @@ DEPENDENCIES
   core!
   devise
   devise-i18n
+  events!
   factory_girl_rails
   figaro
   font-awesome-rails

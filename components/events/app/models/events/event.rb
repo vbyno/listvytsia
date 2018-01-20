@@ -10,7 +10,7 @@ module Events
     field :end_time
     field :contacts
 
-    ATTRIBUTES = %i( title city start_time end_time contacts )
+    ATTRIBUTES = %i( id title city start_time end_time contacts )
 
     validates :city, :start_time, :end_time, :contacts, presence: true
   end

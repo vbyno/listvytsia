@@ -9,6 +9,7 @@ path 'components' do
   gem 'core'
   gem 'micro_groups'
   gem 'calendars'
+  gem 'events'
 end
 
 gem 'rails'
