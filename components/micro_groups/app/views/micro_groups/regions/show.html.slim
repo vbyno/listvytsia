@@ -31,7 +31,7 @@ article
     .tab-pane#micro_groups role="tabpanel" aria-labelledby="additional-calendar-tab"
       - micro_groups.each do |micro_group|
         .list-group
-          = link_to micro_group.name, "#{ region.permalink }/#{ micro_group.permalink }"
+          = link_to micro_group.name, "#{ region.permalink }/micro_groups/#{ micro_group.permalink }"
     .tab-pane#general_calendar role='tabpanel' aria-labelledby='info-tab'
       general-calendar-component searchable='true'
 
