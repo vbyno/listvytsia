@@ -9,6 +9,7 @@ path '../' do
   gem 'hotels'
   gem 'chunks'
   gem 'profiles'
+  gem 'events'
 end
 
 gem 'ckeditor',                 github: 'mkaszubowski/ckeditor',          ref: 'c9b5ea842222976c2d7f646f2d1210f4cb619fc2'

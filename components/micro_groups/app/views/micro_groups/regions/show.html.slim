@@ -2,42 +2,36 @@ article
   .title-v1.margin-bottom-30
     h1= region.name
   ul.nav.nav-tabs.margin-bottom-30 role='tablist'
-    - if region.info.present?
-      li.nav-item.active#info-tab data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected=true
-        a.nav-link href="#info"
-          = MicroGroups::Region.human_attribute_name(:info)
-    - if region.calendar_url.present?
-      li.nav-item#calendar-tab data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected=false
-        a.nav-link href="#calendar"
-          = MicroGroups::Region.human_attribute_name(:calendar_url)
-    - if region.additional_calendar_url.present?
-      li.nav-item#calendar-tab data-toggle="tab" href="#additional_calendar" role="tab" aria-controls="additional-calendar" aria-selected=false
-        a.nav-link href="#additional_calendar"
-          = MicroGroups::Region.human_attribute_name(:additional_calendar_url)
-    / - if micro_groups.any?
-    /   li.nav-item#micro_groups-tab data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
-    /     a.nav-link href="#micro_groups"
-    /       = t('mongoid.models.micro_groups/micro_group.other')
+    li.nav-item.active#info-tab data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected=true
+      a.nav-link href="#info"
+        = MicroGroups::Region.human_attribute_name(:info)
+
+    li.nav-item#calendar-tab data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected=false
+      a.nav-link href="#calendar"
+        = MicroGroups::Region.human_attribute_name(:calendar_url)
+
+    li.nav-item#calendar-tab data-toggle="tab" href="#additional_calendar" role="tab" aria-controls="additional-calendar" aria-selected=false
+      a.nav-link href="#additional_calendar"
+        = MicroGroups::Region.human_attribute_name(:additional_calendar_url)
+    li.nav-item#micro_groups-tab data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
+      a.nav-link href="#micro_groups"
+        = t('mongoid.models.micro_groups/micro_group.other')
     li.nav-item#calendar-tab data-toggle="tab" href="#general_calendar" role="tab" aria-controls="calendar" aria-selected=false
       a.nav-link href="#general_calendar"
         = t('.general_calendar')
   .tab-content
-    - if region.info.present?
-      .tab-pane.active#info role="tabpanel" aria-labelledby="info-tab"
-        p== region.info
-    - if region.calendar_url.present?
-      .tab-pane#calendar role="tabpanel" aria-labelledby="calendar-tab"
-        .google-calendar
-          iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
-    - if region.additional_calendar_url.present?
-      .tab-pane#additional_calendar role="tabpanel" aria-labelledby="additional-calendar-tab"
-        .google-calendar
-          iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.additional_calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
-    - if micro_groups.any?
-      .tab-pane#micro_groups role="tabpanel" aria-labelledby="additional-calendar-tab"
-        - micro_groups.each do |micro_group|
-          .list-group
-            = link_to micro_group.name, "#{ region.permalink }/#{ micro_group.permalink }"
+    .tab-pane.active#info role="tabpanel" aria-labelledby="info-tab"
+      p== region.info
+    .tab-pane#calendar role="tabpanel" aria-labelledby="calendar-tab"
+      .google-calendar
+        iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+    .tab-pane#additional_calendar role="tabpanel" aria-labelledby="additional-calendar-tab"
+      .google-calendar
+        iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.additional_calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+    .tab-pane#micro_groups role="tabpanel" aria-labelledby="additional-calendar-tab"
+      - micro_groups.each do |micro_group|
+        .list-group
+          = link_to micro_group.name, "#{ region.permalink }/#{ micro_group.permalink }"
     .tab-pane#general_calendar role='tabpanel' aria-labelledby='info-tab'
       general-calendar-component searchable='true'
 

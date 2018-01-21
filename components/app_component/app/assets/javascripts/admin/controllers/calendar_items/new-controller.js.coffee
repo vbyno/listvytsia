@@ -11,7 +11,7 @@ angular.module('admin.controllers')
 
   controller.city_names = []
 
-  $http.get('/admins/items').then((response) ->
+  $http.get('/admins/regions').then((response) ->
     controller.city_names = _.map(response.data, ((obj) -> obj.name));
   );
 

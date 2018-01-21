@@ -12,7 +12,11 @@ angular.module('admin.controllers')
     calendar_url: null
   };
 
-  controller.city_names = ['Львів', 'Рівне']
+  controller.city_names = []
+
+  $http.get('/admins/regions').then((response) ->
+    controller.city_names = _.map(response.data, ((obj) -> obj.name));
+  );
 
   $http.get("/admins/micro_groups/#{$routeParams.id}").then((response) ->
     controller.micro_group = response.data;

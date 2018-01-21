@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'hotels'
   s.add_dependency 'chunks'
   s.add_dependency 'micro_groups'
+  s.add_dependency 'events'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'fuubar'

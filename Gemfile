@@ -9,6 +9,7 @@ path 'components' do
   gem 'core'
   gem 'micro_groups'
   gem 'calendars'
+  gem 'events'
 end
 
 gem 'rails'
@@ -92,4 +93,5 @@ group :test do
   gem 'chromedriver-helper'
   gem 'launchy'
   gem 'fuubar', require: false
+  gem 'database_cleaner'
 end
