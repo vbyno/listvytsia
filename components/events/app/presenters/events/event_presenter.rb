@@ -11,7 +11,7 @@ module Events
     end
 
     def dates
-      DateFormatter.to_period(event.start_time, event.end_time)
+      Calendars::DateFormatter.to_period(event.start_time, event.end_time)
     end
 
     private
