@@ -42,7 +42,7 @@ module Tasks
       end
 
       def remove_external_directory
-        "#{ via_ssh } -p #{ config.server_port } rm -rf #{ dumpfolder }"
+        "#{ via_ssh } rm -rf #{ dumpfolder }"
       end
 
       def str_date

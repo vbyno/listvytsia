@@ -9,6 +9,9 @@ namespace :db do
 
   desc 'Restore development database from the dumpfile'
   task :restore_development, &Tasks::DB::RestoreDevelopment
+
+  desc 'Restores staging from last dump folder'
+  task :restore_staging, &Tasks::DB::RestoreStaging
 end
 
 namespace :images do
