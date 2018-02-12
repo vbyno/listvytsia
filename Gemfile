@@ -36,7 +36,6 @@ gem 'underscore-rails'
 gem 'coffee-rails'
 gem 'turbolinks'
 gem 'rabl'
-gem 'rack-cors'
 
 gem 'slim-rails'
 gem 'sass-rails'

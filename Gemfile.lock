@@ -381,7 +381,6 @@ GEM
     rabl (0.13.1)
       activesupport (>= 2.3.14)
     rack (2.0.3)
-    rack-cors (1.0.2)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.1)
@@ -572,7 +571,6 @@ DEPENDENCIES
   puma
   pundit
   rabl
-  rack-cors
   rails
   rails-i18n
   rails_layout
