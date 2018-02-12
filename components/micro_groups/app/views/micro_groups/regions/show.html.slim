@@ -23,15 +23,20 @@ article
     .tab-pane.active#info role="tabpanel" aria-labelledby="info-tab"
       p== region.info
     .tab-pane#calendar role="tabpanel" aria-labelledby="calendar-tab"
-      .google-calendar
-        iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+      - if region.calendar_url
+        .google-calendar
+          iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+      - else
+        p= t('.no_calendar')
     .tab-pane#additional_calendar role="tabpanel" aria-labelledby="additional-calendar-tab"
-      .google-calendar
-        iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.additional_calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+      - if region.additional_calendar_url
+        .google-calendar
+          iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.additional_calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
+      - else
+        p= t('.no_calendar')
     .tab-pane#micro_groups role="tabpanel" aria-labelledby="additional-calendar-tab"
       - micro_groups.each do |micro_group|
         .list-group
           = link_to micro_group.name, "#{ region.permalink }/micro_groups/#{ micro_group.permalink }"
     .tab-pane#general_calendar role='tabpanel' aria-labelledby='info-tab'
       general-calendar-component searchable='true'
-
