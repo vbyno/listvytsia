@@ -7,6 +7,7 @@ require 'core'
 
 module MicroGroups
   require 'micro_groups/engine'
+  require 'micro_groups/region_path_manager'
 
   extend self
 

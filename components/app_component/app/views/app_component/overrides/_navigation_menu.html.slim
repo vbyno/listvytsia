@@ -4,14 +4,17 @@
 - main_region_path = MicroGroups.region_path('lviv')
 - regions = MicroGroups.links_info
 - main_region_path = "/#{ regions.first.permalink }"
-li.menu-dropdown-opened class=('active' if current_page?(main_region_path))
-  span= link_to regions.first.name, main_region_path, class: 'menu-dropdown-link'
+- region_paths_manager = MicroGroups::RegionPathManager.new(request.original_url)
+li.menu-dropdown-opened class=('active' if region_paths_manager.active?)
+  span= link_to region_paths_manager.region_to_display.name,
+                region_paths_manager.region_to_display.permalink,
+                class: 'menu-dropdown-link'
   span.dropdown
     a.btn.btn-default.menu-dropdown-button type='button' data-toggle='dropdown'
       span.caret
     ul.dropdown-menu
-      - regions.drop(1).each do |region_info|
-        li= link_to region_info.name, "/#{ region_info.permalink }"
+      - region_paths_manager.regions_to_display.each do |region|
+        li= link_to region.name, "/#{ region.permalink }"
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path
 li class=('active' if current_page?(app_component.events_path))
