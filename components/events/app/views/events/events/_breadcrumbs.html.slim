@@ -1,0 +1,7 @@
+ol class="breadcrumb"
+  li class="breadcrumb-item"
+    = link_to event.region.name, MicroGroups.region_path(event.region.permalink)
+  li class="breadcrumb-item"
+    span= t('mongoid.models.events/event.other')
+  li class="breadcrumb-item active"
+    span= event.title

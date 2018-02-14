@@ -1,7 +1,11 @@
-article
-  .title-v1
-    h1= micro_group.name
-  h3= MicroGroups::MicroGroup.human_attribute_name(:idea)
-  p= micro_group.idea
-  h3= MicroGroups::MicroGroup.human_attribute_name(:methodologies)
-  p= micro_group.methodologies
+- present(micro_group) do |micro_group|
+  ==  render '/micro_groups/micro_groups/breadcrumbs', micro_group: micro_group
+  br
+
+  article
+    .title-v1
+      h1= micro_group.name
+    h3= MicroGroups::MicroGroup.human_attribute_name(:idea)
+    p= micro_group.idea
+    h3= MicroGroups::MicroGroup.human_attribute_name(:methodologies)
+    p= micro_group.methodologies

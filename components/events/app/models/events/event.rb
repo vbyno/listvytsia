@@ -11,6 +11,10 @@ module Events
     field :contacts
     field :permalink
 
+    belongs_to :region, class_name: 'MicroGroups::Region',
+                        foreign_key: :city,
+                        primary_key: :name
+
     ATTRIBUTES = %i( id title city start_time end_time contacts permalink )
 
     validates :city, :start_time, :end_time, :contacts, presence: true

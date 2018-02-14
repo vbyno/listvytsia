@@ -4,6 +4,7 @@ require 'rails'
 require 'rabl'
 
 require 'core'
+require 'micro_groups' # we need regions
 
 module Events
   require 'events/engine'

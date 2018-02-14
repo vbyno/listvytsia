@@ -16,6 +16,10 @@ module MicroGroups
     field :calendar_url
     field :published, type: Mongoid::Boolean, default: false
 
+    belongs_to :region, class_name: 'MicroGroups::Region',
+                        foreign_key: :city,
+                        primary_key: :name
+
     validates :name, :city, :idea, :leaders, :contacts, :permalink, presence: true
 
     scope :published, ->{ where(published: true) }
