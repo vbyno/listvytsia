@@ -1,16 +1,7 @@
 module Tasks
   module DB
     class DumpProduction < Base
-      attr_reader :runner, :config, :time
-
-      def initialize(runner: CommandRunner.new,
-                     config: OpenStruct.new(YAML.load_file('config/application.yml').
-                                                     fetch('production')),
-                     time: Time.now)
-        @runner = runner
-        @config = config
-        @time = time
-      end
+      include RunnableViaConsole
 
       def call
         puts 'Dump on production database...'
@@ -51,7 +42,7 @@ module Tasks
       end
 
       def remove_external_directory
-        "#{ via_ssh } -p #{ config.server_port } rm -rf #{ dumpfolder }"
+        "#{ via_ssh } rm -rf #{ dumpfolder }"
       end
 
       def str_date

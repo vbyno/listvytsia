@@ -15,12 +15,12 @@ uk:
         idea: Ідея
         leaders: Ведучі, представники
         contacts: Кантактна інформація
-        methodologies: Примітки, методики
+        methodologies: Методики, що використовуються
         published: Опублікована
       micro_groups/region:
         name: Назва міста
         info: Інформація
         permalink: Посилання
-        calendar_url: Календар мікрогруп
+        calendar_url: Календар подій
         additional_calendar_url: Календар особистих прийомів
         published: Опублікований

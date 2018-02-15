@@ -18,5 +18,6 @@ module MicroGroups
 
     scope :published, ->{ where(published: true) }
     scope :ordered,   ->{ order(priority: :desc) }
+    scope :by_name,   ->(name) { where(name: name) }
   end
 end

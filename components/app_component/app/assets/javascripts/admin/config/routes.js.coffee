@@ -109,6 +109,21 @@ angular.module('admin.config')
     controller: 'CalendarItemsEditController',
     controllerAs: 'ctrl'
   })
+  .when('/events', {
+    templateUrl: 'admin/views/events/index.html',
+    controller: 'EventsIndexController',
+    controllerAs: 'ctrl'
+  })
+  .when('/events/new', {
+    templateUrl: 'admin/views/events/new.html',
+    controller: 'EventsNewController',
+    controllerAs: 'ctrl'
+  })
+  .when('/events/:id/edit', {
+    templateUrl: 'admin/views/events/edit.html',
+    controller: 'EventsEditController',
+    controllerAs: 'ctrl'
+  })
   .otherwise({
     redirectTo: '/'
   });

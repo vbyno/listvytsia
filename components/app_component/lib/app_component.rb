@@ -16,6 +16,8 @@ require 'pictures'
 require 'chunks'
 require 'profiles'
 require 'micro_groups'
+require 'events'
+require 'calendars'
 
 module AppComponent
   require 'app_component/engine'

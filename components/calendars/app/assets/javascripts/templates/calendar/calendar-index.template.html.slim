@@ -20,6 +20,6 @@ table.table.table-hover st-table='displayed_calendar_items' st-safe-src='items'
   tbody
     tr data-ng-repeat = 'calendar_item in displayed_calendar_items'
       td {{calendar_item.dates}}
-      td {{calendar_item.course}}
-      td {{calendar_item.city}}
+      td ng-bind-html='renderHtml(calendar_item.course)'
+      td ng-bind-html='renderHtml(calendar_item.city)'
       td.none-style-list ng-bind-html='renderHtml(calendar_item.contacts)'

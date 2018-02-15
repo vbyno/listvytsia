@@ -1,0 +1,36 @@
+h1
+  = Events::Event.human_list_name
+  a.pull-right href= '#/events/new'
+    i.fa.fa-plus
+table.table.table-hover st-table='displayed_events' st-safe-src='events'
+  thead
+    tr
+      th st-sort='title'      = Events::Event.human_attribute_name(:title)
+      th st-sort='city'       = Events::Event.human_attribute_name(:city)
+      th st-sort='start_time' = Events::Event.human_attribute_name(:start_time)
+      th st-sort='end_time'   = Events::Event.human_attribute_name(:end_time)
+      th st-sort='contacts'   = Events::Event.human_attribute_name(:contacts)
+      th.col-md-1.col-sm-1.col-xs-2= I18n.t('actions.actions')
+    tr
+      th
+        select.form-control st-search='city'
+          option value='' Всі
+          option data-ng-repeat="event in displayed_events | unique:'city'" value='{{event.city}}' {{event.city}}
+      th colspan='2'
+        input.input-sm.form-control st-search='name' placeholder='Пошук по назві мікрогрупи' type='search'
+      th colspan='5'
+        input.input-sm.form-control st-search='' placeholder='Пошук по всіх полях' type='search'
+  tbody
+    tr data-ng-repeat = 'event in displayed_events'
+      td {{event.title}}
+      td {{event.city}}
+      td {{event.start_time}}
+      td {{event.end_time}}
+      td {{event.contacts}}
+      td
+        span>
+          a data-ng-href= '#/events/{{event.id}}/edit'
+            i.fa.fa-pencil
+        span
+          a href= '#/events' data-ng-click= 'ctrl.deleteCalendarEvent(event)'
+            i.fa.fa-trash

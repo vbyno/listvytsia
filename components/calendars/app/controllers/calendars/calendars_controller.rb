@@ -7,7 +7,7 @@ module Calendars
     private
 
     def items
-      @items ||= policy_scope(Item).order(start_date: :asc)
+      @items ||= policy_scope(Item).actual_at_time(Time.now).ordered_by_start_date
     end
   end
 end

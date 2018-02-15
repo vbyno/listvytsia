@@ -1,0 +1,7 @@
+ol class="breadcrumb"
+  li class="breadcrumb-item"
+    = link_to micro_group.region.name, MicroGroups.region_path(micro_group.region.permalink)
+  li class="breadcrumb-item"
+    span= t('mongoid.models.micro_groups/micro_group.other')
+  li class="breadcrumb-item active"
+    span= micro_group.short_name

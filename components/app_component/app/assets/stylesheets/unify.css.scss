@@ -61,3 +61,32 @@ $primary-color: #3498db;
     padding-left: 0
   }
 }
+
+li.menu-dropdown-opened {
+  .dropdown.open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.menu-dropdown-link {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 29px;
+  padding: 23px 1px 24px;
+  display: inline-block;
+}
+
+.menu-dropdown-link:hover {
+  text-decoration: none;
+}
+
+.menu-dropdown-button {
+  padding: 0px 3px;
+  position: inherit;
+  vertical-align: inherit;
+}

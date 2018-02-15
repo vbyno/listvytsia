@@ -4,7 +4,6 @@
       | *
       =< Calendars::Item.human_attribute_name(:city)
   input#calendar_item_city.string.required.form-control type='text' data-ng-model='ctrl.calendar_item.city' required=true autofocus=true
-    option data-ng-repeat= 'name in ctrl.city_names' value='{{name}}' {{name}}
 .form-group
   label.string.required.control-label
     abbr =< Calendars::Item.human_attribute_name(:course)
