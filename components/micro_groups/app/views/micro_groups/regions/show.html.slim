@@ -2,7 +2,7 @@ article
   .title-v1.margin-bottom-30
     h1= region.name
   ul.nav.nav-tabs.margin-bottom-30 role='tablist'
-    li.nav-item.active#info-tab data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected=true
+    li.nav-item#info-tab class=("active" if region.info) data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected=true
       a.nav-link href="#info"
         = MicroGroups::Region.human_attribute_name(:info)
 
@@ -13,14 +13,14 @@ article
     li.nav-item#calendar-tab data-toggle="tab" href="#additional_calendar" role="tab" aria-controls="additional-calendar" aria-selected=false
       a.nav-link href="#additional_calendar"
         = MicroGroups::Region.human_attribute_name(:additional_calendar_url)
-    li.nav-item#micro_groups-tab data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
+    li.nav-item#micro_groups-tab class=("active" unless region.info) data-toggle="tab" href="#micro_groups" role="tab" aria-controls="micro_groups" aria-selected=false
       a.nav-link href="#micro_groups"
         = t('mongoid.models.micro_groups/micro_group.other')
     li.nav-item#calendar-tab data-toggle="tab" href="#general_calendar" role="tab" aria-controls="calendar" aria-selected=false
       a.nav-link href="#general_calendar"
         = t('.general_calendar')
   .tab-content
-    .tab-pane.active#info role="tabpanel" aria-labelledby="info-tab"
+    .tab-pane#info class=("active" if region.info) role="tabpanel" aria-labelledby="info-tab"
       p== region.info
     .tab-pane#calendar role="tabpanel" aria-labelledby="calendar-tab"
       - if region.calendar_url
@@ -34,7 +34,7 @@ article
           iframe frameborder="0" height="600" width="800" scrolling="no" src="https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&showTz=0&height=600&wkst=2&hl=uk&bgcolor=%23FFFFFF&src=#{ region.additional_calendar_url }&color=%232952A3&ctz=Europe%2FKiev" style="border-width:0"
       - else
         p= t('.no_calendar')
-    .tab-pane#micro_groups role="tabpanel" aria-labelledby="additional-calendar-tab"
+    .tab-pane#micro_groups class=("active" unless region.info) role="tabpanel" aria-labelledby="additional-calendar-tab"
       - micro_groups.each do |micro_group|
         .list-group
           = link_to micro_group.name, "#{ region.permalink }/micro_groups/#{ micro_group.permalink }"

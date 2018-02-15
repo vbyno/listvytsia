@@ -1,9 +1,7 @@
 - if AppComponent::SHOW_SEMINAR_PAGE
   li class=('active' if current_page? app_component.seminar_path)
     = link_to t('.seminar'), app_component.seminar_path
-- main_region_path = MicroGroups.region_path('lviv')
-- regions = MicroGroups.links_info
-- main_region_path = "/#{ regions.first.permalink }"
+
 - region_paths_manager = MicroGroups::RegionPathManager.new(request.original_url)
 li.menu-dropdown-opened class=('active' if region_paths_manager.active?)
   span= link_to region_paths_manager.region_to_display.name,
@@ -15,6 +13,7 @@ li.menu-dropdown-opened class=('active' if region_paths_manager.active?)
     ul.dropdown-menu
       - region_paths_manager.regions_to_display.each do |region|
         li= link_to region.name, "/#{ region.permalink }"
+
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path
 li class=('active' if current_page?(app_component.events_path))
