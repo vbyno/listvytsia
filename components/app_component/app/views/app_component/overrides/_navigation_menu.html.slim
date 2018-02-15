@@ -12,7 +12,7 @@ li.menu-dropdown-opened class=('active' if region_paths_manager.active?)
       span.caret
     ul.dropdown-menu
       - region_paths_manager.regions_to_display.each do |region|
-        li= link_to region.name, "/#{ region.permalink }"
+        li= link_to region.name, region.permalink
 
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path

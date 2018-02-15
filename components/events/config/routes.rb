@@ -1,7 +1,7 @@
 require 'micro_groups'
 
 Events::Engine.routes.draw do
-  MicroGroups.region_permalinks.each do |permalink|
+  MicroGroups.all_region_permalinks.each do |permalink|
     get "/#{ permalink }/events/:permalink",
       to: 'events#show',
       defaults: { region_permalink: permalink }

@@ -17,7 +17,7 @@ module Calendars
     end
 
     def city
-      return super unless region
+      return super if region.nil? || !region.published?
 
       h.link_to(region.name, "/#{ region.permalink }")
     end

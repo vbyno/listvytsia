@@ -4,7 +4,7 @@ module MicroGroups
 
     def initialize(path)
       @path = path
-      @db_regions = MicroGroups::Region.all
+      @db_regions = MicroGroups::Region.published
     end
 
     def region_to_display
@@ -26,7 +26,7 @@ module MicroGroups
     attr_reader :db_regions, :path
 
     def region_to_openstruct(region)
-      OpenStruct.new(name: region.name, permalink: region.permalink)
+      OpenStruct.new(name: region.name, permalink: "/#{ region.permalink }")
     end
 
     def current_region

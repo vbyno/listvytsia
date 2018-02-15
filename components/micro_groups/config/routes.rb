@@ -10,7 +10,7 @@ MicroGroups::Engine.routes.draw do
               constraints: { format: :json }
   end
 
-  MicroGroups.region_permalinks.each do |permalink|
+  MicroGroups.published_region_permalinks.each do |permalink|
     get MicroGroups.region_path(permalink),
         to: 'regions#show',
         defaults: { permalink: permalink }

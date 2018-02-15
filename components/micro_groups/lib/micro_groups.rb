@@ -15,8 +15,12 @@ module MicroGroups
     Region.published.ordered.pluck(:name)
   end
 
-  def region_permalinks
+  def published_region_permalinks
     Region.published.ordered.pluck(:permalink)
+  end
+
+  def all_region_permalinks
+    Region.ordered.pluck(:permalink)
   end
 
   def links_info
