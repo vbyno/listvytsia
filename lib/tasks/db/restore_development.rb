@@ -21,6 +21,8 @@ module Tasks
 
       def dumpfolder
         "#{ Listvytsia::Application.root }/tmp/dump/#{ str_date }"
+
+        "/data/db/dump/#{ str_date }"
       end
 
       def str_date

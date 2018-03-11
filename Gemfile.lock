@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/vbyno/mongoid_rails_migrations.git
+  remote: https://github.com/vbyno/mongoid_rails_migrations.git
   revision: c0b264d334069454a5b9fe4afaee2fc7562012bd
   branch: development
   specs:

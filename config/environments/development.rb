@@ -41,5 +41,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
-  config.web_console.whitelisted_ips = ENV['DOCKER_HOST_IP']
+
+  require 'socket'
+  require 'ipaddr'
+
+  config.web_console.whitelisted_ips = Socket.ip_address_list.reduce([]) do |res, addrinfo|
+    addrinfo.ipv4? ? res << IPAddr.new(addrinfo.ip_address).mask(24) : res
+  end
 end

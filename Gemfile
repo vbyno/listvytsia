@@ -15,7 +15,9 @@ end
 gem 'rails'
 gem 'rails-i18n'
 gem 'mongoid'
-gem 'mongoid_rails_migrations', github: 'vbyno/mongoid_rails_migrations', branch: 'development'
+gem 'mongoid_rails_migrations',
+  git: 'https://github.com/vbyno/mongoid_rails_migrations.git',
+  branch: 'development'
 
 gem 'devise'
 gem 'devise-i18n'
