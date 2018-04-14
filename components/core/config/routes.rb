@@ -7,6 +7,17 @@ Core::Engine.routes.draw do
     resources :users, except: [:new, :edit, :destroy]
   end
 
-  devise_for :users, class_name: 'Core::User', module: :devise, controllers: { sessions: 'core/sessions' }
-  devise_for :admins, class_name: 'Core::Admin', module: :devise, controllers: { sessions: 'core/admins/sessions' }
+  devise_for :users, class_name: 'Core::User',
+                     module: :devise,
+                     controllers: { sessions: 'core/sessions' },
+                     path_names: {
+                       sign_in: 'login',
+                       sign_out: 'logout',
+                       sign_up: 'register',
+                       edit: 'settings'
+                     }
+
+  devise_for :admins, class_name: 'Core::Admin',
+                      module: :devise,
+                      controllers: { sessions: 'core/admins/sessions' }
 end
