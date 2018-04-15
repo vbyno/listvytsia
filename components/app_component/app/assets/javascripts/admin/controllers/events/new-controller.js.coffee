@@ -8,6 +8,7 @@ angular.module('admin.controllers')
     start_time: '',
     end_time: '',
     contacts: '',
+    info: '',
     course: '',
     permalink: ''
   };
@@ -31,6 +32,7 @@ angular.module('admin.controllers')
       start_time: controller.event_info.start_time,
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
+      info: controller.event_info.info,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink
     }

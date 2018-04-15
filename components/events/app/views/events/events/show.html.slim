@@ -18,6 +18,12 @@
               h2.heading-sm== event.dates
           .margin-bottom-30
             i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-              i.fa.fa-info
+              i.fa.fa-edit
             .content-boxes-in-v3.none-style-list
               == event.contacts
+          - if event.info.present?
+            .margin-bottom-30
+              i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
+                i.fa.fa-info
+              .content-boxes-in-v3.none-style-list
+                == event.info

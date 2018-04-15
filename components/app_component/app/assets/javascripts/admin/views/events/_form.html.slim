@@ -38,7 +38,11 @@
       | *
       =< Events::Event.human_attribute_name(:contacts)
   .small_ck_editor
-    textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' required=true rows=5
+    textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' required=true rows=7
+.form-group
+  label.string.control-label = Events::Event.human_attribute_name(:info)
+  .small_ck_editor
+    textarea#event_info_info.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info' rows=7
   br
   .form-group
     input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!eventForm.$valid'
