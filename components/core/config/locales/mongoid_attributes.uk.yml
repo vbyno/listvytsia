@@ -21,3 +21,6 @@ uk:
       core/user:
         roles: Ролі
         email: Електронна адреса
+        remember_me: Запам’ятати мене
+        password: Пароль
+        password_confirmation: Підтвердження паролю

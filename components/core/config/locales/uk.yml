@@ -24,6 +24,8 @@ uk:
     login_info:
       logged_in_as: Ви увійшли як користувач
       log_out: Вийти
+      log_in: Ввійти
+      register: Зареєструватися
     header:
       listvytsia: *name
       articles: Статті

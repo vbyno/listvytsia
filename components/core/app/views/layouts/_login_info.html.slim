@@ -3,11 +3,16 @@
     .row
       .col-sm-6.col-sm-offset-6
         ul.list-inline.right-topbar.pull-right
-          li
-            = t('.logged_in_as')
-            span<
-              strong= pundit_user.email
-          li
-            ||
-          li
-            = link_to t('.log_out'), core.destroy_user_session_path, method: :delete
+          - if pundit_user.registered?
+            li
+              = t('.logged_in_as')
+              span<
+                strong= pundit_user.email
+            li
+              ||
+            li= link_to t('.log_out'), core.destroy_user_session_path, method: :delete
+          - else
+            li= link_to t('.log_in'), core.new_user_session_path
+            li
+              ||
+            li= link_to t('.register'), core.new_user_registration_path
