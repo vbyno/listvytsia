@@ -1,12 +1,12 @@
 uk:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    "yes": 'Так'
+    "no": 'Ні'
     required:
-      text: 'required'
+      text: 'обовє’язкове поле'
       mark: '*'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "У полях форми є такі помилки:"
     main_info: Загальна інформація
     labels:
       article:
