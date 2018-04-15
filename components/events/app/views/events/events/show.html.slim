@@ -3,10 +3,9 @@
   br
 
   .title-v1.margin-bottom-0
-    h1
-      => event.city
-      | –
-      =< event.title
+    h1= event.title
+  .text-center.margin-bottom-50
+    h2= event.subtitle if event.subtitle
 
   .margin-bottom-40
     .row

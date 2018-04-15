@@ -5,6 +5,7 @@ module Events
     include Core::ModelMethods
 
     field :title
+    field :subtitle
     field :city
     field :start_time, type: DateTime
     field :end_time, type: DateTime
@@ -15,7 +16,7 @@ module Events
                         foreign_key: :city,
                         primary_key: :name
 
-    ATTRIBUTES = %i( id title city start_time end_time contacts permalink )
+    ATTRIBUTES = %i( id title subtitle city start_time end_time contacts permalink )
 
     validates :city, :start_time, :end_time, :contacts, presence: true
 

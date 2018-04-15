@@ -3,6 +3,7 @@ angular.module('admin.controllers')
   controller = this;
   controller.event_info = {
     title: '',
+    subtitle: '',
     city: '',
     start_time: '',
     end_time: '',
@@ -25,6 +26,7 @@ angular.module('admin.controllers')
   @_eventParams = () ->
     'event': {
       title: controller.event_info.title,
+      subtitle: controller.event_info.subtitle,
       city: controller.event_info.city,
       start_time: controller.event_info.start_time,
       end_time: controller.event_info.end_time,
