@@ -6,4 +6,4 @@ p
 p
   = t('devise.mailer.unlock_instructions.instruction')
 p
-  = link_to t('devise.mailer.unlock_instructions.action'), core.user_unlock_url(@resource, unlock_token: (Devise::VERSION.start_with?('3.') ? @token :@resource.unlock_token))
+  = link_to t('devise.mailer.unlock_instructions.action'), core.user_unlock_url(unlock_token: (Devise::VERSION.start_with?('3.') ? @token :@resource.unlock_token))

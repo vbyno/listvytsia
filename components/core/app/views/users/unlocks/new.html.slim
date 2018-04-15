@@ -1,10 +1,11 @@
-h2
-  = t("devise.unlockcs.new.resend_unlock_instructions")
-= simple_form_for(resource, as: resource_name, url: core.user_unlock_path, html: { method: :post }) do |f|
-  = f.error_notification
-  = f.full_error :unlock_token
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, t("devise.unlockcs.new.resend_unlock_instructions")
-= render "users/shared/links"
+.col-md-offset-3.col-md-6
+  h2
+    = t("devise.unlockcs.new.resend_unlock_instructions")
+  = simple_form_for(resource, as: resource_name, url: core.user_unlock_path, html: { method: :post }) do |f|
+    = f.error_notification
+    = f.full_error :unlock_token
+    .form-inputs
+      = f.input :email, required: true, autofocus: true
+    .form-actions
+      = f.button :submit, t("devise.unlockcs.new.resend_unlock_instructions"), class: 'btn btn-u'
+  = render "users/shared/links"
