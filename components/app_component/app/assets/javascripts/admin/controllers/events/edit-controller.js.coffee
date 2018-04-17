@@ -9,6 +9,7 @@ angular.module('admin.controllers')
     end_time: '',
     contacts: '',
     info: '',
+    info_translation: '',
     course: '',
     permalink: ''
   };
@@ -29,6 +30,7 @@ angular.module('admin.controllers')
       end_time:   new Date(response.data.end_time),
       contacts:   response.data.contacts,
       info:       response.data.info,
+      info_translation: response.data.info_translation,
       course:     response.data.course
       permalink:  response.data.permalink
     };
@@ -54,6 +56,7 @@ angular.module('admin.controllers')
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
       info: controller.event_info.info,
+      info_translation: controller.event_info.info_translation,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink
     }

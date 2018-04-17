@@ -11,6 +11,7 @@ module Events
     field :end_time, type: DateTime
     field :contacts
     field :info
+    field :info_translation
     field :permalink
 
     belongs_to :region, class_name: 'MicroGroups::Region',
@@ -26,6 +27,7 @@ module Events
       end_time
       contacts
       info
+      info_translation
       permalink
     )
 
