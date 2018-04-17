@@ -1,7 +1,7 @@
 .row.blog.blog-medium.margin-bottom-40
-  .col-md-5
+  div class=('col-md-5' if article.picture_url.present?)
     img.img-responsive alt="" src= article.picture_url
-  .col-md-7
+  div class=(article.picture_url.present? ? 'col-md-7' : 'col-md-12' )
     h2
       = link_to article.title, article
       - if policy(article).update?
