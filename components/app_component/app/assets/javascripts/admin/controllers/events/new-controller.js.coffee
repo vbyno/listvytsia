@@ -3,10 +3,13 @@ angular.module('admin.controllers')
   controller = this;
   controller.event_info = {
     title: '',
+    subtitle: '',
     city: '',
     start_time: '',
     end_time: '',
     contacts: '',
+    info: '',
+    info_translation: '',
     course: '',
     permalink: ''
   };
@@ -25,10 +28,13 @@ angular.module('admin.controllers')
   @_eventParams = () ->
     'event': {
       title: controller.event_info.title,
+      subtitle: controller.event_info.subtitle,
       city: controller.event_info.city,
       start_time: controller.event_info.start_time,
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
+      info: controller.event_info.info,
+      info_translation: response.data.info_translation,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink
     }

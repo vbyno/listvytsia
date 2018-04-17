@@ -26,7 +26,7 @@ table.table.table-hover st-table='displayed_events' st-safe-src='events'
       td {{event.city}}
       td {{event.start_time}}
       td {{event.end_time}}
-      td {{event.contacts}}
+      td {{event.contacts.substring(0, 300)}}
       td
         span>
           a data-ng-href= '#/events/{{event.id}}/edit'

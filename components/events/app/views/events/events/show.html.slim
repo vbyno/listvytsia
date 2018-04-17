@@ -3,22 +3,26 @@
   br
 
   .title-v1.margin-bottom-0
-    h1
-      => event.city
-      | –
-      =< event.title
+    h1= event.title
+  .text-center.margin-bottom-50
+    h2= event.subtitle if event.subtitle
 
-  .margin-bottom-40
+  .text-center
+    i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
+      i.fa.fa-calendar
+    h2.heading-sm== event.dates
+  - if event.contacts.present?
     .row
-      .col-sm-6.col-sm-offset-3
-        .content-boxes-v3.content-boxes-v3.sm-margin-bottom-30
-          .margin-bottom-30
-            i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-              i.fa.fa-calendar
-            .content-boxes-in-v3
-              h2.heading-sm== event.dates
-          .margin-bottom-30
-            i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-              i.fa.fa-info
-            .content-boxes-in-v3.none-style-list
-              == event.contacts
+      .none-style-list.col-md-offset-4.col-md-4.col-sm-offset-2.col-sm-8
+        == event.contacts
+
+  - if event.info.present?
+    .text-center
+      i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
+        i.fa.fa-info
+    - if event.info_translation.present?
+      .row
+        .col-md-6
+          == event.info
+        .col-md-6
+          == event.info_translation

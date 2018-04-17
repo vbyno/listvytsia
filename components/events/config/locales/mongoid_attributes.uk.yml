@@ -10,7 +10,10 @@ uk:
     attributes:
       events/event:
         title: Назва
+        subtitle: Підзаголовок
         city: Місто
         start_time: Час початку
         end_time: Час завершення
-        contacts: Кантакти
+        contacts: Контакти
+        info: Інформація
+        info_translation: Інформація (переклад)

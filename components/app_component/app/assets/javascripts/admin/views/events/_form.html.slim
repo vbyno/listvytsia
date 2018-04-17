@@ -4,6 +4,9 @@
       | *
       =< Events::Event.human_attribute_name(:title)
   input#event_info_title.string.required.form-control type='text' data-ng-model='ctrl.event_info.title' required=true autofocus=true
+.form-group
+  label.string.control-label = Events::Event.human_attribute_name(:subtitle)
+  input#event_info_subtitle.string.form-control type='text' data-ng-model='ctrl.event_info.subtitle'
 .form-group.required
   label.string.required.control-label
     abbr title='required'
@@ -35,7 +38,13 @@
       | *
       =< Events::Event.human_attribute_name(:contacts)
   .small_ck_editor
-    textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' required=true rows=5
-  br
-  .form-group
-    input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!eventForm.$valid'
+    textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' required=true rows=7
+.form-group
+  label.string.control-label = Events::Event.human_attribute_name(:info)
+  textarea#event_info_info.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info' rows=7
+.form-group
+  label.string.control-label = Events::Event.human_attribute_name(:info_translation)
+  textarea#event_info_info_translation.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info_translation' rows=7
+br
+.form-group
+  input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!eventForm.$valid'
