@@ -30,7 +30,9 @@ module Events
       end
 
       def event_params
-        params.require(:event).permit(*Event::ATTRIBUTES)
+        params.require(:event)
+              .permit(*Event::ATTRIBUTES,
+                      location: [:latitude, :longitude, :information])
       end
     end
   end
