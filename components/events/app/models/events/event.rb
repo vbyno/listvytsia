@@ -14,6 +14,8 @@ module Events
     field :info_translation
     field :permalink
 
+    embeds_one :location, class_name: 'Events::Location'
+
     belongs_to :region, class_name: 'MicroGroups::Region',
                         foreign_key: :city,
                         primary_key: :name

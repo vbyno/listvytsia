@@ -16,6 +16,15 @@
       .none-style-list.col-md-offset-4.col-md-4.col-sm-offset-2.col-sm-8
         == event.contacts
 
+  - if (location = event.location)&.valid?
+    .row.margin-bottom-30
+      .col-md-10.col-md-offset-1.col-sm-12
+        #map.map.map-high
+      = render 'app_component/static_pages/seminar/google_map_scripts'
+      - content_for :script do
+        javascript:
+          Listvytsia.seminarLocation("#{location.latitude}", "#{location.longitude}", "#{{location.information}}");
+
   - if event.info.present?
     .text-center
       i.icon.icon-custom.icon-md.rounded-x.icon-bg-u

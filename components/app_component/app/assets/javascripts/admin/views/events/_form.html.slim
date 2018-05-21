@@ -1,50 +1,75 @@
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:title)
-  input#event_info_title.string.required.form-control type='text' data-ng-model='ctrl.event_info.title' required=true autofocus=true
-.form-group
-  label.string.control-label = Events::Event.human_attribute_name(:subtitle)
-  input#event_info_subtitle.string.form-control type='text' data-ng-model='ctrl.event_info.subtitle'
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:permalink)
-  input#event_info_permalink.string.required.form-control type='text' data-ng-model='ctrl.event_info.permalink' required=true
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:city)
-  select.form-control data-ng-model='ctrl.event_info.city'
-    option data-ng-repeat= 'name in ctrl.city_names' value='{{name}}' {{name}}
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:start_time)
-  input#event_info_start_time.string.required.form-control type='date' data-ng-model='ctrl.event_info.start_time' required=true
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:end_time)
-  input#event_info_end_time.string.required.form-control type='date' data-ng-model='ctrl.event_info.end_time' required=true
-.form-group.required
-  label.string.required.control-label
-    abbr title='required'
-      | *
-      =< Events::Event.human_attribute_name(:contacts)
-  .small_ck_editor
-    textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' required=true rows=7
-.form-group
-  label.string.control-label = Events::Event.human_attribute_name(:info)
-  textarea#event_info_info.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info' rows=7
-.form-group
-  label.string.control-label = Events::Event.human_attribute_name(:info_translation)
-  textarea#event_info_info_translation.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info_translation' rows=7
+ul.nav.nav-tabs
+  li.active
+    a href='#main-info' data-toggle='tab'
+      = Events::Event.model_name.human
+  li
+    a href='#location' data-toggle='tab'
+      = Events::Location.model_name.human
+  li
+    a href='#additional-info' data-toggle='tab'
+      = 'Додаткова інформація'
+
+.tab-content
+  .tab-pane.fade.in.active#main-info
+    br
+    .form-group.required
+      label.string.required.control-label
+        abbr title='required'
+          | *
+          =< Events::Event.human_attribute_name(:title)
+      input#event_info_title.string.required.form-control type='text' data-ng-model='ctrl.event_info.title' required=true autofocus=true
+    .form-group
+      label.string.control-label = Events::Event.human_attribute_name(:subtitle)
+      input#event_info_subtitle.string.form-control type='text' data-ng-model='ctrl.event_info.subtitle'
+    .form-group.required
+      label.string.required.control-label
+        abbr title='required'
+          | *
+          =< Events::Event.human_attribute_name(:permalink)
+      input#event_info_permalink.string.required.form-control type='text' data-ng-model='ctrl.event_info.permalink' required=true
+    .form-group.required
+      label.string.required.control-label
+        abbr title='required'
+          | *
+          =< Events::Event.human_attribute_name(:city)
+      select.form-control data-ng-model='ctrl.event_info.city'
+        option data-ng-repeat= 'name in ctrl.city_names' value='{{name}}' {{name}}
+    .form-group.required
+      label.string.required.control-label
+        abbr title='required'
+          | *
+          =< Events::Event.human_attribute_name(:start_time)
+      input#event_info_start_time.string.required.form-control type='date' data-ng-model='ctrl.event_info.start_time' required=true
+    .form-group.required
+      label.string.required.control-label
+        abbr title='required'
+          | *
+          =< Events::Event.human_attribute_name(:end_time)
+      input#event_info_end_time.string.required.form-control type='date' data-ng-model='ctrl.event_info.end_time' required=true
+    .form-group.required
+    label.string.control-label =< Events::Event.human_attribute_name(:contacts)
+    .small_ck_editor
+      textarea#event_info_contacts.string.required.form-control type='text' ckeditor='height: 150px' data-ng-model='ctrl.event_info.contacts' rows=7
+
+  .tab-pane.fade.in#location
+    br
+    .form-group
+      h3= Events::Location.model_name.human
+      label.string.control-label = Events::Location.human_attribute_name(:latitude)
+      input#event_location_latitude.string.form-control data-ng-model='ctrl.event_info.location.latitude'
+      label.string.control-label = Events::Location.human_attribute_name(:longitude)
+      input#event_location_longitude.string.form-control data-ng-model='ctrl.event_info.location.longitude'
+      label.string.control-label = Events::Location.human_attribute_name(:information)
+      textarea#event_info_location.string.form-control type='text' data-ng-model='ctrl.event_info.location.information' rows=7
+
+  .tab-pane.fade.in#additional-info
+    br
+    .form-group
+      label.string.control-label = Events::Event.human_attribute_name(:info)
+      textarea#event_info_info.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info' rows=7
+    .form-group
+      label.string.control-label = Events::Event.human_attribute_name(:info_translation)
+      textarea#event_info_info_translation.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info_translation' rows=7
 br
 .form-group
   input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!eventForm.$valid'

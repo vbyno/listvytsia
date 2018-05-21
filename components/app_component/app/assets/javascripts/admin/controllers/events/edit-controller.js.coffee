@@ -11,7 +11,8 @@ angular.module('admin.controllers')
     info: '',
     info_translation: '',
     course: '',
-    permalink: ''
+    permalink: '',
+    location: { latitude: '', longitude: '', information: '' }
   };
 
   controller.city_names = []
@@ -33,6 +34,7 @@ angular.module('admin.controllers')
       info_translation: response.data.info_translation,
       course:     response.data.course
       permalink:  response.data.permalink
+      location:   response.data.location
     };
   );
 
@@ -58,7 +60,8 @@ angular.module('admin.controllers')
       info: controller.event_info.info,
       info_translation: controller.event_info.info_translation,
       course: controller.event_info.course,
-      permalink: controller.event_info.permalink
+      permalink: controller.event_info.permalink,
+      location: controller.event_info.location
     }
 
   @_deleteEventParams = (event_info) ->

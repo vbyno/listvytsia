@@ -1,11 +1,9 @@
-Listvytsia.seminarLocation = ->
-  lat = 49.8098497
-  lng = 23.9721197
+Listvytsia.seminarLocation =(lat, lng, info, zoom = 17) ->
   handler = Gmaps.build('Google')
 
   handler.buildMap
     provider:
-      zoom: 17
+      zoom: zoom
     internal:
       id: 'map'
   ,
@@ -13,6 +11,6 @@ Listvytsia.seminarLocation = ->
     marker = handler.addMarker
       lat: lat,
       lng: lng,
-      infowindow: 'Місце проведення семінару'
+      infowindow: info
 
     handler.map.centerOn(marker)

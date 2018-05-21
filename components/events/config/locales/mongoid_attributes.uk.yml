@@ -2,11 +2,11 @@ uk:
   mongoid:
     models:
       events/event:
-        one: Запис
-        other: Записи
-      events/event:
         one: Подія
         other: Події
+      events/location:
+        one: Місцезнаходження
+        other: Місцезнаходження
     attributes:
       events/event:
         title: Назва
@@ -17,3 +17,7 @@ uk:
         contacts: Контакти
         info: Інформація
         info_translation: Інформація (переклад)
+      events/location:
+        information: Опис місцезнаходженя
+        latitude: Широта (координата)
+        longitude: Довгота (координата)
