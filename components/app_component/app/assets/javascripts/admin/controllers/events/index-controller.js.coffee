@@ -9,7 +9,7 @@ angular.module('admin.controllers')
 
   $scope.displayed_events = [].concat($scope.events);
 
-  @deleteCalendarItem = (event) ->
+  @deleteEvent = (event) ->
     if confirm('Видалити подію?')
       $http.delete("/admins/events/#{event.id}").then((response) ->
         $scope.events.splice($scope.events.indexOf(event), 1);

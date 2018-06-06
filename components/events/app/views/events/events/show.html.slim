@@ -29,9 +29,5 @@
     .text-center
       i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
         i.fa.fa-info
-    - if event.info_translation.present?
-      .row
-        .col-md-6
-          == event.info
-        .col-md-6
-          == event.info_translation
+    .col-md-10.col-md-offset-1
+      == event.info

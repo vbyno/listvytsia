@@ -9,7 +9,6 @@ angular.module('admin.controllers')
     end_time: '',
     contacts: '',
     info: '',
-    info_translation: '',
     course: '',
     permalink: ''
   };
@@ -21,6 +20,8 @@ angular.module('admin.controllers')
   );
 
   @createEvent = () ->
+    console.log(@_eventParams());
+
     $http.post('/admins/events', @_eventParams()).then( ->
       $location.path('/events');
     );
@@ -34,7 +35,6 @@ angular.module('admin.controllers')
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
       info: controller.event_info.info,
-      info_translation: response.data.info_translation,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink
     }
