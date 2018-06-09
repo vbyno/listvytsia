@@ -11,6 +11,7 @@ angular.module('admin.controllers')
     info: '',
     course: '',
     permalink: '',
+    info_blocks: [],
     location: { latitude: '', longitude: '', information: '' }
   };
 
@@ -32,7 +33,8 @@ angular.module('admin.controllers')
       info:       response.data.info,
       course:     response.data.course,
       permalink:  response.data.permalink,
-      location:   response.data.location
+      location:   response.data.location,
+      info_blocks: response.data.info_blocks
     };
   );
 
@@ -58,13 +60,20 @@ angular.module('admin.controllers')
       info: controller.event_info.info,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink,
-      location: controller.event_info.location
+      location: controller.event_info.location,
+      info_blocks: controller.event_info.info_blocks
     }
 
   @_deleteEventParams = (event_info) ->
     event_info: {
       id: event_info.id,
     };
+
+  @addInfoBlock = () ->
+    controller.event_info.info_blocks.push(@emptyInfoBlock())
+
+  @emptyInfoBlock = () ->
+    { name: '', content: '' }
 
   controller;
 ]);

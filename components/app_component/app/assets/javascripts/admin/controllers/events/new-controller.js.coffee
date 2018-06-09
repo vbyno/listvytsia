@@ -10,7 +10,8 @@ angular.module('admin.controllers')
     contacts: '',
     info: '',
     course: '',
-    permalink: ''
+    permalink: '',
+    info_blocks: []
   };
 
   controller.city_names = []
@@ -36,11 +37,18 @@ angular.module('admin.controllers')
       contacts: controller.event_info.contacts,
       info: controller.event_info.info,
       course: controller.event_info.course,
-      permalink: controller.event_info.permalink
+      permalink: controller.event_info.permalink,
+      info_blocks: controller.event_info.info_blocks
     }
+
+  @addInfoBlock = () ->
+    controller.event_info.info_blocks.push(@emptyInfoBlock())
 
   @locationPath = () ->
     "##{$location.path()}"
+
+  @emptyInfoBlock = () ->
+    { name: '', content: '' }
 
   controller;
 ]);

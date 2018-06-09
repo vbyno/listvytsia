@@ -1,13 +1,13 @@
 module Events
-  class Location
+  class InfoBlock
     include Mongoid::Document
+    include Mongoid::Timestamps
     include Core::ModelMethods
 
-    ATTRIBUTES = %i( latitude longitude information )
+    ATTRIBUTES = %i( name content )
 
-    field :latitude
-    field :longitude
-    field :information
+    field :name
+    field :content
 
     embedded_in :event, class_name: 'Events::Event'
 
