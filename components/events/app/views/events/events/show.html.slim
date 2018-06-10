@@ -25,13 +25,14 @@
         javascript:
           Listvytsia.seminarLocation("#{location.latitude}", "#{location.longitude}", "#{{location.information}}");
 
-  - if event.info.present?
-    .text-center
-      i.icon.icon-custom.icon-md.rounded-x.icon-bg-u
-        i.fa.fa-info
-    - if event.info_translation.present?
-      .row
-        .col-md-6
-          == event.info
-        .col-md-6
-          == event.info_translation
+  - if event.info_blocks.any?
+    div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false"
+      - event.info_blocks.each_with_index do |info_block, i|
+          div class="panel panel-default"
+            div class="panel-heading" role="tab" id="heading_#{i}"
+              h4 class="panel-title"
+                a.g-cursor-pointer role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_#{i}" aria-expanded="true" aria-controls="collapse_#{i}"
+                  = info_block.name
+            div id="collapse_#{i}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="heading_#{i}"
+              div class="panel-body"
+                == info_block.content

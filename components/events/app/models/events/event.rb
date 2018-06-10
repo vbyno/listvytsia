@@ -15,6 +15,7 @@ module Events
     field :permalink
 
     embeds_one :location, class_name: 'Events::Location'
+    embeds_many :info_blocks, class_name: 'Events::InfoBlock'
 
     belongs_to :region, class_name: 'MicroGroups::Region',
                         foreign_key: :city,

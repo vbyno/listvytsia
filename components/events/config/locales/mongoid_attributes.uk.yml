@@ -21,3 +21,6 @@ uk:
         information: Опис місцезнаходженя
         latitude: Широта (координата)
         longitude: Довгота (координата)
+      events/info_block:
+        name: Назва
+        content: Контент

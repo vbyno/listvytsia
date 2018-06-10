@@ -9,9 +9,9 @@ angular.module('admin.controllers')
     end_time: '',
     contacts: '',
     info: '',
-    info_translation: '',
     course: '',
     permalink: '',
+    info_blocks: [],
     location: { latitude: '', longitude: '', information: '' }
   };
 
@@ -31,10 +31,10 @@ angular.module('admin.controllers')
       end_time:   new Date(response.data.end_time),
       contacts:   response.data.contacts,
       info:       response.data.info,
-      info_translation: response.data.info_translation,
-      course:     response.data.course
-      permalink:  response.data.permalink
-      location:   response.data.location
+      course:     response.data.course,
+      permalink:  response.data.permalink,
+      location:   response.data.location,
+      info_blocks: response.data.info_blocks
     };
   );
 
@@ -58,16 +58,22 @@ angular.module('admin.controllers')
       end_time: controller.event_info.end_time,
       contacts: controller.event_info.contacts,
       info: controller.event_info.info,
-      info_translation: controller.event_info.info_translation,
       course: controller.event_info.course,
       permalink: controller.event_info.permalink,
-      location: controller.event_info.location
+      location: controller.event_info.location,
+      info_blocks: controller.event_info.info_blocks
     }
 
   @_deleteEventParams = (event_info) ->
     event_info: {
       id: event_info.id,
     };
+
+  @addInfoBlock = () ->
+    controller.event_info.info_blocks.push(@emptyInfoBlock())
+
+  @emptyInfoBlock = () ->
+    { name: '', content: '' }
 
   controller;
 ]);
