@@ -34,7 +34,7 @@ module Events
       permalink
     )
 
-    validates :city, :start_time, :end_time, :contacts, presence: true
+    validates :city, :start_time, :end_time, :title, presence: true
 
     scope :by_title, ->(title) { where(title: title) }
     scope :by_city, ->(city) { where(city: city) }
