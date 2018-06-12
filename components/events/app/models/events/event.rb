@@ -15,6 +15,7 @@ module Events
     field :permalink
 
     embeds_one :location, class_name: 'Events::Location'
+    embeds_many :info_blocks, class_name: 'Events::InfoBlock'
 
     belongs_to :region, class_name: 'MicroGroups::Region',
                         foreign_key: :city,
@@ -33,7 +34,7 @@ module Events
       permalink
     )
 
-    validates :city, :start_time, :end_time, :contacts, presence: true
+    validates :city, :start_time, :end_time, :title, presence: true
 
     scope :by_title, ->(title) { where(title: title) }
     scope :by_city, ->(city) { where(city: city) }

@@ -14,6 +14,10 @@ module Events
       Calendars::DateFormatter.to_period(event.start_time, event.end_time)
     end
 
+    def info_blocks
+      event.info_blocks || []
+    end
+
     private
 
     def str_time(time)

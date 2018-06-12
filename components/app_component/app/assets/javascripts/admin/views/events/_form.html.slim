@@ -63,13 +63,15 @@ ul.nav.nav-tabs
       textarea#event_info_location.string.form-control type='text' data-ng-model='ctrl.event_info.location.information' rows=7
 
   .tab-pane.fade.in#additional-info
-    br
-    .form-group
-      label.string.control-label = Events::Event.human_attribute_name(:info)
-      textarea#event_info_info.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info' rows=7
-    .form-group
-      label.string.control-label = Events::Event.human_attribute_name(:info_translation)
-      textarea#event_info_info_translation.string.form-control type='text' ckeditor='height: 250px' data-ng-model='ctrl.event_info.info_translation' rows=7
+    div data-ng-repeat = 'info_block in ctrl.event_info.info_blocks'
+      br
+      .form-group
+        label.string.control-label = Events::InfoBlock.human_attribute_name(:name)
+        input.string.form-control data-ng-model='info_block.name'
+        label.string.control-label = Events::InfoBlock.human_attribute_name(:content)
+        textarea.string.form-control type='text' ckeditor='height: 250px' data-ng-model='info_block.content' rows=7
+    a.pull-right.margin-bottom-30.g-cursor-pointer ng-click='ctrl.addInfoBlock()'
+      i.fa.fa-plus
 br
 .form-group
   input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!eventForm.$valid'

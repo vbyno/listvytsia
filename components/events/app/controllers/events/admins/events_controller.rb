@@ -8,11 +8,11 @@ module Events
       def show; end
 
       def create
-        event.save
+        event.save!
       end
 
       def update
-        event.update_attributes(event_params)
+        event.update_attributes!(event_params)
       end
 
       def destroy
@@ -32,7 +32,8 @@ module Events
       def event_params
         params.require(:event)
               .permit(*Event::ATTRIBUTES,
-                      location: [:latitude, :longitude, :information])
+                      location: Location::ATTRIBUTES,
+                      info_blocks: InfoBlock::ATTRIBUTES)
       end
     end
   end
