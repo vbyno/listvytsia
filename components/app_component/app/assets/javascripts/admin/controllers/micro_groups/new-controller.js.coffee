@@ -9,6 +9,7 @@ angular.module('admin.controllers')
     leaders: '',
     contacts: '',
     methodologies: '',
+    priority: 0,
     calendar_url: null
   };
 
@@ -35,7 +36,8 @@ angular.module('admin.controllers')
       leaders: controller.micro_group.leaders,
       contacts: controller.micro_group.contacts,
       methodologies: controller.micro_group.methodologies
-      calendar_url: controller.micro_group.calendar_url
+      calendar_url: controller.micro_group.calendar_url,
+      priority: controller.micro_group.priority
     }
 
   @locationPath = () ->

@@ -1,6 +1,17 @@
 module MicroGroups
   class MicroGroup
-    ATTRIBUTES = %i( name permalink city idea leaders contacts methodologies published calendar_url )
+    ATTRIBUTES = %i(
+      name
+      permalink
+      city
+      idea
+      leaders
+      contacts
+      methodologies
+      published
+      calendar_url
+      priority
+    ).freeze
 
     include Mongoid::Document
     include Mongoid::Timestamps
@@ -14,6 +25,7 @@ module MicroGroups
     field :contacts
     field :methodologies
     field :calendar_url
+    field :priority, type: Integer, default: 0
     field :published, type: Mongoid::Boolean, default: false
 
     belongs_to :region, class_name: 'MicroGroups::Region',
@@ -23,7 +35,7 @@ module MicroGroups
     validates :name, :city, :idea, :leaders, :contacts, :permalink, presence: true
 
     scope :published, ->{ where(published: true) }
-    scope :ordered_created_at, ->{ order(created_at: :desc) }
+    scope :ordered_by_priority, ->{ order(priority: :desc) }
     scope :of_city, ->(city) { where(city: city) }
   end
 end

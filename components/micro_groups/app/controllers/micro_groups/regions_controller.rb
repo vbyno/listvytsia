@@ -15,7 +15,7 @@ module MicroGroups
     end
 
     def micro_groups
-      @micro_groups ||= MicroGroup.of_city(region.name).ordered_created_at
+      @micro_groups ||= MicroGroup.of_city(region.name).ordered_by_priority
     end
   end
 end

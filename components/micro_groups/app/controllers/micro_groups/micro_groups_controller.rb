@@ -8,7 +8,7 @@ module MicroGroups
     private
 
     def micro_groups
-      @micro_groups ||= policy_scope(MicroGroup).ordered_created_at
+      @micro_groups ||= policy_scope(MicroGroup).ordered_by_priority
     end
 
     def micro_group
