@@ -16,6 +16,7 @@ uk:
         leaders: Ведучі, представники
         contacts: Контактна інформація
         methodologies: Методики, що використовуються
+        priority: Пріоритет
         published: Опублікована
       micro_groups/region:
         name: Назва міста
