@@ -25,6 +25,10 @@
   input#micro_group_idea.string.required.form-control type='text' data-ng-model='ctrl.micro_group.idea' required=true
 .form-group.required
   label.string.required.control-label
+    abbr=< MicroGroups::MicroGroup.human_attribute_name(:priority)
+  input#micro_group_name.required.form-control type='number' data-ng-model='ctrl.micro_group.priority' required=true value=0
+.form-group.required
+  label.string.required.control-label
     abbr title='required'
       | *
       =< MicroGroups::MicroGroup.human_attribute_name(:leaders)
@@ -47,4 +51,3 @@
   br
   .form-group
     input.pull-right type='submit' class='btn btn-primary' value=I18n.t('admins.static_pages.form.submit') data-ng-disabled='!microGroupForm.$valid'
-
