@@ -1,0 +1,10 @@
+version: '2'
+
+options:
+  verbose: true
+syncs:
+  appcode-sync:
+    src: './'
+    sync_excludes: ['tmp', '.idea', '.git']
+  dbdata-sync:
+    src: '../data/db'

@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  app:
+    volumes:
+      - appcode-sync:/listvytsia:nocopy
+      - dbdata-sync:/data/db:nocopy
+      - ./scripts:/scripts
+      - ~/.ssh:/root/.ssh
+  db:
+    volumes:
+      - dbdata-sync:/data/db:nocopy
+      - ./scripts:/scripts
+
+volumes:
+  appcode-sync:
+    external: true
+  dbdata-sync:
+    external: true

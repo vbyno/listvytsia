@@ -50,7 +50,7 @@ module Tasks
       end
 
       def local_dumpfolder
-        "#{ Listvytsia::Application.root }/tmp/dump/"
+        "/data/db/dump/"
       end
 
       def via_ssh
