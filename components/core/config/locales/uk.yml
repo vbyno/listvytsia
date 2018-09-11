@@ -2,7 +2,7 @@ uk:
   site_info:
     name: &name Ліствиця
     email: &email listvycja@gmail.com
-    phone: &phone +38 (093) 657 02 19
+    phone: &phone +38 093 657-02-19
     site: &site listvycja.org
     address: &address Україна, м. Львів
     facebook: &facebook 'https://www.facebook.com/pages/ЛМГО-Ліствиця/1433298123589114'
