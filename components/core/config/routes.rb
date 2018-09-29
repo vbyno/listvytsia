@@ -7,9 +7,16 @@ Core::Engine.routes.draw do
     resources :users, except: [:new, :edit, :destroy]
   end
 
+  devise_scope :user do
+    delete 'sign_out', to: 'core/sessions#destroy', as: :destroy_omniauth_user_session
+  end
+
   devise_for :users, class_name: 'Core::User',
                      module: :devise,
-                     controllers: { sessions: 'core/sessions' },
+                     controllers: {
+                       sessions: 'core/sessions',
+                       omniauth_callbacks: 'core/omniauth_callbacks'
+                     },
                      path_names: {
                        sign_in: 'login',
                        sign_out: 'logout',
