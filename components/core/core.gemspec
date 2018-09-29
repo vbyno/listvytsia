@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rabl'
   s.add_dependency 'oj'
   s.add_dependency 'slim-rails'
+  s.add_dependency 'require_all'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'mongoid-rspec'

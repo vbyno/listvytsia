@@ -51,7 +51,6 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'gmaps4rails'
 gem 'awesome_print'
 gem 'foreman'
-gem 'require_all'
 
 group :development do
   gem 'generators', path: 'components'
