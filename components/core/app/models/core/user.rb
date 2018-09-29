@@ -13,7 +13,7 @@ module Core
            :validatable,
            :confirmable,
            :omniauthable,
-           omniauth_providers: %i[facebook]
+           omniauth_providers: %i[facebook google_oauth2]
 
     ## Database authenticatable
     field :email,              default: ""
