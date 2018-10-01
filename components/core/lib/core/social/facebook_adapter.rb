@@ -1,23 +1,23 @@
 class Core::Social::FacebookAdapter < Core::Social::BaseAdapter
   def first_name
-    binding.pry
+    name_parts.first
   end
 
   def last_name
+    name_parts.last
   end
 
   def email
-  end
-
-  def password
-  end
-
-  def provider
-  end
-
-  def uuid
+    response.info.email
   end
 
   def photo_url
+    response.info.image
+  end
+
+  private
+
+  def name_parts
+    response.info.name.split
   end
 end

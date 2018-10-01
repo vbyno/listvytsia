@@ -8,6 +8,9 @@ require 'deface'
 require 'rabl'
 require 'slim-rails'
 require 'require_all'
+require 'omniauth'
+require 'omniauth-facebook'
+require 'omniauth-google-oauth2'
 
 module Core; end
 

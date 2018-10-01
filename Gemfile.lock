@@ -52,6 +52,9 @@ PATH
       mongoid
       mongoid_rails_migrations
       oj
+      omniauth
+      omniauth-facebook
+      omniauth-google-oauth2
       pundit
       rabl
       rails (= 5.1.1)
