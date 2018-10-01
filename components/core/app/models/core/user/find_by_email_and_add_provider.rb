@@ -11,6 +11,14 @@ class Core::User::FindByEmailAndAddProvider < Core::User::SocialProviderCommand
 
     user.confirm
 
+    if user.profile.nil?
+      user.create_profile(
+        first_name: provider_adapter.first_name,
+        last_name: provider_adapter.last_name,
+        photo_url: provider_adapter.photo_url
+      )
+    end
+
     user
   end
 end

@@ -1,25 +1,13 @@
 class Core::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
-    binding.pry
-    if user.persisted?
-      sign_in_and_redirect user, event: :authentication #this will throw if user is not activated
-      set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
-    else
-      session["devise.facebook_data"] = request.env["omniauth.auth"]
-      redirect_to new_user_registration_url
-    end
+    sign_in_and_redirect user, event: :authentication # this will throw if user is not activated
+
+    set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
   end
 
   def google_oauth2
-    auth = request.env["omniauth.auth"]
-    binding.pry
-    user = Core::User.where(provider: auth["provider"], uid: auth["uid"])
-            .first_or_initialize(email: auth["info"]["email"])
-    # user.name ||= auth.info.name
-    user.save!
-
-    user.remember_me = true
     sign_in(:user, user)
+    set_flash_message(:notice, :success, kind: "Google") if is_navigational_format?
 
     redirect_to core.after_sign_in_path_for(user)
   end

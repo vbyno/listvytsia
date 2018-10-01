@@ -8,5 +8,7 @@ module Core
     field :first_name
     field :last_name
     field :photo_url
+
+    validates :first_name, :last_name, presence: true
   end
 end

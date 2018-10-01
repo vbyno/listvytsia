@@ -24,6 +24,10 @@ describe Core::User::FindByEmailAndAddProvider do
       end
     end
 
+    it 'adds correct profile info' do
+      expect { subject }.to change { user.reload.profile }.from(nil)
+    end
+
     it 'confirms user' do
       expect { subject }.to change { user.reload.confirmed? }.from(false).to(true)
     end
