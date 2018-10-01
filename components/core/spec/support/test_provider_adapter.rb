@@ -1,19 +1,11 @@
-class TestProviderAdapter < Core::Social::BaseAdapter
-  def initialize(
-    uid: '123456789',
-    provider: 'facebook',
-    first_name: 'TestFirstName',
-    last_name: 'TestLastName',
-    email: 'test@mail.comx',
-    photo_url: 'https://photo.jpeg'
-  )
-    @uid = uid
-    @provider = provider
-    @first_name = first_name
-    @last_name = last_name
-    @email = email
-    @photo_url = photo_url
-  end
+class TestProviderAdapter
+  extend Dry::Initializer
 
-  attr_reader :uid, :provider, :first_name, :last_name, :email, :photo_url
+  option :uid,        default: proc { '123456789' }
+  option :provider,   default: proc { 'facebook' }
+  option :first_name, default: proc { 'TestFirstName' }
+  option :last_name,  default: proc { 'TestLastName' }
+  option :email,      default: proc { 'test@mail.comx' }
+  option :password,   default: proc { 'password' }
+  option :photo_url,  default: proc { 'https://photo.jpeg' }
 end

@@ -11,6 +11,7 @@ require 'require_all'
 require 'omniauth'
 require 'omniauth-facebook'
 require 'omniauth-google-oauth2'
+require 'dry-initializer'
 
 module Core; end
 

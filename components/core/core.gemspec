@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'omniauth'
   s.add_dependency 'omniauth-facebook'
   s.add_dependency 'omniauth-google-oauth2'
+  s.add_dependency 'dry-initializer'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'mongoid-rspec'
