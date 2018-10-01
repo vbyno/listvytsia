@@ -31,6 +31,13 @@ class Core::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def user
-    @user ||= Core::User.from_omniauth(request.env['omniauth.auth'])
+    @user ||=
+      Core::User::FindBySocialProvider.(provider_adapter) ||
+      Core::User::FindByEmailAndAddProvider.(provider_adapter) ||
+      Core::User::CreateBySocialProvider.(provider_adapter)
+  end
+
+  def provider_adapter
+    @provider_adapter ||= Core::Social.build_adapter(request.env['omniauth.auth'])
   end
 end

@@ -44,10 +44,12 @@ module Core
     # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
     # field :locked_at,       type: Time
 
-    field :provider
-    field :uid
+    embeds_one :profile, class_name: 'Core::Profile'
+    embeds_many :social_providers, class_name: 'Core::SocialProvider'
 
     has_and_belongs_to_many :roles, class_name: 'Core::Role', autosave: true
+
+    scope :by_email, ->(email) { where(email: email) }
 
     def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first ||
