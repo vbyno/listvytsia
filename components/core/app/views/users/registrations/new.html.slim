@@ -3,8 +3,8 @@
     = t("devise.registrations.new.sign_up")
   = simple_form_for(resource, as: resource_name, url: core.user_registration_path) do |f|
     = f.error_notification
+    = render 'users/shared/social_links'
     .form-inputs
-      = link_to 'Register with facebook', core.user_facebook_omniauth_authorize_path
       = f.input :email, required: true, autofocus: true
       = f.input :password, required: true
       = f.input :password_confirmation, required: true

@@ -2,8 +2,8 @@
   h2
     = t("devise.sessions.new.sign_in")
   = simple_form_for(resource, as: resource_name, url: core.user_session_path) do |f|
+    = render 'users/shared/social_links'
     .form-inputs
-      = link_to 'Register with facebook', core.user_facebook_omniauth_authorize_path
       = f.input :email, required: false, autofocus: true
       = f.input :password, required: false
       = f.input :remember_me, as: :boolean if devise_mapping.rememberable?

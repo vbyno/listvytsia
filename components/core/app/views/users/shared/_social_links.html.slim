@@ -1,0 +1,13 @@
+.text-center
+  p
+    = t('.enter_using')
+  a.btn.btn-outline-primary.btn-lg role='button' href=core.user_facebook_omniauth_authorize_path
+    i.fa.fa-facebook
+    =< t('.facebook')
+  =<
+  a.btn.btn-outline-primary.btn-lg role='button' href=core.user_google_oauth2_omniauth_authorize_path
+    i.fa.fa-google
+    =< t('.google')
+  p
+  = t('.or')
+br
