@@ -1,0 +1,4 @@
+uk:
+  recaptcha:
+    errors:
+      verification_failed: Ви не підтвердили, що ви не робот

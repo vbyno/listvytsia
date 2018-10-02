@@ -22,5 +22,6 @@
         = f.input :email, required: true
         = f.input :password, required: true
         = f.input :password_confirmation, required: true
+        div= recaptcha_tags
       .form-actions
         = f.button :submit, t("devise.registrations.new.sign_up"), class: 'btn btn-u'

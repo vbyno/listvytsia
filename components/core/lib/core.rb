@@ -12,6 +12,7 @@ require 'omniauth'
 require 'omniauth-facebook'
 require 'omniauth-google-oauth2'
 require 'dry-initializer'
+require 'recaptcha/rails'
 
 module Core; end
 
