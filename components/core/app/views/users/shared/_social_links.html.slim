@@ -1,10 +1,10 @@
 .text-center
   p= t('.enter_using')
-div
+div.hidden
   a.btn.btn-facebook.btn-lg.btn-block role='button' href=core.user_facebook_omniauth_authorize_path
     i.fa.fa-facebook
     =< t('.facebook')
-br
+  br
 div
   a.btn.btn-google.btn-lg.btn-block role='button' href=core.user_google_oauth2_omniauth_authorize_path
     i.fa.fa-google
