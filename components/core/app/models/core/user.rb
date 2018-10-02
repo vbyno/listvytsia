@@ -11,7 +11,9 @@ module Core
            :rememberable,
            :trackable,
            :validatable,
-           :confirmable
+           :confirmable,
+           :omniauthable,
+           omniauth_providers: %i[facebook google_oauth2]
 
     ## Database authenticatable
     field :email,              default: ""
@@ -42,7 +44,22 @@ module Core
     # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
     # field :locked_at,       type: Time
 
+    embeds_one :profile, class_name: 'Core::Profile'
+    embeds_many :social_providers, class_name: 'Core::SocialProvider'
+
     has_and_belongs_to_many :roles, class_name: 'Core::Role', autosave: true
+
+    scope :by_email, ->(email) { where(email: email) }
+
+    def self.new_with_session(params, session)
+      super.tap do |user|
+        if data = session["devise.facebook_data"] &&
+           session["devise.facebook_data"]["extra"]["raw_info"]
+          user.email = data["email"] if user.email.blank?
+        end
+      end
+    end
+
     def name; end
   end
 end

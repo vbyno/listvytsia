@@ -1,0 +1,15 @@
+.text-center
+  p= t('.enter_using')
+div
+  a.btn.btn-facebook.btn-lg.btn-block role='button' href=core.user_facebook_omniauth_authorize_path
+    i.fa.fa-facebook
+    =< t('.facebook')
+br
+div
+  a.btn.btn-google.btn-lg.btn-block role='button' href=core.user_google_oauth2_omniauth_authorize_path
+    i.fa.fa-google
+    =< t('.google')
+.visible-sm.visible-xs
+  br
+  .text-center
+    = t('.or')

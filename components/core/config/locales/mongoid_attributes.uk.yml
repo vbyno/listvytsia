@@ -13,6 +13,12 @@ uk:
       core/permission:
         one: Дозвіл
         other: Дозволи
+      core/social_provider:
+        one: Провайдер соцмережі
+        other: Провайдери соцмереж
+      core/profile:
+        one: Профіль
+        other: Профілі
     attributes:
       core/role:
         title: Назва
@@ -24,3 +30,10 @@ uk:
         remember_me: Запам’ятати мене
         password: Пароль
         password_confirmation: Підтвердження паролю
+      core/social_provider:
+        uid: Ідентифікатор
+        provider: Тип провайдера
+      core/profile:
+        first_name: Ім’я
+        last_name: Прізвище
+        photo_url: Посилання на фото

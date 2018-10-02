@@ -7,11 +7,18 @@ require 'figaro'
 require 'deface'
 require 'rabl'
 require 'slim-rails'
+require 'require_all'
+require 'omniauth'
+require 'omniauth-facebook'
+require 'omniauth-google-oauth2'
+require 'dry-initializer'
+require 'recaptcha/rails'
 
-module Core
-  require_relative 'core/engine'
-  require_relative 'core/user_decorators'
-  require_relative 'core/application_policy'
-  require_relative 'core/base_presenter'
-  require_relative '../app/models/core/concerns/permalinkable'
-end
+module Core; end
+
+require_relative 'core/engine'
+require_relative 'core/user_decorators'
+require_relative 'core/application_policy'
+require_relative 'core/base_presenter'
+require_relative '../app/models/core/concerns/permalinkable'
+require_relative 'core/social'
