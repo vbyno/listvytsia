@@ -15,6 +15,7 @@ Core::Engine.routes.draw do
                      module: :devise,
                      controllers: {
                        sessions: 'core/sessions',
+                       registrations: 'core/registrations',
                        omniauth_callbacks: 'core/omniauth_callbacks'
                      },
                      path_names: {

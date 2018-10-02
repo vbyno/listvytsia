@@ -51,23 +51,6 @@ module Core
 
     scope :by_email, ->(email) { where(email: email) }
 
-    def self.from_omniauth(auth)
-      where(provider: auth.provider, uid: auth.uid).first ||
-      where(email: auth.info.email).first&.tap do |user|
-        user.confirm!
-        user.update_attributes!(provider: auth.provider, uid: auth.uid)
-      end ||
-      new(
-        email: auth.info.email,
-        password: Devise.friendly_token[0,20],
-        provider: auth.provider,
-        uid: auth.uid
-      ).tap do |user|
-        user.skip_confirmation!
-        user.save!
-      end
-    end
-
     def self.new_with_session(params, session)
       super.tap do |user|
         if data = session["devise.facebook_data"] &&
