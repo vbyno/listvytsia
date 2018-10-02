@@ -90,3 +90,10 @@ li.menu-dropdown-opened {
   position: inherit;
   vertical-align: inherit;
 }
+
+@media screen and (min-width: 992px) {
+  .header-v5 .navbar-default .navbar-nav > li > a {
+    line-height: 29px;
+    padding: 23px 5px 24px;
+  }
+}

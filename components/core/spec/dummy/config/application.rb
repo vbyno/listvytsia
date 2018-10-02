@@ -16,7 +16,7 @@ module Dummy
     config.public_file_server.enabled = true
     config.active_support.test_order = :random
     config.active_support.deprecation = :stderr
+    config.action_mailer.delivery_method = :test
     Mongoid.load!(File.expand_path('../../../../component_mongoid.yml', __dir__), :test)
   end
 end
-

@@ -7,16 +7,16 @@ li class=('active' if current_page?(fakultatyv))
     = link_to t('.seminar'), app_component.seminar_path
 
 - region_paths_manager = MicroGroups::RegionPathManager.new(request.original_url)
-li.menu-dropdown-opened class=('active' if region_paths_manager.active?)
-  span= link_to region_paths_manager.region_to_display.name,
-                region_paths_manager.region_to_display.permalink,
-                class: 'menu-dropdown-link'
-  span.dropdown
-    a.btn.btn-default.menu-dropdown-button type='button' data-toggle='dropdown'
-      span.caret
-    ul.dropdown-menu
-      - region_paths_manager.regions_to_display.each do |region|
-        li= link_to region.name, region.permalink
+
+li class=('active' if region_paths_manager.is_default?)
+   = link_to region_paths_manager.main_region.name, region_paths_manager.main_region.permalink
+li.dropdown class=('active' if region_paths_manager.active?)
+  a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
+    = t('.other_cities')
+    span.caret
+  ul.dropdown-menu
+    - region_paths_manager.regions_to_display.each do |region|
+      li= link_to region.name, region.permalink
 
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path

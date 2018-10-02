@@ -7,9 +7,10 @@ AppComponent::Engine.routes.draw do
   mount Calendars::Engine,   at: Calendars::Engine.mount_path,   as: :calendars_component
   mount Events::Engine,      at: Events::Engine.mount_path,      as: :events_component
 
-  get :contacts,  to: 'static_pages#contacts'
-  get :seminar,   to: 'static_pages#seminar'
-  get :donate,    to: 'static_pages#donate'
+  get :contacts,       to: 'static_pages#contacts'
+  get :seminar,        to: 'static_pages#seminar'
+  get :donate,         to: 'static_pages#donate'
+  get :privacy_policy, to: 'static_pages#privacy_policy'
 
   resources :articles
   resources :events, path: :activities

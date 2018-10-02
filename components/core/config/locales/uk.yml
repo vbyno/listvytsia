@@ -33,6 +33,7 @@ uk:
       seminar: Семінар
       donate: Пожертви
       events: Події
+      other_cities: Інші міста
       contacts: &contacts Про нас
     banner:
       main_text: *name

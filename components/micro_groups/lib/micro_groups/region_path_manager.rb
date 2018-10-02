@@ -11,14 +11,22 @@ module MicroGroups
       region_to_openstruct(current_region)
     end
 
+    def main_region
+      region_to_openstruct(default_region)
+    end
+
     def regions_to_display
-      (db_regions.sort_by(&:name) - [current_region]).map do |region|
+      (db_regions.sort_by(&:name) - [default_region]).map do |region|
         region_to_openstruct(region)
       end
     end
 
     def active?
-      !_current_region.nil?
+      !current_region.nil? && !is_default?
+    end
+
+    def is_default?
+      current_region == default_region
     end
 
     private
@@ -30,11 +38,7 @@ module MicroGroups
     end
 
     def current_region
-      @current_region ||= (_current_region || default_region)
-    end
-
-    def _current_region
-      @_current_region ||= db_regions.detect { |r| path.include?(r.permalink) }
+      @current_region ||= db_regions.detect { |r| path.include?(r.permalink) }
     end
 
     def default_region

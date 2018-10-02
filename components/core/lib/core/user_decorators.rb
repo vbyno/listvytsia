@@ -8,4 +8,3 @@ module Core
     end
   end
 end
-
