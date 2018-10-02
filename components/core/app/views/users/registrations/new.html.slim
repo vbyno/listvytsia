@@ -24,4 +24,5 @@
         = f.input :password_confirmation, required: true
         div= recaptcha_tags
       .form-actions
+        p== t('app_component.confirm_policy', link: app_component.privacy_policy_path)
         = f.button :submit, t("devise.registrations.new.sign_up"), class: 'btn btn-u'
