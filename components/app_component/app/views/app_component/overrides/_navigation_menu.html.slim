@@ -1,11 +1,3 @@
-- fakultatyv = '/lviv/events/fakultatyv'
-li class=('active' if current_page?(fakultatyv))
-  = link_to 'I факультатив', fakultatyv
-
-- if AppComponent::SHOW_SEMINAR_PAGE
-  li class=('active' if current_page? app_component.seminar_path)
-    = link_to t('.seminar'), app_component.seminar_path
-
 - region_paths_manager = MicroGroups::RegionPathManager.new(request.original_url)
 
 li class=('active' if region_paths_manager.is_default?)
