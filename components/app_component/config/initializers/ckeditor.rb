@@ -21,7 +21,8 @@ Ckeditor.setup do |config|
   config.authorize_with :pundit
 
   # Asset model classes
-  # config.picture_model { Ckeditor::Picture }
+  config.picture_model = AppComponent::Ckeditor::Picture
+  # config.parent_controller = 'Pictures::PicturesController'
   # config.attachment_file_model { Ckeditor::AttachmentFile }
 
   # Paginate assets

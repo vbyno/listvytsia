@@ -1,5 +1,6 @@
 AppComponent::Engine.routes.draw do
   mount Core::Engine,        at: '/',                            as: :core
+  mount Ckeditor::Engine,    at: '/'
   mount Pictures::Engine,    at: Pictures::Engine.mount_path,    as: :pictures_engine
   mount Hotels::Engine,      at: Hotels::Engine.mount_path,      as: :hotels
   mount Chunks::Engine,      at: Chunks::Engine.mount_path,      as: :chunks
@@ -22,6 +23,4 @@ AppComponent::Engine.routes.draw do
   namespace :admins do
     resources :static_pages, except: [:new, :edit, :destroy]
   end
-
-  mount Ckeditor::Engine => '/ckeditor'
 end
