@@ -15,7 +15,8 @@ html lang==I18n.locale
         == render 'layouts/header'
       - if current_page?(core.root_path)
         == render 'layouts/messages'
-        == render 'layouts/banner'
+        == render 'layouts/olga'
+        / == render 'layouts/banner'
       .container.content.content-custom
         == render 'layouts/messages' unless current_page?(core.root_path)
         == yield
