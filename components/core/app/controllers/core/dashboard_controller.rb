@@ -1,5 +1,7 @@
 module Core
   class DashboardController < ApplicationController
-    def index; end
+    def index;
+      render 'core/dashboard/olga'
+    end
   end
 end
