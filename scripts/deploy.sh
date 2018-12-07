@@ -7,9 +7,6 @@ SERVER_IP=185.69.153.54
 scp -P $SERVER_PORT .env $SERVER_USER@$SERVER_IP:$remote_dir
 scp -P $SERVER_PORT \
   config/application.yml \
-  config/liqpay.yml \
-  config/mongoid.yml \
-  config/recaptcha.yml \
   config/secrets.yml \
   $SERVER_USER@$SERVER_IP:$remote_dir/config/
 

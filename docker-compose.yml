@@ -2,10 +2,7 @@ version: '2'
 
 services:
   app:
-    build: ./
     command: bundle exec rails server -b 0.0.0.0
-    env_file:
-      - .env
     volumes:
       - ../data/db:/data/db
     ports:
@@ -16,8 +13,6 @@ services:
       - db
   db:
     image: mongo:3.4.2
-    env_file:
-      - .env
     volumes:
       - ../data/db:/data/db
     networks:

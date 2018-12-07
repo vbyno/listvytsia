@@ -9,13 +9,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = Figaro.env.devise_secret_key
+  config.secret_key = ENV['DEVISE_SECRET_KEY']
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = Figaro.env.site_email
+  config.mailer_sender = ENV['SITE_EMAIL']
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -240,11 +240,11 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook,
-                  Figaro.env.facebook_app_id,
-                  Figaro.env.facebook_app_secret
+                  ENV['FACEBOOK_APP_ID'],
+                  ENV['FACEBOOK_APP_SECRET']
   config.omniauth :google_oauth2,
-                  Figaro.env.google_client_id,
-                  Figaro.env.google_client_secret,
+                  ENV['GOOGLE_CLIENT_ID'],
+                  ENV['GOODLE_CLIENT_SECRET'],
                   access_type: 'online',
                   callback_path: '/users/auth/google_oauth2/callback'
 

@@ -64,13 +64,13 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: ENV['server_ip'] }
+  config.action_mailer.default_url_options = { host: ENV['SERVER_IP'] }
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               "#{ENV['server_ip']}:80",
-    user_name:            ENV['admin_email'],
-    password:             ENV['admin_email_password'],
+    domain:               "#{ENV['SERVER_IP']}:80",
+    user_name:            ENV['ADMIN_EMAIL'],
+    password:             ENV['ADMIN_EMAIL_PASSWORD'],
     authentication:       :plain,
     enable_starttls_auto: true
   }

@@ -5,6 +5,7 @@ RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends apt-utils
 
 # for nokogiri
+RUN apt-get update -yqq
 RUN apt-get install -y libxml2-dev libxslt1-dev
 
 RUN apt-get install -y nodejs

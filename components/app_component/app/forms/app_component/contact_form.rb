@@ -8,7 +8,7 @@ module AppComponent
     def headers
       {
         subject: I18n.t('contact_forms.contact_form.subject'),
-        to: Figaro.env.site_email,
+        to: ENV['SITE_EMAIL'],
         from: %("#{name}" <#{email}>)
       }
     end

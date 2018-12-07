@@ -1,6 +1,6 @@
 require 'integration_helper'
 
-describe 'sign-in user', js: true do
+xdescribe 'sign-in user', js: true do
   let(:password) { 'Strong_Pa$$word123' }
   let(:user) { create :user, password: password }
 

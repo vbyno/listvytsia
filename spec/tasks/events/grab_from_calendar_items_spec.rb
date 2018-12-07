@@ -1,4 +1,4 @@
-describe Tasks::Events::GrabFromCalendarItems do
+xdescribe Tasks::Events::GrabFromCalendarItems do
   describe '.call' do
     let!(:calendar_item) { create :item, city: city_name }
     let(:task) { double(:task) }

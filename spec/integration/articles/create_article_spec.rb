@@ -1,6 +1,6 @@
 require 'integration_helper'
 
-describe 'create article', js: true do
+xdescribe 'create article', js: true do
   let(:user) { create :user }
 
   before do

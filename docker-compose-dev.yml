@@ -2,12 +2,17 @@ version: '2'
 
 services:
   app:
+    build: ./
+    env_file:
+      - .env
     volumes:
       - appcode-sync:/listvytsia:nocopy
       - dbdata-sync:/data/db:nocopy
       - ./scripts:/scripts
       - ~/.ssh:/root/.ssh
   db:
+    env_file:
+      - .env
     volumes:
       - dbdata-sync:/data/db:nocopy
       - ./scripts:/scripts

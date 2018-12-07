@@ -1,6 +1,6 @@
 require 'integration_helper'
 
-describe 'create event', js: true do
+xdescribe 'create event', js: true do
   let(:user) { create :user }
 
   before do
