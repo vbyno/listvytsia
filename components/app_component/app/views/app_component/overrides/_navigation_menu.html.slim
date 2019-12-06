@@ -1,5 +1,7 @@
 - region_paths_manager = MicroGroups::RegionPathManager.new(request.original_url)
 
+/ li class=('active' if current_page?('lviv/events/4_naukovo_filosofskyi_seminar')
+/    = link_to 'Семінар', 'lviv/events/4_naukovo_filosofskyi_seminar'
 li class=('active' if region_paths_manager.is_default?)
    = link_to region_paths_manager.main_region.name, region_paths_manager.main_region.permalink
 li.dropdown class=('active' if region_paths_manager.active?)
