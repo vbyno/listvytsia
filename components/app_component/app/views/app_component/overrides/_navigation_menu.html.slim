@@ -3,19 +3,19 @@
 / li class=('active' if current_page?('lviv/events/4_naukovo_filosofskyi_seminar')
 /    = link_to 'Семінар', 'lviv/events/4_naukovo_filosofskyi_seminar'
 li class=('active' if region_paths_manager.is_default?)
-   = link_to region_paths_manager.main_region.name, region_paths_manager.main_region.permalink
-li.dropdown class=('active' if region_paths_manager.active?)
-  a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
-    = t('.other_cities')
-    span.caret
-  ul.dropdown-menu
-    - region_paths_manager.regions_to_display.each do |region|
-      li= link_to region.name, region.permalink
+   = link_to t('.events'), region_paths_manager.main_region.permalink
+/ li.dropdown class=('active' if region_paths_manager.active?)
+/   a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
+/     = t('.other_cities')
+/     span.caret
+/   ul.dropdown-menu
+/     - region_paths_manager.regions_to_display.each do |region|
+/       li= link_to region.name, region.permalink
 
 li class=('active' if current_page?(app_component.articles_path))
    = link_to t('.articles'), app_component.articles_path
 li class=('active' if current_page?(app_component.events_path))
-   = link_to t('.events'), app_component.events_path
+   = link_to t('.activities'), app_component.events_path
 li class=('active' if current_page?(app_component.donate_path))
    = link_to t('.donate'), app_component.donate_path
 li class=('active' if current_page?(app_component.contacts_path))

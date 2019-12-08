@@ -6,6 +6,7 @@ uk:
       not_authorized: Ви не маєте дозволів для завершення цієї дії
     static_pages:
       contacts:
+        contacts_for_those_who_interested: "Для охочих відвідати зустрічі та дізнатись більше: <a href='tel:+380671807657'>067 180-76-57</a>"
         write_us: Написати нам
         intro: Напишіть нам повідомлення. Вкажіть свій email для зворотнього зв`язку
         message: Повідомлення
@@ -54,7 +55,7 @@ uk:
         submit: Зберегти
       index:
         header: Події
-        activities: Наша Діяльність
+        activities: Діяльність
         <<: *social_networks
       show:
         edit_event: *edit_event
