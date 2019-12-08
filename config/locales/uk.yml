@@ -35,8 +35,8 @@ uk:
       micro_groups: Мікрогрупи
       seminar: Семінар
       donate: Пожертви
-      events: Наша Діяльність
-      contacts: &contacts Про нас
+      events: Події
+      contacts: &contacts Контакти
     banner:
       main_text: *name
       subtext: Львівська міська громадська організація
